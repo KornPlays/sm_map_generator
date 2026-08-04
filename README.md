@@ -5,6 +5,8 @@ local `.db` save file — without starting Scrap Mechanic.
 
 **Live site:** https://sm.kornplays.com
 
+**Source code:** https://github.com/KornPlays/sm_map_generator
+
 The site is fully static. Map generation, save-file seed extraction, and WebP
 encoding run in the visitor's browser. Nothing is sent to a server.
 
