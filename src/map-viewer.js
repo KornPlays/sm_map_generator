@@ -7,7 +7,7 @@ const WORLD_MAX_Y = 3077.88;
 const DATABASE_NAME = "sm-ch2-map-generator";
 const DATABASE_VERSION = 1;
 const LAST_MAP_KEY = "last-map";
-const MARKER_DATA_VERSION = 3;
+const MARKER_DATA_VERSION = 5;
 const MARKER_ORDER_KEY = "sm-map-marker-order";
 const IS_TOUCH_DEVICE = "ontouchstart" in window || navigator.maxTouchPoints > 0;
 const MIN_SAFE_SCALE = IS_TOUCH_DEVICE ? 0.15 : 0;
@@ -19,6 +19,7 @@ const MARKER_KIND_LABELS = {
   mechanicStation: "Mechanic Station",
   growlab: "Growlab",
   packingStation: "Packing Station",
+  cagedFarmer: "Caged Farmer",
 };
 
 function openDatabase() {
@@ -96,6 +97,7 @@ export function setupMapViewer({ onWarning, resolveMarkers } = {}) {
   const markerDetailsKind = document.querySelector("#marker-details-kind");
   const markerDetailsTitle = document.querySelector("#marker-details-title");
   const markerDetailsRewards = document.querySelector("#marker-details-rewards");
+  const markerDetailsListTitle = document.querySelector("#marker-details-list-title");
   const markerDetailsRewardList = document.querySelector("#marker-details-reward-list");
 
   let imageWidth = 0;
@@ -105,6 +107,8 @@ export function setupMapViewer({ onWarning, resolveMarkers } = {}) {
   let panX = 0;
   let panY = 0;
   let mapUrl = null;
+  let currentMapSource = null;
+  let mapSuspended = false;
   let pinnedPixel = null;
   let mapMarkerElements = [];
   let transformFrame = 0;
@@ -125,7 +129,7 @@ export function setupMapViewer({ onWarning, resolveMarkers } = {}) {
   const markerVisibility = Object.fromEntries(markerToggles.map((input) => {
     const kind = input.dataset.markerKind;
     const stored = localStorage.getItem(`sm-map-show-${kind}`);
-    const defaultVisible = kind !== "ruin";
+    const defaultVisible = kind !== "ruin" && kind !== "cagedFarmer";
     return [kind, stored === null ? defaultVisible : stored === "true"];
   }));
   const pointers = new Map();
@@ -206,6 +210,7 @@ export function setupMapViewer({ onWarning, resolveMarkers } = {}) {
     markerDetailsIcon.src = new URL(marker.icon, document.baseURI).href;
     markerDetailsKind.textContent = MARKER_KIND_LABELS[marker.kind] || "Map marker";
     markerDetailsTitle.textContent = marker.title;
+    markerDetailsListTitle.textContent = marker.listTitle || "Rewards";
     markerDetailsRewardList.replaceChildren();
     for (const reward of marker.rewards || []) {
       const item = document.createElement("li");
@@ -305,6 +310,8 @@ export function setupMapViewer({ onWarning, resolveMarkers } = {}) {
 
   function setMapSource(blob, name, details, seed, markers) {
     if (mapUrl) URL.revokeObjectURL(mapUrl);
+    currentMapSource = { blob, name, details, seed, markers };
+    mapSuspended = false;
     mapUrl = URL.createObjectURL(blob);
     imageWidth = details.width;
     imageHeight = details.height;
@@ -320,6 +327,25 @@ export function setupMapViewer({ onWarning, resolveMarkers } = {}) {
     meta.textContent = `${seedLabel}${imageWidth.toLocaleString()} × ${imageHeight.toLocaleString()} · ${formatSize(blob.size)} · ${name || "map.webp"}`;
     removePin();
     renderMapMarkers(markers);
+    requestAnimationFrame(fitMap);
+  }
+
+  function suspendMap() {
+    if (!mapUrl || !currentMapSource) return false;
+    URL.revokeObjectURL(mapUrl);
+    mapUrl = null;
+    image.removeAttribute("src");
+    download.removeAttribute("href");
+    mapSuspended = true;
+    return true;
+  }
+
+  function resumeMap() {
+    if (!mapSuspended || !currentMapSource || mapUrl) return;
+    mapUrl = URL.createObjectURL(currentMapSource.blob);
+    image.src = mapUrl;
+    download.href = mapUrl;
+    mapSuspended = false;
     requestAnimationFrame(fitMap);
   }
 
@@ -505,5 +531,5 @@ export function setupMapViewer({ onWarning, resolveMarkers } = {}) {
   });
   window.addEventListener("resize", fitMap);
 
-  return { showMap, restoreLastMap, fitMap };
+  return { showMap, restoreLastMap, fitMap, suspendMap, resumeMap };
 }

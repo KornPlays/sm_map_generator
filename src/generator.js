@@ -1,6 +1,6 @@
 import { intNoise2d, simplexNoise2d } from "./noise.js";
 import { LuaJitRandom } from "./luajit-random.js";
-import { LuaFactory } from "wasmoon";
+import { LuaFactory, LuaLibraries } from "wasmoon";
 
 const RUNTIME_SOURCES = [
   "data/excavation_world.lua",
@@ -83,11 +83,40 @@ function resolveSource(path) {
 }
 
 function instrumentSource(resolved, source) {
+  if (resolved === "lua/overworld/generate_roads.lua") {
+    return source
+      .replace("\t\tlocal roadCells = {}\n", "")
+      .replaceAll("\t\troadCells[#roadCells + 1] = { x = n.x, y = n.y }\n", "")
+      .replace("\t\troadCells[#roadCells + 1] = { x = b.x, y = b.y }\n", "");
+  }
   if (resolved !== "lua/overworld/generate_cells.lua") return source;
   return source
     .replace(
+      "local roadNodes = drawRoads( roadEdges, pois )",
+      `collectgarbage("collect")
+	local roadNodes = drawRoads( roadEdges, pois )
+	for _, roadPoi in ipairs( roadPois ) do
+		roadPoi.edges = nil
+		roadPoi.dist = nil
+	end
+	roadPois = nil
+	roadEdges = nil
+	roadDestinations = nil
+	collectgarbage("collect")`,
+    )
+    .replace(
+      'print( "Random road pois:", randomRoadPoiCount )\n\n\t------------------------------------------------------------------------------------------------\n\n\t-- Elevation (hills)',
+      `print( "Random road pois:", randomRoadPoiCount )
+	roadNodes = nil
+	collectgarbage("collect")
+
+	------------------------------------------------------------------------------------------------
+
+	-- Elevation (hills)`,
+    )
+    .replace(
       "preparePoiRoadGraph( pois, roadPois )",
-      '_sm_progress("Connecting the main roads…", 20)\n\tpreparePoiRoadGraph( pois, roadPois )',
+      '_sm_progress("Connecting the main roads…", 20)\n\tcollectgarbage("collect")\n\tpreparePoiRoadGraph( pois, roadPois )',
     )
     .replace(
       "writeStartArea( pois, roadNodes )",
@@ -259,7 +288,14 @@ export async function generateCells(seed, onProgress = () => {}) {
   await new Promise((resolve) => setTimeout(resolve, 0));
 
   luaFactory ??= new LuaFactory(publicUrl("vendor/wasmoon.wasm").href);
-  const engine = await luaFactory.createEngine();
+  const engine = await luaFactory.createEngine({
+    enableProxy: false,
+    openStandardLibs: false,
+  });
+  engine.global.loadLibrary(LuaLibraries.Base);
+  engine.global.loadLibrary(LuaLibraries.Table);
+  engine.global.loadLibrary(LuaLibraries.String);
+  engine.global.loadLibrary(LuaLibraries.Math);
   const random = new LuaJitRandom();
   try {
     installCallbacks(engine, runtime, random, onProgress);

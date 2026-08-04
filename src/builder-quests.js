@@ -67,17 +67,59 @@ const ICONS = {
   mechanicStation: "assets/ui/debug_compass_mechanicstation.png",
   growlab: "assets/ui/debug_compass_growlab.png?v=3",
   packingStation: "assets/ui/debug_compass_packingstation.png?v=3",
+  cagedFarmer: "assets/ui/debug_compass_cagedfarmer.png?v=2",
 };
 
-const WAREHOUSE_UIDS = new Set([
-  "e8dfc039-7879-40cb-8b69-696f88d1cb2c", "887b1866-009d-430d-923c-53f7f6e21f4c",
-  "71acfa84-5a93-4d71-8263-abff15908985", "457232e5-8233-4dc8-8565-3433405ecd77",
-  "5861d377-b27d-4ba7-9167-2ca064915e81", "dc5c1caf-885c-4b9e-a3d7-d2578b04e633",
-  "afc8dacf-a2ec-4bc5-9ffb-166372b5fcd2", "4283ed68-9811-4fc6-91b6-156fda5c444f",
-  "cbeb1357-2027-4a90-bd03-632ccd4509b5", "3f35b614-e5da-41b1-ad2c-2959a9ae77d6",
-  "b626a6fa-5930-4196-99dd-bf36f629bd0d", "669a9132-e9c2-4961-a6ad-869044058024",
-  "5e9fa630-76fe-4693-be63-00ecd9acf201",
+const WAREHOUSES = new Map([
+  ["e8dfc039-7879-40cb-8b69-696f88d1cb2c", { floors: 2 }],
+  ["887b1866-009d-430d-923c-53f7f6e21f4c", { floors: 2 }],
+  ["71acfa84-5a93-4d71-8263-abff15908985", { floors: 2 }],
+  ["457232e5-8233-4dc8-8565-3433405ecd77", { floors: 2 }],
+  ["5861d377-b27d-4ba7-9167-2ca064915e81", { floors: 2 }],
+  ["dc5c1caf-885c-4b9e-a3d7-d2578b04e633", { floors: 2 }],
+  ["afc8dacf-a2ec-4bc5-9ffb-166372b5fcd2", { floors: 2 }],
+  ["4283ed68-9811-4fc6-91b6-156fda5c444f", { floors: 2 }],
+  ["cbeb1357-2027-4a90-bd03-632ccd4509b5", { floors: 3 }],
+  ["3f35b614-e5da-41b1-ad2c-2959a9ae77d6", { floors: 3 }],
+  ["b626a6fa-5930-4196-99dd-bf36f629bd0d", { floors: 4 }],
+  ["669a9132-e9c2-4961-a6ad-869044058024", { floors: 4 }],
+  ["5e9fa630-76fe-4693-be63-00ecd9acf201", { floors: 4, trashbot: true }],
 ]);
+
+// Positions come from the caged-farmer shape transforms in the game's .tileson files.
+const CAGED_FARMER_LOCATIONS = [
+  ["16a6315e-897a-4186-abe9-cdf83470757a", [[32.717, 30.457]]],
+  ["05b6d448-59fa-4abd-8986-5e331eb49af1", [[40.739, 22.970]]],
+  ["9b11721e-3df5-438e-92a3-9ce08c5a8e84", [[37.918, 28.804]]],
+  ["0556fb22-cacc-4402-8d7c-6cfd6f5d39ce", [[34.810, 34.483]]],
+  ["afa0fd48-9c11-43c0-8519-def13c56eb7f", [[28.172, 27.374]]],
+  ["bfd3e6e5-bd62-4bb9-8ab5-a12d2d44ffa3", [[25.499, 35.994]]],
+  ["2cc399c0-7f60-4737-8ce9-dfebe1cff997", [[41.027, 42.522]]],
+  ["2baccd93-fb01-49ba-bbce-f26bd6bba53c", [[20.869, 29.250]]],
+  ["f7862697-5c60-412d-8508-2e37e8ec7d16", [[33.887, 30.722]]],
+  ["150b28d3-2c48-40b8-a657-907629c63637", [[25.389, 36.347]]],
+  ["139ff089-19e7-4c65-b02e-0bcdb30e4600", [[34.263, 31.131]]],
+  ["e4fbd2dd-6d4a-4bfa-a311-6ae40fdd0f64", [[35.183, 33.862], [25.186, 33.862]]],
+  ["75adfa70-b50e-428e-a035-580091009aee", [[28.250, 38.000], [40.250, 33.981]]],
+  ["adc981bf-6a97-4c97-a303-b0066ccea342", [[23.250, 28.000]]],
+  ["ddc41612-20f3-484e-b7eb-c0d510d190be", [[26.250, 27.500], [36.017, 34.113]]],
+  ["33f54ce4-2287-4d9c-a5b1-a62eeca38127", [[99.215, 112.183], [73.528, 94.104], [128.569, 96.020]]],
+  ["e7703a66-88a4-44c3-b99d-b22b8418c28b", [[49.411, 45.847]]],
+  ["b0355ca4-2aec-4a08-8a4a-ac5ea8542055", [[52.863, 97.094]]],
+  ["4df0a671-7c8c-4db7-9a6d-3be6e987731e", [[77.342, 84.094], [68.684, 83.363]]],
+  ["c60fb408-5ca6-45eb-98d0-dc9a05ed7a66", [[56.234, 95.498], [64.123, 83.598]]],
+  ["c1af7c32-42e8-471f-93b6-019f2c22ed10", [[358.500, 125.750], [243.537, 381.779]]],
+  ["dd8b2c81-c9c5-4314-a069-65fa9cea3024", [[19.180, 35.757]]],
+  ["c3bda64c-61c7-4dec-9ae0-c6bb2b7a395d", [[17.689, 17.552]]],
+  ["2fc07dd0-482c-4eb5-86a0-2d48ba50fad3", [[33.407, 42.449]]],
+  ["6cca7d2f-a07b-4133-9ac3-265715be70f6", [[53.135, 36.910]]],
+  ["a3b7e066-2530-404e-9c4b-d311f569748c", [[73.669, 55.239]]],
+  ["ca8cce51-4e86-4c38-b2a0-e21facb13229", [[33.012, 39.298]]],
+  ["0de47979-bf12-4665-bf58-692b5e129b1c", [[19.456, 49.836]]],
+  ["5b2285e1-5d70-4598-8831-619911c22d5a", [[29.062, 16.095]]],
+  ["08f0037b-9233-4fe8-b7e1-c1a0c4a2913b", [[343.640, 191.713]]],
+  ["b5b956c1-bab0-4bbe-abb0-e0ab8d3f1fab", [[155.455, 202.887]]],
+];
 const PART_UNLOCK_UIDS = new Set([
   "2908dd45-9767-4c9a-aa00-871a3a0b04b5", "d26c9186-24ea-42fa-a6d3-fc6536bb2725",
   "f32ebca6-dd04-462f-a614-884dcb55ccfe", "560ee0c0-5a35-429d-9533-9b9351d82df5",
@@ -107,13 +149,13 @@ const RUIN_UIDS = new Set([
 const SPECIAL_STRUCTURES = [
   { kind: "packingStation", title: "Vegetable Packing Station", uid: "f3dda4db-8450-4e9d-a501-ec6dbf14a78a", x: 37, y: 102 },
   { kind: "packingStation", title: "Fruit Packing Station", uid: "9f3b2d02-a1b2-4717-99b8-83cae87bcb7c", x: 37, y: 102 },
-  { kind: "growlab", title: "Growlab 1", uid: "e70e6ba1-29a3-40a4-9ec3-cc2ed60a69c9", x: 135.5, y: 152 },
-  { kind: "growlab", title: "Growlab 2", uid: "d159bbf6-7b87-4073-8da7-c6cc3b85e4b5", x: 118.5, y: 114 },
-  { kind: "growlab", title: "Growlab 3", uid: "312e8d1c-de9c-479d-861a-cace1cb480f7", x: 131, y: 112 },
-  { kind: "growlab", title: "Growlab 4", uid: "b5b956c1-bab0-4bbe-abb0-e0ab8d3f1fab", x: 102.5, y: 96 },
-  { kind: "growlab", title: "Growlab 5", uid: "08f0037b-9233-4fe8-b7e1-c1a0c4a2913b", x: 295.5, y: 256 },
-  { kind: "growlab", title: "Growlab 6", uid: "8e1538ae-6169-4053-b9ae-d80258c6fb3b", x: 210, y: 334 },
-  { kind: "growlab", title: "Growlab 7", uid: "c1af7c32-42e8-471f-93b6-019f2c22ed10", x: 229, y: 194.75 },
+  { kind: "growlab", title: "Growlab 1", listTitle: "Unlocks", rewards: ["Carrot Seeds", "Large Chest"], uid: "e70e6ba1-29a3-40a4-9ec3-cc2ed60a69c9", x: 135.5, y: 152 },
+  { kind: "growlab", title: "Growlab 2", listTitle: "Unlocks", rewards: ["Redbeet Seeds", "Beehive"], uid: "d159bbf6-7b87-4073-8da7-c6cc3b85e4b5", x: 118.5, y: 114 },
+  { kind: "growlab", title: "Growlab 3", listTitle: "Unlocks", rewards: ["Banana Seeds", "Freezer"], uid: "312e8d1c-de9c-479d-861a-cace1cb480f7", x: 131, y: 112 },
+  { kind: "growlab", title: "Growlab 4", listTitle: "Unlocks", rewards: ["Blueberry Seeds", "Spud Shotgun"], uid: "b5b956c1-bab0-4bbe-abb0-e0ab8d3f1fab", x: 102.5, y: 96 },
+  { kind: "growlab", title: "Growlab 5", listTitle: "Unlocks", rewards: ["Orange Seeds", "Thruster"], uid: "08f0037b-9233-4fe8-b7e1-c1a0c4a2913b", x: 295.5, y: 256 },
+  { kind: "growlab", title: "Growlab 6", listTitle: "Unlocks", rewards: ["Broccoli Seeds", "XXL Chest"], uid: "8e1538ae-6169-4053-b9ae-d80258c6fb3b", x: 210, y: 334 },
+  { kind: "growlab", title: "Growlab 7", listTitle: "Unlocks", rewards: ["Pineapple Seeds", "Fireworks"], uid: "c1af7c32-42e8-471f-93b6-019f2c22ed10", x: 229, y: 194.75 },
 ];
 
 function rotateLocal(rotation, x, y, size) {
@@ -165,8 +207,13 @@ export function findMapMarkers(cells) {
   }
   for (const group of groups) {
     const center = group.size * CELL_SIZE / 2;
-    if (WAREHOUSE_UIDS.has(group.uid)) {
-      markers.push(markerAt(group, center, center, { kind: "warehouse", title: "Warehouse" }));
+    const warehouse = WAREHOUSES.get(group.uid);
+    if (warehouse) {
+      const suffix = warehouse.trashbot ? " (Trashbot)" : "";
+      markers.push(markerAt(group, center, center, {
+        kind: "warehouse",
+        title: `Warehouse · ${warehouse.floors} Floors${suffix}`,
+      }));
     } else if (PART_UNLOCK_UIDS.has(group.uid)) {
       markers.push(markerAt(group, center, center, { kind: "partUnlockStation", title: "Part Unlock Station" }));
     } else if (MECHANIC_UIDS.has(group.uid)) {
@@ -178,6 +225,13 @@ export function findMapMarkers(cells) {
   for (const structure of SPECIAL_STRUCTURES) {
     const group = groupsByUid.get(structure.uid)?.[0];
     if (group) markers.push(markerAt(group, structure.x, structure.y, structure));
+  }
+  for (const [uid, locations] of CAGED_FARMER_LOCATIONS) {
+    for (const group of groupsByUid.get(uid) || []) {
+      for (const [x, y] of locations) {
+        markers.push(markerAt(group, x, y, { kind: "cagedFarmer", title: "Caged Farmer" }));
+      }
+    }
   }
   return markers;
 }

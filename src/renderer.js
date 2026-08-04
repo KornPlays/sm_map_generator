@@ -33,36 +33,10 @@ async function yieldThread(signal) {
   throwIfAborted(signal);
 }
 
-async function loadBitmap(path, cache, baseUrl, signal) {
-  if (!cache.has(path)) {
-    cache.set(
-      path,
-      (async () => {
-        const response = await fetch(publicUrl(path, baseUrl), { signal });
-        if (!response.ok) return null;
-        return createImageBitmap(await response.blob());
-      })(),
-    );
-  }
-  return cache.get(path);
-}
-
-async function preloadBitmaps(paths, cache, baseUrl, signal, onProgress) {
-  const queue = [...new Set(paths)];
-  let next = 0;
-  let finished = 0;
-  const workers = Array.from({ length: Math.min(12, queue.length) }, async () => {
-    while (next < queue.length) {
-      const path = queue[next];
-      next += 1;
-      await loadBitmap(path, cache, baseUrl, signal);
-      finished += 1;
-      if (finished === queue.length || finished % 12 === 0) {
-        onProgress(`Loading map artwork… ${finished} / ${queue.length}`, 33 + Math.round((finished / queue.length) * 11));
-      }
-    }
-  });
-  await Promise.all(workers);
+async function loadBitmap(path, baseUrl, signal) {
+  const response = await fetch(publicUrl(path, baseUrl), { signal });
+  if (!response.ok) return null;
+  return createImageBitmap(await response.blob());
 }
 
 function position(x, y, cellSize) {
@@ -141,39 +115,45 @@ export async function composeMap(
   context.imageSmoothingEnabled = true;
   context.imageSmoothingQuality = "high";
 
-  const cache = new Map();
   const missing = new Set();
+  const openBitmaps = new Set();
+  const openBitmap = async (path) => {
+    const bitmap = await loadBitmap(path, baseUrl, signal);
+    if (bitmap) openBitmaps.add(bitmap);
+    return bitmap;
+  };
+  const closeBitmap = (bitmap) => {
+    if (!bitmap) return;
+    openBitmaps.delete(bitmap);
+    bitmap.close?.();
+  };
   try {
     context.fillStyle = "rgb(0, 186, 242)";
     context.fillRect(0, 0, width, height);
 
     onProgress("Preparing map artwork…", 33);
+    const singleGroups = new Map();
+    const multiGroups = new Map();
     const lakeCounts = new Map();
     for (const cell of cells) {
-      if (cell.size === 1 && cell.terrainType === 8) {
-        lakeCounts.set(cell.uid, (lakeCounts.get(cell.uid) ?? 0) + 1);
+      if (cell.size === 1) {
+        if (!singleGroups.has(cell.uid)) singleGroups.set(cell.uid, []);
+        singleGroups.get(cell.uid).push(cell);
+        if (cell.terrainType === 8) {
+          lakeCounts.set(cell.uid, (lakeCounts.get(cell.uid) ?? 0) + 1);
+        }
+      } else {
+        const key = `${cell.group}:${cell.uid}`;
+        if (!multiGroups.has(key)) multiGroups.set(key, []);
+        multiGroups.get(key).push(cell);
       }
     }
     const rankedLakes = [...lakeCounts.entries()].sort((left, right) => right[1] - left[1]);
-    const singleCells = cells.filter((cell) => cell.size === 1);
-    const groups = new Map();
-    for (const cell of cells) {
-      if (cell.size <= 1) continue;
-      const key = `${cell.group}:${cell.uid}`;
-      if (!groups.has(key)) groups.set(key, []);
-      groups.get(key).push(cell);
-    }
-    const assetPaths = singleCells.map((cell) => `assets/tiles/${cell.uid}.webp`);
-    assetPaths.push("assets/excavation_island_special.webp");
-    for (const members of groups.values()) {
-      if (!EXCAVATION_SPECIAL_UIDS.has(members[0].uid)) assetPaths.push(`assets/${members[0].uid}.webp`);
-    }
-    await preloadBitmaps(assetPaths, cache, baseUrl, signal, onProgress);
 
     let ocean = null;
     let oceanUid = null;
     for (const [uid] of rankedLakes) {
-      ocean = await loadBitmap(`assets/tiles/${uid}.webp`, cache, baseUrl, signal);
+      ocean = await openBitmap(`assets/tiles/${uid}.webp`);
       if (ocean) {
         oceanUid = uid;
         break;
@@ -199,47 +179,62 @@ export async function composeMap(
       tileCanvas.height = 1;
     }
 
-    const excavation = await loadBitmap("assets/excavation_island_special.webp", cache, baseUrl, signal);
+    const excavation = await openBitmap("assets/excavation_island_special.webp");
     if (excavation) {
       const [x, y] = position(32, 47, cellSize);
       context.drawImage(excavation, x, y, 32 * cellSize, 32 * cellSize);
     }
+    closeBitmap(excavation);
 
     // The ocean pattern already covers ordinary water cells. Water inside the
     // 32x32 excavation composite must still be repainted afterward, because
     // those cells intentionally mask parts of the calibrated island image.
-    const terrainCells = singleCells.filter(
-      (cell) => cell.uid !== oceanUid || isInsideExcavationComposite(cell),
-    );
-    onProgress(`Drawing terrain tiles… 0 / ${terrainCells.length.toLocaleString()}`, 48);
-    for (let index = 0; index < terrainCells.length; index += 1) {
-      const cell = terrainCells[index];
-      const image = await loadBitmap(`assets/tiles/${cell.uid}.webp`, cache, baseUrl, signal);
-      if (image) {
-        const [x, y] = position(cell.x, cell.y, cellSize);
-        drawRotated(context, image, x, y, cellSize, cell.rotation);
-      } else {
-        missing.add(cell.uid);
-      }
-      if (index % 300 === 0) {
-        const finished = index + 1;
-        const percent = 48 + Math.round((finished / terrainCells.length) * 33);
-        onProgress(
-          `Drawing terrain tiles… ${finished.toLocaleString()} / ${terrainCells.length.toLocaleString()}`,
-          percent,
-        );
-        await yieldThread(signal);
-      }
+    let terrainTotal = 0;
+    for (const [uid, members] of singleGroups) {
+      if (uid !== oceanUid) terrainTotal += members.length;
+      else for (const cell of members) terrainTotal += Number(isInsideExcavationComposite(cell));
     }
+    let terrainFinished = 0;
+    const terrainEntries = [...singleGroups.entries()];
+    const terrainBatchSize = 4;
+    onProgress(`Drawing terrain tiles… 0 / ${terrainTotal.toLocaleString()}`, 48);
+    for (let offset = 0; offset < terrainEntries.length; offset += terrainBatchSize) {
+      const batch = terrainEntries.slice(offset, offset + terrainBatchSize);
+      const images = await Promise.all(batch.map(([uid]) => (
+        uid === oceanUid ? ocean : openBitmap(`assets/tiles/${uid}.webp`)
+      )));
+      for (let batchIndex = 0; batchIndex < batch.length; batchIndex += 1) {
+        const [uid, members] = batch[batchIndex];
+        const image = images[batchIndex];
+        for (const cell of members) {
+          if (uid === oceanUid && !isInsideExcavationComposite(cell)) continue;
+          if (image) {
+            const [x, y] = position(cell.x, cell.y, cellSize);
+            drawRotated(context, image, x, y, cellSize, cell.rotation);
+          } else {
+            missing.add(uid);
+          }
+          terrainFinished += 1;
+        }
+        if (image !== ocean) closeBitmap(image);
+      }
+      const percent = 48 + Math.round((terrainFinished / terrainTotal) * 33);
+      onProgress(
+        `Drawing terrain tiles… ${terrainFinished.toLocaleString()} / ${terrainTotal.toLocaleString()}`,
+        percent,
+      );
+      await yieldThread(signal);
+    }
+    closeBitmap(ocean);
 
     onProgress("Placing landmarks and multi-cell terrain…", 82);
     let groupIndex = 0;
-    for (const members of groups.values()) {
+    for (const members of multiGroups.values()) {
       const { uid, size, rotation } = members[0];
       // The calibrated 32x32 excavation image replaces these two raw 16x16
       // source captures. They are stitching inputs, not standalone overlays.
       if (!EXCAVATION_SPECIAL_UIDS.has(uid)) {
-        const image = await loadBitmap(`assets/${uid}.webp`, cache, baseUrl, signal);
+        const image = missing.has(uid) ? null : await openBitmap(`assets/${uid}.webp`);
         if (!image) {
           missing.add(uid);
         } else {
@@ -248,6 +243,7 @@ export async function composeMap(
           const [x, y] = position(originX, originY + size - 1, cellSize);
           drawRotated(context, image, x, y, size * cellSize, rotation);
         }
+        closeBitmap(image);
       }
       groupIndex += 1;
       if (groupIndex % 30 === 0) await yieldThread(signal);
@@ -264,10 +260,7 @@ export async function composeMap(
   } finally {
     canvas.width = 1;
     canvas.height = 1;
-    const bitmaps = await Promise.allSettled(cache.values());
-    for (const result of bitmaps) {
-      if (result.status === "fulfilled") result.value?.close?.();
-    }
+    for (const bitmap of openBitmaps) bitmap.close?.();
   }
 }
 

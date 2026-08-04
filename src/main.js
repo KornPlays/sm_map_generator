@@ -43,7 +43,7 @@ const mapViewer = setupMapViewer({
   },
   resolveMarkers: generateMapMarkers,
 });
-void mapViewer.restoreLastMap();
+const lastMapRestore = mapViewer.restoreLastMap();
 
 function setGenerating(generating) {
   form.dataset.generating = String(generating);
@@ -116,13 +116,15 @@ saveInput.addEventListener("change", async () => {
 function generateInWorker(seed, cellSize, signal, onProgress) {
   return new Promise((resolve, reject) => {
     const worker = new Worker(new URL("./generator-worker.js", import.meta.url), { type: "module" });
+    let rendererWorker = null;
     activeWorker = worker;
     let settled = false;
 
     const cleanup = () => {
       signal.removeEventListener("abort", handleAbort);
       worker.terminate();
-      if (activeWorker === worker) activeWorker = null;
+      rendererWorker?.terminate();
+      if (activeWorker === worker || activeWorker === rendererWorker) activeWorker = null;
     };
     const finish = (callback, value) => {
       if (settled) return;
@@ -143,24 +145,48 @@ function generateInWorker(seed, cellSize, signal, onProgress) {
       } else if (message?.type === "result") {
         finish(resolve, message);
       } else if (message?.type === "cells") {
+        // Release the Lua WebAssembly heap before allocating the large render
+        // canvas. Keeping generation and rendering in separate workers lowers
+        // the peak even when the browser cannot return WASM pages to the OS.
+        worker.terminate();
+        if (activeWorker === worker) activeWorker = null;
+        if (typeof OffscreenCanvas !== "undefined") {
+          rendererWorker = new Worker(new URL("./renderer-worker.js", import.meta.url), { type: "module" });
+          activeWorker = rendererWorker;
+          rendererWorker.addEventListener("error", (renderError) => {
+            finish(reject, new Error(renderError.message || "The background map renderer stopped unexpectedly."));
+          });
+          rendererWorker.addEventListener("message", (renderEvent) => {
+            const renderMessage = renderEvent.data;
+            if (renderMessage?.type === "progress") {
+              onProgress(renderMessage.message, renderMessage.percent);
+            } else if (renderMessage?.type === "result") {
+              finish(resolve, { ...renderMessage, mapMarkers: message.mapMarkers });
+            } else if (renderMessage?.type === "error") {
+              finish(reject, new Error(renderMessage.message || "Map rendering failed."));
+            }
+          });
+          rendererWorker.postMessage({
+            type: "render",
+            cells: message.cells,
+            cellSize,
+            baseUrl: document.baseURI,
+            seed,
+          });
+          return;
+        }
+
         // Older browsers without OffscreenCanvas still keep Lua generation
         // off the UI thread; only the final composition falls back here.
-        cleanup();
         try {
           const rendered = await composeMap(message.cells, cellSize, onProgress, {
             baseUrl: document.baseURI,
             signal,
             seed,
           });
-          if (!settled) {
-            settled = true;
-            resolve({ ...rendered, seed, mapMarkers: message.mapMarkers });
-          }
+          finish(resolve, { ...rendered, seed, mapMarkers: message.mapMarkers });
         } catch (error) {
-          if (!settled) {
-            settled = true;
-            reject(error);
-          }
+          finish(reject, error);
         }
       } else if (message?.type === "error") {
         finish(reject, new Error(message.message || "Map generation failed."));
@@ -226,6 +252,9 @@ form.addEventListener("submit", async (event) => {
   }
 
   const controller = new AbortController();
+  await lastMapRestore;
+  const suspendedMap = mapViewer.suspendMap();
+  let generatedMap = false;
   activeController = controller;
   activeSeed = seed;
   setGenerating(true);
@@ -247,6 +276,7 @@ form.addEventListener("submit", async (event) => {
       seed,
       mapMarkers: rendered.mapMarkers,
     });
+    generatedMap = true;
     if (rendered.missing.length) {
       missing.hidden = false;
       missing.textContent = `${rendered.missing.length} tile image${rendered.missing.length === 1 ? " is" : "s are"} missing: ${rendered.missing.join(", ")}`;
@@ -265,6 +295,7 @@ form.addEventListener("submit", async (event) => {
       setStatus("Map generation failed", error?.message || String(error), "error");
     }
   } finally {
+    if (suspendedMap && !generatedMap) mapViewer.resumeMap();
     if (activeController === controller) {
       activeController = null;
       activeSeed = null;
