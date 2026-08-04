@@ -1,0 +1,24 @@
+# Dependencies and generated deployment output
+node_modules/
+dist/
+public/vendor/fengari-web.js
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Saves, game binaries, archives, and local artifacts must never be published.
+*.db
+*.dll
+*.exe
+*.tar
+*.zip
+*.7z
+*.log
+npm-debug.log*
+.DS_Store

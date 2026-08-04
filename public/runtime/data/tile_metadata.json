@@ -1,0 +1,4390 @@
+{
+  "$CONTENT_DATA/ExampleMods/Templates/Empty Custom Game/Terrain/Tiles/example.tile": {
+    "size": 1,
+    "uid": "957337e3-615f-4a29-a50d-c22b61ade237"
+  },
+  "$CONTENT_DATA/ExampleMods/Templates/Survival Custom Game/Terrain/Tiles/example.tile": {
+    "size": 1,
+    "uid": "8fb1a873-6395-4da2-bc6a-e30ab7e0b148"
+  },
+  "$CONTENT_DATA/Menu/MAINMENU256_01.tile": {
+    "size": 4,
+    "uid": "b3eaa2c5-49c1-417e-8e5a-ee20f2ed880a"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/Auto/BORDERFADE128_01.tile": {
+    "size": 2,
+    "uid": "908f1602-93a4-445a-8780-645f0e12daff"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/Auto/BORDERFADE128_02.tile": {
+    "size": 2,
+    "uid": "ca282e1d-f3e1-40a4-ace0-0ebb59045dd7"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/Auto/DESERT64_01.tile": {
+    "size": 1,
+    "uid": "486f1659-0227-49aa-a590-5ba835618ad9"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/Auto/DESERT64_02.tile": {
+    "size": 1,
+    "uid": "c258218b-33fa-4ce9-9e5d-8bd69bd51b65"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/Auto/DESERT64_03.tile": {
+    "size": 1,
+    "uid": "b3ccd45e-2562-470a-9f7b-8e53bf59c97d"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/Auto/DESERT64_04.tile": {
+    "size": 1,
+    "uid": "ca556f2a-6402-48db-95cd-ed7665b8feb8"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/Auto/DESERT64_05.tile": {
+    "size": 1,
+    "uid": "80e3ac14-ed0f-45b8-ac81-49da0af4495f"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/Auto/FenceE_01.tile": {
+    "size": 1,
+    "uid": "06b2c828-8c2a-4dd9-8c62-7bb2c55c29d9"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/Auto/FenceE_02.tile": {
+    "size": 1,
+    "uid": "700a984e-55cd-4112-b8f3-bff65a0fd8ba"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/Auto/FenceE_03.tile": {
+    "size": 1,
+    "uid": "cf83d91f-3027-4d17-b246-c4e9fc8d3a87"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/Auto/FenceNE.tile": {
+    "size": 1,
+    "uid": "4d4f6758-8f9e-4401-9648-dc46336721f7"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/Auto/FenceNW.tile": {
+    "size": 1,
+    "uid": "eb9466d1-790c-4dba-820b-98890462c94a"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/Auto/FenceN_01.tile": {
+    "size": 1,
+    "uid": "df09e584-e1d4-4dbf-bb78-c952e85952a4"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/Auto/FenceN_02.tile": {
+    "size": 1,
+    "uid": "c71fd57c-7553-4cb2-ab02-936938dcb893"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/Auto/FenceN_03.tile": {
+    "size": 1,
+    "uid": "991138cb-caa6-4a03-bf97-9b84c2c65abe"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/Auto/FenceSE.tile": {
+    "size": 1,
+    "uid": "0677b88c-933b-4ef1-979d-6dd3d4219add"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/Auto/FenceSW.tile": {
+    "size": 1,
+    "uid": "a4ceb1fb-adc8-4346-ad4c-2f36cba4385e"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/Auto/FenceS_01.tile": {
+    "size": 1,
+    "uid": "e98ce97b-3137-4ef3-8386-499970f69a52"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/Auto/FenceS_02.tile": {
+    "size": 1,
+    "uid": "067932d2-703e-47f4-92dd-37c31f3abb0c"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/Auto/FenceS_03.tile": {
+    "size": 1,
+    "uid": "42efce6e-46a3-4421-9b4f-2a69f30e0cbe"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/Auto/FenceW_01.tile": {
+    "size": 1,
+    "uid": "bb1fe4e5-56fa-4292-8fed-8a4feb9f2b82"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/Auto/FenceW_02.tile": {
+    "size": 1,
+    "uid": "eb6adb0c-05e1-45ea-816a-0a3fb4ed1f26"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/Auto/FenceW_03.tile": {
+    "size": 1,
+    "uid": "05f3efe1-859e-4e81-acf5-9e2cf992744d"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/FOREST256_01.tile": {
+    "size": 4,
+    "uid": "b73d90a4-918b-459a-8a9a-16baa8fd60d8"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND128_01.tile": {
+    "size": 2,
+    "uid": "113cb5c7-479f-4bdb-ab2a-ae0da359beda"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND128_02.tile": {
+    "size": 2,
+    "uid": "416487b7-5b89-4538-9317-e956f74fab54"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND128_03.tile": {
+    "size": 2,
+    "uid": "2ec279f1-b77b-4a15-958b-f3a8f2266461"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND128_04.tile": {
+    "size": 2,
+    "uid": "3c25c43b-1333-4f7c-9e26-1a31ecd8587c"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND128_05.tile": {
+    "size": 2,
+    "uid": "a5db966d-4fef-4aeb-850b-266dcd1bee63"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND128_06.tile": {
+    "size": 2,
+    "uid": "27b13142-b11f-4f40-8f8c-c85129fe2b9c"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND128_07.tile": {
+    "size": 2,
+    "uid": "9f02b0b8-afc3-4b09-9024-b1fa19476610"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND128_08.tile": {
+    "size": 2,
+    "uid": "2d4d1941-208a-4d10-b5a8-a2ceb8422401"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND256_01.tile": {
+    "size": 4,
+    "uid": "e1fdaeca-c7da-4958-99c4-db94331ce37c"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND256_02.tile": {
+    "size": 4,
+    "uid": "4889c5c7-ea7f-4674-8af6-be5b5610801e"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND256_03.tile": {
+    "size": 4,
+    "uid": "bbf6cc51-df82-472c-99ae-5e83beaebfd7"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND256_04.tile": {
+    "size": 4,
+    "uid": "a913c3bd-54b4-40b8-be39-b76e1caac63b"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND256_05.tile": {
+    "size": 4,
+    "uid": "61bdb6f3-1bae-40e2-986c-c11dfc0bbd8e"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND256_06.tile": {
+    "size": 4,
+    "uid": "01bcdbbc-a980-47b6-91a7-dcf98c66bfdc"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND256_07.tile": {
+    "size": 4,
+    "uid": "e9260bf7-c49a-4759-8e1c-d2d2cdd2f2e7"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND256_08.tile": {
+    "size": 4,
+    "uid": "da260302-96ce-4450-81fc-335c34fdd9ed"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND256_09.tile": {
+    "size": 4,
+    "uid": "e62bbb13-c675-40f6-8bdb-1f58e7061550"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND256_10.tile": {
+    "size": 4,
+    "uid": "8b01bf3f-27b8-409c-b7a5-51df1cc3a790"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND256_11.tile": {
+    "size": 4,
+    "uid": "d106c9a9-2598-411a-9fe0-d6d5bf706aee"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND256_12.tile": {
+    "size": 4,
+    "uid": "3c37a480-7779-4e9c-bbba-a9d0fc0ff7e6"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND512_01.tile": {
+    "size": 8,
+    "uid": "43e26adc-7f6f-4e97-931d-2fcaac5dc79a"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND512_02.tile": {
+    "size": 8,
+    "uid": "d1f5372c-c966-47d0-b50a-5bdae433d1ae"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND512_03.tile": {
+    "size": 8,
+    "uid": "68c6ba67-e6fc-456e-ba95-64d821368333"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND512_04.tile": {
+    "size": 8,
+    "uid": "b054e1dc-0a54-4c3a-addc-2653f4040790"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND512_05.tile": {
+    "size": 8,
+    "uid": "731115bb-96ba-46f8-b06a-26c397991a0b"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND64_01.tile": {
+    "size": 1,
+    "uid": "bc57ddfc-3fc1-45d7-900a-8aef764e051a"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND64_02.tile": {
+    "size": 1,
+    "uid": "0d75c0de-a5e8-47c2-a811-4e4ef88054ba"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND64_03.tile": {
+    "size": 1,
+    "uid": "b346cdca-4fbd-4759-ad88-b3e7f2decb1e"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND64_04.tile": {
+    "size": 1,
+    "uid": "3227b8f5-dfa2-4001-a308-571d448c62ec"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND64_05.tile": {
+    "size": 1,
+    "uid": "b6d61c8a-a129-4637-801a-875879920e62"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND64_06.tile": {
+    "size": 1,
+    "uid": "0f2e1ff5-c41d-4673-962b-38397f5dac19"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND64_07.tile": {
+    "size": 1,
+    "uid": "928829cb-4d49-4793-9cf7-bfc01c7ee7f7"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND64_08.tile": {
+    "size": 1,
+    "uid": "e3595e53-dd75-4908-8f5e-3d40dba8989d"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND64_09.tile": {
+    "size": 1,
+    "uid": "b19e48ce-4e78-4366-9ade-e74c1e6c558e"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND64_10.tile": {
+    "size": 1,
+    "uid": "cdb3b8a1-73d8-42fd-8240-635c4e848360"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/GROUND64_11.tile": {
+    "size": 1,
+    "uid": "44f88bd0-e05c-47b1-8472-8e4ea03dce02"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/HILLS256_01.tile": {
+    "size": 4,
+    "uid": "f6523605-c49e-4767-bd57-f9f65f3a1312"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/HILLS512_01.tile": {
+    "size": 8,
+    "uid": "732f5f64-3153-4b1c-9237-8d2f974db6e3"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW128_01.tile": {
+    "size": 2,
+    "uid": "fb7c034f-2754-4c85-a99e-be4528faea06"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW128_02.tile": {
+    "size": 2,
+    "uid": "23b3dddd-9706-467c-b725-c99d160a7ebe"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW128_03.tile": {
+    "size": 2,
+    "uid": "80b5b095-ebb0-431a-9eb7-f7f3837490aa"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW128_04.tile": {
+    "size": 2,
+    "uid": "1a39bfdc-b55d-483a-824d-442ca50b5631"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW128_05.tile": {
+    "size": 2,
+    "uid": "dcf5737f-478b-4bfe-917f-115cba8ab21e"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW128_06.tile": {
+    "size": 2,
+    "uid": "bd21f1bf-b4c7-41e7-95ed-841423664ead"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW128_07.tile": {
+    "size": 2,
+    "uid": "8cd97785-6456-4914-919b-f6c3581c2bc6"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW128_08.tile": {
+    "size": 2,
+    "uid": "a5d6e104-23ab-4302-9827-66f84319e3fa"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW128_09.tile": {
+    "size": 2,
+    "uid": "2e96885b-4396-4d88-87bd-e45c74f34f39"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW128_10.tile": {
+    "size": 2,
+    "uid": "5a7484b4-e1b5-43cf-9292-3f5a8f58bfe0"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW128_11.tile": {
+    "size": 2,
+    "uid": "2c33cb6c-6ef3-43ec-ad4e-bf4d75c48d47"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW128_12.tile": {
+    "size": 2,
+    "uid": "f8baf522-02e9-46a1-8f90-e78735cf07dd"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW256_01.tile": {
+    "size": 4,
+    "uid": "7d318fdc-90f6-4c84-9ce6-2c6c0eaf5b5f"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW64_01.tile": {
+    "size": 1,
+    "uid": "1cbb7c68-a163-44d4-b2a4-7d1c07ad7f2d"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW64_02.tile": {
+    "size": 1,
+    "uid": "eeb71457-f5e9-4501-b0f1-890d3868eeef"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW64_03.tile": {
+    "size": 1,
+    "uid": "72894750-0660-45a1-9991-3ec99467dce8"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW64_04.tile": {
+    "size": 1,
+    "uid": "ef80544c-33c2-4d72-8f75-813af3d992b0"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW64_05.tile": {
+    "size": 1,
+    "uid": "5c548209-96b2-4c0c-a202-57787b395ebd"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW64_06.tile": {
+    "size": 1,
+    "uid": "b51fe9ad-0378-4dea-af98-08323fa3d945"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW64_07.tile": {
+    "size": 1,
+    "uid": "c19afeb1-1cba-4f27-903e-772294944a0d"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW64_08.tile": {
+    "size": 1,
+    "uid": "9bfa92f7-01ae-41aa-8b11-14da4b68496e"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW64_09.tile": {
+    "size": 1,
+    "uid": "570a32d7-1ae5-4cc1-83c1-d608ac9f3b67"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW64_10.tile": {
+    "size": 1,
+    "uid": "b7344e6f-7c4a-4dcc-be93-622055b48d70"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW64_11.tile": {
+    "size": 1,
+    "uid": "a971366f-940f-477d-9757-290dd4828b3b"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW64_12.tile": {
+    "size": 1,
+    "uid": "c06c2eba-2819-46b8-88e0-e6c46b39355a"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW64_13.tile": {
+    "size": 1,
+    "uid": "9d692d15-b266-4d62-9b2e-73837534d0a7"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW64_14.tile": {
+    "size": 1,
+    "uid": "86574b72-6cdb-4f7a-a2e6-7eecafdcd2ff"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW64_15.tile": {
+    "size": 1,
+    "uid": "780c1a4b-45e2-4ae3-af59-0223f5e94781"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW64_16.tile": {
+    "size": 1,
+    "uid": "a1ff142c-da10-4e78-9c6c-06297b1b816d"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW64_17.tile": {
+    "size": 1,
+    "uid": "b9f5daaf-c6e4-43fa-ba35-3993fc17d852"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW64_18.tile": {
+    "size": 1,
+    "uid": "f25e522e-1724-4ea4-adff-92ae1c9231ae"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW64_19.tile": {
+    "size": 1,
+    "uid": "45f2b662-c6bd-4651-8cb2-aa6027d60558"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW64_20.tile": {
+    "size": 1,
+    "uid": "b4e76010-d082-4d1b-b401-f26b0dc0ba05"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/MEADOW64_21.tile": {
+    "size": 1,
+    "uid": "c186b1d2-f718-47e7-9ffc-446d22ed15bd"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/Road_Dirt_Bend_01.tile": {
+    "size": 1,
+    "uid": "6f8fa1c5-85f2-404f-8129-476b914e6219"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/Road_Dirt_End_01.tile": {
+    "size": 1,
+    "uid": "ce3b4cef-2f51-487c-85eb-5d8aa6a8f6d6"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/Road_Dirt_Four-way_01.tile": {
+    "size": 1,
+    "uid": "704f4efd-7178-45f9-b4f4-97aa7b7b6bcf"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/Road_Dirt_Straight_01.tile": {
+    "size": 1,
+    "uid": "7c93d6b5-99c1-46e6-ba70-2f5d56c7ac30"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/Road_Dirt_Three-way_01.tile": {
+    "size": 1,
+    "uid": "29660086-c71b-4ef4-aae3-3e851ce24a51"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ClassicCreativeTiles/START64_01.tile": {
+    "size": 1,
+    "uid": "a31d56d8-2f93-4d92-a537-8ce1cc84ced0"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/BORDERFADE128_01.tile": {
+    "size": 2,
+    "uid": "73c69148-aff7-4123-a672-cdb708156c69"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/BORDERFADE128_02.tile": {
+    "size": 2,
+    "uid": "f74a7fa8-c718-45cb-a74c-d3c938dc396f"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/DESERT64_01.tile": {
+    "size": 1,
+    "uid": "b5313578-bcda-4636-9663-cfbbab9dd62a"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/DESERT64_02.tile": {
+    "size": 1,
+    "uid": "8d5a7399-0944-433e-9638-76d29c003716"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/DESERT64_03.tile": {
+    "size": 1,
+    "uid": "27a71c12-8aaa-4b76-94c0-197c22083cbe"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/DESERT64_04.tile": {
+    "size": 1,
+    "uid": "d077f998-aeb7-4a87-9695-bd1937cc16d5"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/DESERT64_05.tile": {
+    "size": 1,
+    "uid": "074160f0-8e46-489f-a99c-101be783f3b3"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/DesertLake(0001)_01.tile": {
+    "size": 1,
+    "uid": "8b4c4b5e-cca2-4905-af8f-9b693cc2ea60"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/DesertLake(0001)_02.tile": {
+    "size": 1,
+    "uid": "1827b1cc-c9f0-45d3-9144-444dc0b71ebd"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/DesertLake(0001)_03.tile": {
+    "size": 1,
+    "uid": "975f16d4-1bab-4a9b-95ab-696d0785f73d"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/DesertLake(0001)_04.tile": {
+    "size": 1,
+    "uid": "0414af34-3559-4588-9309-6bb570ccf0e0"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/DesertLake(0001)_05.tile": {
+    "size": 1,
+    "uid": "b5bfcab2-b538-41e8-9dd7-2995ccf5f561"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/DesertLake(0001)_06.tile": {
+    "size": 1,
+    "uid": "d360bc7c-4f93-4674-baad-730381217fd5"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/DesertLake(0001)_07.tile": {
+    "size": 1,
+    "uid": "dfdf3a22-21db-4beb-b977-1e21e257a66b"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/DesertLake(0001)_08.tile": {
+    "size": 1,
+    "uid": "91c93cf0-7932-47e0-85dc-18d04916b7db"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/DesertLake(0001)_09.tile": {
+    "size": 1,
+    "uid": "81380079-d8c0-4dc3-a7bb-6191687f0463"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/DesertLake(0001)_10.tile": {
+    "size": 1,
+    "uid": "d8ca8ff1-edd2-4c89-a098-70d33aa8e226"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/DesertLake(0001)_11.tile": {
+    "size": 1,
+    "uid": "335c2744-f591-4cd0-bf7a-f4f6c3c7cc24"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/DesertLake(0011)_01.tile": {
+    "size": 1,
+    "uid": "d192b581-b0a4-44e9-8f53-b5f23bc04dd7"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/DesertLake(0011)_02.tile": {
+    "size": 1,
+    "uid": "2a3485f9-b079-47e0-8d98-a39a3f2ea5d2"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/DesertLake(0011)_03.tile": {
+    "size": 1,
+    "uid": "49bff651-e3ed-442e-8331-1fbcb382c33a"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/DesertLake(0011)_04.tile": {
+    "size": 1,
+    "uid": "e6c89d46-8365-4cf4-b376-ae033fd6cab5"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/DesertLake(0011)_05.tile": {
+    "size": 1,
+    "uid": "87bdd4b2-1dd1-41ba-869a-4f64ab6cabfc"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/DesertLake(0011)_06.tile": {
+    "size": 1,
+    "uid": "7b4ea912-162f-4d83-a62c-6891cae79731"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/DesertLake(0011)_07.tile": {
+    "size": 1,
+    "uid": "e6725674-2261-415a-a60a-5bd7fd81efa7"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/DesertLake(0011)_08.tile": {
+    "size": 1,
+    "uid": "4959edfb-30fb-4f0f-b4df-49a01eedb36d"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/DesertLake(0011)_09.tile": {
+    "size": 1,
+    "uid": "be9db523-a43e-45b3-9a81-9af324834910"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/DesertLake(0011)_10.tile": {
+    "size": 1,
+    "uid": "5983cbed-d2d4-42af-ac9b-b0b377ca6d7e"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/DesertLake(0011)_11.tile": {
+    "size": 1,
+    "uid": "d34b0cea-68eb-4297-b97f-3f56f9c16c67"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/DesertLake(0011)_12.tile": {
+    "size": 1,
+    "uid": "8db8a9d9-ded1-4b33-a9b5-f066a5f7fc92"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/DesertLake(0011)_13.tile": {
+    "size": 1,
+    "uid": "6e6096d4-90f5-46e7-b3da-6a9dd5faed8f"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/DesertLake(0011)_14.tile": {
+    "size": 1,
+    "uid": "ef9c4b82-b7aa-4161-a39d-6f33d98ed062"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/FenceE_01.tile": {
+    "size": 1,
+    "uid": "319dbeb3-3fa8-45ef-b70c-4112d8c005dd"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/FenceE_02.tile": {
+    "size": 1,
+    "uid": "6a8753c5-3599-49a3-94b3-8c15fbb6666c"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/FenceE_03.tile": {
+    "size": 1,
+    "uid": "ef950854-870c-48a9-8116-9e048b24c28d"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/FenceNE.tile": {
+    "size": 1,
+    "uid": "3e8236be-8e6e-4b52-b89f-e5900c08f7e2"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/FenceNW.tile": {
+    "size": 1,
+    "uid": "7419daf9-646e-4ff5-b40d-dab34a77c5ee"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/FenceN_01.tile": {
+    "size": 1,
+    "uid": "5ed3dbfa-2147-41ac-92bd-4aafb8a7c555"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/FenceN_02.tile": {
+    "size": 1,
+    "uid": "21892c3c-18d1-4767-9c05-1f85bb3d2a58"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/FenceN_03.tile": {
+    "size": 1,
+    "uid": "37ce2804-d815-422c-a3eb-937f322aec4e"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/FenceSE.tile": {
+    "size": 1,
+    "uid": "fb1ce356-c739-45bc-9277-0806698b247a"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/FenceSW.tile": {
+    "size": 1,
+    "uid": "554b09ba-7d91-4729-ba37-c19f9a043f47"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/FenceS_01.tile": {
+    "size": 1,
+    "uid": "f205ff28-c6f3-4d3b-b469-7a7ad75acf84"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/FenceS_02.tile": {
+    "size": 1,
+    "uid": "9c5d0da0-89d2-422c-8df1-2b224340c59d"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/FenceS_03.tile": {
+    "size": 1,
+    "uid": "8003c680-378b-4ce9-ad07-b3ee145c85b4"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/FenceW_01.tile": {
+    "size": 1,
+    "uid": "67edea0c-9908-4b71-a227-2a82d7a5b57a"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/FenceW_02.tile": {
+    "size": 1,
+    "uid": "f73abfba-44ca-4d97-9363-9255b1e9f1dc"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/FenceW_03.tile": {
+    "size": 1,
+    "uid": "5bdc534e-2836-4bf5-9153-40e8f4f046fb"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/Flatterrain_FenceE_01.tile": {
+    "size": 1,
+    "uid": "42bf4a1e-6312-4694-a435-5254a7717e90"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/Flatterrain_FenceNE.tile": {
+    "size": 1,
+    "uid": "c789d001-c3da-4011-a864-a5322a61811c"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/Flatterrain_FenceNW.tile": {
+    "size": 1,
+    "uid": "ed44fdd6-3432-4810-a451-d77fbb0dcbda"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/Flatterrain_FenceN_01.tile": {
+    "size": 1,
+    "uid": "bbbe1229-7131-42a5-9346-3674cb6bac20"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/Flatterrain_FenceSE.tile": {
+    "size": 1,
+    "uid": "460cd779-2783-4cc4-9404-acedc0f0e4ba"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/Flatterrain_FenceSW.tile": {
+    "size": 1,
+    "uid": "7d3dc50c-7e94-4094-b79c-1df66977bc40"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/Flatterrain_FenceS_01.tile": {
+    "size": 1,
+    "uid": "f3e298ed-b01f-4b70-8531-0191ef00c7a9"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Auto/Flatterrain_FenceW_01.tile": {
+    "size": 1,
+    "uid": "42588bef-c2d0-4646-a82a-c1737a751fc3"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/CampingSpot_AutumnForest_64_01.tile": {
+    "size": 1,
+    "uid": "16a6315e-897a-4186-abe9-cdf83470757a"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/CampingSpot_AutumnForest_64_02.tile": {
+    "size": 1,
+    "uid": "05b6d448-59fa-4abd-8986-5e331eb49af1"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/CampingSpot_AutumnForest_64_03.tile": {
+    "size": 1,
+    "uid": "9b11721e-3df5-438e-92a3-9ce08c5a8e84"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/CampingSpot_BurntForest_64_01.tile": {
+    "size": 1,
+    "uid": "0556fb22-cacc-4402-8d7c-6cfd6f5d39ce"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/CampingSpot_Forest_64_01.tile": {
+    "size": 1,
+    "uid": "afa0fd48-9c11-43c0-8519-def13c56eb7f"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/CampingSpot_Forest_64_02.tile": {
+    "size": 1,
+    "uid": "bfd3e6e5-bd62-4bb9-8ab5-a12d2d44ffa3"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/CampingSpot_Forest_64_03.tile": {
+    "size": 1,
+    "uid": "2cc399c0-7f60-4737-8ce9-dfebe1cff997"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/CampingSpot_Forest_64_04.tile": {
+    "size": 1,
+    "uid": "2baccd93-fb01-49ba-bbce-f26bd6bba53c"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/CampingSpot_Forest_64_05.tile": {
+    "size": 1,
+    "uid": "f7862697-5c60-412d-8508-2e37e8ec7d16"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/CampingSpot_Forest_64_06.tile": {
+    "size": 1,
+    "uid": "150b28d3-2c48-40b8-a657-907629c63637"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/CampingSpot_Forest_64_07.tile": {
+    "size": 1,
+    "uid": "139ff089-19e7-4c65-b02e-0bcdb30e4600"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/CampingSpot_Meadow_64_01.tile": {
+    "size": 1,
+    "uid": "e4fbd2dd-6d4a-4bfa-a311-6ae40fdd0f64"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/CampingSpot_WaterFront_256_01.tile": {
+    "size": 4,
+    "uid": "33f54ce4-2287-4d9c-a5b1-a62eeca38127"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/ChemicalLake_128_01.tile": {
+    "size": 2,
+    "uid": "e7703a66-88a4-44c3-b99d-b22b8418c28b"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/ChemicalLake_128_02.tile": {
+    "size": 2,
+    "uid": "b0355ca4-2aec-4a08-8a4a-ac5ea8542055"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/ChemicalLake_128_03.tile": {
+    "size": 2,
+    "uid": "4df0a671-7c8c-4db7-9a6d-3be6e987731e"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/CrashedShip_256_01.tile": {
+    "size": 4,
+    "uid": "7736cd40-0adf-459b-8ffc-d0fa4caa5f59"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/FOREST256_01.tile": {
+    "size": 4,
+    "uid": "8b03fd47-e4db-4ba7-94f8-c8b83a94201b"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/FarmbotGraveyard_256_01.tile": {
+    "size": 4,
+    "uid": "25b787f7-f1f0-4191-985e-0cbbc22821c8"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/FarmbotGraveyard_256_02.tile": {
+    "size": 4,
+    "uid": "f245182c-5f04-462a-b58f-258ec9ad6992"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/FarmingPatch_64_01.tile": {
+    "size": 1,
+    "uid": "761f7dca-1931-4efc-ad90-22c970ce9ce4"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/FarmingPatch_64_02.tile": {
+    "size": 1,
+    "uid": "52e21267-288f-483f-acd9-9e5e84adc4e7"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/FarmingPatch_64_03.tile": {
+    "size": 1,
+    "uid": "8a2d4fa6-d97a-46e8-b7de-198b9eb54353"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND128_01.tile": {
+    "size": 2,
+    "uid": "3781991f-61dd-4de8-9aff-e4023181a3dd"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND128_02.tile": {
+    "size": 2,
+    "uid": "8596608c-6b18-44f8-99ca-fc6b56e2a853"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND128_03.tile": {
+    "size": 2,
+    "uid": "6014acc0-6a1f-42c9-ae29-6636d40a3834"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND128_04.tile": {
+    "size": 2,
+    "uid": "2c24d6e2-ef8b-44b3-a812-da4dd81f96de"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND128_05.tile": {
+    "size": 2,
+    "uid": "59e3bec9-a845-4292-bdde-fd1f54a07d2f"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND128_06.tile": {
+    "size": 2,
+    "uid": "e811d77d-2319-4cfb-b854-6c1554c61315"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND128_07.tile": {
+    "size": 2,
+    "uid": "f705f6e0-1caf-46d9-a2eb-5db854aa6040"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND128_08.tile": {
+    "size": 2,
+    "uid": "75377fbb-5f41-4d9f-8bd2-f22ab9399ee7"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND256_01.tile": {
+    "size": 4,
+    "uid": "610c03f5-7eeb-44c2-9369-56f77b301acf"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND256_02.tile": {
+    "size": 4,
+    "uid": "8009c74e-5cf8-42d6-9ab5-8ca7a8b3bb50"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND256_03.tile": {
+    "size": 4,
+    "uid": "c01baf18-59b8-48b6-ac8e-2688e23e46cf"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND256_04.tile": {
+    "size": 4,
+    "uid": "b32b7b60-a8f2-4725-910a-29bd68b5c96a"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND256_05.tile": {
+    "size": 4,
+    "uid": "4c57ac08-ff98-418b-bd93-4ed95aa85006"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND256_06.tile": {
+    "size": 4,
+    "uid": "eff47e2d-1506-43b7-93da-fc5804a56661"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND256_07.tile": {
+    "size": 4,
+    "uid": "f700ddaa-e9fe-4159-afad-e0b788ff02de"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND256_08.tile": {
+    "size": 4,
+    "uid": "26eef154-9404-4227-988e-a1046614b7e8"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND256_09.tile": {
+    "size": 4,
+    "uid": "baafd7a9-e8d1-45ee-859f-eec91fa924d7"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND256_10.tile": {
+    "size": 4,
+    "uid": "f0aac4ee-35a3-4bb5-b4b5-5025f2a4e64c"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND256_11.tile": {
+    "size": 4,
+    "uid": "54e3aed5-fa97-4791-bdd1-4b6a42c395f4"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND256_12.tile": {
+    "size": 4,
+    "uid": "7ca10b89-faad-447e-bd68-4b97bf3de6f5"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND512_01.tile": {
+    "size": 8,
+    "uid": "db86f5d2-d62b-41d9-9781-3042b9363d1e"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND512_02.tile": {
+    "size": 8,
+    "uid": "bd8d0c1c-a92d-4397-a2a1-788127660c95"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND512_03.tile": {
+    "size": 8,
+    "uid": "f9a69d68-8b35-4ab9-87f5-91dce37e0995"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND512_04.tile": {
+    "size": 8,
+    "uid": "aa15fe0c-c36e-4925-acca-b6190e4aa070"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND512_05.tile": {
+    "size": 8,
+    "uid": "8cc096b1-e2ca-445d-94a8-cd6c5c9c9e73"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND64_01.tile": {
+    "size": 1,
+    "uid": "522c8d88-8d81-424e-9a6a-3a242c39457e"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND64_02.tile": {
+    "size": 1,
+    "uid": "a3027842-85a1-4495-9dac-29dc027ff881"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND64_03.tile": {
+    "size": 1,
+    "uid": "645f7553-c49e-4753-a657-ba0cee1b3a4b"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND64_04.tile": {
+    "size": 1,
+    "uid": "3bdfe81f-90b4-4212-8f81-8d141c97efb1"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND64_05.tile": {
+    "size": 1,
+    "uid": "06008ac8-1793-4ddb-b1a8-1caad9e030fd"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND64_06.tile": {
+    "size": 1,
+    "uid": "12e1aa1a-2832-4274-a085-88009a1bfd84"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND64_07.tile": {
+    "size": 1,
+    "uid": "6a3af77f-980b-4bc7-ad70-5c1144048d6e"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND64_08.tile": {
+    "size": 1,
+    "uid": "cf8d7b80-24b1-41a4-a553-e9327bd6e608"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND64_09.tile": {
+    "size": 1,
+    "uid": "3c82319e-c7e2-4562-81e6-6b87b4f7d232"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND64_10.tile": {
+    "size": 1,
+    "uid": "56c2a708-030b-4327-a434-df3606e9c96b"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/GROUND64_11.tile": {
+    "size": 1,
+    "uid": "94df713f-7ba5-483f-b0e8-5b41dd92ef9b"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/HILLS256_01.tile": {
+    "size": 4,
+    "uid": "dc9054c6-fa19-4167-b002-c7bd272387ac"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/HILLS512_01.tile": {
+    "size": 8,
+    "uid": "4ab09f0d-cb53-45a2-bbee-523de130b8ad"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/HayBaleLabyrinth_128_01.tile": {
+    "size": 2,
+    "uid": "c63fd690-594e-4398-9668-84c9c5527df5"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Hideout_512_01.tile": {
+    "size": 8,
+    "uid": "ba590d07-4cfc-4b3d-a734-b011f546b666"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Kiosk_64_01.tile": {
+    "size": 1,
+    "uid": "5174bec6-0c87-4a03-abfd-21e88c3d1e8a"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Kiosk_64_02.tile": {
+    "size": 1,
+    "uid": "69c5db97-2452-4f95-9ec0-573721249137"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Kiosk_64_03.tile": {
+    "size": 1,
+    "uid": "cdaaf827-67c2-4e24-b7a0-6daf2dbd9d30"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW128_01.tile": {
+    "size": 2,
+    "uid": "cfe515b1-c330-4a76-8b7d-7d9e975cca1a"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW128_02.tile": {
+    "size": 2,
+    "uid": "8bbc44c7-13ec-4f24-b310-d6e0a6850f64"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW128_03.tile": {
+    "size": 2,
+    "uid": "4253ea9b-4939-4181-9f75-3045c95e74f5"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW128_04.tile": {
+    "size": 2,
+    "uid": "7b285e52-0d8b-45fa-ba50-7dd9d0faa69c"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW128_05.tile": {
+    "size": 2,
+    "uid": "c0ff04e2-e786-4a52-b765-9cdce63abe81"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW128_06.tile": {
+    "size": 2,
+    "uid": "0b2761e1-0988-42cf-ba46-da4d60b0c93a"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW128_07.tile": {
+    "size": 2,
+    "uid": "48c92f74-add3-45cb-b408-67ffe0528dae"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW128_08.tile": {
+    "size": 2,
+    "uid": "f19c3608-7b30-430d-be45-3ef766c96638"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW128_09.tile": {
+    "size": 2,
+    "uid": "81fc885c-107e-443d-99d1-f10e68ed743f"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW128_10.tile": {
+    "size": 2,
+    "uid": "afeefa2b-8caa-4c79-ae32-103a2fb18234"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW128_11.tile": {
+    "size": 2,
+    "uid": "2c598e6e-da4b-4714-a386-e89874e460c9"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW128_12.tile": {
+    "size": 2,
+    "uid": "1d755dce-e56c-4a60-a59f-4f1315f83444"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW256_01.tile": {
+    "size": 4,
+    "uid": "d1e40efe-43fd-44bf-9abe-1aafa0f3aa64"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW64_01.tile": {
+    "size": 1,
+    "uid": "2b81a46c-608a-4f34-9893-709d6f16899b"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW64_02.tile": {
+    "size": 1,
+    "uid": "fe960e93-ee15-41e6-aeed-c4444a720529"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW64_03.tile": {
+    "size": 1,
+    "uid": "a4696ed1-7468-46b7-a407-6c1fafd2770d"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW64_04.tile": {
+    "size": 1,
+    "uid": "df05493f-a665-42d3-8520-1e0246a91b61"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW64_05.tile": {
+    "size": 1,
+    "uid": "859c84ae-3f80-43b7-b879-561c91529ca1"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW64_06.tile": {
+    "size": 1,
+    "uid": "d23616a0-5a60-4a6b-82d3-40d364f8456e"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW64_07.tile": {
+    "size": 1,
+    "uid": "f6c0ced8-c484-4a36-876f-b9f52b885ba1"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW64_08.tile": {
+    "size": 1,
+    "uid": "9c10de9b-8920-43b9-a8a1-6a271a19166a"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW64_09.tile": {
+    "size": 1,
+    "uid": "baf83b84-85bd-4a4d-869d-d3605d495f13"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW64_10.tile": {
+    "size": 1,
+    "uid": "ee68353a-7008-4c80-b3a1-2d95361a27ab"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW64_11.tile": {
+    "size": 1,
+    "uid": "30b766ee-3d82-4845-8be7-60a6fba54251"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW64_12.tile": {
+    "size": 1,
+    "uid": "e13120bf-3614-4d6d-be09-a45cffa920a1"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW64_13.tile": {
+    "size": 1,
+    "uid": "92f7a119-d6c1-41e0-83e9-042efe06b11a"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW64_14.tile": {
+    "size": 1,
+    "uid": "62221327-8bff-4e0c-b075-38178c97f7a0"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW64_15.tile": {
+    "size": 1,
+    "uid": "f34cee76-823e-4be8-b10e-5df283a5b7e3"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW64_16.tile": {
+    "size": 1,
+    "uid": "8f0c63e8-da79-4d73-9a2a-a7b4570f71e4"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW64_17.tile": {
+    "size": 1,
+    "uid": "1e2569e8-4323-49e7-9553-c61f5a9b23dc"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW64_18.tile": {
+    "size": 1,
+    "uid": "54768e95-9707-4683-af8b-1f3ee19bd3e8"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW64_19.tile": {
+    "size": 1,
+    "uid": "994a9ddc-5d1c-4cfc-82da-e1d981baaa34"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW64_20.tile": {
+    "size": 1,
+    "uid": "5acc33e3-6c25-4f79-99db-40929554ece1"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MEADOW64_21.tile": {
+    "size": 1,
+    "uid": "488d4dc3-9e8c-4399-901e-f6aae5544fe1"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/MechanicStation_128_01.tile": {
+    "size": 2,
+    "uid": "3ef31461-6f4e-4fb5-938d-875fb837d736"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/PackingStation_Fruit_128_01.tile": {
+    "size": 2,
+    "uid": "9f3b2d02-a1b2-4717-99b8-83cae87bcb7c"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/PackingStation_Vegetable_128_01.tile": {
+    "size": 2,
+    "uid": "f3dda4db-8450-4e9d-a501-ec6dbf14a78a"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Random_Desert_64_01.tile": {
+    "size": 1,
+    "uid": "2ce743d8-8466-4e7e-b1a8-0385617b2549"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Random_Desert_64_02.tile": {
+    "size": 1,
+    "uid": "28573376-d18d-4f60-a595-e9b27b41cebd"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Random_Field_64_01.tile": {
+    "size": 1,
+    "uid": "2eb07292-e901-4c84-add5-78130abb32ef"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Random_Field_64_02.tile": {
+    "size": 1,
+    "uid": "3d64303d-2a54-40b1-a7f4-57382403b2c1"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Random_Field_64_03.tile": {
+    "size": 1,
+    "uid": "3f72fa10-2b48-4a1a-ac65-33d481ce3785"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Random_Forest_128_01.tile": {
+    "size": 2,
+    "uid": "910e80a5-294d-41a0-930e-6887a6cab9cf"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Random_Forest_64_01.tile": {
+    "size": 1,
+    "uid": "ba690f45-5e28-42c6-b539-68a5a91303a9"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Random_Forest_64_02.tile": {
+    "size": 1,
+    "uid": "ae4cc1ea-6407-4baa-a353-620ee1600306"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Random_Forest_64_03.tile": {
+    "size": 1,
+    "uid": "6c103a80-f200-46e3-abb8-2857c36f27cb"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Random_Forest_64_04.tile": {
+    "size": 1,
+    "uid": "4efb5dcb-6f39-4648-af7c-26433cb31a18"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Random_Island_128_01.tile": {
+    "size": 2,
+    "uid": "9958e995-8416-4970-945f-181c0c8add04"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Random_Lake_128_01.tile": {
+    "size": 2,
+    "uid": "0b12d848-284e-4ffb-9e1f-ddc1de9c42f0"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Random_Lake_128_02.tile": {
+    "size": 2,
+    "uid": "f3842158-55ff-4e0e-9bdc-e4e83a4c82f6"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Random_Lake_64_01.tile": {
+    "size": 1,
+    "uid": "886a58f4-305e-458b-adff-7da04b161707"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Random_Lake_64_02.tile": {
+    "size": 1,
+    "uid": "2bd45a6c-9da7-47d3-bc06-06ae127a0f8f"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Random_Lake_64_03.tile": {
+    "size": 1,
+    "uid": "0e74d86b-b2bb-4f57-87d7-bd51faa5242c"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Random_Meadow_128_01.tile": {
+    "size": 2,
+    "uid": "f9ea368e-9873-4c39-a3e1-7dd1cbba6cd5"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Random_Meadow_64_01.tile": {
+    "size": 1,
+    "uid": "cf65814d-3bd4-4e26-8ec1-1658202727a4"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Random_Meadow_64_02.tile": {
+    "size": 1,
+    "uid": "8d4c4773-a2e5-4fdb-b748-ebed4b8eec5e"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Random_Meadow_64_03.tile": {
+    "size": 1,
+    "uid": "5d3f7eac-7e13-4529-8627-65b3c9f8d281"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Random_Meadow_64_04.tile": {
+    "size": 1,
+    "uid": "f31d8dd8-982a-4637-b8d8-1b333d966663"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Random_Meadow_64_05.tile": {
+    "size": 1,
+    "uid": "bdd72d25-f3b8-4fb6-bb8b-a033e44223fa"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Random_Road_64_01.tile": {
+    "size": 1,
+    "uid": "f3535095-b884-4596-a432-0aee1b5d742a"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Random_Road_64_02.tile": {
+    "size": 1,
+    "uid": "7281c295-9748-496b-bc1e-6efe5f5f2541"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Random_Road_64_03.tile": {
+    "size": 1,
+    "uid": "af25cff8-1700-4842-b6f8-b486558cfefc"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Random_Road_64_04.tile": {
+    "size": 1,
+    "uid": "ea30c62b-944a-4763-be94-454cd03fa218"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Road_Dirt_Bend_01.tile": {
+    "size": 1,
+    "uid": "cc6e4f3f-c0b4-45f3-afe6-875d18fcc392"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Road_Dirt_End_01.tile": {
+    "size": 1,
+    "uid": "7c68a839-e447-4f77-81f3-74fbbb472692"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Road_Dirt_Four-way_01.tile": {
+    "size": 1,
+    "uid": "970f88e8-751f-4767-8ec7-64cf9be99495"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Road_Dirt_Straight_01.tile": {
+    "size": 1,
+    "uid": "eed41548-d0e5-4314-89c1-bab30eda4750"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Road_Dirt_Three-way_01.tile": {
+    "size": 1,
+    "uid": "4be7a0d8-ae21-4f2f-be75-208515be4e14"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/RuinCity_512_01.tile": {
+    "size": 8,
+    "uid": "d4e2cbc3-62e1-48c5-8bd1-95ab3f7448ac"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Ruin_AutumnForest_64_01.tile": {
+    "size": 1,
+    "uid": "190ac485-1f21-4490-abdb-0fb1592ab356"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Ruin_BurntForest_64_01.tile": {
+    "size": 1,
+    "uid": "51ee58d4-5d91-4914-aa42-d35c4521a23b"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Ruin_Field_64_01.tile": {
+    "size": 1,
+    "uid": "61fbf237-7ca1-4310-a70b-85c5c047aa1c"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Ruin_Forest_128_01.tile": {
+    "size": 2,
+    "uid": "921eeedd-3f10-47a5-aabb-81b65db23b06"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Ruin_Forest_64_01.tile": {
+    "size": 1,
+    "uid": "0a028fbe-5580-4abc-b48a-66c6a0f67c8e"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Ruin_Forest_64_02.tile": {
+    "size": 1,
+    "uid": "6cca7d2f-a07b-4133-9ac3-265715be70f6"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Ruin_Forest_64_03.tile": {
+    "size": 1,
+    "uid": "19f3fd49-1aa9-4aea-9fe5-6be46f73844f"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Ruin_Meadow_128_01.tile": {
+    "size": 2,
+    "uid": "a3b7e066-2530-404e-9c4b-d311f569748c"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Ruin_Meadow_128_02.tile": {
+    "size": 2,
+    "uid": "70e2d931-7c97-4290-bdbf-436db8582f71"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Ruin_Meadow_128_03.tile": {
+    "size": 2,
+    "uid": "31d05f8f-c1a5-493b-8ff0-91dc9af302e4"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Ruin_Meadow_128_04.tile": {
+    "size": 2,
+    "uid": "10bac32b-48ac-401a-9d7c-b215fc84aa98"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Ruin_Meadow_64_01.tile": {
+    "size": 1,
+    "uid": "68794ad2-e70f-4f68-8dc1-4b396a927d07"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Ruin_Meadow_64_02.tile": {
+    "size": 1,
+    "uid": "ca8cce51-4e86-4c38-b2a0-e21facb13229"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Ruin_Meadow_64_03.tile": {
+    "size": 1,
+    "uid": "1f041ba4-4fc1-49ec-bf98-63ad8e1f1b96"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Ruin_Meadow_64_04.tile": {
+    "size": 1,
+    "uid": "240b28e9-e298-4306-8d77-aca4b2581670"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/START64_01.tile": {
+    "size": 1,
+    "uid": "bd1ad887-07a6-43f7-a693-b8e8555866f5"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/SiloDistrict_512_01.tile": {
+    "size": 8,
+    "uid": "9e5e4d7f-020d-4eec-ad19-ee2b19d6283a"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/SleepCapsuleBurial_128_01.tile": {
+    "size": 2,
+    "uid": "bd9b7d46-b57e-42cb-a470-3e2371921b5d"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/WATER256_01.tile": {
+    "size": 4,
+    "uid": "f2194130-7d72-4e8e-8c81-05ebb35aa3ea"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/WATER256_02.tile": {
+    "size": 4,
+    "uid": "163e0da4-a345-4b3d-984f-ee97abc29d8b"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Warehouse_Exterior_2Floors_256_01.tile": {
+    "size": 4,
+    "uid": "e8dfc039-7879-40cb-8b69-696f88d1cb2c"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Warehouse_Exterior_2Floors_256_02.tile": {
+    "size": 4,
+    "uid": "71acfa84-5a93-4d71-8263-abff15908985"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Warehouse_Exterior_2Floors_256_03.tile": {
+    "size": 4,
+    "uid": "5861d377-b27d-4ba7-9167-2ca064915e81"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Warehouse_Exterior_2Floors_256_04.tile": {
+    "size": 4,
+    "uid": "afc8dacf-a2ec-4bc5-9ffb-166372b5fcd2"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Warehouse_Exterior_3Floors_256_01.tile": {
+    "size": 4,
+    "uid": "cbeb1357-2027-4a90-bd03-632ccd4509b5"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/CreativeTiles/Warehouse_Exterior_4Floors_256_01.tile": {
+    "size": 4,
+    "uid": "b626a6fa-5930-4196-99dd-bf36f629bd0d"
+  },
+  "$CONTENT_DATA/Terrain/Tiles/ERROR.tile": {
+    "size": 1,
+    "uid": "cd46fe83-a9dd-4cf9-a9e7-55193e284e12"
+  },
+  "$SURVIVAL_DATA/DungeonTiles/Minidungeon/Minidungeon_Interior_01.tile": {
+    "size": 10,
+    "uid": "d3d4d976-d2a6-4d21-95bd-fada26b6b371"
+  },
+  "$SURVIVAL_DATA/DungeonTiles/Minidungeon/Minidungeon_Interior_02.tile": {
+    "size": 8,
+    "uid": "87be926a-095a-4448-8965-fbcc94d63db3"
+  },
+  "$SURVIVAL_DATA/DungeonTiles/Minidungeon/Minidungeon_Interior_03.tile": {
+    "size": 10,
+    "uid": "740e1277-a61f-47e6-9619-2d4125951988"
+  },
+  "$SURVIVAL_DATA/DungeonTiles/Minidungeon/Minidungeon_Interior_04.tile": {
+    "size": 10,
+    "uid": "48a6c248-6347-4319-8045-e3ac977b412e"
+  },
+  "$SURVIVAL_DATA/DungeonTiles/Minidungeon/Minidungeon_Interior_05.tile": {
+    "size": 12,
+    "uid": "cc129b37-1b7c-406b-bf73-ad70c67346b7"
+  },
+  "$SURVIVAL_DATA/DungeonTiles/Minidungeon/Minidungeon_Interior_06.tile": {
+    "size": 8,
+    "uid": "4dea737c-8382-4494-9171-db40960ab659"
+  },
+  "$SURVIVAL_DATA/DungeonTiles/Minidungeon/Minidungeon_Interior_07.tile": {
+    "size": 8,
+    "uid": "b84e5f3e-84ef-461b-98b2-b5135c5e9f43"
+  },
+  "$SURVIVAL_DATA/DungeonTiles/Warehouse_Interior_ConstructionFloor_01.tile": {
+    "size": 1,
+    "uid": "3f6460cf-db7c-44c0-a91e-a42c617a1750"
+  },
+  "$SURVIVAL_DATA/DungeonTiles/Warehouse_Interior_ConstructionFloor_02.tile": {
+    "size": 1,
+    "uid": "1c283c74-dfd0-4da5-af59-9432c0ba3d5a"
+  },
+  "$SURVIVAL_DATA/DungeonTiles/Warehouse_Interior_ConstructionFloor_03.tile": {
+    "size": 1,
+    "uid": "7639f5fa-c134-4e22-9ea8-aa2ac1922bde"
+  },
+  "$SURVIVAL_DATA/DungeonTiles/Warehouse_Interior_DarkFloor_01.tile": {
+    "size": 1,
+    "uid": "5479c162-5a99-4d98-8f03-e05a18d797ea"
+  },
+  "$SURVIVAL_DATA/DungeonTiles/Warehouse_Interior_DarkFloor_02.tile": {
+    "size": 1,
+    "uid": "6b451b2d-ba20-414c-8a28-79a1a4080a56"
+  },
+  "$SURVIVAL_DATA/DungeonTiles/Warehouse_Interior_OfficeFloor_01.tile": {
+    "size": 1,
+    "uid": "d214a29d-310d-4543-ab61-142fa82d065f"
+  },
+  "$SURVIVAL_DATA/DungeonTiles/Warehouse_Interior_OfficeFloor_02.tile": {
+    "size": 1,
+    "uid": "fa4a4516-5185-4522-a953-e6200d4c9597"
+  },
+  "$SURVIVAL_DATA/DungeonTiles/Warehouse_Interior_OfficeFloor_03.tile": {
+    "size": 1,
+    "uid": "fc7e128c-f596-4563-84b7-f23039eee424"
+  },
+  "$SURVIVAL_DATA/DungeonTiles/Warehouse_Interior_StorageFloor_01.tile": {
+    "size": 1,
+    "uid": "92aa7f83-af3c-4300-87fe-a2adc21121bb"
+  },
+  "$SURVIVAL_DATA/DungeonTiles/Warehouse_Interior_StorageFloor_02.tile": {
+    "size": 1,
+    "uid": "a58aab3d-8744-43d2-9830-42714dacf544"
+  },
+  "$SURVIVAL_DATA/DungeonTiles/Warehouse_Interior_StorageFloor_03.tile": {
+    "size": 1,
+    "uid": "ddbcd57f-b3b5-432f-9987-d642342f9515"
+  },
+  "$SURVIVAL_DATA/DungeonTiles/Warehouse_Interior_StorageFloor_04.tile": {
+    "size": 1,
+    "uid": "31e4de94-77f1-47f6-94ec-f3e2d9f025aa"
+  },
+  "$SURVIVAL_DATA/DungeonTiles/Warehouse_Interior_StorageFloor_05.tile": {
+    "size": 1,
+    "uid": "f9c5d54a-a42e-4973-b553-611546b61195"
+  },
+  "$SURVIVAL_DATA/DungeonTiles/Warehouse_Interior_StorageFloor_Quest_01.tile": {
+    "size": 1,
+    "uid": "81465007-7c76-486f-be9a-be4b62b971d4"
+  },
+  "$SURVIVAL_DATA/DungeonTiles/Warehouse_Interior_TopFloor_01.tile": {
+    "size": 1,
+    "uid": "42f64f16-00ec-428b-8584-aca3287c5645"
+  },
+  "$SURVIVAL_DATA/DungeonTiles/Warehouse_Interior_TopFloor_02.tile": {
+    "size": 1,
+    "uid": "c2913fe6-43df-4da0-a738-6408ce0cc1cf"
+  },
+  "$SURVIVAL_DATA/DungeonTiles/Warehouse_Interior_TopFloor_Quest_01.tile": {
+    "size": 1,
+    "uid": "50a087c7-a736-4026-937b-bda6253fa938"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/CrashedShip_Meadow_01.tile": {
+    "size": 1,
+    "uid": "d51ebbba-dca0-4744-aac0-e406cfec2fb9"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/CrashedShip_Meadow_02.tile": {
+    "size": 1,
+    "uid": "de16705c-cb50-4db5-972f-c1c8d77f023d"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/CrashedShip_Road_01.tile": {
+    "size": 1,
+    "uid": "90b0f364-0367-4902-8977-39dccf0e9ccf"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/ERROR.tile": {
+    "size": 1,
+    "uid": "cd46fe83-a9dd-4cf9-a9e7-55193e284e12"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/Error_1024.tile": {
+    "size": 32,
+    "uid": "7fc62cf0-24a1-4074-bdc8-b51546bea6af"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/GameplayTiles/Trashbot/gameplay_trashbot_main.tile": {
+    "size": 4,
+    "uid": "67b0e8ab-59b5-4a58-8384-65de3bf5cddb"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/Road_Dirt_Bend_01.tile": {
+    "size": 1,
+    "uid": "258be1e5-e4b2-4f72-ab9f-2b09f3480652"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/Road_Dirt_Bendx2_01.tile": {
+    "size": 1,
+    "uid": "8546a96c-762a-4ee0-9d8d-10e21dc25dc1"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/Road_Dirt_End_01.tile": {
+    "size": 1,
+    "uid": "8c7d5ed2-e44e-4373-985e-ac9659ab2198"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/Road_Dirt_Four-way_01.tile": {
+    "size": 1,
+    "uid": "48e870a8-3d9c-4668-85ec-3744e03038a4"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/Road_Dirt_Straight_01.tile": {
+    "size": 1,
+    "uid": "5669ce86-ed13-472c-b994-12fa5699b66c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/Road_Dirt_Three-way_01.tile": {
+    "size": 1,
+    "uid": "df31ef67-2284-44a0-b07a-f8b81c98a846"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/Road_Gravel+Dirt_Bendx2_01.tile": {
+    "size": 1,
+    "uid": "6c5ee017-7dda-4289-9949-545f81eb293a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/Road_Gravel+Dirt_Four-way_01.tile": {
+    "size": 1,
+    "uid": "79c8d78a-4703-4ccf-88ce-0086ea8ed4a1"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/Road_Gravel+Dirt_Straight_01.tile": {
+    "size": 1,
+    "uid": "8ad945d4-abb1-4a8b-b0c9-b4f376a8433c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/Road_Gravel+Dirt_Three-way_01.tile": {
+    "size": 1,
+    "uid": "725be142-0341-49be-804d-13e7fbf20acd"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/Road_Gravel+Dirt_Three-way_02.tile": {
+    "size": 1,
+    "uid": "c8421eba-a492-4aa3-8101-c4325d8bb12b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/Road_Gravel+Dirt_Three-way_03.tile": {
+    "size": 1,
+    "uid": "f6436fa1-690c-403a-a495-8536b8bbd3cf"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/Road_Gravel_Bend_01.tile": {
+    "size": 1,
+    "uid": "e0f80d2a-0df3-4505-96c0-b245f0d18d9d"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/Road_Gravel_Bendx2_01.tile": {
+    "size": 1,
+    "uid": "4cd31525-a5b1-4983-b4cb-ca7821db3223"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/Road_Gravel_End_01.tile": {
+    "size": 1,
+    "uid": "77390cae-7896-4063-b60b-870d3ba90190"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/Road_Gravel_Four-way_01.tile": {
+    "size": 1,
+    "uid": "9879573d-92ab-4eaf-8cc7-5906b70ac675"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/Road_Gravel_Straight_01.tile": {
+    "size": 1,
+    "uid": "5a05e169-5b59-40dd-a95f-b0fac45e084c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/Road_Gravel_Three-way_01.tile": {
+    "size": 1,
+    "uid": "b1f8d419-63e7-445c-9c00-f6999bc2d114"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0001)_01.tile": {
+    "size": 1,
+    "uid": "4b391749-2080-408f-b509-0a8748d7b108"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0001)_02.tile": {
+    "size": 1,
+    "uid": "2317289c-b438-4678-936a-84e562eefd04"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0001)_03.tile": {
+    "size": 1,
+    "uid": "b7ec008a-9ad7-4828-bb2e-55fe2e0f7849"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0001)_04.tile": {
+    "size": 1,
+    "uid": "2dce54f6-16d6-4aaf-9f9c-2d4cc26a5ad1"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0001)_05.tile": {
+    "size": 1,
+    "uid": "b430d9c1-c37a-4cde-9672-f5c418e3f6c1"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0011)_01.tile": {
+    "size": 1,
+    "uid": "ddb540cd-f757-423f-be9d-6b43e5b44b38"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0011)_02.tile": {
+    "size": 1,
+    "uid": "8df4be13-0b40-45fd-a49f-a3ed87fccf95"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0011)_03.tile": {
+    "size": 1,
+    "uid": "231e228d-9f05-431d-b9bd-2914576facab"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0011)_04.tile": {
+    "size": 1,
+    "uid": "046eb018-1180-4ca8-b217-d6ff7d8e2060"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0011)_05.tile": {
+    "size": 1,
+    "uid": "a13a3038-5b35-494e-b7f6-78d84bde5a52"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0101)_01.tile": {
+    "size": 1,
+    "uid": "72458596-f56d-401e-a451-f7cfda9f69bc"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0111)_01.tile": {
+    "size": 1,
+    "uid": "2c500779-ee44-466d-9bf1-aaaaa0709f9e"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(1111)_01.tile": {
+    "size": 1,
+    "uid": "aa03e6ee-42c4-42ce-93f0-ffc669eb59e6"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(1111)_02.tile": {
+    "size": 1,
+    "uid": "4b4a6ec1-4130-47c6-8005-a992bc352f94"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/bosstrain/Tier4_DrillbotTrainstation_2048.tile": {
+    "size": 32,
+    "uid": "59970891-b99d-4caf-b78a-6d07fc86dc65"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0001)_01.tile": {
+    "size": 1,
+    "uid": "6f7df918-9f1c-4815-8b24-936a048c321d"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0001)_02.tile": {
+    "size": 1,
+    "uid": "cdd1fd5a-7188-4897-bd70-0bfddebc7e89"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0001)_03.tile": {
+    "size": 1,
+    "uid": "1eba8ab8-5ea0-476d-ab04-05486bdf4cb2"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0011)_01.tile": {
+    "size": 1,
+    "uid": "1f23571d-53c4-49a6-8d11-6f919958ba68"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0011)_02.tile": {
+    "size": 1,
+    "uid": "9df7f769-ed9c-40d8-9e04-f0e90e957d04"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0011)_03.tile": {
+    "size": 1,
+    "uid": "d0882458-19b0-4c22-93d9-5e900e63e1ea"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0101)_01.tile": {
+    "size": 1,
+    "uid": "b2e9abc1-4079-4211-b39a-4495dd5f336d"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0111)_01.tile": {
+    "size": 1,
+    "uid": "e6f67efb-1ff8-474b-a34d-bc46ef266244"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0111)_02.tile": {
+    "size": 1,
+    "uid": "61e5d4df-dc9f-4184-a700-2f4ef382eae6"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0111)_03.tile": {
+    "size": 1,
+    "uid": "bdadf81d-e2c1-4df1-9fe8-7f590638c17b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(1111)_01.tile": {
+    "size": 1,
+    "uid": "bac9fc7f-7637-4ab2-b0f1-79ec8e8060a9"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(1111)_02.tile": {
+    "size": 1,
+    "uid": "79b955b5-73e3-4dc7-b787-a19f34df2c66"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0001)_01.tile": {
+    "size": 1,
+    "uid": "78a29afe-bc45-4c9a-81ab-1bf6421f6384"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0001)_02.tile": {
+    "size": 1,
+    "uid": "d96a4990-5fea-4dd2-b855-65bbc8220444"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0001)_03.tile": {
+    "size": 1,
+    "uid": "3a21490b-a937-4218-84b5-1cfb40441e4b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0011)_01.tile": {
+    "size": 1,
+    "uid": "7b3c0d6b-3c1e-4d7f-8e1c-f4a978b1308b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0011)_02.tile": {
+    "size": 1,
+    "uid": "aca428a9-3c94-4133-aa37-60d463170c60"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0011)_03.tile": {
+    "size": 1,
+    "uid": "dd7bc6d7-b36a-4ca1-94e4-9701c2a529ac"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0011)_04.tile": {
+    "size": 1,
+    "uid": "6efddc06-2c32-4b7d-b7bc-692bb2544024"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0101)_01.tile": {
+    "size": 1,
+    "uid": "1d5869de-c026-43a3-aa28-4a435f58a6a6"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0111)_01.tile": {
+    "size": 1,
+    "uid": "94837bb4-91f1-4544-8276-6c5db99bffbc"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0111)_02.tile": {
+    "size": 1,
+    "uid": "c753392e-567d-4528-9b31-d7b1eb1f50b9"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(1111)_01.tile": {
+    "size": 1,
+    "uid": "0123c758-c3d4-45fb-a9a8-ad1b54578012"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(1111)_02.tile": {
+    "size": 1,
+    "uid": "37158e70-8c95-4bca-adee-018f59c721f2"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(1111)_03.tile": {
+    "size": 1,
+    "uid": "c45f030e-6cf2-4d32-af12-a5fe6e63b690"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(1111)_04.tile": {
+    "size": 1,
+    "uid": "780e4e28-6c58-4bf0-b662-66b6f4f58a55"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(1111)_05.tile": {
+    "size": 1,
+    "uid": "afa9b4ce-99fb-4b94-991f-75eb78a7e59b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(1111)_06.tile": {
+    "size": 1,
+    "uid": "3a7cfd16-567b-404c-bcef-3db813942a74"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert_256_01.tile": {
+    "size": 4,
+    "uid": "7a67cc88-8548-4a44-b6be-a6c9a0f59457"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/excavation/ExcavationIsland_Beach_256_01.tile": {
+    "size": 4,
+    "uid": "1ec32974-d07c-4ad1-a16c-57dcf90ca342"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/excavation/ExcavationIsland_Forest_256_01.tile": {
+    "size": 4,
+    "uid": "01e4e9d7-b4ba-4362-b90d-8cb2b40ca50b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/excavation/ExcavationIsland_KinematicBridge_1024_01.tile": {
+    "size": 16,
+    "uid": "ba31a522-7659-4ec5-b933-8b83960c57f2"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/excavation/ExcavationIsland_Mountain_1024_01.tile": {
+    "size": 16,
+    "uid": "bf0ba240-416f-4f32-b87d-3a445919e72a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/excavation/OverworldToUnderground_SmallElevator_64_01.tile": {
+    "size": 1,
+    "uid": "3d8544c6-6439-4fa4-98f0-ca6d172af467"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/field/Field(0001)_01.tile": {
+    "size": 1,
+    "uid": "24878aab-2f07-4a49-b492-bcfe5402c4f7"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/field/Field(0011)_01.tile": {
+    "size": 1,
+    "uid": "01582735-15b6-4058-9a39-3a96f5d7c985"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/field/Field(0101)_01.tile": {
+    "size": 1,
+    "uid": "03d476aa-5f86-4efe-aac8-2070b4792bfe"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/field/Field(0111)_01.tile": {
+    "size": 1,
+    "uid": "85f20a17-ff0f-490e-b519-5728969ec09b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/field/Field(1111)_01.tile": {
+    "size": 1,
+    "uid": "48d5d460-1970-4ae5-866d-921fc015f642"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/field/Field(1111)_02.tile": {
+    "size": 1,
+    "uid": "644946ef-9f8a-426a-87ac-aefc13cdbaf8"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/field/Field(1111)_03.tile": {
+    "size": 1,
+    "uid": "ebc36e24-eb09-47fd-8d5c-6d05feee5935"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/field/Field(1111)_04.tile": {
+    "size": 1,
+    "uid": "b627932a-bc83-4085-885e-1e79baeed702"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/field/Field(1111)_05.tile": {
+    "size": 1,
+    "uid": "1b6cc59d-a84f-4d89-a646-1197a24af600"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/field/Field(1111)_06.tile": {
+    "size": 1,
+    "uid": "4e7147a5-0ca7-41fd-b198-6dcd383033c6"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/field/Field(1111)_07.tile": {
+    "size": 1,
+    "uid": "dd39772b-3811-48c3-bec4-53994b1bbaa2"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0001)_01.tile": {
+    "size": 1,
+    "uid": "b6ab0741-32df-4b0c-a60a-94675337b17c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0001)_02.tile": {
+    "size": 1,
+    "uid": "4bea2982-baa8-4dfd-91ee-959170125365"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0001)_03.tile": {
+    "size": 1,
+    "uid": "3e006539-6d36-467d-8da1-1d6f54fdf6e6"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0001)_04.tile": {
+    "size": 1,
+    "uid": "7a35e9a3-95a4-46a6-8b2d-3947efd4c9a4"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0001)_05.tile": {
+    "size": 1,
+    "uid": "f883d147-163f-4f5b-89b2-199ad996b8b1"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0011)_01.tile": {
+    "size": 1,
+    "uid": "e6bc1c42-b139-4e0a-a80f-f219c717de8a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0011)_02.tile": {
+    "size": 1,
+    "uid": "be932a11-890b-4bf3-a656-39811da61d8c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0011)_03.tile": {
+    "size": 1,
+    "uid": "be6b6923-87d2-4495-b8de-251e11d25352"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0011)_04.tile": {
+    "size": 1,
+    "uid": "c70c2dcd-1db5-4a2d-aecc-ffceea35b638"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0011)_05.tile": {
+    "size": 1,
+    "uid": "973baa53-6bc2-4775-9cff-5b3776f6c9bd"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0101)_01.tile": {
+    "size": 1,
+    "uid": "38d8f705-5600-4135-a8c3-b939ce2babc2"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0111)_01.tile": {
+    "size": 1,
+    "uid": "62e2c28c-1a59-4956-9e2f-fd727ef704e8"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(1111)_01.tile": {
+    "size": 1,
+    "uid": "b7c31a79-6c63-4346-8f24-7a5415081879"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(1111)_02.tile": {
+    "size": 1,
+    "uid": "10d13c08-12d5-48ba-85c5-1f4e1af0328c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(1111)_03.tile": {
+    "size": 1,
+    "uid": "911d2398-9ca1-4bfc-9134-353b405d11c8"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_01.tile": {
+    "size": 1,
+    "uid": "1ea5ab23-e8d1-4b02-a290-d2494e4e7512"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_02.tile": {
+    "size": 1,
+    "uid": "8fe85bd6-dc12-41c9-9f29-534b5c48d5d1"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_03.tile": {
+    "size": 1,
+    "uid": "f9295fc8-56fd-4e79-a971-cce2cfd10633"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_04.tile": {
+    "size": 1,
+    "uid": "af18e876-ae6e-48cb-9a9e-f2aea20b3042"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_05.tile": {
+    "size": 1,
+    "uid": "3f715ee3-ae47-4df3-a273-49b673cae158"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_06.tile": {
+    "size": 1,
+    "uid": "c8272fd7-4f86-4c4d-87f5-4fc0c3166ff6"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_07.tile": {
+    "size": 1,
+    "uid": "86fc7552-c3ad-4403-9f81-3d56012019ef"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_08.tile": {
+    "size": 1,
+    "uid": "7ceab330-2084-47de-8a93-f47bcd639153"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_09.tile": {
+    "size": 1,
+    "uid": "77c1c957-9fd7-43bd-a1be-3f5f29ae7c4f"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_10.tile": {
+    "size": 1,
+    "uid": "8020cad6-1601-42e5-a60b-93428c794ca1"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_11.tile": {
+    "size": 1,
+    "uid": "72afb665-b9dc-4ca6-9689-7bb4df3ed6bd"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_01.tile": {
+    "size": 1,
+    "uid": "7db1791b-30b0-4c79-8f7f-88d0543e0a78"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_02.tile": {
+    "size": 1,
+    "uid": "111ca6bd-0f37-4a55-8755-88b411f70ab9"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_03.tile": {
+    "size": 1,
+    "uid": "6c7c7872-89f9-488c-9133-8897be66b6a5"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_04.tile": {
+    "size": 1,
+    "uid": "1d7dbd16-c2e8-4e81-88a4-7e5a54ff6afd"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_05.tile": {
+    "size": 1,
+    "uid": "99b53e6e-acc1-4e05-8ac3-15da7e11ece3"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_06.tile": {
+    "size": 1,
+    "uid": "cb9086fe-9f57-4a3e-9eaf-03f2aba7d425"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_07.tile": {
+    "size": 1,
+    "uid": "7a267f36-db61-412c-a999-9d5e987fa66e"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_08.tile": {
+    "size": 1,
+    "uid": "83be72a2-ebd7-4ea4-84a4-0d7bfa2ac42b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_09.tile": {
+    "size": 1,
+    "uid": "bcc31369-8591-49a9-8509-e28b87d8701d"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_10.tile": {
+    "size": 1,
+    "uid": "a5f8a5fc-dc75-4c61-9ce9-ab7cd4cd58dc"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_11.tile": {
+    "size": 1,
+    "uid": "55b6fd34-5c3a-4788-a892-e712d98684d6"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_12.tile": {
+    "size": 1,
+    "uid": "52190307-ecb9-4187-9d61-1c6bbf29cb76"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_13.tile": {
+    "size": 1,
+    "uid": "092674ae-7ea4-445f-a98d-52f6b24a99c0"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_14.tile": {
+    "size": 1,
+    "uid": "92616469-7a80-4dae-a647-6638fc16080f"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0101)_01.tile": {
+    "size": 1,
+    "uid": "6d8c7d32-e97f-4236-894a-b3639609044d"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0111)_01.tile": {
+    "size": 1,
+    "uid": "48ebd5ec-f503-4a6f-85a9-32510fdfe02f"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0111)_02.tile": {
+    "size": 1,
+    "uid": "9bbf51f6-fe33-4a1c-9675-bbdfa93fb447"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0111)_03.tile": {
+    "size": 1,
+    "uid": "0c58144b-42ab-42c3-b4f1-28a3406122ab"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0111)_04.tile": {
+    "size": 1,
+    "uid": "d7c5b115-13b5-458b-9bc6-20b55961ce34"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0111)_05.tile": {
+    "size": 1,
+    "uid": "4b9a9f88-4c4d-4629-a9a2-94d172bfd36b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0111)_06.tile": {
+    "size": 1,
+    "uid": "9fc40ce9-2b75-4483-a492-534565d7917f"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(1111)_01.tile": {
+    "size": 1,
+    "uid": "87d5b9f2-64d8-4eaa-930d-073ade3fdcb3"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(1111)_02.tile": {
+    "size": 1,
+    "uid": "f7135ab9-05f3-4130-9e26-a24941082ffb"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(1111)_03.tile": {
+    "size": 1,
+    "uid": "784f602b-80b8-4e56-bb6c-92abecd73a0a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(1111)_04.tile": {
+    "size": 1,
+    "uid": "58f0bc49-5775-4684-a490-501f0137d57d"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(1111)_05.tile": {
+    "size": 1,
+    "uid": "9f6d272c-e83c-4951-85d4-ade117910822"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(1111)_06.tile": {
+    "size": 1,
+    "uid": "ef746abb-98c6-4163-a256-5b850923b401"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(1111)_07.tile": {
+    "size": 1,
+    "uid": "beb49eff-aa1c-40de-8f23-74dfc847eb4a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(1111)_08.tile": {
+    "size": 1,
+    "uid": "71d6e69b-0188-40ca-acaf-874941a22cf6"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(1111)_09.tile": {
+    "size": 1,
+    "uid": "ce722b0c-38bc-4a9d-b9d7-6887dff3203f"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(1111)_10.tile": {
+    "size": 1,
+    "uid": "7295dfce-a802-4677-a9a0-271ccbc146b7"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(1111)_11.tile": {
+    "size": 1,
+    "uid": "ff81a193-30e6-42d2-b597-78dfe47fdf2b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(1111)_12.tile": {
+    "size": 1,
+    "uid": "1f2c35cf-5aea-4e90-968f-f13780ec31c3"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(1111)_13.tile": {
+    "size": 1,
+    "uid": "08e49c83-8d78-4bf9-942c-ba3062dadbb5"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/legacy/Hideout_512_01_legacy.tile": {
+    "size": 8,
+    "uid": "ba590d07-4cfc-4b3d-a734-b011f546b666"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_128(1111)_02.tile": {
+    "size": 2,
+    "uid": "ba96e465-8985-48b9-a352-16efb64a867e"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_128(1111)_03.tile": {
+    "size": 2,
+    "uid": "2cdc45a4-1716-496f-b62f-db2a30675be9"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_128(1111)_04.tile": {
+    "size": 2,
+    "uid": "7e627ada-9376-4744-a257-8d1f3d99c5d0"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_128(1111)_05.tile": {
+    "size": 2,
+    "uid": "ca5f9458-ed12-4c55-b943-996be6aaa1d1"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_128(1111)_06.tile": {
+    "size": 2,
+    "uid": "ca428cf6-6947-4bfd-90c0-206b8fc1fbeb"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_128(1111)_07.tile": {
+    "size": 2,
+    "uid": "94178cf5-2904-4b0c-a08d-2a3fcbec6f44"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_128(1111)_08.tile": {
+    "size": 2,
+    "uid": "c9b095fc-981f-40e5-8159-88404d467480"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_128(1111)_09.tile": {
+    "size": 2,
+    "uid": "5a52ab25-0d30-48f6-bf19-a6218398576b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_128(1111)_10.tile": {
+    "size": 2,
+    "uid": "950e4b0c-fa15-4612-93fa-7b9db73e41ef"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_128(1111)_11.tile": {
+    "size": 2,
+    "uid": "8accf536-0214-4667-8511-649662460486"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_01.tile": {
+    "size": 1,
+    "uid": "54b1f04b-de02-4e82-bf2b-f2d7ef163356"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_02.tile": {
+    "size": 1,
+    "uid": "88b74423-5749-49f6-bddc-15c0b951130f"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_03.tile": {
+    "size": 1,
+    "uid": "2c380613-2da9-4f56-9cbd-2109a4fa8a2b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_04.tile": {
+    "size": 1,
+    "uid": "b9f929eb-740e-4a0d-a0ab-d74d00e7afa7"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_05.tile": {
+    "size": 1,
+    "uid": "76838c0b-f359-4a1b-b7ac-d33117644e03"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_06.tile": {
+    "size": 1,
+    "uid": "ed36d855-3bd0-4280-bf76-ae4ef78c0e6e"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_07.tile": {
+    "size": 1,
+    "uid": "cf9e70b9-3778-4797-a247-2049a98faceb"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_08.tile": {
+    "size": 1,
+    "uid": "8125416c-0a36-4f70-9f12-b4985e3d454d"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_09.tile": {
+    "size": 1,
+    "uid": "824ba160-f53a-4e24-b8a5-8e8315463d64"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_10.tile": {
+    "size": 1,
+    "uid": "b10a5b8b-191a-4a01-8306-e8f5bf773776"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_11.tile": {
+    "size": 1,
+    "uid": "4dc65480-af75-4ffe-8409-a480f7fbe353"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_12.tile": {
+    "size": 1,
+    "uid": "e655b09b-5bb4-48c4-8dad-a06a7ae7662f"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_13.tile": {
+    "size": 1,
+    "uid": "84164a93-6e6b-4b57-b800-7b13fc40f1bd"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_14.tile": {
+    "size": 1,
+    "uid": "c01b5dfd-7ed5-45a9-9cf4-c3a31d6a6500"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_15.tile": {
+    "size": 1,
+    "uid": "e5ee76f1-a961-45d2-9be8-06102bb73df5"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_16.tile": {
+    "size": 1,
+    "uid": "75a4f42b-125b-4bfb-84dd-88719566463c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_17.tile": {
+    "size": 1,
+    "uid": "d412a124-2f0a-4382-a300-1eff6b2afbcd"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_18.tile": {
+    "size": 1,
+    "uid": "9ebead52-4aa7-452c-9d59-ff4c21e53c31"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_19.tile": {
+    "size": 1,
+    "uid": "873c07a4-52bb-424c-b3fc-909d5b52cfce"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_20.tile": {
+    "size": 1,
+    "uid": "9bc96916-f3bf-4ab7-8b5d-d46f11f4a13b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_21.tile": {
+    "size": 1,
+    "uid": "af025eab-cc5d-4c12-8038-38bdcfaac05b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_22.tile": {
+    "size": 1,
+    "uid": "12f12d96-cdc3-4f9b-b94b-907252e21adf"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_23.tile": {
+    "size": 1,
+    "uid": "537c11d8-19c6-442a-862c-516235a904f1"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_24.tile": {
+    "size": 1,
+    "uid": "dd9e4f9c-8a0c-4bc4-aae9-dc2ae2d1a833"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_25.tile": {
+    "size": 1,
+    "uid": "068c2c7b-73ed-41ca-b2fe-eccdfb65b188"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_26.tile": {
+    "size": 1,
+    "uid": "f7d64431-ed33-4252-b48c-5c7d4d015553"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_27.tile": {
+    "size": 1,
+    "uid": "d6ffe170-c906-494a-b3be-16f0c528165e"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_28.tile": {
+    "size": 1,
+    "uid": "06c6aa9a-348e-4686-b77c-a490dfe0c180"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_29.tile": {
+    "size": 1,
+    "uid": "98b27f67-ddb3-4b9f-9cb6-f1d99c03dcb7"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/BunkInvestigationQuest_128_01.tile": {
+    "size": 2,
+    "uid": "3ffa9284-021e-4679-8c61-6c35b04361f4"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/CampingSpot_AutumnForest_64_01.tile": {
+    "size": 1,
+    "uid": "16a6315e-897a-4186-abe9-cdf83470757a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/CampingSpot_AutumnForest_64_02.tile": {
+    "size": 1,
+    "uid": "05b6d448-59fa-4abd-8986-5e331eb49af1"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/CampingSpot_AutumnForest_64_03.tile": {
+    "size": 1,
+    "uid": "9b11721e-3df5-438e-92a3-9ce08c5a8e84"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/CampingSpot_BurntForest_64_01.tile": {
+    "size": 1,
+    "uid": "0556fb22-cacc-4402-8d7c-6cfd6f5d39ce"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/CampingSpot_Forest_64_01.tile": {
+    "size": 1,
+    "uid": "afa0fd48-9c11-43c0-8519-def13c56eb7f"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/CampingSpot_Forest_64_02.tile": {
+    "size": 1,
+    "uid": "bfd3e6e5-bd62-4bb9-8ab5-a12d2d44ffa3"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/CampingSpot_Forest_64_03.tile": {
+    "size": 1,
+    "uid": "2cc399c0-7f60-4737-8ce9-dfebe1cff997"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/CampingSpot_Forest_64_04.tile": {
+    "size": 1,
+    "uid": "2baccd93-fb01-49ba-bbce-f26bd6bba53c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/CampingSpot_Forest_64_05.tile": {
+    "size": 1,
+    "uid": "f7862697-5c60-412d-8508-2e37e8ec7d16"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/CampingSpot_Forest_64_06.tile": {
+    "size": 1,
+    "uid": "150b28d3-2c48-40b8-a657-907629c63637"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/CampingSpot_Forest_64_07.tile": {
+    "size": 1,
+    "uid": "139ff089-19e7-4c65-b02e-0bcdb30e4600"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/CampingSpot_Meadow_64_01.tile": {
+    "size": 1,
+    "uid": "e4fbd2dd-6d4a-4bfa-a311-6ae40fdd0f64"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/CampingSpot_Meadow_64_02.tile": {
+    "size": 1,
+    "uid": "75adfa70-b50e-428e-a035-580091009aee"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/CampingSpot_Meadow_64_03.tile": {
+    "size": 1,
+    "uid": "adc981bf-6a97-4c97-a303-b0066ccea342"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/CampingSpot_Meadow_64_04.tile": {
+    "size": 1,
+    "uid": "ddc41612-20f3-484e-b7eb-c0d510d190be"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/CampingSpot_WaterFront_256_01.tile": {
+    "size": 4,
+    "uid": "33f54ce4-2287-4d9c-a5b1-a62eeca38127"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/ChemicalLake_128_01.tile": {
+    "size": 2,
+    "uid": "e7703a66-88a4-44c3-b99d-b22b8418c28b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/ChemicalLake_128_02.tile": {
+    "size": 2,
+    "uid": "b0355ca4-2aec-4a08-8a4a-ac5ea8542055"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/ChemicalLake_128_03.tile": {
+    "size": 2,
+    "uid": "4df0a671-7c8c-4db7-9a6d-3be6e987731e"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/ChemicalPlant_Field_64_01.tile": {
+    "size": 1,
+    "uid": "61e5f92c-54eb-478f-943b-38a32348c713"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/ChemicalPlant_Forest_64_01.tile": {
+    "size": 1,
+    "uid": "9755ee40-7f23-4380-8a63-8055060fd18b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/ChemicalPlant_Road_64_01.tile": {
+    "size": 1,
+    "uid": "013e980d-2425-4275-9c4b-c0eee0dba7f1"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/CrashedShip_256_01.tile": {
+    "size": 4,
+    "uid": "7736cd40-0adf-459b-8ffc-d0fa4caa5f59"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/FarmbotGraveyard_256_01.tile": {
+    "size": 4,
+    "uid": "25b787f7-f1f0-4191-985e-0cbbc22821c8"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/FarmbotGraveyard_256_02.tile": {
+    "size": 4,
+    "uid": "f245182c-5f04-462a-b58f-258ec9ad6992"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/FarmingPatch_64_01.tile": {
+    "size": 1,
+    "uid": "761f7dca-1931-4efc-ad90-22c970ce9ce4"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/FarmingPatch_64_02.tile": {
+    "size": 1,
+    "uid": "52e21267-288f-483f-acd9-9e5e84adc4e7"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/FarmingPatch_64_03.tile": {
+    "size": 1,
+    "uid": "8a2d4fa6-d97a-46e8-b7de-198b9eb54353"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/HayBaleLabyrinth_128_01.tile": {
+    "size": 2,
+    "uid": "c63fd690-594e-4398-9668-84c9c5527df5"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/HayBaleLabyrinth_128_01_NEW.tile": {
+    "size": 2,
+    "uid": "2510a9a4-cef5-4888-b5b8-ecfcdf042c6d"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Hideout_512_01.tile": {
+    "size": 8,
+    "uid": "7d7556b3-0dc7-4b95-9d92-731013b19fc0"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Kiosk_64_01.tile": {
+    "size": 1,
+    "uid": "5174bec6-0c87-4a03-abfd-21e88c3d1e8a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Kiosk_64_02.tile": {
+    "size": 1,
+    "uid": "69c5db97-2452-4f95-9ec0-573721249137"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Kiosk_64_03.tile": {
+    "size": 1,
+    "uid": "cdaaf827-67c2-4e24-b7a0-6daf2dbd9d30"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Kiosk_Desert_64_01.tile": {
+    "size": 1,
+    "uid": "a0be1f82-5a6c-4dc6-8a38-c09fbb63c002"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Kiosk_Forest_64_01.tile": {
+    "size": 1,
+    "uid": "fd3351f8-9af6-4c58-933d-48185fe2c151"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/MechanicStation_128_01.tile": {
+    "size": 2,
+    "uid": "2c36976b-e008-408c-a5b5-1baaaf01df04"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/OilLake_Desert_128_01.tile": {
+    "size": 2,
+    "uid": "c60fb408-5ca6-45eb-98d0-dc9a05ed7a66"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/OilPool_Desert_64_01.tile": {
+    "size": 1,
+    "uid": "84b61087-2a16-41ee-b23f-56aa4ff5d056"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/OilPool_Desert_64_02.tile": {
+    "size": 1,
+    "uid": "465b42d9-4db1-4b10-925b-8d517ad37edb"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/PackingStation_Fruit_128_01.tile": {
+    "size": 2,
+    "uid": "9f3b2d02-a1b2-4717-99b8-83cae87bcb7c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/PackingStation_Vegetable_128_01.tile": {
+    "size": 2,
+    "uid": "f3dda4db-8450-4e9d-a501-ec6dbf14a78a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Desert_64_01.tile": {
+    "size": 1,
+    "uid": "2ce743d8-8466-4e7e-b1a8-0385617b2549"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Desert_64_01_NEW.tile": {
+    "size": 1,
+    "uid": "8ff1b531-0988-437b-b261-c002dd6e69fc"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Desert_64_02.tile": {
+    "size": 1,
+    "uid": "28573376-d18d-4f60-a595-e9b27b41cebd"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Desert_64_02_NEW.tile": {
+    "size": 1,
+    "uid": "6a36603f-c0b0-4a23-98c5-6c4df4a1f254"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Field_64_01.tile": {
+    "size": 1,
+    "uid": "2eb07292-e901-4c84-add5-78130abb32ef"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Field_64_02.tile": {
+    "size": 1,
+    "uid": "3d64303d-2a54-40b1-a7f4-57382403b2c1"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Field_64_03.tile": {
+    "size": 1,
+    "uid": "3f72fa10-2b48-4a1a-ac65-33d481ce3785"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Forest_128_01.tile": {
+    "size": 2,
+    "uid": "910e80a5-294d-41a0-930e-6887a6cab9cf"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Forest_64_01.tile": {
+    "size": 1,
+    "uid": "ba690f45-5e28-42c6-b539-68a5a91303a9"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Forest_64_02.tile": {
+    "size": 1,
+    "uid": "ae4cc1ea-6407-4baa-a353-620ee1600306"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Forest_64_03.tile": {
+    "size": 1,
+    "uid": "6c103a80-f200-46e3-abb8-2857c36f27cb"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Forest_64_04.tile": {
+    "size": 1,
+    "uid": "4efb5dcb-6f39-4648-af7c-26433cb31a18"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Lake_128_01.tile": {
+    "size": 2,
+    "uid": "0b12d848-284e-4ffb-9e1f-ddc1de9c42f0"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Lake_128_02.tile": {
+    "size": 2,
+    "uid": "f3842158-55ff-4e0e-9bdc-e4e83a4c82f6"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Lake_128_03.tile": {
+    "size": 2,
+    "uid": "53320dd6-a8f9-44f3-b39b-1b7b42bfbb7b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Lake_64_01.tile": {
+    "size": 1,
+    "uid": "886a58f4-305e-458b-adff-7da04b161707"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Lake_64_02.tile": {
+    "size": 1,
+    "uid": "2bd45a6c-9da7-47d3-bc06-06ae127a0f8f"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Lake_64_03.tile": {
+    "size": 1,
+    "uid": "0e74d86b-b2bb-4f57-87d7-bd51faa5242c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Meadow_128_01.tile": {
+    "size": 2,
+    "uid": "f9ea368e-9873-4c39-a3e1-7dd1cbba6cd5"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Meadow_64_01.tile": {
+    "size": 1,
+    "uid": "cf65814d-3bd4-4e26-8ec1-1658202727a4"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Meadow_64_02.tile": {
+    "size": 1,
+    "uid": "8d4c4773-a2e5-4fdb-b748-ebed4b8eec5e"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Meadow_64_03.tile": {
+    "size": 1,
+    "uid": "5d3f7eac-7e13-4529-8627-65b3c9f8d281"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Meadow_64_04.tile": {
+    "size": 1,
+    "uid": "f31d8dd8-982a-4637-b8d8-1b333d966663"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Meadow_64_05.tile": {
+    "size": 1,
+    "uid": "bdd72d25-f3b8-4fb6-bb8b-a033e44223fa"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Road_64_01.tile": {
+    "size": 1,
+    "uid": "f3535095-b884-4596-a432-0aee1b5d742a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Road_64_02.tile": {
+    "size": 1,
+    "uid": "7281c295-9748-496b-bc1e-6efe5f5f2541"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Road_64_03.tile": {
+    "size": 1,
+    "uid": "af25cff8-1700-4842-b6f8-b486558cfefc"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Road_64_04.tile": {
+    "size": 1,
+    "uid": "ea30c62b-944a-4763-be94-454cd03fa218"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/RuinCity_512_01.tile": {
+    "size": 8,
+    "uid": "d4e2cbc3-62e1-48c5-8bd1-95ab3f7448ac"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/RuinCity_512_01_NEW.tile": {
+    "size": 8,
+    "uid": "c1af7c32-42e8-471f-93b6-019f2c22ed10"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_AutumnForest_64_01.tile": {
+    "size": 1,
+    "uid": "190ac485-1f21-4490-abdb-0fb1592ab356"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_AutumnForest_64_02.tile": {
+    "size": 1,
+    "uid": "dd8b2c81-c9c5-4314-a069-65fa9cea3024"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_AutumnForest_64_03.tile": {
+    "size": 1,
+    "uid": "afe1dcc6-0894-4e95-a439-84463fc2a2e4"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_BurntForest_64_01.tile": {
+    "size": 1,
+    "uid": "51ee58d4-5d91-4914-aa42-d35c4521a23b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_BurntForest_64_02.tile": {
+    "size": 1,
+    "uid": "c3bda64c-61c7-4dec-9ae0-c6bb2b7a395d"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_BurntForest_64_03.tile": {
+    "size": 1,
+    "uid": "c0261f9b-a288-475a-957a-33e01e964002"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Field_64_01.tile": {
+    "size": 1,
+    "uid": "61fbf237-7ca1-4310-a70b-85c5c047aa1c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Field_64_02.tile": {
+    "size": 1,
+    "uid": "2fc07dd0-482c-4eb5-86a0-2d48ba50fad3"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Field_64_03.tile": {
+    "size": 1,
+    "uid": "a372e03c-8006-44ab-a8ee-15bffec72dbe"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Forest_128_01.tile": {
+    "size": 2,
+    "uid": "921eeedd-3f10-47a5-aabb-81b65db23b06"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Forest_64_01.tile": {
+    "size": 1,
+    "uid": "0a028fbe-5580-4abc-b48a-66c6a0f67c8e"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Forest_64_02.tile": {
+    "size": 1,
+    "uid": "6cca7d2f-a07b-4133-9ac3-265715be70f6"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Forest_64_03.tile": {
+    "size": 1,
+    "uid": "19f3fd49-1aa9-4aea-9fe5-6be46f73844f"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Lake_128_01.tile": {
+    "size": 2,
+    "uid": "9958e995-8416-4970-945f-181c0c8add04"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Lake_128_02.tile": {
+    "size": 2,
+    "uid": "36004765-1886-4e65-9c61-26526ae925e3"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Lake_128_03.tile": {
+    "size": 2,
+    "uid": "3d581892-c351-4a03-a117-562f2a25f18d"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Meadow_128_01.tile": {
+    "size": 2,
+    "uid": "a3b7e066-2530-404e-9c4b-d311f569748c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Meadow_128_02.tile": {
+    "size": 2,
+    "uid": "70e2d931-7c97-4290-bdbf-436db8582f71"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Meadow_128_03.tile": {
+    "size": 2,
+    "uid": "31d05f8f-c1a5-493b-8ff0-91dc9af302e4"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Meadow_128_04.tile": {
+    "size": 2,
+    "uid": "10bac32b-48ac-401a-9d7c-b215fc84aa98"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Meadow_64_01.tile": {
+    "size": 1,
+    "uid": "68794ad2-e70f-4f68-8dc1-4b396a927d07"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Meadow_64_02.tile": {
+    "size": 1,
+    "uid": "ca8cce51-4e86-4c38-b2a0-e21facb13229"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Meadow_64_03.tile": {
+    "size": 1,
+    "uid": "1f041ba4-4fc1-49ec-bf98-63ad8e1f1b96"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Meadow_64_04.tile": {
+    "size": 1,
+    "uid": "240b28e9-e298-4306-8d77-aca4b2581670"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Meadow_64_05.tile": {
+    "size": 1,
+    "uid": "18216217-7c49-40ee-afb3-38d2e9555fb8"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Meadow_64_06.tile": {
+    "size": 1,
+    "uid": "0de47979-bf12-4665-bf58-692b5e129b1c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Meadow_64_07.tile": {
+    "size": 1,
+    "uid": "a132fdc0-2417-4181-91b6-26176657ea4e"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Meadow_64_08.tile": {
+    "size": 1,
+    "uid": "95da1468-8960-4fa7-9157-b5bc478466a4"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Meadow_64_09.tile": {
+    "size": 1,
+    "uid": "5b2285e1-5d70-4598-8831-619911c22d5a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Meadow_64_10.tile": {
+    "size": 1,
+    "uid": "8e3f35e9-c142-4508-87fd-d48affb22fea"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Meadow_64_11.tile": {
+    "size": 1,
+    "uid": "7ba6fefb-8a07-49b8-b61f-a4d4305ecb47"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/SchematicStation_64_01.tile": {
+    "size": 1,
+    "uid": "2908dd45-9767-4c9a-aa00-871a3a0b04b5"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/SchematicStation_Desert_64_01.tile": {
+    "size": 1,
+    "uid": "d26c9186-24ea-42fa-a6d3-fc6536bb2725"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/SchematicStation_Field_64_01.tile": {
+    "size": 1,
+    "uid": "f32ebca6-dd04-462f-a614-884dcb55ccfe"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/SchematicStation_Forest_64_01.tile": {
+    "size": 1,
+    "uid": "560ee0c0-5a35-429d-9533-9b9351d82df5"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/SiloDistrict_512_01.tile": {
+    "size": 8,
+    "uid": "9e5e4d7f-020d-4eec-ad19-ee2b19d6283a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/SleepCapsuleBurial_128_01.tile": {
+    "size": 2,
+    "uid": "bd9b7d46-b57e-42cb-a470-3e2371921b5d"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Warehouse_Exterior_2Floors_256_01.tile": {
+    "size": 4,
+    "uid": "e8dfc039-7879-40cb-8b69-696f88d1cb2c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Warehouse_Exterior_2Floors_256_01_NEW.tile": {
+    "size": 4,
+    "uid": "887b1866-009d-430d-923c-53f7f6e21f4c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Warehouse_Exterior_2Floors_256_02.tile": {
+    "size": 4,
+    "uid": "71acfa84-5a93-4d71-8263-abff15908985"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Warehouse_Exterior_2Floors_256_02_NEW.tile": {
+    "size": 4,
+    "uid": "457232e5-8233-4dc8-8565-3433405ecd77"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Warehouse_Exterior_2Floors_256_03.tile": {
+    "size": 4,
+    "uid": "5861d377-b27d-4ba7-9167-2ca064915e81"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Warehouse_Exterior_2Floors_256_03_NEW.tile": {
+    "size": 4,
+    "uid": "dc5c1caf-885c-4b9e-a3d7-d2578b04e633"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Warehouse_Exterior_2Floors_256_04.tile": {
+    "size": 4,
+    "uid": "afc8dacf-a2ec-4bc5-9ffb-166372b5fcd2"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Warehouse_Exterior_2Floors_256_04_NEW.tile": {
+    "size": 4,
+    "uid": "4283ed68-9811-4fc6-91b6-156fda5c444f"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Warehouse_Exterior_3Floors_256_01.tile": {
+    "size": 4,
+    "uid": "cbeb1357-2027-4a90-bd03-632ccd4509b5"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Warehouse_Exterior_3Floors_256_01_NEW.tile": {
+    "size": 4,
+    "uid": "3f35b614-e5da-41b1-ad2c-2959a9ae77d6"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Warehouse_Exterior_4Floors_256_01.tile": {
+    "size": 4,
+    "uid": "b626a6fa-5930-4196-99dd-bf36f629bd0d"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Warehouse_Exterior_4Floors_256_01_NEW.tile": {
+    "size": 4,
+    "uid": "669a9132-e9c2-4961-a6ad-869044058024"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/poi/Warehouse_Exterior_4Floors_256_Quest.tile": {
+    "size": 4,
+    "uid": "5e9fa630-76fe-4693-be63-00ecd9acf201"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Baguette_128_01.tile": {
+    "size": 2,
+    "uid": "d92fa65f-9eda-4e95-ac60-7cd35af64abf"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Beesuit_64_01.tile": {
+    "size": 1,
+    "uid": "4bb32278-6e87-482d-a9e3-3476a45a194b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Bigfan_64_01.tile": {
+    "size": 1,
+    "uid": "84cce463-a967-443f-95ff-9fcdb73262b0"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Cardboardpoop_64_01.tile": {
+    "size": 1,
+    "uid": "cd2e757d-249d-49af-979c-14428b41f7ad"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Carousel_64_01.tile": {
+    "size": 1,
+    "uid": "86854faa-1d4f-4f2a-bb57-877abb8dfbc3"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Catapult_128_01.tile": {
+    "size": 2,
+    "uid": "e010fb27-2d28-44fb-a8e6-e9f9664850a7"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Compass_64_01.tile": {
+    "size": 1,
+    "uid": "9269286f-6bde-4d6d-ad57-3ef57c88980e"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Cornheart_64_01.tile": {
+    "size": 1,
+    "uid": "d5532a26-4450-4bc7-9db9-ff370be3dee9"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Cozybed_64_01.tile": {
+    "size": 1,
+    "uid": "6ddf24cb-db84-4534-81a8-a9ce81e83d84"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Crowbar_64_01.tile": {
+    "size": 1,
+    "uid": "5c34eac0-2870-4978-8f05-7478d6e03baa"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Garden_64_01.tile": {
+    "size": 1,
+    "uid": "405bb852-e090-4ee5-8a2f-24f2395d5d5f"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Musicbox_128_01.tile": {
+    "size": 2,
+    "uid": "eb056a47-8122-4fd5-8f45-fbd96c249997"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Nicehouse_128_01.tile": {
+    "size": 2,
+    "uid": "da1275c8-2133-442a-b649-6961a5ddeb7f"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Popcorn_64_01.tile": {
+    "size": 1,
+    "uid": "d149b9cf-de7e-4fcd-8e82-69c07214d3af"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_ResourceCar_64_01.tile": {
+    "size": 1,
+    "uid": "e732c8c9-4580-4ca9-98fd-dbb79c97a623"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Sawbladearm_64_01.tile": {
+    "size": 1,
+    "uid": "49b86128-327e-457c-98f5-1949bee17c3d"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Sledgehammer_128_01.tile": {
+    "size": 2,
+    "uid": "311d997e-b8b0-491d-ac9d-176335e94e97"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Steelbridge_128_01.tile": {
+    "size": 2,
+    "uid": "328be143-d67d-4b73-a15a-3df26c106f20"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Totebotkey_64_01.tile": {
+    "size": 1,
+    "uid": "6c57b05d-36c7-46df-ae45-7403f756199d"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Wochouse_64_01.tile": {
+    "size": 1,
+    "uid": "bb5acabd-562f-449f-bece-5a8351c34b6e"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Xylophone_64_01.tile": {
+    "size": 1,
+    "uid": "c62ca228-3190-4c09-bd1a-88eb32e0695b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/questtiles/MechanicStation_QuestTile_01.tile": {
+    "size": 2,
+    "uid": "3ef31461-6f4e-4fb5-938d-875fb837d736"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/questtiles/Minidungeon_OverworldEntrance_Chemical_512_01.tile": {
+    "size": 8,
+    "uid": "08f0037b-9233-4fe8-b7e1-c1a0c4a2913b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/questtiles/Minidungeon_OverworldEntrance_Water_512_01.tile": {
+    "size": 8,
+    "uid": "8e1538ae-6169-4053-b9ae-d80258c6fb3b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/questtiles/Minidungeon_Overworld_Entrance_256_03.tile": {
+    "size": 4,
+    "uid": "312e8d1c-de9c-479d-861a-cace1cb480f7"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/questtiles/Minidungeon_Overworld_Entrance_256_04.tile": {
+    "size": 4,
+    "uid": "b5b956c1-bab0-4bbe-abb0-e0ab8d3f1fab"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/questtiles/Minidungeon_Overworld_Entrance_256_07.tile": {
+    "size": 4,
+    "uid": "d159bbf6-7b87-4073-8da7-c6cc3b85e4b5"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/questtiles/Minidungeon_Overworld_Entrance_DungeonQuest_256_01.tile": {
+    "size": 4,
+    "uid": "e70e6ba1-29a3-40a4-9ec3-cc2ed60a69c9"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/questtiles/Ruin_AutumnForest_RuinsQuest_128_01.tile": {
+    "size": 2,
+    "uid": "a47695ef-2028-44c7-8247-5fcad4e10bf8"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/ravine/Ravine(0001)_01.tile": {
+    "size": 1,
+    "uid": "dcb3aabc-6a4f-49f2-9897-0d26f941da07"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/ravine/Ravine(0002)_01.tile": {
+    "size": 1,
+    "uid": "229a15bc-f37a-4b86-879d-384efdf6ff3f"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/ravine/Ravine(0011)_01.tile": {
+    "size": 1,
+    "uid": "a76013a3-3bbe-46f6-bae9-1cb25c8a1e95"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/ravine/Ravine(0011)_02.tile": {
+    "size": 1,
+    "uid": "cab866fa-b9bc-45ce-af41-dbc249abf71f"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/ravine/Ravine(0012)_01.tile": {
+    "size": 1,
+    "uid": "3c8f64d6-78e1-4596-8365-91f3e8e3acbb"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/ravine/Ravine(0021)_01.tile": {
+    "size": 1,
+    "uid": "e2f74e1a-9607-409c-96aa-44e5b2d9aa27"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/ravine/Ravine(0022)_01.tile": {
+    "size": 1,
+    "uid": "e39d6028-a754-416f-b89e-12b26906988a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/ravine/Ravine(0101)_01.tile": {
+    "size": 1,
+    "uid": "a571350e-5e42-4664-a543-067ad54be11e"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/ravine/Ravine(0102)_01.tile": {
+    "size": 1,
+    "uid": "9717ee6b-4bf5-457b-9804-ea6df4302fdf"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/ravine/Ravine(0111)_01.tile": {
+    "size": 1,
+    "uid": "58234b8a-c733-4ffa-9185-b6ed2fdbe32c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/ravine/Ravine(0112)_01.tile": {
+    "size": 1,
+    "uid": "95f07b82-45a0-46b6-a076-3d96edf5a7dd"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/ravine/Ravine(0121)_01.tile": {
+    "size": 1,
+    "uid": "05a3c852-9605-4b1c-8637-2df9a9a4ba57"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/ravine/Ravine(0122)_01.tile": {
+    "size": 1,
+    "uid": "b68e8c51-97f3-49ff-93b8-a2236abd31a4"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/ravine/Ravine(0202)_01.tile": {
+    "size": 1,
+    "uid": "7480e763-11b5-4a97-aeeb-ed006f687cff"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/ravine/Ravine(0211)_01.tile": {
+    "size": 1,
+    "uid": "68346b58-c27b-4e57-aad6-b14d0935ae07"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/ravine/Ravine(0212)_01.tile": {
+    "size": 1,
+    "uid": "17fed20b-0d59-4907-8d07-602061ec7bea"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/ravine/Ravine(0221)_01.tile": {
+    "size": 1,
+    "uid": "42b3b2e9-4f70-4cc4-8bd6-3690da6e7fdc"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/ravine/Ravine(0222)_01.tile": {
+    "size": 1,
+    "uid": "36f60ce5-a44d-4004-843a-38f6eeeea846"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/ravine/Ravine(1111)_01.tile": {
+    "size": 1,
+    "uid": "5d8ce416-2bf5-479a-83d4-8db35113119a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_01.tile": {
+    "size": 1,
+    "uid": "8738fcb1-2ebe-4a02-8691-e4691c7db390"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_02.tile": {
+    "size": 1,
+    "uid": "03427a8b-ea62-4cb5-a13b-c544585b594a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_03.tile": {
+    "size": 1,
+    "uid": "448095af-4b7e-4881-9613-9e048012281e"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_04.tile": {
+    "size": 1,
+    "uid": "806fd9b2-b78a-4abf-9b8f-ca877f50fe2c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_05.tile": {
+    "size": 1,
+    "uid": "b0e53404-9f41-42c7-8ed2-88b839b672ee"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_06.tile": {
+    "size": 1,
+    "uid": "e5326cf5-8832-4370-be57-34a12a4c5dd7"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_07.tile": {
+    "size": 1,
+    "uid": "bd3064ce-d7eb-4fed-8b74-e5258581e13c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0002)_01.tile": {
+    "size": 1,
+    "uid": "c0b3adb3-1734-4811-84f7-06387f55fe34"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0002)_02.tile": {
+    "size": 1,
+    "uid": "02aa25f6-7909-4cbf-97d7-dbb30a4046b8"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0002)_03.tile": {
+    "size": 1,
+    "uid": "0fb52e79-2ad5-46a9-a660-5a819a279be1"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0003)_01.tile": {
+    "size": 1,
+    "uid": "39909f9b-6b39-4e88-9b6b-b98a555828b3"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0003)_02.tile": {
+    "size": 1,
+    "uid": "cc3f4f2f-7af0-4f4b-a246-1f999d853f2d"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0003)_03.tile": {
+    "size": 1,
+    "uid": "70396436-6b08-48e4-9ea0-c911ac94077c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_01.tile": {
+    "size": 1,
+    "uid": "6c4bbc3c-0307-4cd5-a064-8323da27a273"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_02.tile": {
+    "size": 1,
+    "uid": "9a3467f8-d5fa-4487-9082-3492304a6ad2"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_03.tile": {
+    "size": 1,
+    "uid": "803648ba-07af-4b54-bbbb-daeb791ea699"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_04.tile": {
+    "size": 1,
+    "uid": "7d1a44be-e5ae-4490-a543-7d401d527556"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_05.tile": {
+    "size": 1,
+    "uid": "95d99dc6-fbf0-45f6-b5b6-f007eca2d02b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_06.tile": {
+    "size": 1,
+    "uid": "464052ff-2fcf-48bf-bc4f-bec379484ddb"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_07.tile": {
+    "size": 1,
+    "uid": "0f0b04f6-218d-4601-90c5-49621f599dab"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_08.tile": {
+    "size": 1,
+    "uid": "40abd082-f508-4941-b2a0-c8a7f7be77f2"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_09.tile": {
+    "size": 1,
+    "uid": "641b0d7d-bb36-43e3-b3fc-c60f731b99ff"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_10.tile": {
+    "size": 1,
+    "uid": "be125375-f72b-45da-9f5a-897e82c851dd"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0012)_01.tile": {
+    "size": 1,
+    "uid": "a0542330-ca51-4979-8343-6f95fe0fbf0e"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0012)_02.tile": {
+    "size": 1,
+    "uid": "ef731c91-15c5-404f-84fe-a45cbb6a6526"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0013)_01.tile": {
+    "size": 1,
+    "uid": "e71a12de-1707-44f2-b717-25b746d58d69"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0021)_01.tile": {
+    "size": 1,
+    "uid": "52204506-c890-4166-b121-0ccf895f6a2f"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0021)_02.tile": {
+    "size": 1,
+    "uid": "c3fd518d-f0dd-4b2b-8520-882aef24bbfb"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_01.tile": {
+    "size": 1,
+    "uid": "e3adcc13-711f-4d7d-b7a3-60b063471de7"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_02.tile": {
+    "size": 1,
+    "uid": "dc08271f-f642-4654-b537-3fd49aae3e3c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_03.tile": {
+    "size": 1,
+    "uid": "f901e45b-dc8b-4d64-b57e-e8914cb4685f"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_04.tile": {
+    "size": 1,
+    "uid": "a4232105-000f-4d10-8c29-10b2ef53ecdf"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_05.tile": {
+    "size": 1,
+    "uid": "0b3aaaad-6380-445a-bbfd-efbb4f755ee0"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_06.tile": {
+    "size": 1,
+    "uid": "ebc95cf8-7c08-4d58-9f80-e2f28165f896"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_07.tile": {
+    "size": 1,
+    "uid": "7a72b21d-9ed7-4110-8d88-ff79c92fe75a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0023)_01.tile": {
+    "size": 1,
+    "uid": "8e50712a-aafa-4ac6-b3b1-b608343a7cfb"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0031)_01.tile": {
+    "size": 1,
+    "uid": "879f2a3a-7b54-4b52-a069-a6b219249465"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0032)_01.tile": {
+    "size": 1,
+    "uid": "3c11d4da-c8c2-4a37-9cb8-970cbade75a6"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_01.tile": {
+    "size": 1,
+    "uid": "5a579cdd-d72d-4848-a9d3-a7d177a0f11b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_02.tile": {
+    "size": 1,
+    "uid": "e74d0b3c-77f1-4bc8-8792-091c8b05af97"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_03.tile": {
+    "size": 1,
+    "uid": "c66b3b3b-f28b-4d69-baac-996a8e3d21c8"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_04.tile": {
+    "size": 1,
+    "uid": "e3a55ae8-afa8-42e0-b2b6-f76ecbce4b32"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_05.tile": {
+    "size": 1,
+    "uid": "d28a3c3c-f7eb-431a-945a-fc165474b8e1"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_06.tile": {
+    "size": 1,
+    "uid": "d07854aa-c8c2-4003-a8bb-5aa481ef081a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_07.tile": {
+    "size": 1,
+    "uid": "b77b84bd-fcf7-4611-ac2a-22b331982311"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0101)_01.tile": {
+    "size": 1,
+    "uid": "320e4f1c-f27d-4a8e-b763-a8f67a822b7f"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0101)_02.tile": {
+    "size": 1,
+    "uid": "6fe5886f-c571-413c-9868-ef7b826c5255"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0102)_01.tile": {
+    "size": 1,
+    "uid": "967a2a8b-8578-4f12-ada9-41c1e4a7b25c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0103)_01.tile": {
+    "size": 1,
+    "uid": "48f54a64-6e5c-4c65-bf3d-9af0fe944afd"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0111)_01.tile": {
+    "size": 1,
+    "uid": "98316424-7d8f-46a2-9944-8dfe88af1b2d"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0111)_02.tile": {
+    "size": 1,
+    "uid": "cff86f22-ce1d-43f8-bbbc-0ff700f47ca5"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0111)_03.tile": {
+    "size": 1,
+    "uid": "463c644f-cf12-412c-8691-be31d733fdf4"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0112)_01.tile": {
+    "size": 1,
+    "uid": "b0f68ed9-1dd2-4980-adf1-b5633b5a59dc"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0113)_01.tile": {
+    "size": 1,
+    "uid": "a4fb1ea7-b5d8-4d28-be10-9766abe63cef"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0121)_01.tile": {
+    "size": 1,
+    "uid": "f2702fae-3a2c-4a58-b9ce-02efc0c15d96"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0121)_02.tile": {
+    "size": 1,
+    "uid": "45ca04f1-a554-4449-8007-7aa37bfc732b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0121)_03.tile": {
+    "size": 1,
+    "uid": "75579044-cfd6-4ce3-a638-b06ea38b9fd5"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0122)_01.tile": {
+    "size": 1,
+    "uid": "52586c40-251d-4b2f-aa4e-e7fab5c7eb1d"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0122)_02.tile": {
+    "size": 1,
+    "uid": "7e2ffbc8-f050-44b3-bcc5-00b9a79e7800"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0123)_01.tile": {
+    "size": 1,
+    "uid": "c40558d3-9855-457f-9ba3-ee8d45b48c4b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0131)_01.tile": {
+    "size": 1,
+    "uid": "0df21966-6aab-4045-b0b8-506b7e6a0e42"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0132)_01.tile": {
+    "size": 1,
+    "uid": "76add552-5c6f-438b-bfc0-1227edb3be2b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0132)_02.tile": {
+    "size": 1,
+    "uid": "d58cec11-fb42-4dca-9449-f9d30cbca41d"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0133)_01.tile": {
+    "size": 1,
+    "uid": "4faf2d7e-eb1b-4b5e-9636-65bfc3da3d8f"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0202)_01.tile": {
+    "size": 1,
+    "uid": "22df3311-c626-4872-9aca-d9ebf89f9550"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0203)_01.tile": {
+    "size": 1,
+    "uid": "4202cbde-18e0-4411-8c2a-e017eb7bcc38"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0211)_01.tile": {
+    "size": 1,
+    "uid": "36b4a8a3-5696-461c-b5bf-76be5b717300"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0212)_01.tile": {
+    "size": 1,
+    "uid": "b4968c7c-47ca-408a-a444-d7f9e4e3550b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0213)_01.tile": {
+    "size": 1,
+    "uid": "657d01e7-ecc6-4a3c-9f4f-795233d29e08"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0221)_01.tile": {
+    "size": 1,
+    "uid": "d7d6740c-4fd5-4455-8649-abefdcb4ba56"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0221)_02.tile": {
+    "size": 1,
+    "uid": "ca98351a-2a56-4c49-aa91-3c8a69b20768"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0222)_01.tile": {
+    "size": 1,
+    "uid": "2ebb634a-32d0-424b-bcb1-93d3efe10429"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0223)_01.tile": {
+    "size": 1,
+    "uid": "f8a2fe56-3bdc-4433-b55a-4f68a2d461b1"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0231)_01.tile": {
+    "size": 1,
+    "uid": "ad72ac19-cb5e-42f3-92b3-ef74f66ea62a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0232)_01.tile": {
+    "size": 1,
+    "uid": "ab91009b-4d27-414e-8282-ec8699ae1354"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0233)_01.tile": {
+    "size": 1,
+    "uid": "be39401b-39f1-4b1f-b458-d76598d2b257"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0303)_01.tile": {
+    "size": 1,
+    "uid": "062f6f8d-e04e-4d7f-a839-69aca76cd47c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0311)_01.tile": {
+    "size": 1,
+    "uid": "b7b2d57b-4d0a-4f55-aa64-b25b8a4f4633"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0312)_01.tile": {
+    "size": 1,
+    "uid": "c583831c-7c8c-4398-838e-bf7539265eb5"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0313)_01.tile": {
+    "size": 1,
+    "uid": "7b7addcf-171f-42c2-8fb6-af677d69b045"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0321)_01.tile": {
+    "size": 1,
+    "uid": "49baca4b-5aca-4d0d-b719-03603238e856"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0322)_01.tile": {
+    "size": 1,
+    "uid": "eac6168e-5fe9-47f2-9031-a93efe008a28"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0323)_01.tile": {
+    "size": 1,
+    "uid": "76f90b37-08fc-4433-a646-642adc6b3bf1"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0331)_01.tile": {
+    "size": 1,
+    "uid": "2f4ba29a-c09a-43f7-ac95-012f9e31b307"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0332)_01.tile": {
+    "size": 1,
+    "uid": "d7ac5317-777e-4351-9101-b56a660b7bfc"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0333)_01.tile": {
+    "size": 1,
+    "uid": "263d23fa-f8d5-4d74-b470-a5d7b0bef725"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0001)_Cliff(0000)_01.tile": {
+    "size": 1,
+    "uid": "dbe93342-18f8-42ee-9a37-6869d15323c3"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_01.tile": {
+    "size": 1,
+    "uid": "b19e6409-39e5-4ee8-b0e6-012a3f03d295"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_02.tile": {
+    "size": 1,
+    "uid": "40d7aa74-0ade-4616-b706-9cef2f89c448"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_03.tile": {
+    "size": 1,
+    "uid": "3c42a67d-5642-4371-b6c2-a70d7dc82ba4"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_04.tile": {
+    "size": 1,
+    "uid": "3d3a1494-d0ad-4efb-b337-28818865d88e"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_05.tile": {
+    "size": 1,
+    "uid": "0ee0bd1f-804c-487c-9e16-b51b2fabedec"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_06.tile": {
+    "size": 1,
+    "uid": "59748a7a-91ab-4530-965c-246c3e7f0a26"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_07.tile": {
+    "size": 1,
+    "uid": "309c5332-d603-4355-a4a1-595c3459f591"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_08.tile": {
+    "size": 1,
+    "uid": "4aa31f0a-2b56-4868-9419-76c32d1919b1"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_09.tile": {
+    "size": 1,
+    "uid": "65f3c721-3f89-470e-a453-1917233cc1f1"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_10.tile": {
+    "size": 1,
+    "uid": "6e8a80d9-08aa-41ff-b7f1-7284550d849b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_11.tile": {
+    "size": 1,
+    "uid": "ca1aea84-265c-4a80-b49c-1b044331fe4b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_12.tile": {
+    "size": 1,
+    "uid": "ce0a2f44-9108-4e14-afe3-38c4aaca4e01"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_13.tile": {
+    "size": 1,
+    "uid": "b9edcca2-5f5f-4f09-9aea-80f0f64c0ee4"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_14.tile": {
+    "size": 1,
+    "uid": "7ac61fb2-81e3-4b44-b4d1-a2d4fc935f68"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0001)_01.tile": {
+    "size": 1,
+    "uid": "edb2b00c-81fb-48c0-8325-68b26e8ba870"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0010)_01.tile": {
+    "size": 1,
+    "uid": "a983d61c-d2b4-432b-9be5-be062d8ff72e"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0011)_01.tile": {
+    "size": 1,
+    "uid": "21359ca2-a302-47ac-b4d2-cafd32c792de"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0100)_01.tile": {
+    "size": 1,
+    "uid": "7d15d629-084d-4603-ba42-83607fab7649"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0101)_01.tile": {
+    "size": 1,
+    "uid": "8afe7a8a-9151-4c8d-a3c2-e44b48b94c39"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0110)_01.tile": {
+    "size": 1,
+    "uid": "b313ee4f-002d-426b-b4d7-41982d973d90"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0111)_01.tile": {
+    "size": 1,
+    "uid": "6f117827-6c4a-4874-8272-ace33fd31ef0"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1000)_01.tile": {
+    "size": 1,
+    "uid": "bd6f65d0-d9c9-42ba-851c-de3b33d3a205"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1001)_01.tile": {
+    "size": 1,
+    "uid": "20630ee4-3ce3-4178-8437-af2c7e99c417"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1010)_01.tile": {
+    "size": 1,
+    "uid": "40872ddf-1212-4bcf-9ba6-f161c1719d9a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1011)_01.tile": {
+    "size": 1,
+    "uid": "b3a31f97-790a-4235-810a-5578395c05aa"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1100)_01.tile": {
+    "size": 1,
+    "uid": "c92c0f49-0cc8-4c96-b4ba-aad83389c812"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1101)_01.tile": {
+    "size": 1,
+    "uid": "fb56e962-a472-4fbc-91e5-90ca406f4d55"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1110)_01.tile": {
+    "size": 1,
+    "uid": "d477dfb7-4a24-471a-a2b3-bcb26cd55b17"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_01.tile": {
+    "size": 1,
+    "uid": "3f3d209f-72c9-412d-9183-74db00f2ebd7"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_02.tile": {
+    "size": 1,
+    "uid": "7b46b3d9-74a8-485e-a82b-30effb44abec"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_03.tile": {
+    "size": 1,
+    "uid": "026be275-0def-4fbe-b29d-581d616ed254"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_04.tile": {
+    "size": 1,
+    "uid": "ec87829f-c2cd-425a-a13b-44b35120e7d0"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_05.tile": {
+    "size": 1,
+    "uid": "cb138480-25ae-4a98-a8af-4fa604778eea"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_06.tile": {
+    "size": 1,
+    "uid": "3548c061-7a96-4dfb-8cbe-3c65e3153294"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_07.tile": {
+    "size": 1,
+    "uid": "c5142925-2541-4b62-8964-96e4b2556d76"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_08.tile": {
+    "size": 1,
+    "uid": "75bf4b95-087c-4ce7-9553-702f1778ae0b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_09.tile": {
+    "size": 1,
+    "uid": "87496417-031e-4361-a61c-f6df0682ff22"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_10.tile": {
+    "size": 1,
+    "uid": "6dc0d519-12e6-4f4a-ad85-63b263ae60d9"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_11.tile": {
+    "size": 1,
+    "uid": "10b5034d-4ecd-4f52-9bd6-d902150f091f"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_12.tile": {
+    "size": 1,
+    "uid": "d3f482e2-b9e4-431d-9b6a-e091bac8f527"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_13.tile": {
+    "size": 1,
+    "uid": "c3a25ab0-ad7e-4040-b1e9-45b9afb45815"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_14.tile": {
+    "size": 1,
+    "uid": "cee54b6d-d071-439f-9a39-a18ee38a1804"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_15.tile": {
+    "size": 1,
+    "uid": "06fc96e0-7f14-4084-98e4-4bf5fd285f18"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_16.tile": {
+    "size": 1,
+    "uid": "791bc2a4-0f8d-4db2-bee4-5ad7caabca62"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0001)_01.tile": {
+    "size": 1,
+    "uid": "76502521-ea68-4db0-8347-7ef7480ea590"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0010)_01.tile": {
+    "size": 1,
+    "uid": "ee357919-b89d-4f75-aa29-f5e7ed1500c4"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0010)_02.tile": {
+    "size": 1,
+    "uid": "747c57f8-cd81-437d-b9f5-a8823d190444"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0011)_01.tile": {
+    "size": 1,
+    "uid": "aeda2fbd-78a3-48ae-9405-834ad610d2ef"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0101)_01.tile": {
+    "size": 1,
+    "uid": "cd9871a3-bb49-440c-ac96-53b6645acafd"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0110)_01.tile": {
+    "size": 1,
+    "uid": "cba092c0-de42-4612-bed6-63446c5e6cea"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0111)_01.tile": {
+    "size": 1,
+    "uid": "52ba1bf0-370d-4e9a-9e7e-eaaec7a8d08c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(1010)_01.tile": {
+    "size": 1,
+    "uid": "723c46f1-325a-453c-8438-79a4e1ac66bc"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(1011)_01.tile": {
+    "size": 1,
+    "uid": "4c2fd06d-27c3-471b-971e-78e6f2a98f4a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0111)_Cliff(0000)_01.tile": {
+    "size": 1,
+    "uid": "77f25340-8482-426a-a58e-335943e9be09"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(1111)_Cliff(0000)_01.tile": {
+    "size": 1,
+    "uid": "dd29a683-9dc3-4634-bef1-daeaf411cb21"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(1111)_Cliff(0000)_02.tile": {
+    "size": 1,
+    "uid": "6af26cb2-a06b-45c3-bfc9-9a7f3065cd45"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0001)_Forest(1111)_01.tile": {
+    "size": 1,
+    "uid": "c287b99e-c7f9-41a0-bb17-6203a2466ccb"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0011)_AutumnForest(1111)_01.tile": {
+    "size": 1,
+    "uid": "8e5a9986-3003-4a6d-93ce-b9e732723a0a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0011)_BurntForest(1111)_01.tile": {
+    "size": 1,
+    "uid": "ff4d8357-5656-4baf-9ed2-61c226cf3b62"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0011)_Desert(1111)_01.tile": {
+    "size": 1,
+    "uid": "53fafc33-74a4-4637-87e8-0626cc945084"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0011)_Desert(1111)_02.tile": {
+    "size": 1,
+    "uid": "4eccd58b-b6ca-4e43-9b70-27ee75cbb441"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0011)_Field(1111)_01.tile": {
+    "size": 1,
+    "uid": "163c84ef-b493-437a-827f-e6f8c79420ab"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0011)_Forest(0001)_01.tile": {
+    "size": 1,
+    "uid": "ddb758e6-1920-4f51-b707-c0e8277e6cd4"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0011)_Forest(0110)_01.tile": {
+    "size": 1,
+    "uid": "a428bce1-949f-4ba9-b1b3-2b984fb0d22c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0011)_Forest(1100)_01.tile": {
+    "size": 1,
+    "uid": "6a0e42cd-13be-44a8-a315-453573200666"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0011)_Forest(1110)_01.tile": {
+    "size": 1,
+    "uid": "283704ff-0ea5-4fcf-ac73-fc4f4944dc8d"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0011)_Forest(1111)_01.tile": {
+    "size": 1,
+    "uid": "39c6c4ea-0a6d-45ef-90ed-9bd722a29fdc"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0011)_Lake(0001)_01.tile": {
+    "size": 1,
+    "uid": "60f9245a-37aa-4740-91a6-9b1c596b3a81"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0011)_Lake(0110)_01.tile": {
+    "size": 1,
+    "uid": "be6259b3-be4e-4e68-a86f-bd6d67eb7572"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0011)_Lake(1100)_01.tile": {
+    "size": 1,
+    "uid": "86ad572b-b7d3-444d-9dfd-8b5f37f229b4"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0011)_Lake(1110)_01.tile": {
+    "size": 1,
+    "uid": "08ebf03e-804c-493c-b626-a56060afb0fa"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0101)_AutumnForest(1001)_01.tile": {
+    "size": 1,
+    "uid": "3a82527c-01a2-4d24-b417-7788bd234e6e"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0101)_AutumnForest(1111)_01.tile": {
+    "size": 1,
+    "uid": "427b130a-99af-46e8-9446-c5ad04398864"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0101)_BurntForest(1001)_01.tile": {
+    "size": 1,
+    "uid": "72e26acb-5f66-4835-a52d-83fb01143381"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0101)_BurntForest(1111)_01.tile": {
+    "size": 1,
+    "uid": "df62624d-8d81-4dd8-b6a5-59f359952dc1"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0101)_Desert(0001)_01.tile": {
+    "size": 1,
+    "uid": "3fa22bd4-111b-4c59-87be-da8fafde861c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0101)_Desert(0010)_01.tile": {
+    "size": 1,
+    "uid": "8e9563ac-9c4d-40fb-9d7f-d7745dc7462a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0101)_Desert(1001)_01.tile": {
+    "size": 1,
+    "uid": "88ab9e44-1580-457f-be83-b4a8b8915703"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0101)_Desert(1001)_02.tile": {
+    "size": 1,
+    "uid": "e6c772ea-dd97-4355-847e-f2f60790e40a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0101)_Desert(1111)_01.tile": {
+    "size": 1,
+    "uid": "2c11ac86-14ea-49ee-92dc-64d4a3ec9474"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0101)_Desert(1111)_02.tile": {
+    "size": 1,
+    "uid": "13007bde-e48f-454f-942e-186719bf1ba8"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0101)_Desert(1111)_03.tile": {
+    "size": 1,
+    "uid": "bac613c0-c3e7-40c5-8b1b-8aef28c4be50"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0101)_Field(1001)_01.tile": {
+    "size": 1,
+    "uid": "eb463d72-ab2b-429e-89ea-bb4b3a41018c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0101)_Field(1111)_01.tile": {
+    "size": 1,
+    "uid": "a20cbce9-bb5f-4409-8b2e-9a32aaec7d74"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0101)_Forest(0001)_01.tile": {
+    "size": 1,
+    "uid": "92b6ed7f-91e2-4f05-bbc9-261d320fa23a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0101)_Forest(0010)_01.tile": {
+    "size": 1,
+    "uid": "98a5e16c-ede2-4580-8ad9-ef070d9fbd29"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0101)_Forest(0011)_01.tile": {
+    "size": 1,
+    "uid": "cd6cdd6f-90e1-4355-8bf9-77ac83b2248c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0101)_Forest(0111)_01.tile": {
+    "size": 1,
+    "uid": "14e2d035-871f-4420-8a05-783a377c6471"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0101)_Forest(1001)_01.tile": {
+    "size": 1,
+    "uid": "dfec295c-66d9-498c-8f18-72447167dbdf"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0101)_Forest(1011)_01.tile": {
+    "size": 1,
+    "uid": "a8bc9bb7-76ed-4dc1-a746-dc81b46cc77b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0101)_Forest(1111)_01.tile": {
+    "size": 1,
+    "uid": "e0be898b-49b2-4710-8a3c-47a1999376e1"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0101)_Lake(0001)_01.tile": {
+    "size": 1,
+    "uid": "e8f3a25c-1e74-4244-bfc8-9560f2511b56"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0101)_Lake(0010)_01.tile": {
+    "size": 1,
+    "uid": "d72cd356-f436-4d6f-b98d-48363d2538eb"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0101)_Lake(0011)_01.tile": {
+    "size": 1,
+    "uid": "ba2e96b3-bf93-4d8b-a64d-eed203614b5c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0101)_Lake(0011)_02.tile": {
+    "size": 1,
+    "uid": "2e599b00-a4f6-4490-b714-b4673e539268"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0101)_Lake(1001)_01.tile": {
+    "size": 1,
+    "uid": "80f1d48d-51a7-4bc8-9315-9567de8c253a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0101)_Lake(1001)_02.tile": {
+    "size": 1,
+    "uid": "f70f4e7e-8f33-438b-91e5-ecd953e9cf83"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0101)_Lake(1001)_03.tile": {
+    "size": 1,
+    "uid": "38bd425b-6169-4aa8-9a8c-70545299e42a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0101)_Lake(1111)_01.tile": {
+    "size": 1,
+    "uid": "a5220463-8117-4e95-8e70-fe71c42b631a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0101)_Lake(1111)_02.tile": {
+    "size": 1,
+    "uid": "568c541a-0d29-4a3c-a73c-dc5c1cb36b61"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0101)_Lake(1111)_03.tile": {
+    "size": 1,
+    "uid": "4ebcfa79-e86a-4c20-bf38-0b863abad849"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(0111)_Forest(1111)_01.tile": {
+    "size": 1,
+    "uid": "92686933-9abd-4765-90ee-b30bc1a8c296"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/roads_biomes/Road(1111)_Forest(1111)_01.tile": {
+    "size": 1,
+    "uid": "775c34a6-d473-4b53-9b46-881bfaada491"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/start_area/SurvivalStartArea_BigRuin_01.tile": {
+    "size": 2,
+    "uid": "6b099f5a-4a59-4303-9629-3b38a394119d"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/start_area/SurvivalStartArea_BigRuin_01_NEW.tile": {
+    "size": 2,
+    "uid": "baf427f1-2bb1-41e8-8868-44fc12af5590"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/start_area/SurvivalStartArea_BossMountain_01.tile": {
+    "size": 2,
+    "uid": "5deb2830-b52e-40af-91c2-e53aee6c5165"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/start_area/SurvivalStartArea_CrashedShip_01.tile": {
+    "size": 4,
+    "uid": "f6e1a6f1-ac23-4fa5-b083-33ea37f4550e"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/start_area/SurvivalStartArea_CrashedShip_01_NEW.tile": {
+    "size": 4,
+    "uid": "28c8f354-3919-46e4-a311-6c3ceee5b5d9"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/start_area/SurvivalStartArea_CrashedTowerCliff_01.tile": {
+    "size": 1,
+    "uid": "ff1f81e2-c68f-4421-ab49-3a68926e3947"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/start_area/SurvivalStartArea_CrashedTower_01.tile": {
+    "size": 2,
+    "uid": "af576b76-b6a2-49ea-8451-4001f1c28d7c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/start_area/SurvivalStartArea_CrashedTower_01_NEW.tile": {
+    "size": 2,
+    "uid": "943c232a-a780-4099-bffc-54ce08c184c5"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/start_area/SurvivalStartArea_SmallRuin_A_01.tile": {
+    "size": 1,
+    "uid": "e7c4f9d9-1e57-4a99-9492-75342d65f3c8"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/start_area/SurvivalStartArea_SmallRuin_B_01.tile": {
+    "size": 1,
+    "uid": "410858cb-6aa8-418f-8bed-00c0dc920316"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/start_area/SurvivalStartArea_SmallRuin_C_01.tile": {
+    "size": 1,
+    "uid": "e416821e-aabf-464e-ba61-b7314c651556"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/start_area/SurvivalStartArea_SmallRuin_D_01.tile": {
+    "size": 1,
+    "uid": "2141d12a-ae86-4658-8d3f-405d5a301190"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Cave/drill1_cave_3a_bot_8x8x3.tile": {
+    "size": 2,
+    "uid": "8162cfa7-50e0-455b-8cbc-fd9a975a7d37"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Cave/drill1_cave_4a_top_8x8x4.tile": {
+    "size": 2,
+    "uid": "4aca3419-6e23-4784-b0ca-642f9c0cf709"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Cave/drill1_cave_4b_bot_8x8x4.tile": {
+    "size": 2,
+    "uid": "bd9b133f-a9e7-437f-8384-0809cfdb6805"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Cave/drill1_cave_5a_top_8x8x5.tile": {
+    "size": 2,
+    "uid": "38d6a889-ac2b-407e-9941-4cde2d0eadd1"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Cave/drill1_cave_8a_8x8x8.tile": {
+    "size": 2,
+    "uid": "1cf340c9-da3b-43f6-ac4f-e31475e84328"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Tunnelpocket/DrillSpawn/tunnelpocket_large_03_ds_4x4x4.tile": {
+    "size": 1,
+    "uid": "ad023d54-ba3d-4387-a9c3-cc595b7eaeb0"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Tunnelpocket/DrillSpawn/tunnelpocket_large_04_ds_4x4x4.tile": {
+    "size": 1,
+    "uid": "1b16d003-e86d-480c-9386-e0a2c4a90d35"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Tunnelpocket/DrillSpawn/tunnelpocket_large_06_ds_4x4x3.tile": {
+    "size": 1,
+    "uid": "c9a1c4b8-fd3f-453e-b6ba-7448f5e1ad31"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Tunnelpocket/DrillSpawn/tunnelpocket_large_07_ds_2x4x5.tile": {
+    "size": 1,
+    "uid": "825ea02e-50eb-4a6e-93da-4b3f72914e7c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Tunnelpocket/DrillSpawn/tunnelpocket_large_rock1Web_ds_3x3x6.tile": {
+    "size": 1,
+    "uid": "e494247d-adbd-47da-8cc2-583e00c28b5e"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Tunnelpocket/DrillSpawn/tunnelpocket_large_square_ds_4x4x4.tile": {
+    "size": 1,
+    "uid": "5863468d-3b5c-4e0b-add9-ee90a7eeb7d6"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Tunnelpocket/DrillSpawn/tunnelpocket_large_t1Balls_ds_4x4x4.tile": {
+    "size": 1,
+    "uid": "c6bef073-8ca9-4ab6-a3e0-60b1a59b0706"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Tunnelpocket/DrillSpawn/tunnelpocket_large_t1Dungeon_ds_4x4x4.tile": {
+    "size": 1,
+    "uid": "838426be-2faa-4823-bdfc-85b731db022a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Tunnelpocket/DrillSpawn/tunnelpocket_large_underwaterRock1_ds_4x4x3.tile": {
+    "size": 1,
+    "uid": "085ebd0b-3de3-472d-8891-da3f1005bc3f"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Tunnelpocket/DrillSpawn/tunnelpocket_large_vertical_ds_3x3x6.tile": {
+    "size": 1,
+    "uid": "0e35806f-34ea-47fa-b4ed-98d94a823f14"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Tunnelpocket/drill1_tunnelpocket_large_UnderwaterRock1_4x4x3.tile": {
+    "size": 1,
+    "uid": "1b827f01-53b0-4d08-85f4-ce4c1c07478a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Tunnelpocket/drill1_tunnelpocket_large_crystaltrees_4x4x4.tile": {
+    "size": 1,
+    "uid": "665ed4e9-c724-497c-8ba4-580f3497c39a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Tunnelpocket/drill1_tunnelpocket_large_rock1Webb_3x3x6.tile": {
+    "size": 1,
+    "uid": "bad9220b-ca49-45ed-a3ea-bdd7901db2dc"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Tunnelpocket/drill1_tunnelpocket_large_square_4x4x4.tile": {
+    "size": 1,
+    "uid": "0f9b345f-94db-49e5-bc38-78ba3b0f59e8"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Tunnelpocket/drill1_tunnelpocket_large_t1Balls_4x4x4.tile": {
+    "size": 1,
+    "uid": "17dd1e22-ba39-4349-8e88-9c7f51edff38"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Tunnelpocket/drill1_tunnelpocket_large_t1Dungeon_4x4x4.tile": {
+    "size": 1,
+    "uid": "46bc74de-f609-42f3-ae6e-58c27972dddc"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Tunnelpocket/drill1_tunnelpocket_large_vertical_3x3x6.tile": {
+    "size": 1,
+    "uid": "b089aacd-be6b-4f2f-b367-eb9c10e56668"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Tunnelpocket/drill1_tunnelpocket_medium_09_3x3x3.tile": {
+    "size": 1,
+    "uid": "8c672499-9818-41fd-bb3b-c07219ede9b6"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Tunnelpocket/drill1_tunnelpocket_medium_10_3x3x3.tile": {
+    "size": 1,
+    "uid": "7b8ac27b-33b2-4aca-8274-55b740e5de56"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Tunnelpocket/drill1_tunnelpocket_medium_11_3x3x3.tile": {
+    "size": 1,
+    "uid": "e4578435-5297-44df-b6f1-987476488d40"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Tunnelpocket/drill1_tunnelpocket_medium_12_3x3x3.tile": {
+    "size": 1,
+    "uid": "cbb76c58-eb90-4a4a-8299-1ba3636dc934"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Tunnelpocket/drill1_tunnelpocket_medium_13_3x3x3.tile": {
+    "size": 1,
+    "uid": "d0e1ccf8-2b23-472c-a504-aa56d8a03ecf"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Tunnelpocket/drill1_tunnelpocket_medium_claustrophobicDiamond_4x4x1.tile": {
+    "size": 1,
+    "uid": "cc4ec472-9b0c-4a75-bfe1-521c208dd46d"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Tunnelpocket/drill1_tunnelpocket_medium_claustrophobicUnderwater_4x4x1.tile": {
+    "size": 1,
+    "uid": "66e4d049-81ef-49dd-9dd0-9954f1455777"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Tunnelpocket/drill1_tunnelpocket_medium_coraliumledge_3x3x2.tile": {
+    "size": 1,
+    "uid": "a7bbfaa7-7e0c-4bb0-89a4-19d73feaaad9"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Tunnelpocket/drill1_tunnelpocket_medium_coraliumthin_1x3x3.tile": {
+    "size": 1,
+    "uid": "c6ff7b33-cc77-4cf0-9037-bbdd09a9e889"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Tunnelpocket/drill1_tunnelpocket_medium_coraliumthin_1x3x4.tile": {
+    "size": 1,
+    "uid": "6ac01853-c37e-4a61-9111-dbc1f8cbb283"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Tunnelpocket/drill1_tunnelpocket_medium_coraliumtop_3x3x3.tile": {
+    "size": 1,
+    "uid": "9b649965-fbfc-4bbb-8fa2-341bbcb21238"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Tunnelpocket/drill1_tunnelpocket_medium_t1Minerbot_3x3x3.tile": {
+    "size": 1,
+    "uid": "abafeadc-ae39-497f-864e-a47cc3cb965b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Tunnelpocket/drill1_tunnelpocket_medium_t1Reward_3x3x3.tile": {
+    "size": 1,
+    "uid": "95aef878-4663-4311-a8f4-25f4d2eaa173"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Tunnelpocket/drill1_tunnelpocket_medium_t1coraliumOpen_3x3x3.tile": {
+    "size": 1,
+    "uid": "3c44112a-4119-42d3-9841-d4e0a140e1e8"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Tunnelpocket/drill1_tunnelpocket_medium_t1pillarCoralium_3x3x2.tile": {
+    "size": 1,
+    "uid": "24125491-4fc8-44e9-889f-a51fcc47c76f"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/Tunnelpocket/drill1_tunnelpocket_medium_t1veindrillspawner_3x3x2.tile": {
+    "size": 1,
+    "uid": "85b26f18-d617-498d-b7f5-778c89adccb4"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill1/drill1_elevator_12x8x8.tile": {
+    "size": 4,
+    "uid": "03bfa999-82b0-43fa-98e7-aafaa159bde0"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Cave/drill2_cave_3a_bot_8x8x3.tile": {
+    "size": 2,
+    "uid": "8e738412-fa02-42c6-9937-8c47064a0bf5"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Cave/drill2_cave_3b_top_8x8x3.tile": {
+    "size": 2,
+    "uid": "af3d7f0f-aac6-4570-918c-f25ef9e94580"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Cave/drill2_cave_4a_top_8x8x4.tile": {
+    "size": 2,
+    "uid": "80383f42-0931-415b-aec3-79bcd846fe0b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Cave/drill2_cave_4b_bot_8x8x4.tile": {
+    "size": 2,
+    "uid": "d0dd97a8-0fe7-4d0b-8117-99debb2737ca"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Cave/drill2_cave_4c_top_8x8x4.tile": {
+    "size": 2,
+    "uid": "39ddaf27-c3d1-4e1f-a2c7-f8b6acc7a91c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Cave/drill2_cave_4d_bot_8x8x4.tile": {
+    "size": 2,
+    "uid": "a4d9fdc9-f859-4ced-84fd-a982890a4bac"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Cave/drill2_cave_5a_top_8x8x5.tile": {
+    "size": 2,
+    "uid": "d8a75f0b-4806-487b-8dfe-e8474cd099d5"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Cave/drill2_cave_5b_bot_8x8x5.tile": {
+    "size": 2,
+    "uid": "68d05df7-a926-4cae-8de5-58b0192e1b84"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Cave/drill2_cave_8a_8x8x8.tile": {
+    "size": 2,
+    "uid": "50b6a878-ce3d-4326-8d93-439fe1a282e3"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Cave/drill2_cave_8b_8x8x8.tile": {
+    "size": 2,
+    "uid": "0748795c-70bc-450d-9a34-739d1425887a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Pocket/drill2_pocket_medium_t2Minerbot_3x3x3.tile": {
+    "size": 1,
+    "uid": "640271d7-17e6-40ac-b83d-9c91ded8336a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Pocket/drill2_pocket_sapphirepillars_01_4x4x4.tile": {
+    "size": 1,
+    "uid": "de7dbb0e-5cc6-4349-b79c-b4dea47e7429"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Pocket/drill2_pocket_tiny_01_1x1x1.tile": {
+    "size": 1,
+    "uid": "24222630-9859-4038-89b8-b0d4f8df57ab"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Large/drill2_tunnelpocket_large_03_4x4x4.tile": {
+    "size": 1,
+    "uid": "14b7c3c3-0ca1-45bf-aee3-8cfad4fdae52"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Large/drill2_tunnelpocket_large_04_4x4x4.tile": {
+    "size": 1,
+    "uid": "4ee3453c-0acd-4d6b-95c6-105e867e5c9a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Large/drill2_tunnelpocket_large_06_4x4x3.tile": {
+    "size": 1,
+    "uid": "1ac4e478-1c88-49e0-9e27-2c8883082f2b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Large/drill2_tunnelpocket_large_cyrstaltrees_4x4x4.tile": {
+    "size": 1,
+    "uid": "e465fd6b-e051-4130-8944-9ba29f13cd87"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Large/drill2_tunnelpocket_large_dungeon_4x4x4.tile": {
+    "size": 1,
+    "uid": "b12ea270-2cff-42ab-ac59-2b0e8562da8e"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Large/drill2_tunnelpocket_large_formations_4x4x4.tile": {
+    "size": 1,
+    "uid": "d974db78-8f2f-43ef-98ea-7b67c430749a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Large/drill2_tunnelpocket_large_square_4x4x4.tile": {
+    "size": 1,
+    "uid": "f69c3b71-aeee-4466-9208-38855bc85830"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Large/drill2_tunnelpocket_large_vertical_3x3x6.tile": {
+    "size": 1,
+    "uid": "0a13149f-55ee-427a-82c1-84e169fab11a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Medium/drill2_tunnelpocket_medium_01_3x3x3.tile": {
+    "size": 1,
+    "uid": "5599000a-00ae-4ad6-a80e-8055041da440"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Medium/drill2_tunnelpocket_medium_02_3x3x2.tile": {
+    "size": 1,
+    "uid": "47a4ae58-8295-4a9e-9236-c5d13f7ad006"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Medium/drill2_tunnelpocket_medium_03_2x2x4.tile": {
+    "size": 1,
+    "uid": "728de782-9ae8-4138-8509-326ef05f0c05"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Medium/drill2_tunnelpocket_medium_04_3x3x2.tile": {
+    "size": 1,
+    "uid": "2e30a8cf-f2ef-4d39-a8eb-d930dd7c8499"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Medium/drill2_tunnelpocket_medium_05_3x3x3.tile": {
+    "size": 1,
+    "uid": "d380166f-c41f-433d-8a41-70bb7084a201"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Medium/drill2_tunnelpocket_medium_06_3x3x3.tile": {
+    "size": 1,
+    "uid": "fe5931a9-1528-4e2b-a4b8-e213cc9ce48a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Medium/drill2_tunnelpocket_medium_07_3x3x3.tile": {
+    "size": 1,
+    "uid": "bb50f88a-7033-4d40-b68c-82c45be25414"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Medium/drill2_tunnelpocket_medium_08_3x3x2.tile": {
+    "size": 1,
+    "uid": "1849a328-3644-468c-a782-1b2d8e6c68f3"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Medium/drill2_tunnelpocket_medium_09_3x3x3.tile": {
+    "size": 1,
+    "uid": "723802af-a7e3-49de-afdf-f434c577316f"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Medium/drill2_tunnelpocket_medium_10_3x3x3.tile": {
+    "size": 1,
+    "uid": "686e72c3-70c5-483f-8236-b46ddd72baf2"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Medium/drill2_tunnelpocket_medium_11_3x3x3.tile": {
+    "size": 1,
+    "uid": "9c4e2b73-971a-44ea-b656-80755470eb74"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Medium/drill2_tunnelpocket_medium_12_3x3x3.tile": {
+    "size": 1,
+    "uid": "466d96f5-3eb0-46b8-b3fb-25d089bdb903"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Medium/drill2_tunnelpocket_medium_13_3x3x3.tile": {
+    "size": 1,
+    "uid": "0d4e9393-bee4-4f40-b3c7-094e40369328"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Medium/drill2_tunnelpocket_medium_claustrophobic_4x4x1.tile": {
+    "size": 1,
+    "uid": "ee90a5f9-9162-4bfe-b975-da53d2423931"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Medium/drill2_tunnelpocket_medium_minerbots_3x3x3.tile": {
+    "size": 1,
+    "uid": "a7d8f248-5eaa-4ca5-b1e6-2baba6e1123e"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Medium/drill2_tunnelpocket_medium_tree_3x3x3.tile": {
+    "size": 1,
+    "uid": "031898d1-f91f-46d8-a67e-f2be2a3b4372"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Small/drill2_tunnelpocket_small_01_2x2x2.tile": {
+    "size": 1,
+    "uid": "c3e7a639-9e89-497a-81b5-2bbaa1f78911"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Small/drill2_tunnelpocket_small_02_2x2x2.tile": {
+    "size": 1,
+    "uid": "2de45f69-25cd-48f8-9ee0-d76cefd1d3e2"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Small/drill2_tunnelpocket_small_03_2x2x2.tile": {
+    "size": 1,
+    "uid": "1d5f605a-442a-44e8-8b52-f1dfadb517f7"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Small/drill2_tunnelpocket_small_onlyt4_2x2x2.tile": {
+    "size": 1,
+    "uid": "a1b19a98-de0e-4a3f-95e4-85110b9925d6"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Small/drill2_tunnelpocket_small_passage_01_2x2x2.tile": {
+    "size": 1,
+    "uid": "f3b9e08d-d0cd-440f-887d-3f3b4247532a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Small/drill2_tunnelpocket_small_passage_02_2x2x1.tile": {
+    "size": 1,
+    "uid": "34257f70-a2d0-45b7-a5f4-f28f1631667f"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Small/drill2_tunnelpocket_small_passage_03_2x3x1.tile": {
+    "size": 1,
+    "uid": "1b2a3f5d-0936-40c2-9f81-67bf1f54782d"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Small/drill2_tunnelpocket_small_passage_04_2x3x1.tile": {
+    "size": 1,
+    "uid": "c1340280-157f-4d58-afa9-844e7cb938ee"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Small/drill2_tunnelpocket_small_passage_05_2x3x2.tile": {
+    "size": 1,
+    "uid": "df50cc6d-a27d-40cf-9216-64c22107e0c8"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Small/drill2_tunnelpocket_small_passage_06_2x3x2.tile": {
+    "size": 1,
+    "uid": "5cec6afb-1889-4cff-90a8-6044a58c95e9"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Small/drill2_tunnelpocket_small_passage_07_2x3x1.tile": {
+    "size": 1,
+    "uid": "74c7b658-f755-47a2-a89a-667e2a2a930c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Small/drill2_tunnelpocket_small_passage_08_2x3x2.tile": {
+    "size": 1,
+    "uid": "a7bde4a1-89f1-4493-8331-270ba1dae561"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Small/drill2_tunnelpocket_small_passage_09_2x2x2.tile": {
+    "size": 1,
+    "uid": "f5c553c8-e3ef-4c63-80a0-68d2a9a3cf6d"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Small/drill2_tunnelpocket_small_passage_10_2x3x2.tile": {
+    "size": 1,
+    "uid": "ea512f63-e806-4a47-8f5b-1d1ea7d66bfa"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Small/drill2_tunnelpocket_small_passage_11_2x3x2.tile": {
+    "size": 1,
+    "uid": "cfc5e8e5-7a90-4081-97da-36524f66c4ee"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Small/drill2_tunnelpocket_small_passage_12_2x3x2.tile": {
+    "size": 1,
+    "uid": "85d23e72-b3b3-449b-bc9c-7efacc2df8ad"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Small/drill2_tunnelpocket_small_passage_13_2x2x2.tile": {
+    "size": 1,
+    "uid": "f4118fd5-f2f2-4de2-9ead-73a92cf8bfea"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Small/drill2_tunnelpocket_small_passage_14_2x2x2.tile": {
+    "size": 1,
+    "uid": "8d0c3fc2-e55f-4241-b143-e286278aec3d"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Small/drill2_tunnelpocket_small_passage_15_2x2x2.tile": {
+    "size": 1,
+    "uid": "034b98c5-c3ce-4fbc-b055-cd052d9864ca"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Small/drill2_tunnelpocket_small_passage_16_2x2x2.tile": {
+    "size": 1,
+    "uid": "62424e1b-8e40-4ec2-918d-2efb3d6c21cd"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Small/drill2_tunnelpocket_small_passage_17_2x2x2.tile": {
+    "size": 1,
+    "uid": "3a8c9671-aee5-4e29-a23a-04593354fcfa"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Small/drill2_tunnelpocket_small_passage_18_2x2x2.tile": {
+    "size": 1,
+    "uid": "6fd25c71-33e6-4a1e-bb83-e893a04da05d"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Small/drill2_tunnelpocket_small_passage_19_2x2x2.tile": {
+    "size": 1,
+    "uid": "956c6dbc-a7e5-4f78-b20b-ad86c4419cbf"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/Tunnelpocket/Small/drill2_tunnelpocket_small_passage_20_2x2x2.tile": {
+    "size": 1,
+    "uid": "fa285c7d-af8b-474e-be45-29ca95bb053a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Drill2/drill2_elevator_12x8x8.tile": {
+    "size": 4,
+    "uid": "52b1c24b-befd-41a6-95c4-54d697737fa6"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Onboarding/onboarding_cave_final_12x16x8.tile": {
+    "size": 4,
+    "uid": "d5addc20-159a-49a9-87fa-2cff8844daf1"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Onboarding/onboarding_cave_first_12x8x8.tile": {
+    "size": 4,
+    "uid": "4df979ea-b8fe-4009-9221-8fe74f892f38"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Onboarding/onboarding_cave_join_12x8x8.tile": {
+    "size": 4,
+    "uid": "dc312dae-180b-4faf-b5ea-b8e0c8c68be0"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Onboarding/onboarding_cave_left_8x8x8.tile": {
+    "size": 2,
+    "uid": "b3418073-8cc7-4a0b-85c8-580aaf2ee3d9"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Onboarding/onboarding_elevator_12x12x8.tile": {
+    "size": 4,
+    "uid": "fc6409fd-e31b-4f3a-a0df-67bc3857618c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Onboarding/onboarding_midblocker_8x8x8.tile": {
+    "size": 2,
+    "uid": "eff63d24-5a76-487f-af0e-c713e276ad0d"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_small_02_2x2x2.tile": {
+    "size": 1,
+    "uid": "5a69120e-bc62-49a1-9586-6bc602ae3a2c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_small_corraliumdeposit1_2x2x1.tile": {
+    "size": 1,
+    "uid": "cb7fea92-db61-4468-9fd9-deda9a194f3c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_small_corraliumdeposit2_2x2x1.tile": {
+    "size": 1,
+    "uid": "8413c29e-3907-49b1-8b6c-a6b5a1f9f04a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_small_golddeposit1_2x2x1.tile": {
+    "size": 1,
+    "uid": "156ecd03-c25b-412d-b825-f7e0570d691d"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_small_golddeposit2_2x2x1.tile": {
+    "size": 1,
+    "uid": "83862769-c856-491e-af89-68b8bb4ec0d0"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_small_mineral4deposit1_2x2x1.tile": {
+    "size": 1,
+    "uid": "7c3df4c4-7892-4810-893e-6f23fbad39be"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_small_mineral4deposit2_2x2x1.tile": {
+    "size": 1,
+    "uid": "f11a10c8-9f72-4dc7-af0b-25437060c477"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_small_passage_02_2x2x1.tile": {
+    "size": 1,
+    "uid": "7a577b60-6718-4570-820c-50f0a40777fa"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_small_potatohole_2x2x2.tile": {
+    "size": 1,
+    "uid": "9eb6aed4-d20b-4214-8450-af5233383649"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_small_t3deposit1_2x2x1.tile": {
+    "size": 1,
+    "uid": "e6f03972-6c00-400a-97f0-3e08b2fa95ca"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_small_t3deposit2_2x2x1.tile": {
+    "size": 1,
+    "uid": "04515947-68ea-41cc-a946-47334fb24cb1"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_small_t4deposit1_2x2x1.tile": {
+    "size": 1,
+    "uid": "a4794cad-0a82-45eb-9578-928b5221ba36"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_small_t4deposit2_2x2x1.tile": {
+    "size": 1,
+    "uid": "53d970eb-3eb3-49f7-b224-d17b2b9ba022"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_tiny_cablebotsRock2_1x1x1.tile": {
+    "size": 1,
+    "uid": "bda41baa-cc73-45eb-aff3-360c7225ae76"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_tiny_coraliumRock1_1x1x1.tile": {
+    "size": 1,
+    "uid": "f7f215cb-4ecb-4404-a7cf-175161e80fab"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_tiny_emptyRock1_1x1x1.tile": {
+    "size": 1,
+    "uid": "b86bd177-2002-4f6d-b731-ab6eb8909bee"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_tiny_emptyRock2_1x1x1.tile": {
+    "size": 1,
+    "uid": "a5fbe799-65de-420d-9e48-fd7b33efc6ff"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_tiny_emptyRock3_1x1x1.tile": {
+    "size": 1,
+    "uid": "b240f73a-cf44-4846-be80-ef281f3c8792"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_tiny_filledOrerich_1x1x1.tile": {
+    "size": 1,
+    "uid": "dd912035-0da7-42ff-8e16-1899deac4e2d"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_tiny_filledTier1_02_1x1x1.tile": {
+    "size": 1,
+    "uid": "52497856-a99c-4c8c-8daa-efa61d699031"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_tiny_filledTier1_03_1x1x1.tile": {
+    "size": 1,
+    "uid": "7933e8bb-8a0c-4e51-85b3-e40144c5a60c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_tiny_filledTier1_1x1x1.tile": {
+    "size": 1,
+    "uid": "bdbd2907-a012-4fb2-82f6-6ef06b391cb4"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_tiny_gigagem_1x1x1.tile": {
+    "size": 1,
+    "uid": "180f49f8-e0e9-4bc2-85a0-6b77ad9e8554"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_tiny_goldRock2_02_1x1x1.tile": {
+    "size": 1,
+    "uid": "269e8473-644b-46e5-85c2-2d0e58ca3ecd"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_tiny_goldRock2_03_1x1x1.tile": {
+    "size": 1,
+    "uid": "b27a1040-3808-427c-9484-761491ff6ca2"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_tiny_goldRock2_1x1x1.tile": {
+    "size": 1,
+    "uid": "fa717d6c-a3b2-49b2-8fb8-d2e18fc79a44"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_tiny_goldRock3_02_1x1x1.tile": {
+    "size": 1,
+    "uid": "09b22b50-62cb-42f0-a6cd-822338de3d46"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_tiny_goldRock3_03_1x1x1.tile": {
+    "size": 1,
+    "uid": "7041c488-6b54-4b10-b282-f8b838cc650b"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_tiny_goldRock3_1x1x1.tile": {
+    "size": 1,
+    "uid": "aa8809ab-8851-46cf-ad73-a7d0c518dc7e"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_tiny_mixedRock3_02_1x1x1.tile": {
+    "size": 1,
+    "uid": "28531981-16a4-487d-82fa-a433f4665007"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_tiny_mixedRock3_03_1x1x1.tile": {
+    "size": 1,
+    "uid": "62ed6133-1645-40d8-82d3-e7b0834e262d"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_tiny_mixedRock3_1x1x1.tile": {
+    "size": 1,
+    "uid": "68cc9158-ff37-441b-a5fe-d90a163c0e84"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_tiny_mudRock2_02_1x1x1.tile": {
+    "size": 1,
+    "uid": "5fd76630-2d04-411d-843e-aa6fe7d3113a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_tiny_mudRock2_03_1x1x1.tile": {
+    "size": 1,
+    "uid": "3717cbb2-79d5-40d0-bac9-03f307cf005d"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_tiny_mudRock2_1x1x1.tile": {
+    "size": 1,
+    "uid": "dfac8711-82c7-4c51-a21e-4935df715d78"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_tiny_potatoNimbolium_1x1x1.tile": {
+    "size": 1,
+    "uid": "276f686c-31db-4b89-9494-aad7a720aa8c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_tiny_quartzRock2_02_1x1x1.tile": {
+    "size": 1,
+    "uid": "ec4c131a-8e65-4b6e-b127-f48fe5c51a0e"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_tiny_quartzRock2_03_1x1x1.tile": {
+    "size": 1,
+    "uid": "5b94a7ea-efaa-4b8c-8e7b-10841b4e5a72"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Pocket/pocket_tiny_quartzRock2_1x1x1.tile": {
+    "size": 1,
+    "uid": "56718a6a-9cdc-49c3-8a95-5702d0572c38"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Poi/poi_scrapyard_1024.tile": {
+    "size": 16,
+    "uid": "14b41d9e-a880-42bf-9130-ed5e3baaaf72"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Poi/poi_undergroundstation01_1024.tile": {
+    "size": 16,
+    "uid": "44d1c6cd-fb82-4fc9-9d24-c9c37c9265e8"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/Poi/poi_undergroundstation02_1024.tile": {
+    "size": 16,
+    "uid": "caaaf592-4e74-4de8-a74e-e9c061e878fd"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_large_03_4x4x4.tile": {
+    "size": 1,
+    "uid": "e27b393d-49c5-4465-b372-615e7a5aebaf"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_large_04_4x4x4.tile": {
+    "size": 1,
+    "uid": "84acab01-5ada-4f81-a3c5-82f307e58d91"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_large_06_4x4x3.tile": {
+    "size": 1,
+    "uid": "b8fb704c-d7ed-4329-be85-6a0204878671"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_large_07_2x4x5.tile": {
+    "size": 1,
+    "uid": "aa0e98b3-308a-4c54-b03c-e3ee0df51d1e"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_medium_01_3x3x3.tile": {
+    "size": 1,
+    "uid": "56f7be8a-28fc-46d6-a6a7-aabdc4585695"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_medium_03_2x2x4.tile": {
+    "size": 1,
+    "uid": "368a81c1-4115-450c-8bde-430cd16847fe"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_medium_04_3x3x2.tile": {
+    "size": 1,
+    "uid": "dfc949bd-da51-403b-9457-8918fcf10bc3"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_medium_08_2x4x2.tile": {
+    "size": 1,
+    "uid": "e71a669a-5f8d-4fa3-b128-a1fdd5efba81"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_small_01_2x2x2.tile": {
+    "size": 1,
+    "uid": "24e99ba4-4a15-4ce0-ad79-aa7b74ec67e8"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_small_02_2x2x2.tile": {
+    "size": 1,
+    "uid": "9db76443-2724-4dc8-9864-2c880c97ffdd"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_small_03_2x2x2.tile": {
+    "size": 1,
+    "uid": "d3aeb732-78b6-43aa-9e71-0833bc06234e"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_small_passage_01_2x2x2.tile": {
+    "size": 1,
+    "uid": "36906f72-759b-4f40-860a-7873ca39508e"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_small_passage_02_2x2x1.tile": {
+    "size": 1,
+    "uid": "a7ff4951-30fe-4510-85ca-7b05c1e60ce0"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_small_passage_03_2x3x1.tile": {
+    "size": 1,
+    "uid": "a932a70c-2f43-493a-a9e7-a153f0638f84"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_small_passage_04_2x3x1.tile": {
+    "size": 1,
+    "uid": "cb1952c9-7483-481e-babe-215e5a61a106"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_small_passage_05_2x3x2.tile": {
+    "size": 1,
+    "uid": "75bd9312-cbe6-4dd2-81c5-2379e7179681"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_small_passage_06_2x3x2.tile": {
+    "size": 1,
+    "uid": "05c62cbb-8904-47b6-94ed-90a42307adb3"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_small_passage_07_2x3x1.tile": {
+    "size": 1,
+    "uid": "5cdc00a2-bc32-46cd-bf8e-b9edf846dbd1"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_small_passage_08_2x3x2.tile": {
+    "size": 1,
+    "uid": "a08984f5-8200-487b-a5de-83c2986e7f6a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_small_passage_09_2x2x2.tile": {
+    "size": 1,
+    "uid": "b96bd8a9-cdb3-4aaf-b45d-f3fd9bce143c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_small_passage_10_2x3x2.tile": {
+    "size": 1,
+    "uid": "26b68a10-306e-413a-b2f8-a96af3aed475"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_small_passage_11_2x3x2.tile": {
+    "size": 1,
+    "uid": "b233c053-e3b9-46ab-8239-d33b3ddb1387"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_small_passage_12_2x3x2.tile": {
+    "size": 1,
+    "uid": "310c50a5-67aa-4c65-86ea-ed319f84eb4c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_small_passage_13_2x2x2.tile": {
+    "size": 1,
+    "uid": "5b71d06b-ec47-4c4d-ac4f-fc3183390bf3"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_small_passage_14_2x2x2.tile": {
+    "size": 1,
+    "uid": "3f1cc0b7-6434-427d-986c-71efdefeb4ae"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_small_passage_15_2x2x2.tile": {
+    "size": 1,
+    "uid": "9f40c68a-14f7-4e02-8106-9f6f1c37bb2a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_small_passage_16_2x2x2.tile": {
+    "size": 1,
+    "uid": "6a2645b8-1420-438b-af49-411015ebcd2c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_small_passage_17_2x2x2.tile": {
+    "size": 1,
+    "uid": "7cbaa2b8-6acf-4ed5-8177-4ff2d424579c"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_small_passage_18_2x2x2.tile": {
+    "size": 1,
+    "uid": "452c079b-98a4-4527-84d0-d66144d5e5f3"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_small_passage_19_2x2x2.tile": {
+    "size": 1,
+    "uid": "9d5d9235-c6f2-437f-9532-5464f6815bbb"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_small_passage_20_2x2x2.tile": {
+    "size": 1,
+    "uid": "7a333a65-b4fb-44fd-85a8-54590ebb5f3e"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_tiny_01_1x1x1.tile": {
+    "size": 1,
+    "uid": "f2722fb3-c8cc-4e78-893b-31a5ace9c995"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_tiny_02_1x1x1.tile": {
+    "size": 1,
+    "uid": "b32df6e0-5379-40fd-97a3-cebe04e49df4"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_tiny_03_1x1x1.tile": {
+    "size": 1,
+    "uid": "d4ce70f3-86a7-4edd-b2be-ce713f623294"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_tiny_04_1x1x1.tile": {
+    "size": 1,
+    "uid": "af02c2d2-cf79-41a6-b909-7fd886ad8024"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_tiny_05_1x1x1.tile": {
+    "size": 1,
+    "uid": "314680a3-77a1-4aa5-87f2-9ebc1e0c0f16"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_tiny_06_1x1x1.tile": {
+    "size": 1,
+    "uid": "b11481e6-6dae-4594-a93d-7e263328ae0a"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_tiny_07_1x1x1.tile": {
+    "size": 1,
+    "uid": "e7e4373d-94ea-4f9e-96fb-6ebb11e31330"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_tiny_08_1x1x1.tile": {
+    "size": 1,
+    "uid": "7facb671-1042-484f-bb43-50ad622b1a1d"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_tiny_09_1x1x1.tile": {
+    "size": 1,
+    "uid": "3ede71ca-8bc9-4a3b-a08d-73cad7c6c633"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/TunnelPocket/tunnelpocket_tiny_10_1x1x1.tile": {
+    "size": 1,
+    "uid": "ab2ca6dc-e230-4aa1-a27b-3517fed6b03f"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/mininghub/mininghub_entrance_256_01.tile": {
+    "size": 4,
+    "uid": "3724c4b4-ebb1-44c1-ade5-deae65a886ec"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/mininghub/mininghub_entranceelevator_320x320_01.tile": {
+    "size": 5,
+    "uid": "32c531ae-a83a-4aac-8c7e-f88cd9dbb8d2"
+  },
+  "$SURVIVAL_DATA/Terrain/Tiles/underground/mininghub/mininghub_main_1024_01.tile": {
+    "size": 16,
+    "uid": "4ecf7c01-1254-44f4-8ea4-ee50520fafe9"
+  }
+}

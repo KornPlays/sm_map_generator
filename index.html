@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Generate a Scrap Mechanic Chapter 2 overworld map locally from its seed." />
+    <title>Scrap Mechanic Chapter 2 Map Generator</title>
+  </head>
+  <body>
+    <main class="shell">
+      <p class="eyebrow">Scrap Mechanic · Chapter 2</p>
+      <h1>Generate a map of any world.</h1>
+      <p class="lede">
+        Enter a world seed or upload a Scrap Mechanic save to create its complete
+        Chapter 2 world map—without launching the game.
+      </p>
+
+      <form id="generator-form" class="generator">
+        <div class="field seed-field">
+          <label for="seed">World seed or save</label>
+          <div class="seed-control">
+            <input
+              id="seed"
+              name="seed"
+              type="text"
+              inputmode="numeric"
+              autocomplete="off"
+              spellcheck="false"
+              maxlength="11"
+              placeholder="Enter the seed or upload the save"
+              aria-describedby="seed-help"
+            />
+            <button id="upload-save" class="upload" type="button">Upload save</button>
+            <input id="save-file" class="visually-hidden" type="file" accept=".db,application/x-sqlite3,application/vnd.sqlite3" />
+          </div>
+          <small id="seed-help">A valid Scrap Mechanic .db save is read locally to find its seed.</small>
+        </div>
+        <label>
+          <span>Output detail</span>
+          <select id="cell-size" name="cell-size">
+            <option value="25">25 px/cell · 3200 × 2400</option>
+            <option value="50">50 px/cell · 6400 × 4800</option>
+            <option value="100" selected>100 px/cell · 12800 × 9600</option>
+          </select>
+        </label>
+        <button id="generate" type="submit">Generate map</button>
+      </form>
+
+      <div id="status" class="status" role="status" hidden>
+        <span class="spinner" aria-hidden="true"></span>
+        <span class="status-copy">
+          <strong id="status-title"></strong>
+          <span id="status-text" aria-live="polite"></span>
+          <span class="progress-track" aria-hidden="true"><span id="progress-bar"></span></span>
+        </span>
+        <button id="cancel" class="cancel" type="button" hidden>Cancel</button>
+      </div>
+
+      <section id="result" class="result" hidden>
+        <div class="result-bar">
+          <div>
+            <h2>Generated map</h2>
+            <p id="dimensions"></p>
+          </div>
+          <a id="download" class="download">Download WebP</a>
+        </div>
+        <div class="map-frame"><canvas id="preview"></canvas></div>
+        <div id="missing" class="missing" hidden></div>
+      </section>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

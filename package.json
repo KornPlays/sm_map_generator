@@ -1,0 +1,22 @@
+{
+  "name": "scrap-mechanic-ch2-browser-map-generator",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "prepare-vendor": "node scripts/prepare-vendor.mjs",
+    "predev": "npm run prepare-vendor",
+    "dev": "vite",
+    "prebuild": "npm run prepare-vendor",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test:generator": "node scripts/verify-generator.mjs"
+  },
+  "dependencies": {
+    "fengari": "^0.1.5",
+    "fengari-web": "^0.1.4"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0"
+  }
+}
