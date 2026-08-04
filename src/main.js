@@ -1,5 +1,6 @@
 import "./style.css";
-import { composeMap, drawPreview } from "./renderer.js";
+import { composeMap } from "./renderer.js";
+import { setupMapViewer } from "./map-viewer.js";
 import { InvalidSaveError, readScrapMechanicSeed } from "./save-reader.js";
 
 const form = document.querySelector("#generator-form");
@@ -13,13 +14,10 @@ const status = document.querySelector("#status");
 const statusTitle = document.querySelector("#status-title");
 const statusText = document.querySelector("#status-text");
 const progressBar = document.querySelector("#progress-bar");
-const result = document.querySelector("#result");
-const preview = document.querySelector("#preview");
-const download = document.querySelector("#download");
-const dimensions = document.querySelector("#dimensions");
+const progressTrack = document.querySelector("#progress-track");
 const missing = document.querySelector("#missing");
+const mapViewerElement = document.querySelector("#map-viewer");
 
-let downloadUrl = null;
 let activeController = null;
 let activeWorker = null;
 let activeSeed = null;
@@ -33,8 +31,19 @@ function setStatus(title, message, kind = "working", percent = 0) {
   status.dataset.kind = kind;
   statusTitle.textContent = title;
   statusText.textContent = message;
-  progressBar.style.width = `${Math.max(0, Math.min(100, percent))}%`;
+  const boundedPercent = Math.max(0, Math.min(100, Math.round(percent)));
+  progressBar.style.width = `${boundedPercent}%`;
+  progressTrack.setAttribute("aria-valuenow", String(boundedPercent));
+  progressTrack.setAttribute("aria-valuetext", `${boundedPercent}% — ${message}`);
 }
+
+const mapViewer = setupMapViewer({
+  onWarning(message) {
+    setStatus("Map viewer", message, "error");
+  },
+  resolveMarkers: generateMapMarkers,
+});
+void mapViewer.restoreLastMap();
 
 function setGenerating(generating) {
   form.dataset.generating = String(generating);
@@ -43,6 +52,8 @@ function setGenerating(generating) {
   uploadButton.disabled = generating;
   generateButton.hidden = generating;
   cancelButton.hidden = !generating;
+  mapViewerElement.hidden = generating;
+  if (!generating) requestAnimationFrame(() => mapViewer.fitMap());
 }
 
 function cleanSeed(value) {
@@ -139,10 +150,11 @@ function generateInWorker(seed, cellSize, signal, onProgress) {
           const rendered = await composeMap(message.cells, cellSize, onProgress, {
             baseUrl: document.baseURI,
             signal,
+            seed,
           });
           if (!settled) {
             settled = true;
-            resolve(rendered);
+            resolve({ ...rendered, seed, mapMarkers: message.mapMarkers });
           }
         } catch (error) {
           if (!settled) {
@@ -161,6 +173,27 @@ function generateInWorker(seed, cellSize, signal, onProgress) {
       cellSize,
       baseUrl: document.baseURI,
     });
+  });
+}
+
+function generateMapMarkers(seed) {
+  return new Promise((resolve, reject) => {
+    const worker = new Worker(new URL("./generator-worker.js", import.meta.url), { type: "module" });
+    const cleanup = () => worker.terminate();
+    worker.addEventListener("error", (event) => {
+      cleanup();
+      reject(new Error(event.message || "The marker generator stopped unexpectedly."));
+    });
+    worker.addEventListener("message", (event) => {
+      if (event.data?.type === "markers") {
+        cleanup();
+        resolve(event.data.mapMarkers || []);
+      } else if (event.data?.type === "error") {
+        cleanup();
+        reject(new Error(event.data.message || "Map markers could not be generated."));
+      }
+    });
+    worker.postMessage({ type: "generate-markers", seed, baseUrl: document.baseURI });
   });
 }
 
@@ -196,10 +229,7 @@ form.addEventListener("submit", async (event) => {
   activeController = controller;
   activeSeed = seed;
   setGenerating(true);
-  result.hidden = true;
   missing.hidden = true;
-  if (downloadUrl) URL.revokeObjectURL(downloadUrl);
-  downloadUrl = null;
   setStatus(
     `Generating seed ${seed}`,
     "Generating the map, this may take up to a few minutes…",
@@ -213,16 +243,14 @@ form.addEventListener("submit", async (event) => {
     };
     const rendered = await generateInWorker(seed, cellSize, controller.signal, update);
     controller.signal.throwIfAborted();
-    await drawPreview(rendered.blob, rendered.width, rendered.height, preview, controller.signal);
-    downloadUrl = URL.createObjectURL(rendered.blob);
-    download.href = downloadUrl;
-    download.download = `scrap-mechanic-ch2-${seed}.webp`;
-    dimensions.textContent = `${rendered.width.toLocaleString()} × ${rendered.height.toLocaleString()} · ${(rendered.blob.size / 1048576).toFixed(1)} MiB`;
+    await mapViewer.showMap(rendered.blob, `scrap-mechanic-ch2-${seed}.webp`, {
+      seed,
+      mapMarkers: rendered.mapMarkers,
+    });
     if (rendered.missing.length) {
       missing.hidden = false;
       missing.textContent = `${rendered.missing.length} tile image${rendered.missing.length === 1 ? " is" : "s are"} missing: ${rendered.missing.join(", ")}`;
     }
-    result.hidden = false;
     setStatus(
       `Map generated from seed ${seed}`,
       "Finished entirely on your device. The WebP is ready to download.",

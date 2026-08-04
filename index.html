@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="description" content="Generate a Scrap Mechanic Chapter 2 overworld map locally from its seed." />
     <title>Scrap Mechanic Chapter 2 Map Generator</title>
   </head>
@@ -37,6 +37,7 @@
             <input id="save-file" class="visually-hidden" type="file" accept=".db,application/x-sqlite3,application/vnd.sqlite3" />
           </div>
           <small id="seed-help">A valid Scrap Mechanic .db save is read locally to find its seed.</small>
+          <small class="save-path">Saves are normally in <code>%AppData%\Roaming\Axolot Games\Scrap Mechanic\User\</code>.</small>
         </div>
         <label>
           <span>Output detail</span>
@@ -49,27 +50,61 @@
         <button id="generate" type="submit">Generate map</button>
       </form>
 
+      <section id="map-viewer" class="map-viewer" aria-labelledby="map-viewer-title">
+        <div class="map-viewer-bar">
+          <div>
+            <h2 id="map-viewer-title">Map viewer</h2>
+            <p id="map-meta">Upload a generated map to explore it here.</p>
+          </div>
+          <div class="map-viewer-actions">
+            <button id="upload-map" class="upload" type="button">Upload map WebP</button>
+            <input id="map-file" class="visually-hidden" type="file" accept="image/webp,.webp" />
+            <a id="download" class="download" hidden>Download WebP</a>
+          </div>
+        </div>
+        <p id="map-empty" class="map-empty">Your last uploaded or generated map will appear here automatically on this browser.</p>
+        <div id="map-viewport" class="map-viewport" hidden aria-label="Interactive world map">
+          <div id="map-stage" class="map-stage"><img id="map-image" alt="Generated Scrap Mechanic world map" draggable="false" /></div>
+          <div id="map-markers" class="map-marker-layer"></div>
+          <div id="map-pin" class="map-pin" hidden title="Click to remove the pin"><span id="map-pin-label" class="map-pin-label"></span><span class="map-pin-dot"></span></div>
+          <aside id="marker-details" class="marker-details" hidden aria-live="polite">
+            <button id="marker-details-close" class="marker-details-close" type="button" aria-label="Close marker details">×</button>
+            <div class="marker-details-heading">
+              <img id="marker-details-icon" alt="" />
+              <div><small id="marker-details-kind"></small><h3 id="marker-details-title"></h3></div>
+            </div>
+            <div id="marker-details-rewards" hidden><h4>Rewards</h4><ul id="marker-details-reward-list"></ul></div>
+          </aside>
+          <div id="viewer-settings" class="viewer-settings" hidden>
+            <strong>Map markers</strong>
+            <label><input type="checkbox" data-marker-kind="builderQuest" checked /> <span>Builder Quests</span></label>
+            <label><input type="checkbox" data-marker-kind="warehouse" checked /> <span>Warehouses</span></label>
+            <label><input type="checkbox" data-marker-kind="partUnlockStation" checked /> <span>Part Unlock Stations</span></label>
+            <label><input type="checkbox" data-marker-kind="ruin" /> <span>Ruins</span></label>
+            <label><input type="checkbox" data-marker-kind="mechanicStation" checked /> <span>Mechanic Stations</span></label>
+            <label><input type="checkbox" data-marker-kind="growlab" checked /> <span>Growlabs</span></label>
+            <label><input type="checkbox" data-marker-kind="packingStation" checked /> <span>Packing Stations</span></label>
+          </div>
+          <div class="map-controls" aria-label="Map controls">
+            <button id="viewer-zoom-in" type="button" title="Zoom in" aria-label="Zoom in">+</button>
+            <button id="viewer-zoom-out" type="button" title="Zoom out" aria-label="Zoom out">−</button>
+            <button id="viewer-expand" type="button" title="Open expanded map view" aria-label="Open expanded map view">⤢</button>
+            <button id="viewer-settings-button" type="button" title="Map settings" aria-label="Map settings">⚙</button>
+          </div>
+        </div>
+        <div id="missing" class="missing" hidden></div>
+      </section>
+
       <div id="status" class="status" role="status" hidden>
         <span class="spinner" aria-hidden="true"></span>
         <span class="status-copy">
           <strong id="status-title"></strong>
           <span id="status-text" aria-live="polite"></span>
-          <span class="progress-track" aria-hidden="true"><span id="progress-bar"></span></span>
+          <span id="progress-track" class="progress-track" role="progressbar" aria-label="Map generation progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="progress-bar"></span></span>
         </span>
         <button id="cancel" class="cancel" type="button" hidden>Cancel</button>
       </div>
 
-      <section id="result" class="result" hidden>
-        <div class="result-bar">
-          <div>
-            <h2>Generated map</h2>
-            <p id="dimensions"></p>
-          </div>
-          <a id="download" class="download">Download WebP</a>
-        </div>
-        <div class="map-frame"><canvas id="preview"></canvas></div>
-        <div id="missing" class="missing" hidden></div>
-      </section>
     </main>
     <script type="module" src="/src/main.js"></script>
   </body>

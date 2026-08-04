@@ -13,8 +13,7 @@
     "test:generator": "node scripts/verify-generator.mjs"
   },
   "dependencies": {
-    "fengari": "^0.1.5",
-    "fengari-web": "^0.1.4"
+    "wasmoon": "^1.16.0"
   },
   "devDependencies": {
     "vite": "^7.0.0"

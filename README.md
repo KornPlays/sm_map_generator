@@ -7,25 +7,30 @@ local `.db` save file — without starting Scrap Mechanic.
 
 **Source code:** https://github.com/KornPlays/sm_map_generator
 
-The site is fully static. Map generation, save-file seed extraction, and WebP
-encoding run in the visitor's browser. Nothing is sent to a server.
+Everything runs in the browser. The site does not upload saves or generated maps.
+
+## Example
+
+![Map generated from seed 1337](docs/seed-1337-preview.webp)
+
+Map generated from seed `1337`.
 
 ## Features
 
-- Enter any signed 32-bit world seed.
-- Upload a Scrap Mechanic `.db` save to fill in its seed automatically.
-- Generate at 25, 50, or 100 pixels per world cell.
-- Download the generated map as WebP.
-- Cancel a generation in progress.
-- Uses a background worker so the interface stays responsive while generating.
+- Generates a map from a world seed.
+- Reads the seed from a Scrap Mechanic `.db` save.
+- Supports 25, 50, and 100 pixels per world cell.
+- Includes an interactive map viewer with zooming, coordinates, structure markers,
+  and Builder Quest rewards.
+- Downloads the finished map as a WebP image.
 
 ## Run locally
 
 Requires Node.js `20.19` or newer.
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
-cd YOUR-REPOSITORY
+git clone https://github.com/KornPlays/sm_map_generator.git
+cd sm_map_generator
 npm ci
 npm run dev
 ```
@@ -39,9 +44,8 @@ npm ci
 npm run build
 ```
 
-Upload the **contents** of `dist/` to any HTTPS static-file host. No Node.js
-process, database, API key, WebSocket, or server-side generator is needed after
-the build completes.
+Upload the **contents** of `dist/` to any HTTPS static-file host. The built site
+does not need a server-side map generator or database.
 
 Examples of suitable hosts include GitHub Pages, Cloudflare Pages, Netlify,
 Vercel static hosting, an S3-compatible static bucket, or a normal web server

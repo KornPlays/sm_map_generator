@@ -1,8 +1,16 @@
+import { embedWebPSeed } from "./webp-seed.js";
+
 const BOUNDS = { xMin: -64, xMax: 63, yMin: -48, yMax: 47 };
 const EXCAVATION_SPECIAL_UIDS = new Set([
   "ba31a522-7659-4ec5-b933-8b83960c57f2",
   "bf0ba240-416f-4f32-b87d-3a445919e72a",
 ]);
+const EXCAVATION_BOUNDS = { xMin: 32, xMax: 63, yMin: 16, yMax: 47 };
+
+function isInsideExcavationComposite(cell) {
+  return cell.x >= EXCAVATION_BOUNDS.xMin && cell.x <= EXCAVATION_BOUNDS.xMax
+    && cell.y >= EXCAVATION_BOUNDS.yMin && cell.y <= EXCAVATION_BOUNDS.yMax;
+}
 
 function defaultBaseUrl() {
   return typeof document === "undefined" ? self.location.href : document.baseURI;
@@ -39,11 +47,33 @@ async function loadBitmap(path, cache, baseUrl, signal) {
   return cache.get(path);
 }
 
+async function preloadBitmaps(paths, cache, baseUrl, signal, onProgress) {
+  const queue = [...new Set(paths)];
+  let next = 0;
+  let finished = 0;
+  const workers = Array.from({ length: Math.min(12, queue.length) }, async () => {
+    while (next < queue.length) {
+      const path = queue[next];
+      next += 1;
+      await loadBitmap(path, cache, baseUrl, signal);
+      finished += 1;
+      if (finished === queue.length || finished % 12 === 0) {
+        onProgress(`Loading map artwork… ${finished} / ${queue.length}`, 33 + Math.round((finished / queue.length) * 11));
+      }
+    }
+  });
+  await Promise.all(workers);
+}
+
 function position(x, y, cellSize) {
   return [(x - BOUNDS.xMin) * cellSize, (BOUNDS.yMax - y) * cellSize];
 }
 
 function drawRotated(context, image, x, y, pixels, turns) {
+  if ((turns & 3) === 0) {
+    context.drawImage(image, x, y, pixels, pixels);
+    return;
+  }
   context.save();
   context.translate(x + pixels / 2, y + pixels / 2);
   context.rotate((-turns * Math.PI) / 2);
@@ -75,11 +105,33 @@ function canvasBlob(canvas, type, quality) {
   });
 }
 
+function drawSeedStamp(context, width, height, cellSize, seed) {
+  if (!Number.isInteger(seed)) return;
+  const label = `Seed ${seed}`;
+  const fontSize = Math.max(14, Math.round(cellSize * 0.75));
+  const paddingX = Math.max(6, Math.round(cellSize * 0.18));
+  const paddingY = Math.max(4, Math.round(cellSize * 0.12));
+  const margin = Math.max(6, Math.round(cellSize * 0.16));
+  context.save();
+  context.font = `700 ${fontSize}px ui-monospace, SFMono-Regular, Consolas, monospace`;
+  context.textBaseline = "middle";
+  const textWidth = context.measureText(label).width;
+  const boxWidth = Math.ceil(textWidth + paddingX * 2);
+  const boxHeight = Math.ceil(fontSize + paddingY * 2);
+  const x = margin;
+  const y = height - boxHeight - margin;
+  context.fillStyle = "rgba(8, 12, 9, 0.82)";
+  context.fillRect(x, y, boxWidth, boxHeight);
+  context.fillStyle = "rgba(244, 242, 233, 0.96)";
+  context.fillText(label, x + paddingX, y + boxHeight / 2);
+  context.restore();
+}
+
 export async function composeMap(
   cells,
   cellSize,
   onProgress = () => {},
-  { baseUrl = defaultBaseUrl(), signal } = {},
+  { baseUrl = defaultBaseUrl(), signal, seed = null } = {},
 ) {
   const width = (BOUNDS.xMax - BOUNDS.xMin + 1) * cellSize;
   const height = (BOUNDS.yMax - BOUNDS.yMin + 1) * cellSize;
@@ -95,7 +147,7 @@ export async function composeMap(
     context.fillStyle = "rgb(0, 186, 242)";
     context.fillRect(0, 0, width, height);
 
-    onProgress("Preparing water and terrain artwork…", 36);
+    onProgress("Preparing map artwork…", 33);
     const lakeCounts = new Map();
     for (const cell of cells) {
       if (cell.size === 1 && cell.terrainType === 8) {
@@ -103,22 +155,48 @@ export async function composeMap(
       }
     }
     const rankedLakes = [...lakeCounts.entries()].sort((left, right) => right[1] - left[1]);
+    const singleCells = cells.filter((cell) => cell.size === 1);
+    const groups = new Map();
+    for (const cell of cells) {
+      if (cell.size <= 1) continue;
+      const key = `${cell.group}:${cell.uid}`;
+      if (!groups.has(key)) groups.set(key, []);
+      groups.get(key).push(cell);
+    }
+    const assetPaths = singleCells.map((cell) => `assets/tiles/${cell.uid}.webp`);
+    assetPaths.push("assets/excavation_island_special.webp");
+    for (const members of groups.values()) {
+      if (!EXCAVATION_SPECIAL_UIDS.has(members[0].uid)) assetPaths.push(`assets/${members[0].uid}.webp`);
+    }
+    await preloadBitmaps(assetPaths, cache, baseUrl, signal, onProgress);
+
     let ocean = null;
+    let oceanUid = null;
     for (const [uid] of rankedLakes) {
       ocean = await loadBitmap(`assets/tiles/${uid}.webp`, cache, baseUrl, signal);
-      if (ocean) break;
+      if (ocean) {
+        oceanUid = uid;
+        break;
+      }
     }
     if (ocean) {
-      const oceanRows = Math.ceil(height / cellSize);
-      for (let row = 0, y = 0; y < height; row += 1, y += cellSize) {
-        for (let x = 0; x < width; x += cellSize) {
-          context.drawImage(ocean, x, y, cellSize, cellSize);
-        }
-        if (row % 12 === 0) {
-          onProgress(`Painting the ocean… ${Math.min(row + 1, oceanRows)} / ${oceanRows} rows`, 38);
-          await yieldThread(signal);
+      onProgress("Painting the ocean…", 45);
+      const tileCanvas = createCanvas(cellSize, cellSize);
+      const tileContext = tileCanvas.getContext("2d", { alpha: false });
+      tileContext.imageSmoothingEnabled = true;
+      tileContext.imageSmoothingQuality = "high";
+      tileContext.drawImage(ocean, 0, 0, cellSize, cellSize);
+      const pattern = context.createPattern(tileCanvas, "repeat");
+      if (pattern) {
+        context.fillStyle = pattern;
+        context.fillRect(0, 0, width, height);
+      } else {
+        for (let y = 0; y < height; y += cellSize) {
+          for (let x = 0; x < width; x += cellSize) context.drawImage(ocean, x, y, cellSize, cellSize);
         }
       }
+      tileCanvas.width = 1;
+      tileCanvas.height = 1;
     }
 
     const excavation = await loadBitmap("assets/excavation_island_special.webp", cache, baseUrl, signal);
@@ -127,10 +205,15 @@ export async function composeMap(
       context.drawImage(excavation, x, y, 32 * cellSize, 32 * cellSize);
     }
 
-    const singleCells = cells.filter((cell) => cell.size === 1);
-    onProgress(`Drawing terrain tiles… 0 / ${singleCells.length.toLocaleString()}`, 42);
-    for (let index = 0; index < singleCells.length; index += 1) {
-      const cell = singleCells[index];
+    // The ocean pattern already covers ordinary water cells. Water inside the
+    // 32x32 excavation composite must still be repainted afterward, because
+    // those cells intentionally mask parts of the calibrated island image.
+    const terrainCells = singleCells.filter(
+      (cell) => cell.uid !== oceanUid || isInsideExcavationComposite(cell),
+    );
+    onProgress(`Drawing terrain tiles… 0 / ${terrainCells.length.toLocaleString()}`, 48);
+    for (let index = 0; index < terrainCells.length; index += 1) {
+      const cell = terrainCells[index];
       const image = await loadBitmap(`assets/tiles/${cell.uid}.webp`, cache, baseUrl, signal);
       if (image) {
         const [x, y] = position(cell.x, cell.y, cellSize);
@@ -140,23 +223,16 @@ export async function composeMap(
       }
       if (index % 300 === 0) {
         const finished = index + 1;
-        const percent = 42 + Math.round((finished / singleCells.length) * 36);
+        const percent = 48 + Math.round((finished / terrainCells.length) * 33);
         onProgress(
-          `Drawing terrain tiles… ${finished.toLocaleString()} / ${singleCells.length.toLocaleString()}`,
+          `Drawing terrain tiles… ${finished.toLocaleString()} / ${terrainCells.length.toLocaleString()}`,
           percent,
         );
         await yieldThread(signal);
       }
     }
 
-    onProgress("Placing landmarks and multi-cell terrain…", 80);
-    const groups = new Map();
-    for (const cell of cells) {
-      if (cell.size <= 1) continue;
-      const key = `${cell.group}:${cell.uid}`;
-      if (!groups.has(key)) groups.set(key, []);
-      groups.get(key).push(cell);
-    }
+    onProgress("Placing landmarks and multi-cell terrain…", 82);
     let groupIndex = 0;
     for (const members of groups.values()) {
       const { uid, size, rotation } = members[0];
@@ -177,9 +253,11 @@ export async function composeMap(
       if (groupIndex % 30 === 0) await yieldThread(signal);
     }
 
+    drawSeedStamp(context, width, height, cellSize, seed);
     onProgress("Encoding the downloadable WebP image…", 90);
     await yieldThread(signal);
-    const blob = await canvasBlob(canvas, "image/webp", 0.92);
+    const encoded = await canvasBlob(canvas, "image/webp", 0.92);
+    const blob = Number.isInteger(seed) ? await embedWebPSeed(encoded, seed, width, height) : encoded;
     throwIfAborted(signal);
     onProgress("Finishing the preview…", 97);
     return { blob, width, height, missing: [...missing].sort() };

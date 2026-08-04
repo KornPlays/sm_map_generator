@@ -1,7 +1,6 @@
 import { intNoise2d, simplexNoise2d } from "./noise.js";
 import { LuaJitRandom } from "./luajit-random.js";
-
-const { lauxlib, lua, lualib, to_jsstring, to_luastring } = globalThis.fengari;
+import { LuaFactory } from "wasmoon";
 
 const RUNTIME_SOURCES = [
   "data/excavation_world.lua",
@@ -31,6 +30,7 @@ const RUNTIME_SOURCES = [
 
 const NIL_UUID = "00000000-0000-0000-0000-000000000000";
 let runtimePromise;
+let luaFactory;
 
 function publicUrl(path) {
   const baseUrl =
@@ -82,112 +82,72 @@ function resolveSource(path) {
   return normalized;
 }
 
-function luaString(state, index) {
-  const value = lua.lua_tostring(state, index);
-  return value ? to_jsstring(value) : "";
-}
-
-function setFunction(state, name, callback) {
-  lua.lua_pushcfunction(state, callback);
-  lua.lua_setglobal(state, to_luastring(name));
-}
-
-function execute(state, source, name = "browser-bootstrap") {
-  const encoded = to_luastring(source);
-  const loadStatus = lauxlib.luaL_loadbuffer(
-    state,
-    encoded,
-    encoded.length,
-    to_luastring(`@${name}`),
-  );
-  if (loadStatus !== lua.LUA_OK) throw new Error(luaString(state, -1));
-  const callStatus = lua.lua_pcall(state, 0, 0, 0);
-  if (callStatus !== lua.LUA_OK) throw new Error(luaString(state, -1));
-}
-
-function pushSignedInteger(state, value) {
-  lua.lua_pushinteger(state, value | 0);
-  return 1;
-}
-
-function installCallbacks(state, runtime, random) {
-  setFunction(state, "_sm_simplex", (inner) => {
-    lua.lua_pushnumber(inner, simplexNoise2d(lua.lua_tonumber(inner, 1), lua.lua_tonumber(inner, 2)));
-    return 1;
-  });
-  setFunction(state, "_sm_int_noise", (inner) => {
-    lua.lua_pushnumber(
-      inner,
-      intNoise2d(
-        lua.lua_tonumber(inner, 1),
-        lua.lua_tonumber(inner, 2),
-        lua.lua_tonumber(inner, 3),
-      ),
+function instrumentSource(resolved, source) {
+  if (resolved !== "lua/overworld/generate_cells.lua") return source;
+  return source
+    .replace(
+      "preparePoiRoadGraph( pois, roadPois )",
+      '_sm_progress("Connecting the main roads…", 20)\n\tpreparePoiRoadGraph( pois, roadPois )',
+    )
+    .replace(
+      "writeStartArea( pois, roadNodes )",
+      '_sm_progress("Placing landmarks and the starting area…", 22)\n\twriteStartArea( pois, roadNodes )',
+    )
+    .replace(
+      "evaluateRoadsAndCliffs( roadNodes )",
+      '_sm_progress("Choosing road and cliff tiles…", 24)\n\tevaluateRoadsAndCliffs( roadNodes )',
+    )
+    .replace(
+      "addBorderingMeadows()",
+      '_sm_progress("Connecting biome roads…", 26)\n\taddBorderingMeadows()',
+    )
+    .replace(
+      "addExtraPois( pois, padding )",
+      '_sm_progress("Placing remaining points of interest…", 29)\n\taddExtraPois( pois, padding )',
+    )
+    .replace(
+      "evaluateType( TYPE_MEADOW, getMeadowTileIdAndRotation )",
+      '_sm_progress("Choosing terrain tiles…", 30)\n\tevaluateType( TYPE_MEADOW, getMeadowTileIdAndRotation )',
     );
-    return 1;
-  });
-  setFunction(state, "_sm_tile_uuid", (inner) => {
-    const item = runtime.metadata[luaString(inner, 1)];
-    lua.lua_pushstring(inner, to_luastring(item?.uid ?? NIL_UUID));
-    return 1;
-  });
-  setFunction(state, "_sm_tile_size", (inner) => {
-    const item = runtime.metadata[luaString(inner, 1)];
-    lua.lua_pushnumber(inner, item?.size ?? 1);
-    return 1;
-  });
-  setFunction(state, "_sm_source", (inner) => {
-    const resolved = resolveSource(luaString(inner, 1));
+}
+
+function installCallbacks(engine, runtime, random, onProgress) {
+  engine.global.set("_sm_simplex", (x, y) => simplexNoise2d(x, y));
+  engine.global.set("_sm_int_noise", (x, y, seed) => intNoise2d(x, y, seed));
+  engine.global.set("_sm_tile_uuid", (path) => runtime.metadata[path]?.uid ?? NIL_UUID);
+  engine.global.set("_sm_tile_size", (path) => runtime.metadata[path]?.size ?? 1);
+  engine.global.set("_sm_source", (path) => {
+    const resolved = resolveSource(path);
     let source = resolved ? runtime.sources.get(resolved) : null;
     if (resolved === "lua/overworld/excavation_island.lua" && source) {
-      // LuaJIT visits this dense numeric array in index order with pairs().
-      // Fengari's table traversal order differs, and the island's neighbor-
-      // based group reconstruction depends on the preceding cell. ipairs()
-      // expresses the order the shipped data already has explicitly.
+      // The excavation reconstruction depends on the source array order.
       source = source
         .replaceAll("pairs( worldFile.cellData )", "ipairs( worldFile.cellData )")
         .replaceAll("pairs( worldFile.cornerData )", "ipairs( worldFile.cornerData )");
     }
-    if (source == null) lua.lua_pushnil(inner);
-    else lua.lua_pushstring(inner, to_luastring(source));
-    return 1;
+    return source == null ? undefined : instrumentSource(resolved, source);
   });
-  setFunction(state, "_sm_randomseed", (inner) => {
-    random.seed(lua.lua_tonumber(inner, 1));
-    return 0;
+  engine.global.set("_sm_randomseed", (seed) => random.seed(seed));
+  engine.global.set("_sm_random", (...args) => {
+    if (args.length === 0) return random.random();
+    if (args.length === 1) return random.integer(1, args[0]);
+    return random.integer(args[0], args[1]);
   });
-  setFunction(state, "_sm_random", (inner) => {
-    const count = lua.lua_gettop(inner);
-    let value;
-    if (count === 0) value = random.random();
-    else if (count === 1) value = random.integer(1, lua.lua_tonumber(inner, 1));
-    else value = random.integer(lua.lua_tonumber(inner, 1), lua.lua_tonumber(inner, 2));
-    lua.lua_pushnumber(inner, value);
-    return 1;
-  });
-
-  setFunction(state, "_sm_band", (inner) => {
+  engine.global.set("_sm_band", (...args) => {
     let value = -1;
-    for (let index = 1; index <= lua.lua_gettop(inner); index += 1) {
-      value &= lua.lua_tonumber(inner, index) | 0;
-    }
-    return pushSignedInteger(inner, value);
+    for (const item of args) value &= item | 0;
+    return value | 0;
   });
-  setFunction(state, "_sm_bor", (inner) => {
+  engine.global.set("_sm_bor", (...args) => {
     let value = 0;
-    for (let index = 1; index <= lua.lua_gettop(inner); index += 1) {
-      value |= lua.lua_tonumber(inner, index) | 0;
-    }
-    return pushSignedInteger(inner, value);
+    for (const item of args) value |= item | 0;
+    return value | 0;
   });
-  setFunction(state, "_sm_bnot", (inner) => pushSignedInteger(inner, ~lua.lua_tonumber(inner, 1)));
-  setFunction(state, "_sm_lshift", (inner) =>
-    pushSignedInteger(inner, (lua.lua_tonumber(inner, 1) | 0) << (lua.lua_tonumber(inner, 2) & 31)),
-  );
-  setFunction(state, "_sm_rshift", (inner) =>
-    pushSignedInteger(inner, (lua.lua_tonumber(inner, 1) >>> (lua.lua_tonumber(inner, 2) & 31)) | 0),
-  );
-  setFunction(state, "_sm_tobit", (inner) => pushSignedInteger(inner, lua.lua_tonumber(inner, 1)));
+  engine.global.set("_sm_bnot", (value) => ~value);
+  engine.global.set("_sm_lshift", (value, shift) => (value | 0) << (shift & 31));
+  engine.global.set("_sm_rshift", (value, shift) => (value >>> (shift & 31)) | 0);
+  engine.global.set("_sm_tobit", (value) => value | 0);
+  engine.global.set("_sm_progress", (message, percent) => onProgress(message, percent));
 }
 
 function bootstrap(seed) {
@@ -298,15 +258,13 @@ export async function generateCells(seed, onProgress = () => {}) {
   onProgress("Generating roads, biomes, islands, and POIs…", 18);
   await new Promise((resolve) => setTimeout(resolve, 0));
 
-  const state = lauxlib.luaL_newstate();
+  luaFactory ??= new LuaFactory(publicUrl("vendor/wasmoon.wasm").href);
+  const engine = await luaFactory.createEngine();
   const random = new LuaJitRandom();
   try {
-    lualib.luaL_openlibs(state);
-    installCallbacks(state, runtime, random);
-    execute(state, bootstrap(seed));
-    lua.lua_getglobal(state, to_luastring("__RESULT"));
-    const result = luaString(state, -1);
-    lua.lua_pop(state, 1);
+    installCallbacks(engine, runtime, random, onProgress);
+    await engine.doString(bootstrap(seed));
+    const result = engine.global.get("__RESULT") || "";
     const cells = result
       .split("\n")
       .filter(Boolean)
@@ -325,6 +283,6 @@ export async function generateCells(seed, onProgress = () => {}) {
     onProgress(`World layout complete · ${cells.length.toLocaleString()} populated cells`, 32);
     return cells;
   } finally {
-    lua.lua_close(state);
+    engine.global.close();
   }
 }

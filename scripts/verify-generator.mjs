@@ -2,12 +2,10 @@ import { createHash } from "node:crypto";
 import { readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
-import fengari from "fengari-web";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const seed = Number(process.argv[2] ?? 760487397);
 
-globalThis.fengari = fengari;
 globalThis.document = { baseURI: pathToFileURL(`${resolve(root, "public")}/`).href };
 globalThis.requestAnimationFrame = (callback) => setImmediate(callback);
 globalThis.fetch = async (input) => {

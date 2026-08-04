@@ -1,4 +1,5 @@
 import { composeMap } from "./renderer.js";
+import { findMapMarkers } from "./builder-quests.js";
 
 let generatorPromise;
 
@@ -6,9 +7,6 @@ async function loadGenerator(baseUrl) {
   if (!generatorPromise) {
     generatorPromise = (async () => {
       globalThis.__SM_MAP_BASE_URL = baseUrl;
-      if (!globalThis.fengari) {
-        await import(/* @vite-ignore */ new URL("vendor/fengari-web.js", baseUrl).href);
-      }
       return import("./generator.js");
     })();
   }
@@ -16,7 +14,7 @@ async function loadGenerator(baseUrl) {
 }
 
 self.addEventListener("message", async (event) => {
-  if (event.data?.type !== "generate") return;
+  if (event.data?.type !== "generate" && event.data?.type !== "generate-markers") return;
   const { seed, cellSize, baseUrl } = event.data;
   const progress = (message, percent) => {
     self.postMessage({ type: "progress", message, percent });
@@ -25,12 +23,17 @@ self.addEventListener("message", async (event) => {
   try {
     const { generateCells } = await loadGenerator(baseUrl);
     const cells = await generateCells(seed, progress);
-    if (typeof OffscreenCanvas === "undefined") {
-      self.postMessage({ type: "cells", cells });
+    const mapMarkers = findMapMarkers(cells);
+    if (event.data.type === "generate-markers") {
+      self.postMessage({ type: "markers", seed, mapMarkers });
       return;
     }
-    const rendered = await composeMap(cells, cellSize, progress, { baseUrl });
-    self.postMessage({ type: "result", ...rendered });
+    if (typeof OffscreenCanvas === "undefined") {
+      self.postMessage({ type: "cells", cells, mapMarkers });
+      return;
+    }
+    const rendered = await composeMap(cells, cellSize, progress, { baseUrl, seed });
+    self.postMessage({ type: "result", ...rendered, seed, mapMarkers });
   } catch (error) {
     self.postMessage({
       type: "error",
