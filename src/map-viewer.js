@@ -709,10 +709,12 @@ export function setupMapViewer({ onWarning, resolveMapData } = {}) {
             savedAt: Date.now(),
           });
         }
+        return true;
       }
     } catch (error) {
       console.warn("Could not restore the previous map:", error);
     }
+    return false;
   }
 
   uploadButton.addEventListener("click", () => fileInput.click());
@@ -743,13 +745,19 @@ export function setupMapViewer({ onWarning, resolveMapData } = {}) {
   }, { passive: false });
 
   viewport.addEventListener("pointerdown", (event) => {
-    if (event.target.closest("button, a, summary, .viewer-settings, .marker-details, .map-marker")) return;
+    const markerButton = event.target.closest(".map-marker");
+    const blockedControl = event.target.closest("button, a, summary, .viewer-settings, .marker-details");
+    // Marker buttons remain tappable, but touch pointers also need to reach
+    // the viewport so a pinch can begin with either finger on a marker.
+    if (blockedControl && !(markerButton && event.pointerType === "touch")) return;
     viewport.setPointerCapture(event.pointerId);
     const rect = viewport.getBoundingClientRect();
     pointers.set(event.pointerId, { x: event.clientX - rect.left, y: event.clientY - rect.top });
     if (pointers.size === 1) {
       drag = { x: event.clientX, y: event.clientY, panX, panY, moved: false };
-      suppressPin = false;
+      // A single marker tap still opens its details through the button click;
+      // it should not also leave a coordinate pin underneath the marker.
+      suppressPin = Boolean(markerButton);
       viewport.classList.add("grabbing");
     } else if (pointers.size === 2) {
       pinchDistance = pointerDistance();
@@ -823,7 +831,9 @@ export function setupMapViewer({ onWarning, resolveMapData } = {}) {
     const expanded = viewer.classList.toggle("expanded");
     document.body.classList.toggle("map-viewer-expanded-open", expanded);
     document.documentElement.classList.toggle("map-viewer-expanded-open", expanded);
-    expandButton.textContent = expanded ? "×" : "⤢";
+    expandButton.innerHTML = expanded
+      ? "×"
+      : '<svg class="expand-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5" /></svg>';
     expandButton.title = expanded ? "Close expanded map view" : "Open expanded map view";
     expandButton.setAttribute("aria-label", expandButton.title);
     requestAnimationFrame(fitMap);

@@ -137,8 +137,10 @@ export function createTileDetailLayer({ canvas, viewport, baseUrl = document.bas
   let source = GENERATOR_ASSET_SOURCE;
   const storedQuality = localStorage.getItem("sm-map-upscaling");
   const mobileDefault = globalThis.matchMedia?.("(pointer: coarse)").matches || (globalThis.navigator?.maxTouchPoints || 0) > 0;
-  let quality = storedQuality || (mobileDefault ? "low" : "medium");
-  if (!THRESHOLDS[quality] && quality !== "off") quality = mobileDefault ? "low" : "medium";
+  // A choice the player has already made always wins. New viewers start with
+  // high detail on desktop and a gentler medium mode on touch devices.
+  let quality = storedQuality || (mobileDefault ? "medium" : "high");
+  if (!THRESHOLDS[quality] && quality !== "off") quality = mobileDefault ? "medium" : "high";
   let cellData = prepareCells([]);
   let originalCellPixels = BASE_CELL_PX;
   let hasCells = false;
@@ -479,7 +481,7 @@ export function createTileDetailLayer({ canvas, viewport, baseUrl = document.bas
       else scheduleSettledRender();
     },
     setQuality(nextQuality) {
-      const fallback = mobileDefault ? "low" : "medium";
+      const fallback = mobileDefault ? "medium" : "high";
       const resolvedQuality = (THRESHOLDS[nextQuality] || nextQuality === "off") ? nextQuality : fallback;
       if (resolvedQuality === quality) return;
       quality = resolvedQuality;

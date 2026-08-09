@@ -589,6 +589,8 @@ button:disabled { cursor: wait; opacity: 0.55; transform: none; }
 }
 
 .map-controls button {
+  display: grid;
+  place-items: center;
   width: 38px;
   min-height: 38px;
   padding: 0;
@@ -597,6 +599,17 @@ button:disabled { cursor: wait; opacity: 0.55; transform: none; }
   background: rgba(24, 30, 24, 0.94);
   color: #eef0e9;
   font-size: 1.1rem;
+  line-height: 1;
+}
+
+.expand-icon {
+  width: 21px;
+  height: 21px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .viewer-control-download,

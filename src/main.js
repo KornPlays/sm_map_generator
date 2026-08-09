@@ -49,7 +49,18 @@ const mapViewer = setupMapViewer({
   },
   resolveMapData: generateMapData,
 });
-const lastMapRestore = mapViewer.restoreLastMap();
+const lastMapRestore = (async () => {
+  setStatus(
+    "Restoring your cached map",
+    "Reading the saved world map and its marker data from this browser…",
+    "working",
+    18,
+  );
+  const restored = await mapViewer.restoreLastMap();
+  if (restored) setStatus("Cached map restored", "Ready to explore.", "done", 100);
+  else status.hidden = true;
+  return restored;
+})();
 
 async function exportMapViewer(kind) {
   const map = mapViewer.getCurrentMap();
