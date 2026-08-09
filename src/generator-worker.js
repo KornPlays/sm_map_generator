@@ -24,7 +24,7 @@ self.addEventListener("message", async (event) => {
     const cells = await generateCells(seed, progress);
     const mapMarkers = findMapMarkers(cells);
     if (event.data.type === "generate-markers") {
-      self.postMessage({ type: "markers", seed, mapMarkers });
+      self.postMessage({ type: "markers", seed, cells, mapMarkers });
       return;
     }
     self.postMessage({ type: "cells", cells, mapMarkers });

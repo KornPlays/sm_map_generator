@@ -59,15 +59,19 @@ export const BUILDER_QUESTS = GENERIC_QUEST_LOCATIONS.map(([uid, x, y], index) =
   { name: "builder_quest_advanced_car", title: "Your Nice Car", rewards: ["Fantastic T-Shirt"], uid: "f3dda4db-8450-4e9d-a501-ec6dbf14a78a", x: 112.14583587646, y: 15.041519165039 },
 ]);
 
-const ICONS = {
-  builderQuest: "assets/ui/debug_compass_builderquest.png",
-  warehouse: "assets/ui/debug_compass_warehouse.png",
-  partUnlockStation: "assets/ui/debug_compass_partunlockstation.png",
-  ruin: "assets/ui/debug_compass_ruin.png",
-  mechanicStation: "assets/ui/debug_compass_mechanicstation.png",
-  growlab: "assets/ui/debug_compass_growlab.png?v=3",
-  packingStation: "assets/ui/debug_compass_packingstation.png?v=3",
-  cagedFarmer: "assets/ui/debug_compass_cagedfarmer.png?v=2",
+// Original, code-rendered marker badges. These do not redistribute the game's
+// compass artwork and remain legible when several kinds share one map area.
+const MARKER_STYLES = {
+  builderQuest: { iconKind: "hammer", theme: "builder" },
+  warehouse: { iconKind: "warehouse", theme: "warehouse" },
+  partUnlockStation: { iconKind: "unlock", theme: "unlock" },
+  ruin: { iconKind: "ruin", theme: "ruin" },
+  mechanicStation: { iconKind: "mechanic", theme: "mechanic" },
+  growlab: { iconKind: "growlab", theme: "growlab" },
+  packingStation: { iconKind: "packing", theme: "packing" },
+  cagedFarmer: { iconKind: "farmer", theme: "farmer" },
+  pondOil: { iconKind: "pond", theme: "pond-oil" },
+  pondChemical: { iconKind: "pond", theme: "pond-chemical" },
 };
 
 const WAREHOUSES = new Map([
@@ -146,6 +150,16 @@ const RUIN_UIDS = new Set([
   "7ba6fefb-8a07-49b8-b61f-a4d4305ecb47", "a47695ef-2028-44c7-8247-5fcad4e10bf8",
 ]);
 
+const CHEMICAL_POND_UIDS = new Set([
+  "e7703a66-88a4-44c3-b99d-b22b8418c28b", "b0355ca4-2aec-4a08-8a4a-ac5ea8542055",
+  "4df0a671-7c8c-4db7-9a6d-3be6e987731e", "61e5f92c-54eb-478f-943b-38a32348c713",
+  "9755ee40-7f23-4380-8a63-8055060fd18b", "013e980d-2425-4275-9c4b-c0eee0dba7f1",
+]);
+const OIL_POND_UIDS = new Set([
+  "c60fb408-5ca6-45eb-98d0-dc9a05ed7a66", "84b61087-2a16-41ee-b23f-56aa4ff5d056",
+  "465b42d9-4db1-4b10-925b-8d517ad37edb",
+]);
+
 const SPECIAL_STRUCTURES = [
   { kind: "packingStation", title: "Vegetable Packing Station", uid: "f3dda4db-8450-4e9d-a501-ec6dbf14a78a", x: 37, y: 102 },
   { kind: "packingStation", title: "Fruit Packing Station", uid: "9f3b2d02-a1b2-4717-99b8-83cae87bcb7c", x: 37, y: 102 },
@@ -184,9 +198,10 @@ function groupCells(cells) {
 
 function markerAt(group, localX, localY, details) {
   const [x, y] = rotateLocal(group.rotation, localX, localY, group.size);
+  const style = MARKER_STYLES[details.theme || details.kind] || { iconKind: "dot", theme: "default" };
   return {
     ...details,
-    icon: ICONS[details.kind],
+    ...style,
     x: group.minimumX * CELL_SIZE + x,
     y: group.minimumY * CELL_SIZE + y,
   };
@@ -220,6 +235,10 @@ export function findMapMarkers(cells) {
       markers.push(markerAt(group, center, center, { kind: "mechanicStation", title: "Mechanic Station" }));
     } else if (RUIN_UIDS.has(group.uid)) {
       markers.push(markerAt(group, center, center, { kind: "ruin", title: "Ruin" }));
+    } else if (CHEMICAL_POND_UIDS.has(group.uid)) {
+      markers.push(markerAt(group, center, center, { kind: "pond", theme: "pondChemical", title: "Chemical Pond" }));
+    } else if (OIL_POND_UIDS.has(group.uid)) {
+      markers.push(markerAt(group, center, center, { kind: "pond", theme: "pondOil", title: "Oil Pond" }));
     }
   }
   for (const structure of SPECIAL_STRUCTURES) {

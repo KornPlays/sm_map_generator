@@ -244,7 +244,6 @@ button:disabled { cursor: wait; opacity: 0.55; transform: none; }
 .status[data-kind="cancelled"] .spinner { border: 0; background: #d7a93b; animation: none; }
 .status:not([data-kind="working"]) .progress-track { display: none; }
 .cancel { min-height: 40px; flex: 0 0 auto; }
-
 .map-viewer {
   margin-top: 26px;
   overflow: hidden;
@@ -265,8 +264,12 @@ button:disabled { cursor: wait; opacity: 0.55; transform: none; }
 
 .map-viewer h2 { margin: 0 0 4px; font-size: 1rem; }
 .map-viewer-bar p { margin: 0; color: #929b92; font-size: 0.84rem; }
-.map-viewer-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
-.download { min-height: 43px; padding: 0 18px; font-size: 0.88rem; }
+.map-viewer-actions { display: flex; flex-wrap: wrap; align-items: stretch; justify-content: flex-end; gap: 8px; }
+.map-viewer-actions > button {
+  height: 43px;
+  min-height: 43px;
+}
+.download { padding: 0 18px; font-size: 0.88rem; }
 
 .map-empty {
   margin: 0;
@@ -296,6 +299,27 @@ button:disabled { cursor: wait; opacity: 0.55; transform: none; }
   left: 0;
   transform-origin: 0 0;
   will-change: transform;
+}
+
+.map-detail-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+  opacity: 0;
+  transition: opacity 140ms ease;
+  pointer-events: none;
+}
+
+.site-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 18px;
+  justify-content: space-between;
+  margin-top: 18px;
+  color: #778078;
+  font-size: 0.72rem;
+  line-height: 1.5;
 }
 
 #map-image {
@@ -340,12 +364,12 @@ button:disabled { cursor: wait; opacity: 0.55; transform: none; }
 
 .map-marker {
   position: absolute;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   min-height: 0;
   padding: 0;
   border: 0;
-  border-radius: 0;
+  border-radius: 8px;
   background: transparent;
   pointer-events: auto;
   transform: translate(-50%, -50%);
@@ -353,20 +377,93 @@ button:disabled { cursor: wait; opacity: 0.55; transform: none; }
 
 .map-marker:hover,
 .map-marker:focus-visible {
-  z-index: 1000 !important;
+  z-index: 2147483647 !important;
   background: transparent;
   box-shadow: none;
   transform: translate(-50%, -50%) scale(1.08);
 }
 
-.map-marker img {
-  display: block;
-  width: 24px;
-  height: 24px;
-  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.8));
+.map-marker-symbol,
+.marker-details-symbol {
+  position: relative;
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  border: 2px solid var(--marker-accent, #e8cb69);
+  border-radius: 7px;
+  background: #202522;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.75);
 }
 
-.map-marker span {
+.map-marker-symbol::before,
+.map-marker-symbol::after,
+.marker-details-symbol::before,
+.marker-details-symbol::after {
+  position: absolute;
+  content: "";
+}
+
+[data-icon="dot"]::before {
+  inset: 34%;
+  border-radius: 50%;
+  background: var(--marker-accent);
+}
+
+[data-raster-icon="true"]::before {
+  inset: 10%;
+  background: var(--marker-accent);
+  -webkit-mask: var(--marker-glyph) center / contain no-repeat;
+  mask: var(--marker-glyph) center / contain no-repeat;
+}
+[data-raster-icon="true"]::after { display: none; }
+
+[data-icon="warehouse"]::before {
+  left: 25%; right: 25%; top: 15%; bottom: 15%;
+  border: 2px solid var(--marker-accent); border-radius: 2px;
+  background: repeating-linear-gradient(0deg, transparent 0 16%, var(--marker-accent) 17% 23%, transparent 24% 39%), repeating-linear-gradient(90deg, transparent 0 24%, var(--marker-accent) 25% 33%, transparent 34% 58%);
+}
+[data-icon="warehouse"]::after {
+  left: 18%; right: 18%; bottom: 14%; height: 3px; border-radius: 2px; background: var(--marker-accent);
+}
+
+
+[data-icon="growlab"]::before {
+  left: 46%; top: 39%; width: 3px; height: 42%; border-radius: 3px; background: var(--marker-accent);
+}
+[data-icon="growlab"]::after {
+  left: 21%; top: 20%; width: 58%; height: 42%;
+  background: var(--marker-accent);
+  clip-path: polygon(48% 47%, 0 38%, 7% 5%, 36% 12%, 50% 45%, 64% 12%, 93% 5%, 100% 38%);
+}
+
+
+.map-marker-symbol { width: 28px; height: 28px; }
+.map-marker[data-theme="builder"] { --marker-accent: #f1cd55; }
+.map-marker[data-theme="warehouse"] { --marker-accent: #67a9ff; }
+.map-marker[data-theme="unlock"] { --marker-accent: #c589ff; }
+.map-marker[data-theme="ruin"] { --marker-accent: #aeb5af; }
+.map-marker[data-theme="mechanic"] { --marker-accent: #f39b44; }
+.map-marker[data-theme="growlab"] { --marker-accent: #57d34c; }
+.map-marker[data-theme="packing"] { --marker-accent: #fff1b3; }
+.map-marker[data-theme="farmer"] { --marker-accent: #70dfcf; }
+.map-marker[data-theme="pond-oil"] { --marker-accent: #cf493e; }
+.map-marker[data-theme="pond-chemical"] { --marker-accent: #ff79bd; }
+
+.viewer-source-link {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #343b35;
+  color: #7ebcff;
+  font-size: 0.74rem;
+  text-decoration: none;
+}
+.viewer-source-link:hover { color: #aed5ff; text-decoration: underline; }
+
+.map-marker-label {
   position: absolute;
   bottom: calc(100% + 5px);
   left: 50%;
@@ -383,8 +480,28 @@ button:disabled { cursor: wait; opacity: 0.55; transform: none; }
   pointer-events: none;
 }
 
-.map-marker:hover span,
-.map-marker:focus-visible span { opacity: 1; }
+.map-marker:hover > .map-marker-label,
+.map-marker:focus-visible > .map-marker-label { opacity: 1; }
+.map-marker.clustered-away { display: none !important; }
+.map-marker-count {
+  position: absolute;
+  top: -7px;
+  right: -8px;
+  z-index: 2;
+  display: grid;
+  min-width: 17px;
+  height: 17px;
+  padding: 0 4px;
+  place-items: center;
+  border: 2px solid #f4f3ed;
+  border-radius: 999px;
+  background: #287fd6;
+  color: #fff;
+  font: 800 9px/1 system-ui, sans-serif;
+  opacity: 1;
+  transform: none;
+  pointer-events: none;
+}
 
 .marker-details {
   position: absolute;
@@ -422,7 +539,23 @@ button:disabled { cursor: wait; opacity: 0.55; transform: none; }
 }
 
 .marker-details-heading { display: flex; gap: 11px; align-items: center; padding-right: 26px; }
-.marker-details-heading img { width: 42px; height: 42px; flex: 0 0 auto; }
+.marker-details-symbol {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  font-size: 12px;
+}
+.marker-details-symbol[data-theme="builder"] { --marker-accent: #f1cd55; }
+.marker-details-symbol[data-theme="warehouse"] { --marker-accent: #67a9ff; }
+.marker-details-symbol[data-theme="unlock"] { --marker-accent: #c589ff; }
+.marker-details-symbol[data-theme="ruin"] { --marker-accent: #aeb5af; }
+.marker-details-symbol[data-theme="mechanic"] { --marker-accent: #f39b44; }
+.marker-details-symbol[data-theme="growlab"] { --marker-accent: #57d34c; }
+.marker-details-symbol[data-theme="packing"] { --marker-accent: #fff1b3; }
+.marker-details-symbol[data-theme="farmer"] { --marker-accent: #70dfcf; }
+.marker-details-symbol[data-theme="pond-oil"] { --marker-accent: #cf493e; }
+.marker-details-symbol[data-theme="pond-chemical"] { --marker-accent: #ff79bd; }
+.marker-details-symbol[data-theme="cluster"] { --marker-accent: #6eb9ff; }
 .marker-details-heading small { color: #9ca79d; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; }
 .marker-details-heading h3 { margin: 2px 0 0; color: #f3f1e9; font-size: 0.98rem; line-height: 1.25; }
 .marker-details h4 { margin: 14px 0 6px; color: #d9b04e; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.08em; }
@@ -466,6 +599,120 @@ button:disabled { cursor: wait; opacity: 0.55; transform: none; }
   font-size: 1.1rem;
 }
 
+.viewer-control-download,
+.viewer-download-menu > summary {
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  width: 38px;
+  min-height: 38px;
+  padding: 0;
+  border: 1px solid #465047;
+  border-radius: 9px;
+  background: rgba(24, 30, 24, 0.94);
+  color: #eef0e9;
+  font-size: 1.12rem;
+  font-weight: 800;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+}
+.viewer-download-menu { position: relative; }
+.viewer-download-menu > summary { list-style: none; }
+.viewer-download-menu > summary::-webkit-details-marker { display: none; }
+.download-icon {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.viewer-control-download:hover,
+.viewer-download-menu > summary:hover,
+.viewer-download-menu[open] > summary { background: #2a322a; transform: none; }
+.viewer-download-options {
+  position: absolute;
+  right: calc(100% + 8px);
+  bottom: 0;
+  z-index: 100;
+  display: grid;
+  width: 244px;
+  padding: 7px;
+  border: 1px solid #465047;
+  border-radius: 11px;
+  background: #151a16;
+  box-shadow: 0 16px 42px rgba(0, 0, 0, 0.48);
+}
+.viewer-download-options > a,
+.viewer-download-options > button {
+  display: grid;
+  min-height: 0;
+  gap: 3px;
+  justify-items: start;
+  justify-content: stretch;
+  width: 100%;
+  padding: 11px 12px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: #edf0e9;
+  font: inherit;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+}
+.viewer-download-options > a:hover,
+.viewer-download-options > button:hover { background: #252d26; transform: none; }
+.viewer-download-options small { color: #939d94; font-size: 0.72rem; font-weight: 500; }
+
+/* The copy of the menu that sits beside "Upload map image" opens downwards from
+   the bar instead of sideways from the floating map controls. */
+.viewer-download-menu-bar > summary {
+  width: auto;
+  height: 43px;
+  min-height: 43px;
+  padding: 0 17px;
+  border-radius: 11px;
+  background: #202620;
+  font-size: 0.86rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.viewer-download-menu-bar > summary:hover,
+.viewer-download-menu-bar[open] > summary { background: #2a322b; }
+.viewer-download-menu-bar .viewer-download-options {
+  right: 0;
+  bottom: auto;
+  top: calc(100% + 8px);
+}
+
+/* While the browser writes the full-resolution image the menu shows nothing but
+   its progress. Canvas encoding reports no intermediate progress, so the bar
+   sweeps rather than claiming a percentage it cannot know. */
+.viewer-download-encoding { display: none; padding: 11px 12px; gap: 5px; }
+.viewer-download-menu[data-encoding] .viewer-download-encoding { display: grid; }
+.viewer-download-menu[data-encoding] .viewer-download-options > a,
+.viewer-download-menu[data-encoding] .viewer-download-options > button { display: none; }
+.viewer-download-encoding strong { font-size: 0.82rem; }
+.viewer-download-encoding small { color: #939d94; font-size: 0.72rem; font-weight: 500; }
+.viewer-download-encoding .progress-track > span {
+  display: block;
+  width: 38%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #d7a93b, #a8c879);
+  animation: download-encoding-sweep 1.3s ease-in-out infinite;
+}
+@keyframes download-encoding-sweep {
+  0% { transform: translateX(-105%); }
+  100% { transform: translateX(268%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .viewer-download-encoding .progress-track > span { width: 100%; animation: none; }
+}
+
 .map-controls button.active { border-color: #a67c23; color: #efc45d; }
 
 .viewer-settings {
@@ -491,6 +738,43 @@ button:disabled { cursor: wait; opacity: 0.55; transform: none; }
   font-size: 0.68rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+}
+
+.upscaling-settings {
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #333b34;
+}
+.upscaling-settings > strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #d9b04e;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.upscaling-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px 12px;
+}
+.viewer-settings .upscaling-options label,
+.viewer-settings .upscaling-options label + label { min-height: 20px; margin: 0; }
+.settings-action {
+  width: 100%;
+  min-height: 38px;
+  padding: 0 12px;
+  border: 1px solid #566158;
+  background: #252d26;
+  color: #edf0e9;
+  font-size: 0.78rem;
+}
+#upscaling-unavailable {
+  display: block;
+  margin-top: 6px;
+  color: #929b92;
+  font-size: 0.68rem;
+  line-height: 1.35;
 }
 
 .viewer-settings label {
@@ -530,6 +814,33 @@ button:disabled { cursor: wait; opacity: 0.55; transform: none; }
 .map-viewer.expanded .map-viewport { position: absolute; inset: 0; height: auto; min-height: 0; }
 html.map-viewer-expanded-open,
 body.map-viewer-expanded-open { overflow: hidden; }
+
+.viewer-legal {
+  position: absolute;
+  bottom: 8px;
+  left: 10px;
+  z-index: 3;
+  max-width: calc(100% - 90px);
+  color: rgba(236, 240, 235, 0.46);
+  font-size: 9px;
+  line-height: 1.25;
+  pointer-events: none;
+}
+
+.portable-status {
+  position: fixed;
+  top: 12px;
+  left: 50%;
+  z-index: 1100;
+  max-width: min(520px, calc(100% - 24px));
+  padding: 10px 14px;
+  border: 1px solid rgba(218, 101, 76, 0.55);
+  border-radius: 9px;
+  background: rgba(23, 12, 10, 0.96);
+  color: #f0a18e;
+  font-size: 0.8rem;
+  transform: translateX(-50%);
+}
 
 .missing {
   padding: 14px 18px;

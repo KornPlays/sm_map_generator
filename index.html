@@ -29,7 +29,7 @@
               inputmode="numeric"
               autocomplete="off"
               spellcheck="false"
-              maxlength="11"
+              maxlength="10"
               placeholder="Enter the seed or upload the save"
               aria-describedby="seed-help"
             />
@@ -50,52 +50,6 @@
         <button id="generate" type="submit">Generate map</button>
       </form>
 
-      <section id="map-viewer" class="map-viewer" aria-labelledby="map-viewer-title">
-        <div class="map-viewer-bar">
-          <div>
-            <h2 id="map-viewer-title">Map viewer</h2>
-            <p id="map-meta">Upload a generated map to explore it here.</p>
-          </div>
-          <div class="map-viewer-actions">
-            <button id="upload-map" class="upload" type="button">Upload map WebP</button>
-            <input id="map-file" class="visually-hidden" type="file" accept="image/webp,.webp" />
-            <a id="download" class="download" hidden>Download WebP</a>
-          </div>
-        </div>
-        <p id="map-empty" class="map-empty">Your last uploaded or generated map will appear here automatically on this browser.</p>
-        <div id="map-viewport" class="map-viewport" hidden aria-label="Interactive world map">
-          <div id="map-stage" class="map-stage"><img id="map-image" alt="Generated Scrap Mechanic world map" draggable="false" /></div>
-          <div id="map-markers" class="map-marker-layer"></div>
-          <div id="map-pin" class="map-pin" hidden title="Click to remove the pin"><span id="map-pin-label" class="map-pin-label"></span><span class="map-pin-dot"></span></div>
-          <aside id="marker-details" class="marker-details" hidden aria-live="polite">
-            <button id="marker-details-close" class="marker-details-close" type="button" aria-label="Close marker details">×</button>
-            <div class="marker-details-heading">
-              <img id="marker-details-icon" alt="" />
-              <div><small id="marker-details-kind"></small><h3 id="marker-details-title"></h3></div>
-            </div>
-            <div id="marker-details-rewards" hidden><h4 id="marker-details-list-title">Rewards</h4><ul id="marker-details-reward-list"></ul></div>
-          </aside>
-          <div id="viewer-settings" class="viewer-settings" hidden>
-            <strong>Map markers</strong>
-            <label><input type="checkbox" data-marker-kind="builderQuest" checked /> <span>Builder Quests</span></label>
-            <label><input type="checkbox" data-marker-kind="warehouse" checked /> <span>Warehouses</span></label>
-            <label><input type="checkbox" data-marker-kind="partUnlockStation" checked /> <span>Part Unlock Stations</span></label>
-            <label><input type="checkbox" data-marker-kind="ruin" /> <span>Ruins</span></label>
-            <label><input type="checkbox" data-marker-kind="mechanicStation" checked /> <span>Mechanic Stations</span></label>
-            <label><input type="checkbox" data-marker-kind="growlab" checked /> <span>Growlabs</span></label>
-            <label><input type="checkbox" data-marker-kind="packingStation" checked /> <span>Packing Stations</span></label>
-            <label><input type="checkbox" data-marker-kind="cagedFarmer" /> <span>Caged Farmers</span></label>
-          </div>
-          <div class="map-controls" aria-label="Map controls">
-            <button id="viewer-zoom-in" type="button" title="Zoom in" aria-label="Zoom in">+</button>
-            <button id="viewer-zoom-out" type="button" title="Zoom out" aria-label="Zoom out">−</button>
-            <button id="viewer-expand" type="button" title="Open expanded map view" aria-label="Open expanded map view">⤢</button>
-            <button id="viewer-settings-button" type="button" title="Map settings" aria-label="Map settings">⚙</button>
-          </div>
-        </div>
-        <div id="missing" class="missing" hidden></div>
-      </section>
-
       <div id="status" class="status" role="status" hidden>
         <span class="spinner" aria-hidden="true"></span>
         <span class="status-copy">
@@ -106,6 +60,97 @@
         <button id="cancel" class="cancel" type="button" hidden>Cancel</button>
       </div>
 
+      <section id="map-viewer" class="map-viewer" aria-labelledby="map-viewer-title">
+        <div class="map-viewer-bar">
+          <div>
+            <h2 id="map-viewer-title">Map viewer</h2>
+            <p id="map-meta">Upload a generated map to explore it here.</p>
+          </div>
+          <div class="map-viewer-actions">
+            <button id="upload-map" class="upload" type="button">Upload map image</button>
+            <input id="map-file" class="visually-hidden" type="file" accept="image/webp,.webp" />
+            <details class="viewer-download-menu viewer-download-menu-bar" data-download-menu hidden>
+              <summary>Download</summary>
+              <div class="viewer-download-options">
+                <a data-download-role="image" hidden><strong>Map image</strong><small>WebP image</small></a>
+                <button data-download-role="original" type="button"><strong>Original asset source</strong><small>Recommended · single HTML file</small></button>
+                <button data-download-role="local" type="button"><strong>Local asset source</strong><small>ZIP for self-hosting</small></button>
+                <div class="viewer-download-encoding">
+                  <strong>Encoding the map image…</strong>
+                  <small>Downloads unlock as soon as it is written.</small>
+                  <span class="progress-track" role="progressbar" aria-label="Encoding the map image"><span></span></span>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+        <p id="map-empty" class="map-empty">Your last uploaded or generated map will appear here automatically on this browser.</p>
+        <div id="map-viewport" class="map-viewport" hidden aria-label="Interactive world map">
+          <div id="map-stage" class="map-stage"><img id="map-image" alt="Generated Scrap Mechanic world map" draggable="false" /></div>
+          <canvas id="map-detail-layer" class="map-detail-layer" aria-hidden="true"></canvas>
+          <div id="map-markers" class="map-marker-layer"></div>
+          <div id="map-pin" class="map-pin" hidden title="Click to remove the pin"><span id="map-pin-label" class="map-pin-label"></span><span class="map-pin-dot"></span></div>
+          <aside id="marker-details" class="marker-details" hidden aria-live="polite">
+            <button id="marker-details-close" class="marker-details-close" type="button" aria-label="Close marker details">×</button>
+            <div class="marker-details-heading">
+              <span id="marker-details-icon" class="marker-details-symbol" aria-hidden="true"></span>
+              <div><small id="marker-details-kind"></small><h3 id="marker-details-title"></h3></div>
+            </div>
+            <div id="marker-details-rewards" hidden><h4 id="marker-details-list-title">Rewards</h4><ul id="marker-details-reward-list"></ul></div>
+          </aside>
+          <div id="viewer-settings" class="viewer-settings" hidden>
+            <div id="upscaling-settings" class="upscaling-settings">
+              <strong>Tile upscaling</strong>
+              <div id="upscaling-options" class="upscaling-options">
+                <label><input type="radio" name="upscaling" value="off" /> <span>Off</span></label>
+                <label><input type="radio" name="upscaling" value="low" /> <span>Low</span></label>
+                <label><input type="radio" name="upscaling" value="medium" /> <span>Medium</span></label>
+                <label><input type="radio" name="upscaling" value="high" /> <span>High</span></label>
+              </div>
+              <div id="upscaling-generate" hidden>
+                <button id="generate-detail-data" class="settings-action" type="button">Generate detail data</button>
+                <small id="upscaling-unavailable"></small>
+              </div>
+            </div>
+            <strong>Map markers</strong>
+            <label><input type="checkbox" data-marker-kind="builderQuest" checked /> <span>Builder Quests</span></label>
+            <label><input type="checkbox" data-marker-kind="warehouse" checked /> <span>Warehouses</span></label>
+            <label><input type="checkbox" data-marker-kind="partUnlockStation" checked /> <span>Part Unlock Stations</span></label>
+            <label><input type="checkbox" data-marker-kind="ruin" /> <span>Ruins</span></label>
+            <label><input type="checkbox" data-marker-kind="mechanicStation" checked /> <span>Mechanic Stations</span></label>
+            <label><input type="checkbox" data-marker-kind="growlab" checked /> <span>Growlabs</span></label>
+            <label><input type="checkbox" data-marker-kind="packingStation" checked /> <span>Packing Stations</span></label>
+            <label><input type="checkbox" data-marker-kind="cagedFarmer" /> <span>Caged Farmers</span></label>
+            <label><input type="checkbox" data-marker-kind="pond" /> <span>Ponds</span></label>
+            <a class="viewer-source-link" href="https://github.com/KornPlays/sm_map_generator" target="_blank" rel="noopener noreferrer">Source code on GitHub</a>
+          </div>
+          <div class="map-controls" aria-label="Map controls">
+            <details class="viewer-download-menu" data-download-menu hidden>
+              <summary title="Download" aria-label="Download"><svg class="download-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m0 0 4-4m-4 4-4-4M5 16v4h14v-4" /></svg></summary>
+              <div class="viewer-download-options">
+                <a data-download-role="image" hidden><strong>Map image</strong><small>WebP image</small></a>
+                <button data-download-role="original" type="button"><strong>Original asset source</strong><small>Recommended · single HTML file</small></button>
+                <button data-download-role="local" type="button"><strong>Local asset source</strong><small>ZIP for self-hosting</small></button>
+                <div class="viewer-download-encoding">
+                  <strong>Encoding the map image…</strong>
+                  <small>Downloads unlock as soon as it is written.</small>
+                  <span class="progress-track" role="progressbar" aria-label="Encoding the map image"><span></span></span>
+                </div>
+              </div>
+            </details>
+            <button id="viewer-zoom-in" type="button" title="Zoom in" aria-label="Zoom in">+</button>
+            <button id="viewer-zoom-out" type="button" title="Zoom out" aria-label="Zoom out">−</button>
+            <button id="viewer-expand" type="button" title="Open expanded map view" aria-label="Open expanded map view">⤢</button>
+            <button id="viewer-settings-button" type="button" title="Map settings" aria-label="Map settings">⚙</button>
+          </div>
+        </div>
+        <div id="missing" class="missing" hidden></div>
+      </section>
+
+      <footer class="site-footer">
+        <span>© 2026 KornPlays</span>
+        <span>Unofficial fan project. Scrap Mechanic and related trademarks belong to Axolot Games.</span>
+      </footer>
     </main>
     <script type="module" src="/src/main.js"></script>
   </body>

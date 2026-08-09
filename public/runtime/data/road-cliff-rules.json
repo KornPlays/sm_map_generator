@@ -1,0 +1,3458 @@
+{
+  "version": 1,
+  "entries": {
+    "1": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1000101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_01.tile"
+        },
+        {
+          "id": 1000102,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_02.tile"
+        },
+        {
+          "id": 1000103,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_03.tile"
+        },
+        {
+          "id": 1000104,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_04.tile"
+        },
+        {
+          "id": 1000105,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_05.tile"
+        },
+        {
+          "id": 1000106,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_06.tile"
+        },
+        {
+          "id": 1000107,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_07.tile"
+        }
+      ]
+    },
+    "2": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1000201,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0002)_01.tile"
+        },
+        {
+          "id": 1000202,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0002)_02.tile"
+        },
+        {
+          "id": 1000203,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0002)_03.tile"
+        }
+      ]
+    },
+    "3": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1000301,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0003)_01.tile"
+        },
+        {
+          "id": 1000302,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0003)_02.tile"
+        },
+        {
+          "id": 1000303,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0003)_03.tile"
+        }
+      ]
+    },
+    "4": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1000101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_01.tile"
+        },
+        {
+          "id": 1000102,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_02.tile"
+        },
+        {
+          "id": 1000103,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_03.tile"
+        },
+        {
+          "id": 1000104,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_04.tile"
+        },
+        {
+          "id": 1000105,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_05.tile"
+        },
+        {
+          "id": 1000106,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_06.tile"
+        },
+        {
+          "id": 1000107,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_07.tile"
+        }
+      ]
+    },
+    "5": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1000501,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_01.tile"
+        },
+        {
+          "id": 1000502,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_02.tile"
+        },
+        {
+          "id": 1000503,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_03.tile"
+        },
+        {
+          "id": 1000504,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_04.tile"
+        },
+        {
+          "id": 1000505,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_05.tile"
+        },
+        {
+          "id": 1000506,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_06.tile"
+        },
+        {
+          "id": 1000507,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_07.tile"
+        },
+        {
+          "id": 1000508,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_08.tile"
+        },
+        {
+          "id": 1000509,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_09.tile"
+        },
+        {
+          "id": 1000510,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_10.tile"
+        }
+      ]
+    },
+    "6": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1000601,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0012)_01.tile"
+        },
+        {
+          "id": 1000602,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0012)_02.tile"
+        }
+      ]
+    },
+    "7": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1000701,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0013)_01.tile"
+        }
+      ]
+    },
+    "8": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1000201,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0002)_01.tile"
+        },
+        {
+          "id": 1000202,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0002)_02.tile"
+        },
+        {
+          "id": 1000203,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0002)_03.tile"
+        }
+      ]
+    },
+    "9": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1000901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0021)_01.tile"
+        },
+        {
+          "id": 1000902,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0021)_02.tile"
+        }
+      ]
+    },
+    "10": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1001001,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_01.tile"
+        },
+        {
+          "id": 1001002,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_02.tile"
+        },
+        {
+          "id": 1001003,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_03.tile"
+        },
+        {
+          "id": 1001004,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_04.tile"
+        },
+        {
+          "id": 1001005,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_05.tile"
+        },
+        {
+          "id": 1001006,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_06.tile"
+        },
+        {
+          "id": 1001007,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_07.tile"
+        }
+      ]
+    },
+    "11": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1001101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0023)_01.tile"
+        }
+      ]
+    },
+    "12": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1000301,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0003)_01.tile"
+        },
+        {
+          "id": 1000302,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0003)_02.tile"
+        },
+        {
+          "id": 1000303,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0003)_03.tile"
+        }
+      ]
+    },
+    "13": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1001301,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0031)_01.tile"
+        }
+      ]
+    },
+    "14": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1001401,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0032)_01.tile"
+        }
+      ]
+    },
+    "15": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1001501,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_01.tile"
+        },
+        {
+          "id": 1001502,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_02.tile"
+        },
+        {
+          "id": 1001503,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_03.tile"
+        },
+        {
+          "id": 1001504,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_04.tile"
+        },
+        {
+          "id": 1001505,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_05.tile"
+        },
+        {
+          "id": 1001506,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_06.tile"
+        },
+        {
+          "id": 1001507,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_07.tile"
+        }
+      ]
+    },
+    "16": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1000101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_01.tile"
+        },
+        {
+          "id": 1000102,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_02.tile"
+        },
+        {
+          "id": 1000103,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_03.tile"
+        },
+        {
+          "id": 1000104,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_04.tile"
+        },
+        {
+          "id": 1000105,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_05.tile"
+        },
+        {
+          "id": 1000106,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_06.tile"
+        },
+        {
+          "id": 1000107,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_07.tile"
+        }
+      ]
+    },
+    "17": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1001701,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0101)_01.tile"
+        },
+        {
+          "id": 1001702,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0101)_02.tile"
+        }
+      ]
+    },
+    "18": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1001801,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0102)_01.tile"
+        }
+      ]
+    },
+    "19": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1001901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0103)_01.tile"
+        }
+      ]
+    },
+    "20": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1000501,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_01.tile"
+        },
+        {
+          "id": 1000502,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_02.tile"
+        },
+        {
+          "id": 1000503,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_03.tile"
+        },
+        {
+          "id": 1000504,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_04.tile"
+        },
+        {
+          "id": 1000505,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_05.tile"
+        },
+        {
+          "id": 1000506,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_06.tile"
+        },
+        {
+          "id": 1000507,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_07.tile"
+        },
+        {
+          "id": 1000508,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_08.tile"
+        },
+        {
+          "id": 1000509,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_09.tile"
+        },
+        {
+          "id": 1000510,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_10.tile"
+        }
+      ]
+    },
+    "21": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1002101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0111)_01.tile"
+        },
+        {
+          "id": 1002102,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0111)_02.tile"
+        },
+        {
+          "id": 1002103,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0111)_03.tile"
+        }
+      ]
+    },
+    "22": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1002201,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0112)_01.tile"
+        }
+      ]
+    },
+    "23": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1002301,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0113)_01.tile"
+        }
+      ]
+    },
+    "24": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1000601,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0012)_01.tile"
+        },
+        {
+          "id": 1000602,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0012)_02.tile"
+        }
+      ]
+    },
+    "25": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1002501,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0121)_01.tile"
+        },
+        {
+          "id": 1002502,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0121)_02.tile"
+        },
+        {
+          "id": 1002503,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0121)_03.tile"
+        }
+      ]
+    },
+    "26": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1002601,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0122)_01.tile"
+        },
+        {
+          "id": 1002602,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0122)_02.tile"
+        }
+      ]
+    },
+    "27": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1002701,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0123)_01.tile"
+        }
+      ]
+    },
+    "28": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1000701,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0013)_01.tile"
+        }
+      ]
+    },
+    "29": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1002901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0131)_01.tile"
+        }
+      ]
+    },
+    "30": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1003001,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0132)_01.tile"
+        },
+        {
+          "id": 1003002,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0132)_02.tile"
+        }
+      ]
+    },
+    "31": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1003101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0133)_01.tile"
+        }
+      ]
+    },
+    "32": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1000201,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0002)_01.tile"
+        },
+        {
+          "id": 1000202,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0002)_02.tile"
+        },
+        {
+          "id": 1000203,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0002)_03.tile"
+        }
+      ]
+    },
+    "33": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1001801,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0102)_01.tile"
+        }
+      ]
+    },
+    "34": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1003401,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0202)_01.tile"
+        }
+      ]
+    },
+    "35": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1003501,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0203)_01.tile"
+        }
+      ]
+    },
+    "36": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1000901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0021)_01.tile"
+        },
+        {
+          "id": 1000902,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0021)_02.tile"
+        }
+      ]
+    },
+    "37": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1003701,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0211)_01.tile"
+        }
+      ]
+    },
+    "38": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1003801,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0212)_01.tile"
+        }
+      ]
+    },
+    "39": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1003901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0213)_01.tile"
+        }
+      ]
+    },
+    "40": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1001001,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_01.tile"
+        },
+        {
+          "id": 1001002,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_02.tile"
+        },
+        {
+          "id": 1001003,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_03.tile"
+        },
+        {
+          "id": 1001004,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_04.tile"
+        },
+        {
+          "id": 1001005,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_05.tile"
+        },
+        {
+          "id": 1001006,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_06.tile"
+        },
+        {
+          "id": 1001007,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_07.tile"
+        }
+      ]
+    },
+    "41": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1004101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0221)_01.tile"
+        },
+        {
+          "id": 1004102,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0221)_02.tile"
+        }
+      ]
+    },
+    "42": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1004201,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0222)_01.tile"
+        }
+      ]
+    },
+    "43": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1004301,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0223)_01.tile"
+        }
+      ]
+    },
+    "44": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1001101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0023)_01.tile"
+        }
+      ]
+    },
+    "45": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1004501,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0231)_01.tile"
+        }
+      ]
+    },
+    "46": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1004601,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0232)_01.tile"
+        }
+      ]
+    },
+    "47": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1004701,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0233)_01.tile"
+        }
+      ]
+    },
+    "48": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1000301,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0003)_01.tile"
+        },
+        {
+          "id": 1000302,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0003)_02.tile"
+        },
+        {
+          "id": 1000303,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0003)_03.tile"
+        }
+      ]
+    },
+    "49": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1001901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0103)_01.tile"
+        }
+      ]
+    },
+    "50": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1003501,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0203)_01.tile"
+        }
+      ]
+    },
+    "51": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1005101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0303)_01.tile"
+        }
+      ]
+    },
+    "52": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1001301,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0031)_01.tile"
+        }
+      ]
+    },
+    "53": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1005301,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0311)_01.tile"
+        }
+      ]
+    },
+    "54": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1005401,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0312)_01.tile"
+        }
+      ]
+    },
+    "55": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1005501,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0313)_01.tile"
+        }
+      ]
+    },
+    "56": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1001401,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0032)_01.tile"
+        }
+      ]
+    },
+    "57": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1005701,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0321)_01.tile"
+        }
+      ]
+    },
+    "58": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1005801,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0322)_01.tile"
+        }
+      ]
+    },
+    "59": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1005901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0323)_01.tile"
+        }
+      ]
+    },
+    "60": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1001501,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_01.tile"
+        },
+        {
+          "id": 1001502,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_02.tile"
+        },
+        {
+          "id": 1001503,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_03.tile"
+        },
+        {
+          "id": 1001504,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_04.tile"
+        },
+        {
+          "id": 1001505,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_05.tile"
+        },
+        {
+          "id": 1001506,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_06.tile"
+        },
+        {
+          "id": 1001507,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_07.tile"
+        }
+      ]
+    },
+    "61": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1006101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0331)_01.tile"
+        }
+      ]
+    },
+    "62": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1006201,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0332)_01.tile"
+        }
+      ]
+    },
+    "63": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1006301,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0333)_01.tile"
+        }
+      ]
+    },
+    "64": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1000101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_01.tile"
+        },
+        {
+          "id": 1000102,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_02.tile"
+        },
+        {
+          "id": 1000103,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_03.tile"
+        },
+        {
+          "id": 1000104,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_04.tile"
+        },
+        {
+          "id": 1000105,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_05.tile"
+        },
+        {
+          "id": 1000106,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_06.tile"
+        },
+        {
+          "id": 1000107,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0001)_07.tile"
+        }
+      ]
+    },
+    "65": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1000501,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_01.tile"
+        },
+        {
+          "id": 1000502,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_02.tile"
+        },
+        {
+          "id": 1000503,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_03.tile"
+        },
+        {
+          "id": 1000504,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_04.tile"
+        },
+        {
+          "id": 1000505,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_05.tile"
+        },
+        {
+          "id": 1000506,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_06.tile"
+        },
+        {
+          "id": 1000507,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_07.tile"
+        },
+        {
+          "id": 1000508,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_08.tile"
+        },
+        {
+          "id": 1000509,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_09.tile"
+        },
+        {
+          "id": 1000510,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_10.tile"
+        }
+      ]
+    },
+    "66": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1000901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0021)_01.tile"
+        },
+        {
+          "id": 1000902,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0021)_02.tile"
+        }
+      ]
+    },
+    "67": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1001301,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0031)_01.tile"
+        }
+      ]
+    },
+    "68": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1001701,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0101)_01.tile"
+        },
+        {
+          "id": 1001702,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0101)_02.tile"
+        }
+      ]
+    },
+    "69": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1002101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0111)_01.tile"
+        },
+        {
+          "id": 1002102,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0111)_02.tile"
+        },
+        {
+          "id": 1002103,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0111)_03.tile"
+        }
+      ]
+    },
+    "70": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1002501,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0121)_01.tile"
+        },
+        {
+          "id": 1002502,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0121)_02.tile"
+        },
+        {
+          "id": 1002503,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0121)_03.tile"
+        }
+      ]
+    },
+    "71": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1002901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0131)_01.tile"
+        }
+      ]
+    },
+    "72": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1001801,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0102)_01.tile"
+        }
+      ]
+    },
+    "73": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1003701,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0211)_01.tile"
+        }
+      ]
+    },
+    "74": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1004101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0221)_01.tile"
+        },
+        {
+          "id": 1004102,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0221)_02.tile"
+        }
+      ]
+    },
+    "75": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1004501,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0231)_01.tile"
+        }
+      ]
+    },
+    "76": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1001901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0103)_01.tile"
+        }
+      ]
+    },
+    "77": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1005301,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0311)_01.tile"
+        }
+      ]
+    },
+    "78": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1005701,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0321)_01.tile"
+        }
+      ]
+    },
+    "79": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1006101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0331)_01.tile"
+        }
+      ]
+    },
+    "80": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1000501,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_01.tile"
+        },
+        {
+          "id": 1000502,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_02.tile"
+        },
+        {
+          "id": 1000503,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_03.tile"
+        },
+        {
+          "id": 1000504,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_04.tile"
+        },
+        {
+          "id": 1000505,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_05.tile"
+        },
+        {
+          "id": 1000506,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_06.tile"
+        },
+        {
+          "id": 1000507,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_07.tile"
+        },
+        {
+          "id": 1000508,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_08.tile"
+        },
+        {
+          "id": 1000509,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_09.tile"
+        },
+        {
+          "id": 1000510,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0011)_10.tile"
+        }
+      ]
+    },
+    "81": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1002101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0111)_01.tile"
+        },
+        {
+          "id": 1002102,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0111)_02.tile"
+        },
+        {
+          "id": 1002103,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0111)_03.tile"
+        }
+      ]
+    },
+    "82": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1003701,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0211)_01.tile"
+        }
+      ]
+    },
+    "83": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1005301,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0311)_01.tile"
+        }
+      ]
+    },
+    "84": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1002101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0111)_01.tile"
+        },
+        {
+          "id": 1002102,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0111)_02.tile"
+        },
+        {
+          "id": 1002103,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0111)_03.tile"
+        }
+      ]
+    },
+    "88": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1002201,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0112)_01.tile"
+        }
+      ]
+    },
+    "92": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1002301,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0113)_01.tile"
+        }
+      ]
+    },
+    "96": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1000601,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0012)_01.tile"
+        },
+        {
+          "id": 1000602,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0012)_02.tile"
+        }
+      ]
+    },
+    "97": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1002201,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0112)_01.tile"
+        }
+      ]
+    },
+    "98": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1003801,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0212)_01.tile"
+        }
+      ]
+    },
+    "99": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1005401,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0312)_01.tile"
+        }
+      ]
+    },
+    "100": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1002501,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0121)_01.tile"
+        },
+        {
+          "id": 1002502,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0121)_02.tile"
+        },
+        {
+          "id": 1002503,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0121)_03.tile"
+        }
+      ]
+    },
+    "104": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1002601,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0122)_01.tile"
+        },
+        {
+          "id": 1002602,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0122)_02.tile"
+        }
+      ]
+    },
+    "108": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1002701,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0123)_01.tile"
+        }
+      ]
+    },
+    "112": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1000701,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0013)_01.tile"
+        }
+      ]
+    },
+    "113": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1002301,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0113)_01.tile"
+        }
+      ]
+    },
+    "114": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1003901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0213)_01.tile"
+        }
+      ]
+    },
+    "115": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1005501,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0313)_01.tile"
+        }
+      ]
+    },
+    "116": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1002901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0131)_01.tile"
+        }
+      ]
+    },
+    "120": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1003001,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0132)_01.tile"
+        },
+        {
+          "id": 1003002,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0132)_02.tile"
+        }
+      ]
+    },
+    "124": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1003101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0133)_01.tile"
+        }
+      ]
+    },
+    "128": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1000201,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0002)_01.tile"
+        },
+        {
+          "id": 1000202,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0002)_02.tile"
+        },
+        {
+          "id": 1000203,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0002)_03.tile"
+        }
+      ]
+    },
+    "129": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1000601,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0012)_01.tile"
+        },
+        {
+          "id": 1000602,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0012)_02.tile"
+        }
+      ]
+    },
+    "130": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1001001,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_01.tile"
+        },
+        {
+          "id": 1001002,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_02.tile"
+        },
+        {
+          "id": 1001003,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_03.tile"
+        },
+        {
+          "id": 1001004,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_04.tile"
+        },
+        {
+          "id": 1001005,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_05.tile"
+        },
+        {
+          "id": 1001006,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_06.tile"
+        },
+        {
+          "id": 1001007,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_07.tile"
+        }
+      ]
+    },
+    "131": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1001401,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0032)_01.tile"
+        }
+      ]
+    },
+    "132": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1001801,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0102)_01.tile"
+        }
+      ]
+    },
+    "133": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1002201,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0112)_01.tile"
+        }
+      ]
+    },
+    "134": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1002601,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0122)_01.tile"
+        },
+        {
+          "id": 1002602,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0122)_02.tile"
+        }
+      ]
+    },
+    "135": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1003001,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0132)_01.tile"
+        },
+        {
+          "id": 1003002,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0132)_02.tile"
+        }
+      ]
+    },
+    "136": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1003401,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0202)_01.tile"
+        }
+      ]
+    },
+    "137": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1003801,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0212)_01.tile"
+        }
+      ]
+    },
+    "138": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1004201,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0222)_01.tile"
+        }
+      ]
+    },
+    "139": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1004601,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0232)_01.tile"
+        }
+      ]
+    },
+    "140": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1003501,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0203)_01.tile"
+        }
+      ]
+    },
+    "141": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1005401,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0312)_01.tile"
+        }
+      ]
+    },
+    "142": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1005801,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0322)_01.tile"
+        }
+      ]
+    },
+    "143": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1006201,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0332)_01.tile"
+        }
+      ]
+    },
+    "144": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1000901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0021)_01.tile"
+        },
+        {
+          "id": 1000902,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0021)_02.tile"
+        }
+      ]
+    },
+    "145": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1002501,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0121)_01.tile"
+        },
+        {
+          "id": 1002502,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0121)_02.tile"
+        },
+        {
+          "id": 1002503,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0121)_03.tile"
+        }
+      ]
+    },
+    "146": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1004101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0221)_01.tile"
+        },
+        {
+          "id": 1004102,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0221)_02.tile"
+        }
+      ]
+    },
+    "147": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1005701,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0321)_01.tile"
+        }
+      ]
+    },
+    "148": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1003701,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0211)_01.tile"
+        }
+      ]
+    },
+    "152": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1003801,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0212)_01.tile"
+        }
+      ]
+    },
+    "156": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1003901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0213)_01.tile"
+        }
+      ]
+    },
+    "160": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1001001,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_01.tile"
+        },
+        {
+          "id": 1001002,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_02.tile"
+        },
+        {
+          "id": 1001003,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_03.tile"
+        },
+        {
+          "id": 1001004,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_04.tile"
+        },
+        {
+          "id": 1001005,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_05.tile"
+        },
+        {
+          "id": 1001006,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_06.tile"
+        },
+        {
+          "id": 1001007,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0022)_07.tile"
+        }
+      ]
+    },
+    "161": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1002601,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0122)_01.tile"
+        },
+        {
+          "id": 1002602,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0122)_02.tile"
+        }
+      ]
+    },
+    "162": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1004201,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0222)_01.tile"
+        }
+      ]
+    },
+    "163": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1005801,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0322)_01.tile"
+        }
+      ]
+    },
+    "164": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1004101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0221)_01.tile"
+        },
+        {
+          "id": 1004102,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0221)_02.tile"
+        }
+      ]
+    },
+    "168": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1004201,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0222)_01.tile"
+        }
+      ]
+    },
+    "172": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1004301,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0223)_01.tile"
+        }
+      ]
+    },
+    "176": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1001101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0023)_01.tile"
+        }
+      ]
+    },
+    "177": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1002701,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0123)_01.tile"
+        }
+      ]
+    },
+    "178": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1004301,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0223)_01.tile"
+        }
+      ]
+    },
+    "179": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1005901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0323)_01.tile"
+        }
+      ]
+    },
+    "180": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1004501,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0231)_01.tile"
+        }
+      ]
+    },
+    "184": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1004601,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0232)_01.tile"
+        }
+      ]
+    },
+    "188": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1004701,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0233)_01.tile"
+        }
+      ]
+    },
+    "192": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1000301,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0003)_01.tile"
+        },
+        {
+          "id": 1000302,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0003)_02.tile"
+        },
+        {
+          "id": 1000303,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0003)_03.tile"
+        }
+      ]
+    },
+    "193": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1000701,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0013)_01.tile"
+        }
+      ]
+    },
+    "194": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1001101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0023)_01.tile"
+        }
+      ]
+    },
+    "195": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1001501,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_01.tile"
+        },
+        {
+          "id": 1001502,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_02.tile"
+        },
+        {
+          "id": 1001503,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_03.tile"
+        },
+        {
+          "id": 1001504,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_04.tile"
+        },
+        {
+          "id": 1001505,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_05.tile"
+        },
+        {
+          "id": 1001506,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_06.tile"
+        },
+        {
+          "id": 1001507,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_07.tile"
+        }
+      ]
+    },
+    "196": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1001901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0103)_01.tile"
+        }
+      ]
+    },
+    "197": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1002301,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0113)_01.tile"
+        }
+      ]
+    },
+    "198": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1002701,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0123)_01.tile"
+        }
+      ]
+    },
+    "199": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1003101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0133)_01.tile"
+        }
+      ]
+    },
+    "200": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1003501,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0203)_01.tile"
+        }
+      ]
+    },
+    "201": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1003901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0213)_01.tile"
+        }
+      ]
+    },
+    "202": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1004301,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0223)_01.tile"
+        }
+      ]
+    },
+    "203": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1004701,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0233)_01.tile"
+        }
+      ]
+    },
+    "204": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1005101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0303)_01.tile"
+        }
+      ]
+    },
+    "205": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1005501,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0313)_01.tile"
+        }
+      ]
+    },
+    "206": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1005901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0323)_01.tile"
+        }
+      ]
+    },
+    "207": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1006301,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0333)_01.tile"
+        }
+      ]
+    },
+    "208": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1001301,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0031)_01.tile"
+        }
+      ]
+    },
+    "209": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1002901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0131)_01.tile"
+        }
+      ]
+    },
+    "210": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1004501,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0231)_01.tile"
+        }
+      ]
+    },
+    "211": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1006101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0331)_01.tile"
+        }
+      ]
+    },
+    "212": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1005301,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0311)_01.tile"
+        }
+      ]
+    },
+    "216": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1005401,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0312)_01.tile"
+        }
+      ]
+    },
+    "220": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1005501,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0313)_01.tile"
+        }
+      ]
+    },
+    "224": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1001401,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0032)_01.tile"
+        }
+      ]
+    },
+    "225": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1003001,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0132)_01.tile"
+        },
+        {
+          "id": 1003002,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0132)_02.tile"
+        }
+      ]
+    },
+    "226": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1004601,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0232)_01.tile"
+        }
+      ]
+    },
+    "227": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1006201,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0332)_01.tile"
+        }
+      ]
+    },
+    "228": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1005701,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0321)_01.tile"
+        }
+      ]
+    },
+    "232": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1005801,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0322)_01.tile"
+        }
+      ]
+    },
+    "236": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1005901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0323)_01.tile"
+        }
+      ]
+    },
+    "240": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1001501,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_01.tile"
+        },
+        {
+          "id": 1001502,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_02.tile"
+        },
+        {
+          "id": 1001503,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_03.tile"
+        },
+        {
+          "id": 1001504,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_04.tile"
+        },
+        {
+          "id": 1001505,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_05.tile"
+        },
+        {
+          "id": 1001506,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_06.tile"
+        },
+        {
+          "id": 1001507,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0033)_07.tile"
+        }
+      ]
+    },
+    "241": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1003101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0133)_01.tile"
+        }
+      ]
+    },
+    "242": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1004701,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0233)_01.tile"
+        }
+      ]
+    },
+    "243": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1006301,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0333)_01.tile"
+        }
+      ]
+    },
+    "244": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1006101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0331)_01.tile"
+        }
+      ]
+    },
+    "248": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1006201,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0332)_01.tile"
+        }
+      ]
+    },
+    "252": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1006301,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Cliff(0333)_01.tile"
+        }
+      ]
+    },
+    "256": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1025601,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0001)_Cliff(0000)_01.tile"
+        }
+      ]
+    },
+    "512": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1025601,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0001)_Cliff(0000)_01.tile"
+        }
+      ]
+    },
+    "768": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1076801,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_01.tile"
+        },
+        {
+          "id": 1076802,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_02.tile"
+        },
+        {
+          "id": 1076803,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_03.tile"
+        },
+        {
+          "id": 1076804,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_04.tile"
+        },
+        {
+          "id": 1076805,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_05.tile"
+        },
+        {
+          "id": 1076806,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_06.tile"
+        },
+        {
+          "id": 1076807,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_07.tile"
+        },
+        {
+          "id": 1076808,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_08.tile"
+        },
+        {
+          "id": 1076809,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_09.tile"
+        },
+        {
+          "id": 1076810,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_10.tile"
+        },
+        {
+          "id": 1076811,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_11.tile"
+        },
+        {
+          "id": 1076812,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_12.tile"
+        },
+        {
+          "id": 1076813,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_13.tile"
+        },
+        {
+          "id": 1076814,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_14.tile"
+        }
+      ]
+    },
+    "769": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1076901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0001)_01.tile"
+        }
+      ]
+    },
+    "772": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1077201,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0010)_01.tile"
+        }
+      ]
+    },
+    "773": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1077301,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0011)_01.tile"
+        }
+      ]
+    },
+    "784": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1078401,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0100)_01.tile"
+        }
+      ]
+    },
+    "785": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1078501,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0101)_01.tile"
+        }
+      ]
+    },
+    "788": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1078801,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0110)_01.tile"
+        }
+      ]
+    },
+    "789": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1078901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0111)_01.tile"
+        }
+      ]
+    },
+    "832": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1083201,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1000)_01.tile"
+        }
+      ]
+    },
+    "833": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1083301,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1001)_01.tile"
+        }
+      ]
+    },
+    "836": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1083601,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1010)_01.tile"
+        }
+      ]
+    },
+    "837": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1083701,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1011)_01.tile"
+        }
+      ]
+    },
+    "848": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1084801,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1100)_01.tile"
+        }
+      ]
+    },
+    "849": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1084901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1101)_01.tile"
+        }
+      ]
+    },
+    "852": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1085201,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1110)_01.tile"
+        }
+      ]
+    },
+    "1024": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1025601,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0001)_Cliff(0000)_01.tile"
+        }
+      ]
+    },
+    "1280": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1128001,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_01.tile"
+        },
+        {
+          "id": 1128002,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_02.tile"
+        },
+        {
+          "id": 1128003,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_03.tile"
+        },
+        {
+          "id": 1128004,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_04.tile"
+        },
+        {
+          "id": 1128005,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_05.tile"
+        },
+        {
+          "id": 1128006,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_06.tile"
+        },
+        {
+          "id": 1128007,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_07.tile"
+        },
+        {
+          "id": 1128008,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_08.tile"
+        },
+        {
+          "id": 1128009,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_09.tile"
+        },
+        {
+          "id": 1128010,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_10.tile"
+        },
+        {
+          "id": 1128011,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_11.tile"
+        },
+        {
+          "id": 1128012,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_12.tile"
+        },
+        {
+          "id": 1128013,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_13.tile"
+        },
+        {
+          "id": 1128014,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_14.tile"
+        },
+        {
+          "id": 1128015,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_15.tile"
+        },
+        {
+          "id": 1128016,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_16.tile"
+        }
+      ]
+    },
+    "1281": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1128101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0001)_01.tile"
+        }
+      ]
+    },
+    "1284": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1128401,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0010)_01.tile"
+        },
+        {
+          "id": 1128402,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0010)_02.tile"
+        }
+      ]
+    },
+    "1285": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1128501,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0011)_01.tile"
+        }
+      ]
+    },
+    "1296": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1128101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0001)_01.tile"
+        }
+      ]
+    },
+    "1297": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1129701,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0101)_01.tile"
+        }
+      ]
+    },
+    "1300": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1130001,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0110)_01.tile"
+        }
+      ]
+    },
+    "1301": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1130101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0111)_01.tile"
+        }
+      ]
+    },
+    "1344": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1128401,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0010)_01.tile"
+        },
+        {
+          "id": 1128402,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0010)_02.tile"
+        }
+      ]
+    },
+    "1345": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1130001,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0110)_01.tile"
+        }
+      ]
+    },
+    "1348": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1134801,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(1010)_01.tile"
+        }
+      ]
+    },
+    "1349": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1134901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(1011)_01.tile"
+        }
+      ]
+    },
+    "1360": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1128501,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0011)_01.tile"
+        }
+      ]
+    },
+    "1361": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1130101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0111)_01.tile"
+        }
+      ]
+    },
+    "1364": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1134901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(1011)_01.tile"
+        }
+      ]
+    },
+    "1536": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1076801,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_01.tile"
+        },
+        {
+          "id": 1076802,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_02.tile"
+        },
+        {
+          "id": 1076803,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_03.tile"
+        },
+        {
+          "id": 1076804,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_04.tile"
+        },
+        {
+          "id": 1076805,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_05.tile"
+        },
+        {
+          "id": 1076806,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_06.tile"
+        },
+        {
+          "id": 1076807,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_07.tile"
+        },
+        {
+          "id": 1076808,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_08.tile"
+        },
+        {
+          "id": 1076809,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_09.tile"
+        },
+        {
+          "id": 1076810,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_10.tile"
+        },
+        {
+          "id": 1076811,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_11.tile"
+        },
+        {
+          "id": 1076812,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_12.tile"
+        },
+        {
+          "id": 1076813,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_13.tile"
+        },
+        {
+          "id": 1076814,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_14.tile"
+        }
+      ]
+    },
+    "1537": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1083201,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1000)_01.tile"
+        }
+      ]
+    },
+    "1540": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1076901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0001)_01.tile"
+        }
+      ]
+    },
+    "1541": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1083301,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1001)_01.tile"
+        }
+      ]
+    },
+    "1552": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1077201,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0010)_01.tile"
+        }
+      ]
+    },
+    "1553": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1083601,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1010)_01.tile"
+        }
+      ]
+    },
+    "1556": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1077301,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0011)_01.tile"
+        }
+      ]
+    },
+    "1557": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1083701,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1011)_01.tile"
+        }
+      ]
+    },
+    "1600": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1078401,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0100)_01.tile"
+        }
+      ]
+    },
+    "1601": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1084801,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1100)_01.tile"
+        }
+      ]
+    },
+    "1604": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1078501,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0101)_01.tile"
+        }
+      ]
+    },
+    "1605": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1084901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1101)_01.tile"
+        }
+      ]
+    },
+    "1616": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1078801,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0110)_01.tile"
+        }
+      ]
+    },
+    "1617": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1085201,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1110)_01.tile"
+        }
+      ]
+    },
+    "1620": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1078901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0111)_01.tile"
+        }
+      ]
+    },
+    "1792": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1179201,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0111)_Cliff(0000)_01.tile"
+        }
+      ]
+    },
+    "2048": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1025601,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0001)_Cliff(0000)_01.tile"
+        }
+      ]
+    },
+    "2304": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1076801,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_01.tile"
+        },
+        {
+          "id": 1076802,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_02.tile"
+        },
+        {
+          "id": 1076803,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_03.tile"
+        },
+        {
+          "id": 1076804,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_04.tile"
+        },
+        {
+          "id": 1076805,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_05.tile"
+        },
+        {
+          "id": 1076806,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_06.tile"
+        },
+        {
+          "id": 1076807,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_07.tile"
+        },
+        {
+          "id": 1076808,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_08.tile"
+        },
+        {
+          "id": 1076809,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_09.tile"
+        },
+        {
+          "id": 1076810,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_10.tile"
+        },
+        {
+          "id": 1076811,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_11.tile"
+        },
+        {
+          "id": 1076812,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_12.tile"
+        },
+        {
+          "id": 1076813,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_13.tile"
+        },
+        {
+          "id": 1076814,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_14.tile"
+        }
+      ]
+    },
+    "2305": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1077201,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0010)_01.tile"
+        }
+      ]
+    },
+    "2308": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1078401,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0100)_01.tile"
+        }
+      ]
+    },
+    "2309": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1078801,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0110)_01.tile"
+        }
+      ]
+    },
+    "2320": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1083201,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1000)_01.tile"
+        }
+      ]
+    },
+    "2321": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1083601,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1010)_01.tile"
+        }
+      ]
+    },
+    "2324": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1084801,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1100)_01.tile"
+        }
+      ]
+    },
+    "2325": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1085201,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1110)_01.tile"
+        }
+      ]
+    },
+    "2368": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1076901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0001)_01.tile"
+        }
+      ]
+    },
+    "2369": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1077301,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0011)_01.tile"
+        }
+      ]
+    },
+    "2372": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1078501,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0101)_01.tile"
+        }
+      ]
+    },
+    "2373": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1078901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0111)_01.tile"
+        }
+      ]
+    },
+    "2384": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1083301,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1001)_01.tile"
+        }
+      ]
+    },
+    "2385": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1083701,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1011)_01.tile"
+        }
+      ]
+    },
+    "2388": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1084901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1101)_01.tile"
+        }
+      ]
+    },
+    "2560": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1128001,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_01.tile"
+        },
+        {
+          "id": 1128002,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_02.tile"
+        },
+        {
+          "id": 1128003,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_03.tile"
+        },
+        {
+          "id": 1128004,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_04.tile"
+        },
+        {
+          "id": 1128005,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_05.tile"
+        },
+        {
+          "id": 1128006,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_06.tile"
+        },
+        {
+          "id": 1128007,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_07.tile"
+        },
+        {
+          "id": 1128008,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_08.tile"
+        },
+        {
+          "id": 1128009,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_09.tile"
+        },
+        {
+          "id": 1128010,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_10.tile"
+        },
+        {
+          "id": 1128011,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_11.tile"
+        },
+        {
+          "id": 1128012,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_12.tile"
+        },
+        {
+          "id": 1128013,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_13.tile"
+        },
+        {
+          "id": 1128014,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_14.tile"
+        },
+        {
+          "id": 1128015,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_15.tile"
+        },
+        {
+          "id": 1128016,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0000)_16.tile"
+        }
+      ]
+    },
+    "2561": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1128401,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0010)_01.tile"
+        },
+        {
+          "id": 1128402,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0010)_02.tile"
+        }
+      ]
+    },
+    "2564": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1128101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0001)_01.tile"
+        }
+      ]
+    },
+    "2565": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1130001,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0110)_01.tile"
+        }
+      ]
+    },
+    "2576": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1128401,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0010)_01.tile"
+        },
+        {
+          "id": 1128402,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0010)_02.tile"
+        }
+      ]
+    },
+    "2577": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1134801,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(1010)_01.tile"
+        }
+      ]
+    },
+    "2580": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1128501,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0011)_01.tile"
+        }
+      ]
+    },
+    "2581": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1134901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(1011)_01.tile"
+        }
+      ]
+    },
+    "2624": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1128101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0001)_01.tile"
+        }
+      ]
+    },
+    "2625": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1128501,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0011)_01.tile"
+        }
+      ]
+    },
+    "2628": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1129701,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0101)_01.tile"
+        }
+      ]
+    },
+    "2629": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1130101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0111)_01.tile"
+        }
+      ]
+    },
+    "2640": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1130001,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0110)_01.tile"
+        }
+      ]
+    },
+    "2641": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1134901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(1011)_01.tile"
+        }
+      ]
+    },
+    "2644": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1130101,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0101)_Cliff(0111)_01.tile"
+        }
+      ]
+    },
+    "2816": {
+      "rotation": 3,
+      "tiles": [
+        {
+          "id": 1179201,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0111)_Cliff(0000)_01.tile"
+        }
+      ]
+    },
+    "3072": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1076801,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_01.tile"
+        },
+        {
+          "id": 1076802,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_02.tile"
+        },
+        {
+          "id": 1076803,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_03.tile"
+        },
+        {
+          "id": 1076804,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_04.tile"
+        },
+        {
+          "id": 1076805,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_05.tile"
+        },
+        {
+          "id": 1076806,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_06.tile"
+        },
+        {
+          "id": 1076807,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_07.tile"
+        },
+        {
+          "id": 1076808,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_08.tile"
+        },
+        {
+          "id": 1076809,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_09.tile"
+        },
+        {
+          "id": 1076810,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_10.tile"
+        },
+        {
+          "id": 1076811,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_11.tile"
+        },
+        {
+          "id": 1076812,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_12.tile"
+        },
+        {
+          "id": 1076813,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_13.tile"
+        },
+        {
+          "id": 1076814,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0000)_14.tile"
+        }
+      ]
+    },
+    "3073": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1078401,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0100)_01.tile"
+        }
+      ]
+    },
+    "3076": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1083201,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1000)_01.tile"
+        }
+      ]
+    },
+    "3077": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1084801,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1100)_01.tile"
+        }
+      ]
+    },
+    "3088": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1076901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0001)_01.tile"
+        }
+      ]
+    },
+    "3089": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1078501,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0101)_01.tile"
+        }
+      ]
+    },
+    "3092": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1083301,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1001)_01.tile"
+        }
+      ]
+    },
+    "3093": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1084901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1101)_01.tile"
+        }
+      ]
+    },
+    "3136": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1077201,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0010)_01.tile"
+        }
+      ]
+    },
+    "3137": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1078801,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0110)_01.tile"
+        }
+      ]
+    },
+    "3140": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1083601,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1010)_01.tile"
+        }
+      ]
+    },
+    "3141": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1085201,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1110)_01.tile"
+        }
+      ]
+    },
+    "3152": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1077301,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0011)_01.tile"
+        }
+      ]
+    },
+    "3153": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1078901,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(0111)_01.tile"
+        }
+      ]
+    },
+    "3156": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1083701,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0011)_Cliff(1011)_01.tile"
+        }
+      ]
+    },
+    "3328": {
+      "rotation": 2,
+      "tiles": [
+        {
+          "id": 1179201,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0111)_Cliff(0000)_01.tile"
+        }
+      ]
+    },
+    "3584": {
+      "rotation": 1,
+      "tiles": [
+        {
+          "id": 1179201,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(0111)_Cliff(0000)_01.tile"
+        }
+      ]
+    },
+    "3840": {
+      "rotation": 0,
+      "tiles": [
+        {
+          "id": 1384001,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(1111)_Cliff(0000)_01.tile"
+        },
+        {
+          "id": 1384002,
+          "path": "$SURVIVAL_DATA/Terrain/Tiles/roads_and_cliffs/Road(1111)_Cliff(0000)_02.tile"
+        }
+      ]
+    }
+  }
+}

@@ -1,32 +1,39 @@
-# Scrap Mechanic Chapter 2 Browser Map Generator
+# Scrap Mechanic Chapter 2 Map Generator
 
-Generate a complete Scrap Mechanic Chapter 2 world map from a world seed or a
-local `.db` save file — without starting Scrap Mechanic.
+Generate and explore a complete Chapter 2 world map from a seed or local
+Scrap Mechanic save—entirely in your browser.
 
 **Live site:** https://sm.kornplays.com
 
 **Source code:** https://github.com/KornPlays/sm_map_generator
 
-Everything runs in the browser. The site does not upload saves or generated maps.
-
-## Example
-
 ![Map generated from seed 1337](docs/seed-1337-preview.webp)
-
-Map generated from seed `1337`.
 
 ## Features
 
-- Generates a map from a world seed.
-- Reads the seed from a Scrap Mechanic `.db` save.
-- Supports 25, 50, and 100 pixels per world cell.
-- Includes an interactive map viewer with zooming, coordinates, structure markers,
-  and Builder Quest rewards.
-- Downloads the finished map as a WebP image.
+- Generates a world map from a seed or `.db` save.
+- Interactive viewer with coordinates, markers, quest rewards, and offline map caching.
+- Intelligently loads tile detail up to 200 × 200 pixels per tile while you zoom.
+- Exports the map as an image or as a standalone interactive HTML viewer.
+- Runs locally in the browser without uploading saves or maps.
 
-## Run locally
+## Host the map viewer
 
-Requires Node.js `20.19` or newer.
+Generate or upload a map, open **Download HTML**, and choose one of the two
+exports:
+
+- **Original asset source** downloads one HTML file. Upload it as `index.html`.
+- **Local asset source** downloads a ZIP. Extract it and upload all of its
+  contents together if you want to host every required asset yourself.
+
+Both exports contain the interactive map viewer; they do not include the map
+generator.
+
+---
+
+## Run the map generator locally
+
+Requires Node.js 20.19 or newer.
 
 ```bash
 git clone https://github.com/KornPlays/sm_map_generator.git
@@ -35,34 +42,34 @@ npm ci
 npm run dev
 ```
 
-Open the local URL printed by Vite.
+## Host the map generator
 
-## Build and host it yourself
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/KornPlays/sm_map_generator)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/KornPlays/sm_map_generator)
+[![Cloudflare Pages](https://img.shields.io/badge/Cloudflare_Pages-Deploy-F38020?logo=cloudflare&logoColor=white)](https://dash.cloudflare.com/?to=%2F%3Aaccount%2Fworkers-and-pages)
+[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Fork-222?logo=github&logoColor=white)](https://github.com/KornPlays/sm_map_generator/fork)
+
+For a manual deployment:
 
 ```bash
 npm ci
 npm run build
 ```
 
-Upload the **contents** of `dist/` to any HTTPS static-file host. The built site
-does not need a server-side map generator or database.
+Host the contents of `dist/`, serve `index.html` at the root, and preserve the
+other generated folders. For Cloudflare Pages, use `npm run build` and `dist`.
 
-Examples of suitable hosts include GitHub Pages, Cloudflare Pages, Netlify,
-Vercel static hosting, an S3-compatible static bucket, or a normal web server
-such as Caddy or Nginx.
+Generator internals and the golden-seed update process are documented in
+[docs/world-generator.md](docs/world-generator.md).
 
-Your host should serve `index.html` at the site root and preserve the `assets/`,
-`runtime/`, and `vendor/` folders exactly as built.
+## License
 
-## Updating the bundled map data
+The original project code and project-created interface artwork are licensed
+under the [MIT License](LICENSE). Copies and substantial portions must retain
+the copyright and permission notice.
 
-This repository intentionally includes the browser assets and runtime files it
-needs, so a standalone clone can build successfully. When updating the tile
-library or Chapter 2 generation data, refresh these tracked folders from the
-canonical generator project before rebuilding:
+Copyright © 2026 KornPlays.
 
-- `public/assets/` — captured tile images and the excavation-island image.
-- `public/runtime/data/` — tile metadata and excavation-world data.
-- `public/runtime/lua/` — browser-used Chapter 2 generation scripts.
-
-Then run `npm run test:generator` and `npm run build` before publishing.
+This is an unofficial fan project and is not affiliated with or endorsed by
+Axolot Games. Scrap Mechanic, its name, trademarks, and underlying game content
+belong to their respective owners. See [third-party notices](THIRD_PARTY_NOTICES.md).

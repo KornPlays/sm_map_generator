@@ -2,12 +2,16 @@
   "name": "scrap-mechanic-ch2-browser-map-generator",
   "private": true,
   "version": "1.0.0",
+  "license": "MIT",
+  "author": "KornPlays",
   "type": "module",
   "scripts": {
+    "build:tiles": "python3 scripts/build-browser-assets.py",
     "prepare-vendor": "node scripts/prepare-vendor.mjs",
-    "predev": "npm run prepare-vendor",
+    "build:viewer": "vite build --config vite.portable.config.js",
+    "predev": "npm run prepare-vendor && npm run build:viewer",
     "dev": "vite",
-    "prebuild": "npm run prepare-vendor",
+    "prebuild": "npm run prepare-vendor && npm run build:viewer",
     "build": "vite build",
     "preview": "vite preview",
     "test:generator": "node scripts/verify-generator.mjs"

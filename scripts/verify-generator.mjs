@@ -19,6 +19,25 @@ globalThis.fetch = async (input) => {
 
 const { generateCells } = await import("../src/generator.js");
 const cells = await generateCells(seed);
+const multiOrigins = new Map();
+for (const cell of cells) {
+  if (cell.size <= 1) continue;
+  if (!Number.isInteger(cell.originX) || !Number.isInteger(cell.originY)) {
+    throw new Error(`Multi-cell tile ${cell.uid} has no integer origin.`);
+  }
+  if (
+    cell.x < cell.originX || cell.x >= cell.originX + cell.size ||
+    cell.y < cell.originY || cell.y >= cell.originY + cell.size
+  ) {
+    throw new Error(`Cell ${cell.x},${cell.y} is outside ${cell.uid}'s declared origin.`);
+  }
+  const key = `${cell.group}:${cell.uid}`;
+  const origin = `${cell.originX},${cell.originY}`;
+  if (multiOrigins.has(key) && multiOrigins.get(key) !== origin) {
+    throw new Error(`Multi-cell group ${key} contains conflicting origins.`);
+  }
+  multiOrigins.set(key, origin);
+}
 if (process.argv.includes("--dump")) {
   const outputIndex = process.argv.indexOf("--output");
   const serialized = JSON.stringify(cells);

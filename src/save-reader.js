@@ -280,10 +280,10 @@ export async function readScrapMechanicSeed(file) {
     const seedIndex = columns.indexOf("seed");
     const rows = await database.tableRecords(gameTable[3]);
     const seed = rows[0]?.[seedIndex];
-    if (!Number.isInteger(seed) || seed < -2147483648 || seed > 2147483647) {
+    if (!Number.isInteger(seed) || seed < -2147483648 || seed > 4294967295) {
       fail("The save does not contain a supported world seed.");
     }
-    return seed;
+    return seed < 0 ? seed + 4294967296 : seed;
   } catch (error) {
     if (error instanceof InvalidSaveError) throw error;
     console.error("Save parsing failed", error);

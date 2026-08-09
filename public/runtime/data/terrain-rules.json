@@ -1,0 +1,2352 @@
+{
+  "version": 1,
+  "types": {
+    "meadow": {
+      "terrainType": 1,
+      "functionSuffix": "Meadow",
+      "entries": {
+        "15": {
+          "rotation": null,
+          "tiles": [
+            {
+              "id": 1000001,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_01.tile",
+              "terrainType": 1
+            },
+            {
+              "id": 1000002,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_02.tile",
+              "terrainType": 1
+            },
+            {
+              "id": 1000003,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_03.tile",
+              "terrainType": 1
+            },
+            {
+              "id": 1000004,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_04.tile",
+              "terrainType": 1
+            },
+            {
+              "id": 1000005,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_05.tile",
+              "terrainType": 1
+            },
+            {
+              "id": 1000006,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_06.tile",
+              "terrainType": 1
+            },
+            {
+              "id": 1000007,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_07.tile",
+              "terrainType": 1
+            },
+            {
+              "id": 1000008,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_08.tile",
+              "terrainType": 1
+            },
+            {
+              "id": 1000009,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_09.tile",
+              "terrainType": 1
+            },
+            {
+              "id": 1000010,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_10.tile",
+              "terrainType": 1
+            },
+            {
+              "id": 1000011,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_11.tile",
+              "terrainType": 1
+            },
+            {
+              "id": 1000012,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_12.tile",
+              "terrainType": 1
+            },
+            {
+              "id": 1000013,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_13.tile",
+              "terrainType": 1
+            },
+            {
+              "id": 1000014,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_14.tile",
+              "terrainType": 1
+            },
+            {
+              "id": 1000015,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_15.tile",
+              "terrainType": 1
+            },
+            {
+              "id": 1000016,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_16.tile",
+              "terrainType": 1
+            },
+            {
+              "id": 1000017,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_17.tile",
+              "terrainType": 1
+            },
+            {
+              "id": 1000018,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_18.tile",
+              "terrainType": 1
+            },
+            {
+              "id": 1000019,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_19.tile",
+              "terrainType": 1
+            },
+            {
+              "id": 1000020,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_20.tile",
+              "terrainType": 1
+            },
+            {
+              "id": 1000021,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_21.tile",
+              "terrainType": 1
+            },
+            {
+              "id": 1000022,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_22.tile",
+              "terrainType": 1
+            },
+            {
+              "id": 1000023,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_23.tile",
+              "terrainType": 1
+            },
+            {
+              "id": 1000024,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_24.tile",
+              "terrainType": 1
+            },
+            {
+              "id": 1000025,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_25.tile",
+              "terrainType": 1
+            },
+            {
+              "id": 1000026,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_26.tile",
+              "terrainType": 1
+            },
+            {
+              "id": 1000027,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_27.tile",
+              "terrainType": 1
+            },
+            {
+              "id": 1000028,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_28.tile",
+              "terrainType": 1
+            },
+            {
+              "id": 1000029,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/meadow/Meadow_64(1111)_29.tile",
+              "terrainType": 1
+            }
+          ]
+        }
+      }
+    },
+    "forest": {
+      "terrainType": 2,
+      "functionSuffix": "Forest",
+      "entries": {
+        "1": {
+          "rotation": 0,
+          "tiles": [
+            {
+              "id": 2000101,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0001)_01.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2000102,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0001)_02.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2000103,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0001)_03.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2000104,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0001)_04.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2000105,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0001)_05.tile",
+              "terrainType": 2
+            }
+          ]
+        },
+        "2": {
+          "rotation": 1,
+          "tiles": [
+            {
+              "id": 2000101,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0001)_01.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2000102,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0001)_02.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2000103,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0001)_03.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2000104,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0001)_04.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2000105,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0001)_05.tile",
+              "terrainType": 2
+            }
+          ]
+        },
+        "3": {
+          "rotation": 0,
+          "tiles": [
+            {
+              "id": 2000301,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0011)_01.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2000302,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0011)_02.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2000303,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0011)_03.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2000304,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0011)_04.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2000305,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0011)_05.tile",
+              "terrainType": 2
+            }
+          ]
+        },
+        "4": {
+          "rotation": 2,
+          "tiles": [
+            {
+              "id": 2000101,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0001)_01.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2000102,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0001)_02.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2000103,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0001)_03.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2000104,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0001)_04.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2000105,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0001)_05.tile",
+              "terrainType": 2
+            }
+          ]
+        },
+        "5": {
+          "rotation": 0,
+          "tiles": [
+            {
+              "id": 2000501,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0101)_01.tile",
+              "terrainType": 2
+            }
+          ]
+        },
+        "6": {
+          "rotation": 1,
+          "tiles": [
+            {
+              "id": 2000301,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0011)_01.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2000302,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0011)_02.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2000303,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0011)_03.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2000304,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0011)_04.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2000305,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0011)_05.tile",
+              "terrainType": 2
+            }
+          ]
+        },
+        "7": {
+          "rotation": 0,
+          "tiles": [
+            {
+              "id": 2000701,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0111)_01.tile",
+              "terrainType": 2
+            }
+          ]
+        },
+        "8": {
+          "rotation": 3,
+          "tiles": [
+            {
+              "id": 2000101,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0001)_01.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2000102,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0001)_02.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2000103,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0001)_03.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2000104,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0001)_04.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2000105,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0001)_05.tile",
+              "terrainType": 2
+            }
+          ]
+        },
+        "9": {
+          "rotation": 3,
+          "tiles": [
+            {
+              "id": 2000301,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0011)_01.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2000302,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0011)_02.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2000303,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0011)_03.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2000304,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0011)_04.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2000305,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0011)_05.tile",
+              "terrainType": 2
+            }
+          ]
+        },
+        "10": {
+          "rotation": 3,
+          "tiles": [
+            {
+              "id": 2000501,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0101)_01.tile",
+              "terrainType": 2
+            }
+          ]
+        },
+        "11": {
+          "rotation": 3,
+          "tiles": [
+            {
+              "id": 2000701,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0111)_01.tile",
+              "terrainType": 2
+            }
+          ]
+        },
+        "12": {
+          "rotation": 2,
+          "tiles": [
+            {
+              "id": 2000301,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0011)_01.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2000302,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0011)_02.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2000303,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0011)_03.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2000304,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0011)_04.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2000305,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0011)_05.tile",
+              "terrainType": 2
+            }
+          ]
+        },
+        "13": {
+          "rotation": 2,
+          "tiles": [
+            {
+              "id": 2000701,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0111)_01.tile",
+              "terrainType": 2
+            }
+          ]
+        },
+        "14": {
+          "rotation": 1,
+          "tiles": [
+            {
+              "id": 2000701,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(0111)_01.tile",
+              "terrainType": 2
+            }
+          ]
+        },
+        "15": {
+          "rotation": 0,
+          "tiles": [
+            {
+              "id": 2001501,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(1111)_01.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2001502,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(1111)_02.tile",
+              "terrainType": 2
+            },
+            {
+              "id": 2001503,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/forest/Forest(1111)_03.tile",
+              "terrainType": 2
+            }
+          ]
+        }
+      }
+    },
+    "desert": {
+      "terrainType": 3,
+      "functionSuffix": "Desert",
+      "entries": {
+        "1": {
+          "rotation": 0,
+          "tiles": [
+            {
+              "id": 3000101,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0001)_01.tile",
+              "terrainType": 3
+            },
+            {
+              "id": 3000102,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0001)_02.tile",
+              "terrainType": 3
+            },
+            {
+              "id": 3000103,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0001)_03.tile",
+              "terrainType": 3
+            }
+          ]
+        },
+        "2": {
+          "rotation": 1,
+          "tiles": [
+            {
+              "id": 3000101,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0001)_01.tile",
+              "terrainType": 3
+            },
+            {
+              "id": 3000102,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0001)_02.tile",
+              "terrainType": 3
+            },
+            {
+              "id": 3000103,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0001)_03.tile",
+              "terrainType": 3
+            }
+          ]
+        },
+        "3": {
+          "rotation": 0,
+          "tiles": [
+            {
+              "id": 3000301,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0011)_01.tile",
+              "terrainType": 3
+            },
+            {
+              "id": 3000302,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0011)_02.tile",
+              "terrainType": 3
+            },
+            {
+              "id": 3000303,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0011)_03.tile",
+              "terrainType": 3
+            },
+            {
+              "id": 3000304,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0011)_04.tile",
+              "terrainType": 3
+            }
+          ]
+        },
+        "4": {
+          "rotation": 2,
+          "tiles": [
+            {
+              "id": 3000101,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0001)_01.tile",
+              "terrainType": 3
+            },
+            {
+              "id": 3000102,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0001)_02.tile",
+              "terrainType": 3
+            },
+            {
+              "id": 3000103,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0001)_03.tile",
+              "terrainType": 3
+            }
+          ]
+        },
+        "5": {
+          "rotation": 0,
+          "tiles": [
+            {
+              "id": 3000501,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0101)_01.tile",
+              "terrainType": 3
+            }
+          ]
+        },
+        "6": {
+          "rotation": 1,
+          "tiles": [
+            {
+              "id": 3000301,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0011)_01.tile",
+              "terrainType": 3
+            },
+            {
+              "id": 3000302,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0011)_02.tile",
+              "terrainType": 3
+            },
+            {
+              "id": 3000303,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0011)_03.tile",
+              "terrainType": 3
+            },
+            {
+              "id": 3000304,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0011)_04.tile",
+              "terrainType": 3
+            }
+          ]
+        },
+        "7": {
+          "rotation": 0,
+          "tiles": [
+            {
+              "id": 3000701,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0111)_01.tile",
+              "terrainType": 3
+            },
+            {
+              "id": 3000702,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0111)_02.tile",
+              "terrainType": 3
+            }
+          ]
+        },
+        "8": {
+          "rotation": 3,
+          "tiles": [
+            {
+              "id": 3000101,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0001)_01.tile",
+              "terrainType": 3
+            },
+            {
+              "id": 3000102,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0001)_02.tile",
+              "terrainType": 3
+            },
+            {
+              "id": 3000103,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0001)_03.tile",
+              "terrainType": 3
+            }
+          ]
+        },
+        "9": {
+          "rotation": 3,
+          "tiles": [
+            {
+              "id": 3000301,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0011)_01.tile",
+              "terrainType": 3
+            },
+            {
+              "id": 3000302,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0011)_02.tile",
+              "terrainType": 3
+            },
+            {
+              "id": 3000303,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0011)_03.tile",
+              "terrainType": 3
+            },
+            {
+              "id": 3000304,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0011)_04.tile",
+              "terrainType": 3
+            }
+          ]
+        },
+        "10": {
+          "rotation": 3,
+          "tiles": [
+            {
+              "id": 3000501,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0101)_01.tile",
+              "terrainType": 3
+            }
+          ]
+        },
+        "11": {
+          "rotation": 3,
+          "tiles": [
+            {
+              "id": 3000701,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0111)_01.tile",
+              "terrainType": 3
+            },
+            {
+              "id": 3000702,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0111)_02.tile",
+              "terrainType": 3
+            }
+          ]
+        },
+        "12": {
+          "rotation": 2,
+          "tiles": [
+            {
+              "id": 3000301,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0011)_01.tile",
+              "terrainType": 3
+            },
+            {
+              "id": 3000302,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0011)_02.tile",
+              "terrainType": 3
+            },
+            {
+              "id": 3000303,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0011)_03.tile",
+              "terrainType": 3
+            },
+            {
+              "id": 3000304,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0011)_04.tile",
+              "terrainType": 3
+            }
+          ]
+        },
+        "13": {
+          "rotation": 2,
+          "tiles": [
+            {
+              "id": 3000701,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0111)_01.tile",
+              "terrainType": 3
+            },
+            {
+              "id": 3000702,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0111)_02.tile",
+              "terrainType": 3
+            }
+          ]
+        },
+        "14": {
+          "rotation": 1,
+          "tiles": [
+            {
+              "id": 3000701,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0111)_01.tile",
+              "terrainType": 3
+            },
+            {
+              "id": 3000702,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(0111)_02.tile",
+              "terrainType": 3
+            }
+          ]
+        },
+        "15": {
+          "rotation": 0,
+          "tiles": [
+            {
+              "id": 3001501,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(1111)_01.tile",
+              "terrainType": 3
+            },
+            {
+              "id": 3001502,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(1111)_02.tile",
+              "terrainType": 3
+            },
+            {
+              "id": 3001503,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(1111)_03.tile",
+              "terrainType": 3
+            },
+            {
+              "id": 3001504,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(1111)_04.tile",
+              "terrainType": 3
+            },
+            {
+              "id": 3001505,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(1111)_05.tile",
+              "terrainType": 3
+            },
+            {
+              "id": 3001506,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/desert/Desert(1111)_06.tile",
+              "terrainType": 3
+            }
+          ]
+        }
+      }
+    },
+    "field": {
+      "terrainType": 4,
+      "functionSuffix": "Field",
+      "entries": {
+        "1": {
+          "rotation": 0,
+          "tiles": [
+            {
+              "id": 4000101,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/field/Field(0001)_01.tile",
+              "terrainType": 4
+            }
+          ]
+        },
+        "2": {
+          "rotation": 1,
+          "tiles": [
+            {
+              "id": 4000101,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/field/Field(0001)_01.tile",
+              "terrainType": 4
+            }
+          ]
+        },
+        "3": {
+          "rotation": 0,
+          "tiles": [
+            {
+              "id": 4000301,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/field/Field(0011)_01.tile",
+              "terrainType": 4
+            }
+          ]
+        },
+        "4": {
+          "rotation": 2,
+          "tiles": [
+            {
+              "id": 4000101,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/field/Field(0001)_01.tile",
+              "terrainType": 4
+            }
+          ]
+        },
+        "5": {
+          "rotation": 0,
+          "tiles": [
+            {
+              "id": 4000501,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/field/Field(0101)_01.tile",
+              "terrainType": 4
+            }
+          ]
+        },
+        "6": {
+          "rotation": 1,
+          "tiles": [
+            {
+              "id": 4000301,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/field/Field(0011)_01.tile",
+              "terrainType": 4
+            }
+          ]
+        },
+        "7": {
+          "rotation": 0,
+          "tiles": [
+            {
+              "id": 4000701,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/field/Field(0111)_01.tile",
+              "terrainType": 4
+            }
+          ]
+        },
+        "8": {
+          "rotation": 3,
+          "tiles": [
+            {
+              "id": 4000101,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/field/Field(0001)_01.tile",
+              "terrainType": 4
+            }
+          ]
+        },
+        "9": {
+          "rotation": 3,
+          "tiles": [
+            {
+              "id": 4000301,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/field/Field(0011)_01.tile",
+              "terrainType": 4
+            }
+          ]
+        },
+        "10": {
+          "rotation": 3,
+          "tiles": [
+            {
+              "id": 4000501,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/field/Field(0101)_01.tile",
+              "terrainType": 4
+            }
+          ]
+        },
+        "11": {
+          "rotation": 3,
+          "tiles": [
+            {
+              "id": 4000701,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/field/Field(0111)_01.tile",
+              "terrainType": 4
+            }
+          ]
+        },
+        "12": {
+          "rotation": 2,
+          "tiles": [
+            {
+              "id": 4000301,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/field/Field(0011)_01.tile",
+              "terrainType": 4
+            }
+          ]
+        },
+        "13": {
+          "rotation": 2,
+          "tiles": [
+            {
+              "id": 4000701,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/field/Field(0111)_01.tile",
+              "terrainType": 4
+            }
+          ]
+        },
+        "14": {
+          "rotation": 1,
+          "tiles": [
+            {
+              "id": 4000701,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/field/Field(0111)_01.tile",
+              "terrainType": 4
+            }
+          ]
+        },
+        "15": {
+          "rotation": 0,
+          "tiles": [
+            {
+              "id": 4001501,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/field/Field(1111)_01.tile",
+              "terrainType": 4
+            },
+            {
+              "id": 4001502,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/field/Field(1111)_02.tile",
+              "terrainType": 4
+            },
+            {
+              "id": 4001503,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/field/Field(1111)_03.tile",
+              "terrainType": 4
+            },
+            {
+              "id": 4001504,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/field/Field(1111)_04.tile",
+              "terrainType": 4
+            },
+            {
+              "id": 4001505,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/field/Field(1111)_05.tile",
+              "terrainType": 4
+            },
+            {
+              "id": 4001506,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/field/Field(1111)_06.tile",
+              "terrainType": 4
+            },
+            {
+              "id": 4001507,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/field/Field(1111)_07.tile",
+              "terrainType": 4
+            }
+          ]
+        }
+      }
+    },
+    "burntForest": {
+      "terrainType": 5,
+      "functionSuffix": "BurntForest",
+      "entries": {
+        "1": {
+          "rotation": 0,
+          "tiles": [
+            {
+              "id": 5000101,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0001)_01.tile",
+              "terrainType": 5
+            },
+            {
+              "id": 5000102,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0001)_02.tile",
+              "terrainType": 5
+            },
+            {
+              "id": 5000103,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0001)_03.tile",
+              "terrainType": 5
+            }
+          ]
+        },
+        "2": {
+          "rotation": 1,
+          "tiles": [
+            {
+              "id": 5000101,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0001)_01.tile",
+              "terrainType": 5
+            },
+            {
+              "id": 5000102,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0001)_02.tile",
+              "terrainType": 5
+            },
+            {
+              "id": 5000103,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0001)_03.tile",
+              "terrainType": 5
+            }
+          ]
+        },
+        "3": {
+          "rotation": 0,
+          "tiles": [
+            {
+              "id": 5000301,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0011)_01.tile",
+              "terrainType": 5
+            },
+            {
+              "id": 5000302,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0011)_02.tile",
+              "terrainType": 5
+            },
+            {
+              "id": 5000303,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0011)_03.tile",
+              "terrainType": 5
+            }
+          ]
+        },
+        "4": {
+          "rotation": 2,
+          "tiles": [
+            {
+              "id": 5000101,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0001)_01.tile",
+              "terrainType": 5
+            },
+            {
+              "id": 5000102,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0001)_02.tile",
+              "terrainType": 5
+            },
+            {
+              "id": 5000103,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0001)_03.tile",
+              "terrainType": 5
+            }
+          ]
+        },
+        "5": {
+          "rotation": 0,
+          "tiles": [
+            {
+              "id": 5000501,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0101)_01.tile",
+              "terrainType": 5
+            }
+          ]
+        },
+        "6": {
+          "rotation": 1,
+          "tiles": [
+            {
+              "id": 5000301,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0011)_01.tile",
+              "terrainType": 5
+            },
+            {
+              "id": 5000302,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0011)_02.tile",
+              "terrainType": 5
+            },
+            {
+              "id": 5000303,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0011)_03.tile",
+              "terrainType": 5
+            }
+          ]
+        },
+        "7": {
+          "rotation": 0,
+          "tiles": [
+            {
+              "id": 5000701,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0111)_01.tile",
+              "terrainType": 5
+            },
+            {
+              "id": 5000702,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0111)_02.tile",
+              "terrainType": 5
+            },
+            {
+              "id": 5000703,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0111)_03.tile",
+              "terrainType": 5
+            }
+          ]
+        },
+        "8": {
+          "rotation": 3,
+          "tiles": [
+            {
+              "id": 5000101,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0001)_01.tile",
+              "terrainType": 5
+            },
+            {
+              "id": 5000102,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0001)_02.tile",
+              "terrainType": 5
+            },
+            {
+              "id": 5000103,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0001)_03.tile",
+              "terrainType": 5
+            }
+          ]
+        },
+        "9": {
+          "rotation": 3,
+          "tiles": [
+            {
+              "id": 5000301,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0011)_01.tile",
+              "terrainType": 5
+            },
+            {
+              "id": 5000302,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0011)_02.tile",
+              "terrainType": 5
+            },
+            {
+              "id": 5000303,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0011)_03.tile",
+              "terrainType": 5
+            }
+          ]
+        },
+        "10": {
+          "rotation": 3,
+          "tiles": [
+            {
+              "id": 5000501,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0101)_01.tile",
+              "terrainType": 5
+            }
+          ]
+        },
+        "11": {
+          "rotation": 3,
+          "tiles": [
+            {
+              "id": 5000701,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0111)_01.tile",
+              "terrainType": 5
+            },
+            {
+              "id": 5000702,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0111)_02.tile",
+              "terrainType": 5
+            },
+            {
+              "id": 5000703,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0111)_03.tile",
+              "terrainType": 5
+            }
+          ]
+        },
+        "12": {
+          "rotation": 2,
+          "tiles": [
+            {
+              "id": 5000301,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0011)_01.tile",
+              "terrainType": 5
+            },
+            {
+              "id": 5000302,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0011)_02.tile",
+              "terrainType": 5
+            },
+            {
+              "id": 5000303,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0011)_03.tile",
+              "terrainType": 5
+            }
+          ]
+        },
+        "13": {
+          "rotation": 2,
+          "tiles": [
+            {
+              "id": 5000701,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0111)_01.tile",
+              "terrainType": 5
+            },
+            {
+              "id": 5000702,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0111)_02.tile",
+              "terrainType": 5
+            },
+            {
+              "id": 5000703,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0111)_03.tile",
+              "terrainType": 5
+            }
+          ]
+        },
+        "14": {
+          "rotation": 1,
+          "tiles": [
+            {
+              "id": 5000701,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0111)_01.tile",
+              "terrainType": 5
+            },
+            {
+              "id": 5000702,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0111)_02.tile",
+              "terrainType": 5
+            },
+            {
+              "id": 5000703,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(0111)_03.tile",
+              "terrainType": 5
+            }
+          ]
+        },
+        "15": {
+          "rotation": 0,
+          "tiles": [
+            {
+              "id": 5001501,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(1111)_01.tile",
+              "terrainType": 5
+            },
+            {
+              "id": 5001502,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/burnt_forest/BurntForest(1111)_02.tile",
+              "terrainType": 5
+            }
+          ]
+        }
+      }
+    },
+    "autumnForest": {
+      "terrainType": 6,
+      "functionSuffix": "AutumnForest",
+      "entries": {
+        "1": {
+          "rotation": 0,
+          "tiles": [
+            {
+              "id": 6000101,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0001)_01.tile",
+              "terrainType": 6
+            },
+            {
+              "id": 6000102,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0001)_02.tile",
+              "terrainType": 6
+            },
+            {
+              "id": 6000103,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0001)_03.tile",
+              "terrainType": 6
+            },
+            {
+              "id": 6000104,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0001)_04.tile",
+              "terrainType": 6
+            },
+            {
+              "id": 6000105,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0001)_05.tile",
+              "terrainType": 6
+            }
+          ]
+        },
+        "2": {
+          "rotation": 1,
+          "tiles": [
+            {
+              "id": 6000101,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0001)_01.tile",
+              "terrainType": 6
+            },
+            {
+              "id": 6000102,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0001)_02.tile",
+              "terrainType": 6
+            },
+            {
+              "id": 6000103,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0001)_03.tile",
+              "terrainType": 6
+            },
+            {
+              "id": 6000104,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0001)_04.tile",
+              "terrainType": 6
+            },
+            {
+              "id": 6000105,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0001)_05.tile",
+              "terrainType": 6
+            }
+          ]
+        },
+        "3": {
+          "rotation": 0,
+          "tiles": [
+            {
+              "id": 6000301,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0011)_01.tile",
+              "terrainType": 6
+            },
+            {
+              "id": 6000302,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0011)_02.tile",
+              "terrainType": 6
+            },
+            {
+              "id": 6000303,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0011)_03.tile",
+              "terrainType": 6
+            },
+            {
+              "id": 6000304,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0011)_04.tile",
+              "terrainType": 6
+            },
+            {
+              "id": 6000305,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0011)_05.tile",
+              "terrainType": 6
+            }
+          ]
+        },
+        "4": {
+          "rotation": 2,
+          "tiles": [
+            {
+              "id": 6000101,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0001)_01.tile",
+              "terrainType": 6
+            },
+            {
+              "id": 6000102,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0001)_02.tile",
+              "terrainType": 6
+            },
+            {
+              "id": 6000103,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0001)_03.tile",
+              "terrainType": 6
+            },
+            {
+              "id": 6000104,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0001)_04.tile",
+              "terrainType": 6
+            },
+            {
+              "id": 6000105,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0001)_05.tile",
+              "terrainType": 6
+            }
+          ]
+        },
+        "5": {
+          "rotation": 0,
+          "tiles": [
+            {
+              "id": 6000501,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0101)_01.tile",
+              "terrainType": 6
+            }
+          ]
+        },
+        "6": {
+          "rotation": 1,
+          "tiles": [
+            {
+              "id": 6000301,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0011)_01.tile",
+              "terrainType": 6
+            },
+            {
+              "id": 6000302,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0011)_02.tile",
+              "terrainType": 6
+            },
+            {
+              "id": 6000303,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0011)_03.tile",
+              "terrainType": 6
+            },
+            {
+              "id": 6000304,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0011)_04.tile",
+              "terrainType": 6
+            },
+            {
+              "id": 6000305,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0011)_05.tile",
+              "terrainType": 6
+            }
+          ]
+        },
+        "7": {
+          "rotation": 0,
+          "tiles": [
+            {
+              "id": 6000701,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0111)_01.tile",
+              "terrainType": 6
+            }
+          ]
+        },
+        "8": {
+          "rotation": 3,
+          "tiles": [
+            {
+              "id": 6000101,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0001)_01.tile",
+              "terrainType": 6
+            },
+            {
+              "id": 6000102,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0001)_02.tile",
+              "terrainType": 6
+            },
+            {
+              "id": 6000103,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0001)_03.tile",
+              "terrainType": 6
+            },
+            {
+              "id": 6000104,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0001)_04.tile",
+              "terrainType": 6
+            },
+            {
+              "id": 6000105,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0001)_05.tile",
+              "terrainType": 6
+            }
+          ]
+        },
+        "9": {
+          "rotation": 3,
+          "tiles": [
+            {
+              "id": 6000301,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0011)_01.tile",
+              "terrainType": 6
+            },
+            {
+              "id": 6000302,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0011)_02.tile",
+              "terrainType": 6
+            },
+            {
+              "id": 6000303,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0011)_03.tile",
+              "terrainType": 6
+            },
+            {
+              "id": 6000304,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0011)_04.tile",
+              "terrainType": 6
+            },
+            {
+              "id": 6000305,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0011)_05.tile",
+              "terrainType": 6
+            }
+          ]
+        },
+        "10": {
+          "rotation": 3,
+          "tiles": [
+            {
+              "id": 6000501,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0101)_01.tile",
+              "terrainType": 6
+            }
+          ]
+        },
+        "11": {
+          "rotation": 3,
+          "tiles": [
+            {
+              "id": 6000701,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0111)_01.tile",
+              "terrainType": 6
+            }
+          ]
+        },
+        "12": {
+          "rotation": 2,
+          "tiles": [
+            {
+              "id": 6000301,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0011)_01.tile",
+              "terrainType": 6
+            },
+            {
+              "id": 6000302,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0011)_02.tile",
+              "terrainType": 6
+            },
+            {
+              "id": 6000303,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0011)_03.tile",
+              "terrainType": 6
+            },
+            {
+              "id": 6000304,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0011)_04.tile",
+              "terrainType": 6
+            },
+            {
+              "id": 6000305,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0011)_05.tile",
+              "terrainType": 6
+            }
+          ]
+        },
+        "13": {
+          "rotation": 2,
+          "tiles": [
+            {
+              "id": 6000701,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0111)_01.tile",
+              "terrainType": 6
+            }
+          ]
+        },
+        "14": {
+          "rotation": 1,
+          "tiles": [
+            {
+              "id": 6000701,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(0111)_01.tile",
+              "terrainType": 6
+            }
+          ]
+        },
+        "15": {
+          "rotation": 0,
+          "tiles": [
+            {
+              "id": 6001501,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(1111)_01.tile",
+              "terrainType": 6
+            },
+            {
+              "id": 6001502,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/autumn_forest/AutumnForest(1111)_02.tile",
+              "terrainType": 6
+            }
+          ]
+        }
+      }
+    },
+    "lake": {
+      "terrainType": 8,
+      "functionSuffix": "Lake",
+      "entries": {
+        "1": {
+          "rotation": 0,
+          "tiles": [
+            {
+              "id": 8000101,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_01.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000102,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_02.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000103,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_03.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000104,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_04.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000105,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_05.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000106,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_06.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000107,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_07.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000108,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_08.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000109,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_09.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000110,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_10.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000111,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_11.tile",
+              "terrainType": 8
+            }
+          ]
+        },
+        "2": {
+          "rotation": 1,
+          "tiles": [
+            {
+              "id": 8000101,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_01.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000102,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_02.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000103,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_03.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000104,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_04.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000105,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_05.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000106,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_06.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000107,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_07.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000108,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_08.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000109,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_09.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000110,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_10.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000111,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_11.tile",
+              "terrainType": 8
+            }
+          ]
+        },
+        "3": {
+          "rotation": 0,
+          "tiles": [
+            {
+              "id": 8000301,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_01.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000302,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_02.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000303,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_03.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000304,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_04.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000305,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_05.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000306,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_06.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000307,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_07.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000308,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_08.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000309,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_09.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000310,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_10.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000311,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_11.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000312,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_12.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000313,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_13.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000314,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_14.tile",
+              "terrainType": 8
+            }
+          ]
+        },
+        "4": {
+          "rotation": 2,
+          "tiles": [
+            {
+              "id": 8000101,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_01.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000102,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_02.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000103,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_03.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000104,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_04.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000105,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_05.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000106,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_06.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000107,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_07.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000108,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_08.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000109,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_09.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000110,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_10.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000111,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_11.tile",
+              "terrainType": 8
+            }
+          ]
+        },
+        "5": {
+          "rotation": 0,
+          "tiles": [
+            {
+              "id": 8000501,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0101)_01.tile",
+              "terrainType": 8
+            }
+          ]
+        },
+        "6": {
+          "rotation": 1,
+          "tiles": [
+            {
+              "id": 8000301,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_01.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000302,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_02.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000303,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_03.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000304,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_04.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000305,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_05.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000306,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_06.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000307,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_07.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000308,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_08.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000309,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_09.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000310,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_10.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000311,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_11.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000312,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_12.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000313,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_13.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000314,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_14.tile",
+              "terrainType": 8
+            }
+          ]
+        },
+        "7": {
+          "rotation": 0,
+          "tiles": [
+            {
+              "id": 8000701,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0111)_01.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000702,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0111)_02.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000703,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0111)_03.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000704,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0111)_04.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000705,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0111)_05.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000706,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0111)_06.tile",
+              "terrainType": 8
+            }
+          ]
+        },
+        "8": {
+          "rotation": 3,
+          "tiles": [
+            {
+              "id": 8000101,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_01.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000102,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_02.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000103,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_03.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000104,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_04.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000105,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_05.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000106,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_06.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000107,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_07.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000108,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_08.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000109,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_09.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000110,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_10.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000111,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0001)_11.tile",
+              "terrainType": 8
+            }
+          ]
+        },
+        "9": {
+          "rotation": 3,
+          "tiles": [
+            {
+              "id": 8000301,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_01.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000302,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_02.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000303,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_03.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000304,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_04.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000305,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_05.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000306,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_06.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000307,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_07.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000308,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_08.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000309,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_09.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000310,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_10.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000311,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_11.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000312,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_12.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000313,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_13.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000314,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_14.tile",
+              "terrainType": 8
+            }
+          ]
+        },
+        "10": {
+          "rotation": 3,
+          "tiles": [
+            {
+              "id": 8000501,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0101)_01.tile",
+              "terrainType": 8
+            }
+          ]
+        },
+        "11": {
+          "rotation": 3,
+          "tiles": [
+            {
+              "id": 8000701,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0111)_01.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000702,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0111)_02.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000703,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0111)_03.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000704,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0111)_04.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000705,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0111)_05.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000706,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0111)_06.tile",
+              "terrainType": 8
+            }
+          ]
+        },
+        "12": {
+          "rotation": 2,
+          "tiles": [
+            {
+              "id": 8000301,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_01.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000302,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_02.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000303,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_03.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000304,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_04.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000305,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_05.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000306,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_06.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000307,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_07.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000308,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_08.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000309,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_09.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000310,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_10.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000311,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_11.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000312,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_12.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000313,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_13.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000314,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0011)_14.tile",
+              "terrainType": 8
+            }
+          ]
+        },
+        "13": {
+          "rotation": 2,
+          "tiles": [
+            {
+              "id": 8000701,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0111)_01.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000702,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0111)_02.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000703,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0111)_03.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000704,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0111)_04.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000705,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0111)_05.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000706,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0111)_06.tile",
+              "terrainType": 8
+            }
+          ]
+        },
+        "14": {
+          "rotation": 1,
+          "tiles": [
+            {
+              "id": 8000701,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0111)_01.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000702,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0111)_02.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000703,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0111)_03.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000704,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0111)_04.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000705,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0111)_05.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8000706,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(0111)_06.tile",
+              "terrainType": 8
+            }
+          ]
+        },
+        "15": {
+          "rotation": 0,
+          "tiles": [
+            {
+              "id": 8001501,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(1111)_01.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8001502,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(1111)_02.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8001503,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(1111)_03.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8001504,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(1111)_04.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8001505,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(1111)_05.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8001506,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(1111)_06.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8001507,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(1111)_07.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8001508,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(1111)_08.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8001509,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(1111)_09.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8001510,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(1111)_10.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8001511,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(1111)_11.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8001512,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(1111)_12.tile",
+              "terrainType": 8
+            },
+            {
+              "id": 8001513,
+              "path": "$SURVIVAL_DATA/Terrain/Tiles/lake/Lake(1111)_13.tile",
+              "terrainType": 8
+            }
+          ]
+        }
+      }
+    }
+  }
+}

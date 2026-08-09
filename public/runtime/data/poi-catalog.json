@@ -1,0 +1,905 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "type": "CRASHSITE_AREA",
+      "legacyIndex": 1,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/start_area/SurvivalStartArea_CrashedShip_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "CRASHSITE_AREA",
+      "legacyIndex": 2,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/start_area/SurvivalStartArea_CrashedTower_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "CRASHSITE_AREA",
+      "legacyIndex": 3,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/start_area/SurvivalStartArea_BigRuin_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "CRASHSITE_AREA",
+      "legacyIndex": 4,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/start_area/SurvivalStartArea_CrashedTowerCliff_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "CRASHSITE_AREA",
+      "legacyIndex": 5,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/start_area/SurvivalStartArea_SmallRuin_A_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "CRASHSITE_AREA",
+      "legacyIndex": 6,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/start_area/SurvivalStartArea_SmallRuin_B_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "CRASHSITE_AREA",
+      "legacyIndex": 7,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/start_area/SurvivalStartArea_SmallRuin_C_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "CRASHSITE_AREA",
+      "legacyIndex": 8,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/start_area/SurvivalStartArea_SmallRuin_D_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "CRASHSITE_AREA",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/start_area/SurvivalStartArea_BossMountain_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "CRASHSITE_AREA",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/start_area/SurvivalStartArea_CrashedShip_01_NEW.tile",
+      "terrainType": null
+    },
+    {
+      "type": "CRASHSITE_AREA",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/start_area/SurvivalStartArea_CrashedTower_01_NEW.tile",
+      "terrainType": null
+    },
+    {
+      "type": "CRASHSITE_AREA",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/start_area/SurvivalStartArea_BigRuin_01_NEW.tile",
+      "terrainType": null
+    },
+    {
+      "type": "HIDEOUT_XL",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Hideout_512_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "MEADOW_GROWLAB_SILODISTRICT_XL",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/questtiles/Minidungeon_OverworldEntrance_Chemical_512_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "RUINCITY_XL",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/RuinCity_512_01_NEW.tile",
+      "terrainType": null
+    },
+    {
+      "type": "BUILDERQUEST_RESOURCECAR",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_ResourceCar_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "CRASHEDSHIP_LARGE",
+      "legacyIndex": 1,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/CrashedShip_256_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "CAMP_LARGE",
+      "legacyIndex": 1,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/CampingSpot_WaterFront_256_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "BUNK_BURIAL_QUEST_MEDIUM",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/BunkInvestigationQuest_128_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "LABYRINTH_MEDIUM",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/HayBaleLabyrinth_128_01_NEW.tile",
+      "terrainType": null
+    },
+    {
+      "type": "MECHANICSTATION_MEDIUM",
+      "legacyIndex": 1,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/MechanicStation_128_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "MECHANICSTATION_QUEST_MEDIUM",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/questtiles/MechanicStation_QuestTile_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "PACKINGSTATIONVEG_MEDIUM",
+      "legacyIndex": 1,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/PackingStation_Vegetable_128_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "PACKINGSTATIONFRUIT_MEDIUM",
+      "legacyIndex": 2,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/PackingStation_Fruit_128_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "BUILDERQUEST_WOCHOUSE",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Wochouse_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "BUILDERQUEST_CARDBOARDPOOP",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Cardboardpoop_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "BURNTFOREST_BUILDERQUEST_TOTEBOTKEY",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Totebotkey_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "FIELD_BUILDERQUEST_CORNHEART",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Cornheart_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "FIELD_BUILDERQUEST_COZYBED",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Cozybed_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "BUILDERQUEST_XYLOPHONE",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Xylophone_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "BUILDERQUEST_BEESUIT",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Beesuit_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "DESERT_BUILDERQUEST_BIGFAN",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Bigfan_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "BUILDERQUEST_CAROUSEL",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Carousel_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "BURNTFOREST_BUILDERQUEST_CATAPULT_MEDIUM",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Catapult_128_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "BUILDERQUEST_CROWBAR",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Crowbar_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "BUILDERQUEST_COMPASS",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Compass_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "DESERT_BUILDERQUEST_GARDEN",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Garden_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "FOREST_BUILDERQUEST_SAWBLADEARM",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Sawbladearm_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "AUTUMNFOREST_BUILDERQUEST_POPCORN",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Popcorn_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "AUTUMNFOREST_BUILDERQUEST_MUSICBOX_MEDIUM",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Musicbox_128_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "BUILDERQUEST_NICEHOUSE_MEDIUM",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Nicehouse_128_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "BUILDERQUEST_SLEDGEHAMMER_MEDIUM",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Sledgehammer_128_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "BUILDERQUEST_STEELBRIDGE_MEDIUM",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Steelbridge_128_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "BUILDERQUEST_BAGUETTE_MEDIUM",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/questtiles/BuilderQuest_Baguette_128_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "WAREHOUSE2_LARGE",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Warehouse_Exterior_2Floors_256_01_NEW.tile",
+      "terrainType": null
+    },
+    {
+      "type": "WAREHOUSE2_LARGE",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Warehouse_Exterior_2Floors_256_02_NEW.tile",
+      "terrainType": null
+    },
+    {
+      "type": "WAREHOUSE2_LARGE",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Warehouse_Exterior_2Floors_256_03_NEW.tile",
+      "terrainType": null
+    },
+    {
+      "type": "WAREHOUSE2_LARGE",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Warehouse_Exterior_2Floors_256_04_NEW.tile",
+      "terrainType": null
+    },
+    {
+      "type": "WAREHOUSE3_LARGE",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Warehouse_Exterior_3Floors_256_01_NEW.tile",
+      "terrainType": null
+    },
+    {
+      "type": "WAREHOUSE4_LARGE",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Warehouse_Exterior_4Floors_256_01_NEW.tile",
+      "terrainType": null
+    },
+    {
+      "type": "WAREHOUSE4_QUEST_LARGE",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Warehouse_Exterior_4Floors_256_Quest.tile",
+      "terrainType": null
+    },
+    {
+      "type": "BURNTFOREST_FARMBOTSCRAPYARD_LARGE",
+      "legacyIndex": 1,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/FarmbotGraveyard_256_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "BURNTFOREST_FARMBOTSCRAPYARD_LARGE",
+      "legacyIndex": 2,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/FarmbotGraveyard_256_02.tile",
+      "terrainType": null
+    },
+    {
+      "type": "ROAD_KIOSK",
+      "legacyIndex": 1,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Kiosk_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "ROAD_KIOSK",
+      "legacyIndex": 2,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Kiosk_64_02.tile",
+      "terrainType": null
+    },
+    {
+      "type": "ROAD_KIOSK",
+      "legacyIndex": 3,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Kiosk_64_03.tile",
+      "terrainType": null
+    },
+    {
+      "type": "ROAD_SCHEMATICSTATION",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/SchematicStation_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "ROAD_CHEMPOOL",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/ChemicalPlant_Road_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "ROAD_RANDOM",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Road_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "ROAD_RANDOM",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Road_64_02.tile",
+      "terrainType": null
+    },
+    {
+      "type": "ROAD_RANDOM",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Road_64_03.tile",
+      "terrainType": null
+    },
+    {
+      "type": "ROAD_RANDOM",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Road_64_04.tile",
+      "terrainType": null
+    },
+    {
+      "type": "CAMP",
+      "legacyIndex": 1,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/CampingSpot_Meadow_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "CAMP",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/CampingSpot_Meadow_64_02.tile",
+      "terrainType": null
+    },
+    {
+      "type": "CAMP",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/CampingSpot_Meadow_64_03.tile",
+      "terrainType": null
+    },
+    {
+      "type": "CAMP",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/CampingSpot_Meadow_64_04.tile",
+      "terrainType": null
+    },
+    {
+      "type": "RUIN",
+      "legacyIndex": 1,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Meadow_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "RUIN",
+      "legacyIndex": 2,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Meadow_64_02.tile",
+      "terrainType": null
+    },
+    {
+      "type": "RUIN",
+      "legacyIndex": 3,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Meadow_64_03.tile",
+      "terrainType": null
+    },
+    {
+      "type": "RUIN",
+      "legacyIndex": 4,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Meadow_64_04.tile",
+      "terrainType": null
+    },
+    {
+      "type": "RUIN",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Meadow_64_05.tile",
+      "terrainType": null
+    },
+    {
+      "type": "RUIN",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Meadow_64_06.tile",
+      "terrainType": null
+    },
+    {
+      "type": "RUIN",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Meadow_64_07.tile",
+      "terrainType": null
+    },
+    {
+      "type": "RUIN",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Meadow_64_08.tile",
+      "terrainType": null
+    },
+    {
+      "type": "RUIN",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Meadow_64_09.tile",
+      "terrainType": null
+    },
+    {
+      "type": "RUIN",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Meadow_64_10.tile",
+      "terrainType": null
+    },
+    {
+      "type": "RUIN",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Meadow_64_11.tile",
+      "terrainType": null
+    },
+    {
+      "type": "RANDOM",
+      "legacyIndex": 5,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Meadow_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "RANDOM",
+      "legacyIndex": 6,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Meadow_64_02.tile",
+      "terrainType": null
+    },
+    {
+      "type": "RANDOM",
+      "legacyIndex": 7,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Meadow_64_03.tile",
+      "terrainType": null
+    },
+    {
+      "type": "RANDOM",
+      "legacyIndex": 8,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Meadow_64_04.tile",
+      "terrainType": null
+    },
+    {
+      "type": "RANDOM",
+      "legacyIndex": 9,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Meadow_64_05.tile",
+      "terrainType": null
+    },
+    {
+      "type": "RUIN_MEDIUM",
+      "legacyIndex": 1,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Meadow_128_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "RUIN_MEDIUM",
+      "legacyIndex": 2,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Meadow_128_02.tile",
+      "terrainType": null
+    },
+    {
+      "type": "RUIN_MEDIUM",
+      "legacyIndex": 3,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Meadow_128_03.tile",
+      "terrainType": null
+    },
+    {
+      "type": "RUIN_MEDIUM",
+      "legacyIndex": 4,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Meadow_128_04.tile",
+      "terrainType": null
+    },
+    {
+      "type": "RANDOM_MEDIUM",
+      "legacyIndex": 1,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Meadow_128_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "FARMINGPATCH",
+      "legacyIndex": 1,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/FarmingPatch_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "FARMINGPATCH",
+      "legacyIndex": 2,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/FarmingPatch_64_02.tile",
+      "terrainType": null
+    },
+    {
+      "type": "FARMINGPATCH",
+      "legacyIndex": 3,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/FarmingPatch_64_03.tile",
+      "terrainType": null
+    },
+    {
+      "type": "FOREST_CAMP",
+      "legacyIndex": 1,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/CampingSpot_Forest_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "FOREST_CAMP",
+      "legacyIndex": 2,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/CampingSpot_Forest_64_02.tile",
+      "terrainType": null
+    },
+    {
+      "type": "FOREST_CAMP",
+      "legacyIndex": 3,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/CampingSpot_Forest_64_03.tile",
+      "terrainType": null
+    },
+    {
+      "type": "FOREST_CAMP",
+      "legacyIndex": 4,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/CampingSpot_Forest_64_04.tile",
+      "terrainType": null
+    },
+    {
+      "type": "FOREST_CAMP",
+      "legacyIndex": 5,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/CampingSpot_Forest_64_05.tile",
+      "terrainType": null
+    },
+    {
+      "type": "FOREST_CAMP",
+      "legacyIndex": 6,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/CampingSpot_Forest_64_06.tile",
+      "terrainType": null
+    },
+    {
+      "type": "FOREST_CAMP",
+      "legacyIndex": 7,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/CampingSpot_Forest_64_07.tile",
+      "terrainType": null
+    },
+    {
+      "type": "FOREST_RUIN",
+      "legacyIndex": 1,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Forest_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "FOREST_RUIN",
+      "legacyIndex": 2,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Forest_64_02.tile",
+      "terrainType": null
+    },
+    {
+      "type": "FOREST_RUIN",
+      "legacyIndex": 3,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Forest_64_03.tile",
+      "terrainType": null
+    },
+    {
+      "type": "FOREST_RANDOM",
+      "legacyIndex": 1,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Forest_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "FOREST_RANDOM",
+      "legacyIndex": 2,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Forest_64_02.tile",
+      "terrainType": null
+    },
+    {
+      "type": "FOREST_RANDOM",
+      "legacyIndex": 3,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Forest_64_03.tile",
+      "terrainType": null
+    },
+    {
+      "type": "FOREST_RANDOM",
+      "legacyIndex": 4,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Forest_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "FOREST_RANDOM",
+      "legacyIndex": 5,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Forest_64_02.tile",
+      "terrainType": null
+    },
+    {
+      "type": "FOREST_RANDOM",
+      "legacyIndex": 6,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Forest_64_03.tile",
+      "terrainType": null
+    },
+    {
+      "type": "FOREST_RANDOM",
+      "legacyIndex": 7,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Forest_64_04.tile",
+      "terrainType": null
+    },
+    {
+      "type": "FOREST_RUIN_MEDIUM",
+      "legacyIndex": 1,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Forest_128_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "FOREST_RANDOM_MEDIUM",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Forest_128_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "DESERT_RANDOM",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Desert_64_01_NEW.tile",
+      "terrainType": null
+    },
+    {
+      "type": "DESERT_RANDOM",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Desert_64_02_NEW.tile",
+      "terrainType": null
+    },
+    {
+      "type": "DESERT_OILPOOL",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/OilPool_Desert_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "DESERT_OILPOOL",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/OilPool_Desert_64_02.tile",
+      "terrainType": null
+    },
+    {
+      "type": "FIELD_RUIN",
+      "legacyIndex": 1,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Field_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "FIELD_RUIN",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Field_64_02.tile",
+      "terrainType": null
+    },
+    {
+      "type": "FIELD_RUIN",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Field_64_03.tile",
+      "terrainType": null
+    },
+    {
+      "type": "FIELD_RANDOM",
+      "legacyIndex": 1,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Field_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "FIELD_RANDOM",
+      "legacyIndex": 2,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Field_64_02.tile",
+      "terrainType": null
+    },
+    {
+      "type": "FIELD_RANDOM",
+      "legacyIndex": 3,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Field_64_03.tile",
+      "terrainType": null
+    },
+    {
+      "type": "BURNTFOREST_CAMP",
+      "legacyIndex": 1,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/CampingSpot_BurntForest_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "BURNTFOREST_RUIN",
+      "legacyIndex": 1,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_BurntForest_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "BURNTFOREST_RUIN",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_BurntForest_64_02.tile",
+      "terrainType": null
+    },
+    {
+      "type": "BURNTFOREST_RUIN",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_BurntForest_64_03.tile",
+      "terrainType": null
+    },
+    {
+      "type": "AUTUMNFOREST_CAMP",
+      "legacyIndex": 1,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/CampingSpot_AutumnForest_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "AUTUMNFOREST_CAMP",
+      "legacyIndex": 2,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/CampingSpot_AutumnForest_64_02.tile",
+      "terrainType": null
+    },
+    {
+      "type": "AUTUMNFOREST_CAMP",
+      "legacyIndex": 3,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/CampingSpot_AutumnForest_64_03.tile",
+      "terrainType": null
+    },
+    {
+      "type": "AUTUMNFOREST_RUIN",
+      "legacyIndex": 1,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_AutumnForest_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "AUTUMNFOREST_RUIN",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_AutumnForest_64_02.tile",
+      "terrainType": null
+    },
+    {
+      "type": "AUTUMNFOREST_RUIN",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_AutumnForest_64_03.tile",
+      "terrainType": null
+    },
+    {
+      "type": "LAKE_RANDOM",
+      "legacyIndex": 1,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Lake_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "LAKE_RANDOM",
+      "legacyIndex": 2,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Lake_64_02.tile",
+      "terrainType": null
+    },
+    {
+      "type": "LAKE_RANDOM",
+      "legacyIndex": 3,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Lake_64_03.tile",
+      "terrainType": null
+    },
+    {
+      "type": "LAKE_RANDOM_MEDIUM",
+      "legacyIndex": 1,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Lake_128_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "LAKE_RANDOM_MEDIUM",
+      "legacyIndex": 2,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Lake_128_02.tile",
+      "terrainType": null
+    },
+    {
+      "type": "LAKE_RANDOM_MEDIUM",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Random_Lake_128_03.tile",
+      "terrainType": null
+    },
+    {
+      "type": "LAKE_RUIN_MEDIUM",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Lake_128_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "LAKE_RUIN_MEDIUM",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Lake_128_02.tile",
+      "terrainType": null
+    },
+    {
+      "type": "LAKE_RUIN_MEDIUM",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Ruin_Lake_128_03.tile",
+      "terrainType": null
+    },
+    {
+      "type": "EXCAVATION_BRIDGE",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/Kiosk_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "CHEMLAKE_MEDIUM",
+      "legacyIndex": 1,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/ChemicalLake_128_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "CHEMLAKE_MEDIUM",
+      "legacyIndex": 2,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/ChemicalLake_128_02.tile",
+      "terrainType": null
+    },
+    {
+      "type": "CHEMLAKE_MEDIUM",
+      "legacyIndex": 3,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/ChemicalLake_128_03.tile",
+      "terrainType": null
+    },
+    {
+      "type": "OILLAKE_MEDIUM",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/poi/OilLake_Desert_128_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "AUTUMNFOREST_CLEARRUINSQUEST_MEDIUM",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/questtiles/Ruin_AutumnForest_RuinsQuest_128_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "MEADOW_GROWLAB_QUEST_LARGE",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/questtiles/Minidungeon_Overworld_Entrance_DungeonQuest_256_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "SERVICE_ELEVATOR",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/excavation/OverworldToUnderground_SmallElevator_64_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "BURNTFOREST_GROWLAB_FROZEN_LARGE",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/questtiles/Minidungeon_Overworld_Entrance_256_03.tile",
+      "terrainType": null
+    },
+    {
+      "type": "FOREST_GROWLAB_STATION_LARGE",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/questtiles/Minidungeon_Overworld_Entrance_256_04.tile",
+      "terrainType": null
+    },
+    {
+      "type": "LAKE_GROWLAB_ISLAND_XL",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/questtiles/Minidungeon_OverworldEntrance_Water_512_01.tile",
+      "terrainType": null
+    },
+    {
+      "type": "DESERT_GROWLAB_CLIFFTOP_LARGE",
+      "legacyIndex": null,
+      "path": "$SURVIVAL_DATA/Terrain/Tiles/questtiles/Minidungeon_Overworld_Entrance_256_07.tile",
+      "terrainType": null
+    }
+  ]
+}

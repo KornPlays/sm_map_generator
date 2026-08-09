@@ -70,27 +70,3 @@ export function simplexNoise2d(rawX, rawY) {
     SCALE,
   );
 }
-
-function arithmeticShift(value, count) {
-  return (value | 0) >> count;
-}
-
-function mix32(value) {
-  value >>>= 0;
-  value = (((value << 15) >>> 0) + (~value >>> 0)) >>> 0;
-  value = (value ^ arithmeticShift(value, 12)) >>> 0;
-  value = Math.imul(value, 5) >>> 0;
-  value = (value ^ arithmeticShift(value, 4)) >>> 0;
-  return Math.imul(value, 0x809) >>> 0;
-}
-
-export function intNoise2d(rawX, rawY, rawSeed) {
-  const x = Math.trunc(rawX) >>> 0;
-  const y = Math.trunc(rawY) >>> 0;
-  const seed = Math.trunc(rawSeed) >>> 0;
-  let value = mix32(y);
-  value = mix32(((value ^ arithmeticShift(value, 16)) + x) >>> 0);
-  value = mix32(((value ^ arithmeticShift(value, 16)) + seed) >>> 0);
-  const signed = value | 0;
-  return (signed ^ (signed >> 16)) | 0;
-}

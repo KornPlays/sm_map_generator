@@ -1,9 +1,9 @@
-import { intNoise2d, simplexNoise2d } from "./noise.js";
-import { LuaJitRandom } from "./luajit-random.js";
+import { simplexNoise2d } from "./noise.js";
+import { FAST_PATH_PRELUDE } from "./lua-fastpath.js";
 import { LuaFactory, LuaLibraries } from "wasmoon";
+import { installPoiTypes, POI_TYPES } from "./world-generation/poi-types.js";
 
 const RUNTIME_SOURCES = [
-  "data/excavation_world.lua",
   "lua/util.lua",
   "lua/terrain/terrain_util.lua",
   "lua/terrain/terrain_util2.lua",
@@ -13,19 +13,8 @@ const RUNTIME_SOURCES = [
   "lua/overworld/generate_cells.lua",
   "lua/overworld/generate_roads.lua",
   "lua/overworld/overworld_util.lua",
-  "lua/overworld/poi.lua",
-  "lua/overworld/poi_types.lua",
   "lua/overworld/processing.lua",
-  "lua/overworld/roads_and_cliffs.lua",
-  "lua/overworld/start_area.lua",
   "lua/overworld/tile_database.lua",
-  "lua/overworld/type_autumnForest.lua",
-  "lua/overworld/type_burntForest.lua",
-  "lua/overworld/type_desert.lua",
-  "lua/overworld/type_field.lua",
-  "lua/overworld/type_forest.lua",
-  "lua/overworld/type_lake.lua",
-  "lua/overworld/type_meadow.lua",
 ];
 
 const NIL_UUID = "00000000-0000-0000-0000-000000000000";
@@ -49,15 +38,40 @@ async function fetchText(path) {
 async function loadRuntime() {
   if (!runtimePromise) {
     runtimePromise = (async () => {
-      const [metadataResponse, sourceEntries] = await Promise.all([
+      const [metadataResponse, terrainRulesResponse, roadCliffRulesResponse, poiCatalogResponse, startAreaResponse, excavationWorldResponse, sourceEntries] = await Promise.all([
         fetch(publicUrl("runtime/data/tile_metadata.json")),
+        fetch(publicUrl("runtime/data/terrain-rules.json")),
+        fetch(publicUrl("runtime/data/road-cliff-rules.json")),
+        fetch(publicUrl("runtime/data/poi-catalog.json")),
+        fetch(publicUrl("runtime/data/start-area.json")),
+        fetch(publicUrl("runtime/data/excavation-world.json")),
         Promise.all(RUNTIME_SOURCES.map(async (path) => [path, await fetchText(path)])),
       ]);
       if (!metadataResponse.ok) {
         throw new Error(`Could not load tile metadata (HTTP ${metadataResponse.status})`);
       }
+      if (!terrainRulesResponse.ok) {
+        throw new Error(`Could not load terrain rules (HTTP ${terrainRulesResponse.status})`);
+      }
+      if (!roadCliffRulesResponse.ok) {
+        throw new Error(`Could not load road/cliff rules (HTTP ${roadCliffRulesResponse.status})`);
+      }
+      if (!poiCatalogResponse.ok) {
+        throw new Error(`Could not load POI catalog (HTTP ${poiCatalogResponse.status})`);
+      }
+      if (!startAreaResponse.ok) {
+        throw new Error(`Could not load start-area data (HTTP ${startAreaResponse.status})`);
+      }
+      if (!excavationWorldResponse.ok) {
+        throw new Error(`Could not load excavation data (HTTP ${excavationWorldResponse.status})`);
+      }
       return {
         metadata: await metadataResponse.json(),
+        terrainRules: await terrainRulesResponse.json(),
+        roadCliffRules: await roadCliffRulesResponse.json(),
+        poiCatalog: await poiCatalogResponse.json(),
+        startArea: await startAreaResponse.json(),
+        excavationWorld: await excavationWorldResponse.json(),
         sources: new Map(sourceEntries),
       };
     })();
@@ -67,7 +81,6 @@ async function loadRuntime() {
 
 function resolveSource(path) {
   const normalized = path.replaceAll("\\", "/");
-  if (normalized === "data/excavation_world.lua") return normalized;
   const prefix = "$SURVIVAL_DATA/Scripts/";
   if (normalized.startsWith(prefix)) {
     const relative = normalized.slice(prefix.length);
@@ -140,9 +153,9 @@ function instrumentSource(resolved, source) {
     );
 }
 
-function installCallbacks(engine, runtime, random, onProgress) {
+function installCallbacks(engine, runtime, onProgress) {
+  installPoiTypes((name, value) => engine.global.set(name, value));
   engine.global.set("_sm_simplex", (x, y) => simplexNoise2d(x, y));
-  engine.global.set("_sm_int_noise", (x, y, seed) => intNoise2d(x, y, seed));
   engine.global.set("_sm_tile_uuid", (path) => runtime.metadata[path]?.uid ?? NIL_UUID);
   engine.global.set("_sm_tile_size", (path) => runtime.metadata[path]?.size ?? 1);
   engine.global.set("_sm_source", (path) => {
@@ -156,31 +169,206 @@ function installCallbacks(engine, runtime, random, onProgress) {
     }
     return source == null ? undefined : instrumentSource(resolved, source);
   });
-  engine.global.set("_sm_randomseed", (seed) => random.seed(seed));
-  engine.global.set("_sm_random", (...args) => {
-    if (args.length === 0) return random.random();
-    if (args.length === 1) return random.integer(1, args[0]);
-    return random.integer(args[0], args[1]);
-  });
-  engine.global.set("_sm_band", (...args) => {
-    let value = -1;
-    for (const item of args) value &= item | 0;
-    return value | 0;
-  });
-  engine.global.set("_sm_bor", (...args) => {
-    let value = 0;
-    for (const item of args) value |= item | 0;
-    return value | 0;
-  });
-  engine.global.set("_sm_bnot", (value) => ~value);
-  engine.global.set("_sm_lshift", (value, shift) => (value | 0) << (shift & 31));
-  engine.global.set("_sm_rshift", (value, shift) => (value >>> (shift & 31)) | 0);
-  engine.global.set("_sm_tobit", (value) => value | 0);
   engine.global.set("_sm_progress", (message, percent) => onProgress(message, percent));
 }
 
-function bootstrap(seed) {
+function terrainRulePrelude(manifest) {
+  const definitions = [];
+  const functions = [];
+  for (const [name, rule] of Object.entries(manifest.types)) {
+    const entries = Object.entries(rule.entries).map(([flags, entry]) => {
+      const tiles = entry.tiles.map((tile) =>
+        `{ ${tile.id}, ${JSON.stringify(tile.path)}, ${tile.terrainType} }`
+      ).join(",");
+      const rotation = entry.rotation == null ? "false" : entry.rotation;
+      return `[${flags}] = { rotation = ${rotation}, tiles = { ${tiles} } }`;
+    }).join(",\n");
+    definitions.push(`${name} = { ${entries} }`);
+    functions.push(`
+function init${rule.functionSuffix}Tiles()
+    browserTerrainInit(${JSON.stringify(name)})
+end
+function get${rule.functionSuffix}TileIdAndRotation(flags, variationNoise, rotationNoise)
+    return browserTerrainSelect(${JSON.stringify(name)}, flags, variationNoise, rotationNoise)
+end`);
+  }
   return `
+local browserTerrainRules = { ${definitions.join(",\n")} }
+local browserTerrainTiles = {}
+
+local function browserTerrainInit(name)
+    local output = {}
+    for flags, entry in pairs(browserTerrainRules[name]) do
+        local candidates = {}
+        for _, tile in ipairs(entry.tiles) do
+            candidates[#candidates + 1] = AddTile(tile[1], tile[2], tile[3])
+        end
+        output[flags] = { rotation = entry.rotation, tiles = candidates }
+    end
+    browserTerrainTiles[name] = output
+end
+
+local function browserTerrainSelect(name, flags, variationNoise, rotationNoise)
+    local entry = browserTerrainTiles[name] and browserTerrainTiles[name][flags]
+    if flags == 0 or entry == nil then return sm.uuid.getNil(), 0 end
+    local count = #entry.tiles
+    if count == 0 then return ERROR_TILE_UUID, 0 end
+    local rotation = flags == 15 and (rotationNoise % 4) or entry.rotation
+    return entry.tiles[variationNoise % count + 1], rotation
+end
+${functions.join("\n")}
+`;
+}
+
+function roadCliffRulePrelude(manifest) {
+  const entries = Object.entries(manifest.entries).map(([flags, entry]) => {
+    const tiles = entry.tiles.map((tile) => `{ ${tile.id}, ${JSON.stringify(tile.path)} }`).join(",");
+    return `[${flags}] = { rotation = ${entry.rotation}, tiles = { ${tiles} } }`;
+  }).join(",\n");
+  return `
+local browserRoadCliffRules = { ${entries} }
+local browserRoadCliffTiles = {}
+
+function calculateCliffBits(se, sw, nw, ne)
+    local lowest = math.min(math.min(se, sw), math.min(nw, ne))
+    local function relative(value) return sm.util.clamp(value - lowest, 0, 3) end
+    return bit.bor(bit.lshift(relative(se), 6), bit.lshift(relative(sw), 4),
+        bit.lshift(relative(nw), 2), relative(ne))
+end
+
+function calculateRoadBits(south, west, north, east)
+    return (east and FLAG_ROAD_E or 0) + (north and FLAG_ROAD_N or 0)
+        + (west and FLAG_ROAD_W or 0) + (south and FLAG_ROAD_S or 0)
+end
+
+function initRoadAndCliffTiles()
+    browserRoadCliffTiles = {}
+    for flags, rule in pairs(browserRoadCliffRules) do
+        local candidates = {}
+        for _, tile in ipairs(rule.tiles) do
+            candidates[#candidates + 1] = AddTile(tile[1], tile[2])
+        end
+        browserRoadCliffTiles[flags] = { rotation = rule.rotation, tiles = candidates }
+    end
+end
+
+function getCliffRoadTileIdAndRotation(flags, variationNoise)
+    if flags <= 0 then return sm.uuid.getNil(), 0 end
+    local item = browserRoadCliffTiles[flags]
+    if item == nil or #item.tiles == 0 then item = browserRoadCliffTiles[bit.band(flags, MASK_CLIFF)] end
+    if item == nil or #item.tiles == 0 then return ERROR_TILE_UUID, 0 end
+    return item.tiles[variationNoise % #item.tiles + 1], item.rotation
+end
+`;
+}
+
+function poiCatalogPrelude(manifest) {
+  const entries = manifest.entries.map((entry) => {
+    const type = POI_TYPES[entry.type];
+    if (!Number.isInteger(type)) throw new Error(`Unknown POI type in catalog: ${entry.type}`);
+    const legacyId = entry.legacyIndex == null ? "false" : type * 100 + entry.legacyIndex;
+    const terrainType = entry.terrainType == null ? "false" : Number(entry.terrainType);
+    return `{ ${type}, ${legacyId}, ${JSON.stringify(entry.path)}, ${terrainType} }`;
+  }).join(",\n");
+  return `
+local browserPoiCatalog = { ${entries} }
+local browserPoiTiles = {}
+
+function initPoiTiles()
+    browserPoiTiles = {}
+    for _, definition in ipairs(browserPoiCatalog) do
+        local poiType, legacyId, path, terrainType = definition[1], definition[2], definition[3], definition[4]
+        browserPoiTiles[poiType] = browserPoiTiles[poiType] or {}
+        local uid = AddTile(legacyId or nil, path, terrainType or nil, poiType)
+        browserPoiTiles[poiType][#browserPoiTiles[poiType] + 1] = uid
+    end
+end
+
+function getPoiTileId(poiType, index)
+    return browserPoiTiles[poiType][index]
+end
+
+function getRandomPoiTileId(poiType, noise)
+    local candidates = browserPoiTiles[poiType]
+    if candidates == nil or #candidates == 0 then return ERROR_TILE_UUID, 0 end
+    return candidates[noise % #candidates + 1]
+end
+`;
+}
+
+function luaLiteral(value) {
+  if (value == null) return "nil";
+  if (typeof value === "number" || typeof value === "boolean") return String(value);
+  if (typeof value === "string") return JSON.stringify(value);
+  if (Array.isArray(value)) return `{ ${value.map(luaLiteral).join(", ")} }`;
+  return `{ ${Object.entries(value).map(([key, item]) => `${key} = ${luaLiteral(item)}`).join(", ")} }`;
+}
+
+function startAreaPrelude(manifest) {
+  return `
+local browserStartArea = ${luaLiteral(manifest)}
+
+function writeStartArea(pois, roadNodes)
+    local originX, originY = browserStartArea.origin[1], browserStartArea.origin[2]
+    for _, placement in ipairs(browserStartArea.placements) do
+        writeTile(getPoiTileId(POI_CRASHSITE_AREA, placement.tileIndex),
+            originX + placement.x, originY + placement.y, placement.size, placement.rotation)
+        if placement.poiIndex then
+            pois[#pois + 1] = {
+                x = originX + placement.x + math.floor(placement.size / 2),
+                y = originY + placement.y + math.floor(placement.size / 2),
+                type = POI_CRASHSITE_AREA, index = placement.poiIndex,
+                size = placement.size, flat = true
+            }
+        end
+    end
+
+    for localY = 0, 16 do
+        for localX = 0, 20 do
+            local x, y = originX + localX, originY + localY
+            g_cornerTemp.terrainType[y][x] = browserStartArea.terrain[17 - localY][localX + 1]
+            g_cellData.cliffLevel[y][x] = browserStartArea.cliffs[17 - localY][localX + 1]
+        end
+    end
+
+    for localY = 0, 15 do
+        for localX = 0, 19 do
+            local x, y = originX + localX, originY + localY
+            if browserStartArea.roadCells[16 - localY][localX + 1] then
+                roadNodes[y][x] = { x = x, y = y, edges = {} }
+            end
+            if browserStartArea.staticCells[16 - localY][localX + 1] then
+                g_cornerTemp.hillyness[y][x], g_cornerTemp.hillyness[y][x + 1] = 0, 0
+                g_cornerTemp.hillyness[y + 1][x], g_cornerTemp.hillyness[y + 1][x + 1] = 0, 0
+            else
+                g_cellData.uid[y][x] = sm.uuid.getNil()
+                g_cellData.xOffset[y][x], g_cellData.yOffset[y][x] = 0, 0
+                g_cellData.rotation[y][x], g_cellData.groupId[y][x] = 0, 0
+            end
+        end
+    end
+
+    for y = originY, originY + 15 do
+        for x = originX, originX + 19 do
+            local current, east, north = roadNodes[y][x], roadNodes[y][x + 1], roadNodes[y + 1][x]
+            if current and east then
+                current.edges[#current.edges + 1] = { n = east, cost = 1, road = true }
+                east.edges[#east.edges + 1] = { n = current, cost = 1, road = true }
+            end
+            if current and north then
+                current.edges[#current.edges + 1] = { n = north, cost = 1, road = true }
+                north.edges[#north.edges + 1] = { n = current, cost = 1, road = true }
+            end
+        end
+    end
+end
+`;
+}
+
+function bootstrap(seed, terrainRules, roadCliffRules, poiCatalog, startArea, excavationWorld) {
+  return `
+${FAST_PATH_PRELUDE}
+
 local realType = type
 local nilUuidString = "${NIL_UUID}"
 local uuidCache = {}
@@ -214,6 +402,7 @@ bit = {
 
 CELL_SIZE = 64
 GRAPHICS_CELL_PADDING = 8
+EXCAVATION_WORLD = ${luaLiteral(excavationWorld)}
 sm = {
     noise = {
         simplexNoise2d = _sm_simplex,
@@ -243,7 +432,11 @@ function dofile(path)
     return chunk()
 end
 
-dofile("data/excavation_world.lua")
+${terrainRulePrelude(terrainRules)}
+${roadCliffRulePrelude(roadCliffRules)}
+${poiCatalogPrelude(poiCatalog)}
+${startAreaPrelude(startArea)}
+
 print = function() end
 dofile("$SURVIVAL_DATA/Scripts/terrain/overworld/generate_cells.lua")
 initRoadAndCliffTiles()
@@ -268,11 +461,23 @@ for y = -48, 47 do
         if uid and not uid:isNil() then
             local flags = g_cellData.flags[y][x] or 0
             local terrainType = bit.rshift(bit.band(flags, MASK_TERRAINTYPE), SHIFT_TERRAINTYPE)
+            local size = GetSize(uid) or 1
+            local rotation = g_cellData.rotation[y][x] or 0
+            local offsetX = g_cellData.xOffset[y][x] or 0
+            local offsetY = g_cellData.yOffset[y][x] or 0
+            local last = size - 1
+            local localX, localY = offsetX, offsetY
+            if rotation == 1 then
+                localX, localY = last - offsetY, offsetX
+            elseif rotation == 2 then
+                localX, localY = last - offsetX, last - offsetY
+            elseif rotation == 3 then
+                localX, localY = offsetY, last - offsetX
+            end
             rows[#rows + 1] = table.concat({
-                x, y, tostring(uid), GetSize(uid) or 1,
-                g_cellData.rotation[y][x] or 0,
+                x, y, tostring(uid), size, rotation,
                 g_cellData.groupId[y][x] or 0,
-                terrainType
+                terrainType, x - localX, y - localY
             }, "\\t")
         end
     end
@@ -296,16 +501,22 @@ export async function generateCells(seed, onProgress = () => {}) {
   engine.global.loadLibrary(LuaLibraries.Table);
   engine.global.loadLibrary(LuaLibraries.String);
   engine.global.loadLibrary(LuaLibraries.Math);
-  const random = new LuaJitRandom();
   try {
-    installCallbacks(engine, runtime, random, onProgress);
-    await engine.doString(bootstrap(seed));
+    installCallbacks(engine, runtime, onProgress);
+    await engine.doString(bootstrap(
+      seed,
+      runtime.terrainRules,
+      runtime.roadCliffRules,
+      runtime.poiCatalog,
+      runtime.startArea,
+      runtime.excavationWorld,
+    ));
     const result = engine.global.get("__RESULT") || "";
     const cells = result
       .split("\n")
       .filter(Boolean)
       .map((line) => {
-        const [x, y, uid, size, rotation, group, terrainType] = line.split("\t");
+        const [x, y, uid, size, rotation, group, terrainType, originX, originY] = line.split("\t");
         return {
           x: Number(x),
           y: Number(y),
@@ -314,6 +525,8 @@ export async function generateCells(seed, onProgress = () => {}) {
           rotation: Number(rotation),
           group: Number(group),
           terrainType: Number(terrainType),
+          originX: Number(originX),
+          originY: Number(originY),
         };
       });
     onProgress(`World layout complete · ${cells.length.toLocaleString()} populated cells`, 32);
