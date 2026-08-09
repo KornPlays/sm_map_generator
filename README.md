@@ -1,7 +1,7 @@
 # Scrap Mechanic Chapter 2 Map Generator
 
 Generate and explore a complete Chapter 2 world map from a seed or local
-Scrap Mechanic save—entirely in your browser.
+Scrap Mechanic save—entirely in your browser within seconds.
 
 **Live site:** https://sm.kornplays.com
 
@@ -29,6 +29,18 @@ exports:
 Both exports contain the interactive map viewer; they do not include the map
 generator.
 
+### Put one exported viewer online
+
+For the quickest route, choose **Original asset source**, rename the downloaded
+file to `index.html`, then upload it to either of these static hosts:
+
+[![Upload to Netlify Drop](https://img.shields.io/badge/Netlify_Drop-Upload_HTML-00C7B7?logo=netlify&logoColor=white)](https://app.netlify.com/drop)
+[![Cloudflare Pages direct upload](https://img.shields.io/badge/Cloudflare_Pages-Direct_upload-F38020?logo=cloudflare&logoColor=white)](https://dash.cloudflare.com/?to=%2F%3Aaccount%2Fworkers-and-pages)
+
+On Cloudflare, select **Create application** → **Get started** → **Drag and
+drop your files**. For the local-asset export, extract the ZIP and upload its
+contents together instead.
+
 ---
 
 ## Run the map generator locally
@@ -46,8 +58,7 @@ npm run dev
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/KornPlays/sm_map_generator)
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/KornPlays/sm_map_generator)
-[![Cloudflare Pages](https://img.shields.io/badge/Cloudflare_Pages-Deploy-F38020?logo=cloudflare&logoColor=white)](https://dash.cloudflare.com/?to=%2F%3Aaccount%2Fworkers-and-pages)
-[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Fork-222?logo=github&logoColor=white)](https://github.com/KornPlays/sm_map_generator/fork)
+[![Cloudflare Pages setup](https://img.shields.io/badge/Cloudflare_Pages-Setup-F38020?logo=cloudflare&logoColor=white)](https://dash.cloudflare.com/?to=%2F%3Aaccount%2Fworkers-and-pages)
 
 For a manual deployment:
 
