@@ -70,16 +70,6 @@ export function viewerMarkup(data, viewerSource, {
   if (typeof styleText !== "string" || typeof scriptText !== "string") {
     throw new Error("The portable viewer bundle is missing. Run npm run build:viewer before exporting.");
   }
-  const markerLabels = [
-    ["builderQuest", "Builder Quests", true], ["warehouse", "Warehouses", true],
-    ["partUnlockStation", "Part Unlock Stations", true], ["ruin", "Ruins", false],
-    ["mechanicStation", "Mechanic Stations", true], ["growlab", "Growlabs", true],
-    ["packingStation", "Packing Stations", true], ["cagedFarmer", "Caged Farmers", false],
-    ["pond", "Ponds", false],
-  ];
-  const toggles = markerLabels.map(([kind, label, checked]) =>
-    `<label><input type="checkbox" data-marker-kind="${kind}"${checked ? " checked" : ""}> <span>${label}</span></label>`
-  ).join("");
   const style = `<style>${escapeElementText(styleText, "style")}</style>`;
   const script = `<script>${escapeElementText(scriptText, "script")}<\/script>`;
   return `<!doctype html>
@@ -98,11 +88,12 @@ ${style}</head>
 <div id="map-pin" class="map-pin" hidden><span id="map-pin-label" class="map-pin-label"></span><span class="map-pin-dot"></span></div>
 <aside id="marker-details" class="marker-details" hidden><button id="marker-details-close" class="marker-details-close" type="button">×</button>
 <div class="marker-details-heading"><span id="marker-details-icon" class="marker-details-symbol" aria-hidden="true"></span><div><small id="marker-details-kind"></small><h3 id="marker-details-title"></h3></div></div>
+<p id="marker-details-description" class="marker-details-description" hidden></p>
 <div id="marker-details-rewards" hidden><h4 id="marker-details-list-title">Rewards</h4><ul id="marker-details-reward-list"></ul></div></aside>
 <div id="viewer-settings" class="viewer-settings" hidden><div class="upscaling-settings"><strong>Tile upscaling</strong>
 <div id="upscaling-options" class="upscaling-options">${["off", "low", "medium", "high"].map((mode) => `<label><input type="radio" name="upscaling" value="${mode}"> <span>${mode[0].toUpperCase() + mode.slice(1)}</span></label>`).join("")}</div>
 <div id="upscaling-generate" hidden><button id="generate-detail-data" type="button">Generate detail data</button><small id="upscaling-unavailable"></small></div></div>
-<strong>Map markers</strong>${toggles}<a class="viewer-source-link" href="https://github.com/KornPlays/sm_map_generator" target="_blank" rel="noopener noreferrer">Source code on GitHub</a></div>
+<strong>Map markers</strong><div class="marker-settings-list" data-marker-settings></div><a class="viewer-source-link" href="https://github.com/KornPlays/sm_map_generator" target="_blank" rel="noopener noreferrer">Source code on GitHub</a></div>
 <div class="map-controls"><a data-download-role="image" class="viewer-control-download" hidden title="Download map image" aria-label="Download map image"><svg class="download-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m0 0 4-4m-4 4-4-4M5 16v4h14v-4" /></svg></a><button id="viewer-zoom-in" type="button">+</button><button id="viewer-zoom-out" type="button">−</button>
 <button id="viewer-expand" type="button">×</button><button id="viewer-settings-button" type="button">⚙</button></div></div>
 <div id="missing" hidden></div><div class="viewer-legal">© 2026 KornPlays · Unofficial fan project · Scrap Mechanic belongs to Axolot Games</div></section><div id="portable-status" class="portable-status" hidden></div>

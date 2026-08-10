@@ -1,32 +1,41 @@
 import { readWebPMapData, seedFromFilename } from "./webp-seed.js";
+import { readSeedBarcode } from "./seed-barcode.js";
 import { createTileDetailLayer } from "./tile-detail-layer.js";
 import { GENERATOR_ASSET_SOURCE } from "./asset-config.js";
 import { applyMarkerGlyph } from "./marker-icons.js";
+import { MARKER_CATEGORIES, MARKER_DATA_VERSION, markerCategory } from "./markers.js";
 import { LAST_MAP_KEY, readStoredMap, writeStoredMap } from "./map-store.js";
 
 const WORLD_MIN_X = -4095.62;
 const WORLD_MAX_X = 4096.36;
 const WORLD_MIN_Y = -3073.66;
 const WORLD_MAX_Y = 3077.88;
-const MARKER_DATA_VERSION = 9;
 const MARKER_ORDER_KEY = "sm-map-marker-order";
-const POND_VISIBILITY_KEY = "sm-map-show-pond-v2";
 const MIN_SAFE_SCALE = 0;
 // Matching marker titles stack after this fraction of their screen areas overlap.
 const MARKER_CLUSTER_OVERLAP = 0.25;
 const MARKER_SCREEN_SIZE = 28;
-const MARKER_KIND_LABELS = {
-  builderQuest: "Builder Quest",
-  warehouse: "Warehouse",
-  partUnlockStation: "Part Unlock Station",
-  ruin: "Ruin",
-  mechanicStation: "Mechanic Station",
-  growlab: "Growlab",
-  packingStation: "Packing Station",
-  cagedFarmer: "Caged Farmer",
-  pond: "Pond",
-  cluster: "Marker group",
-};
+
+function markerStorageKey(category) {
+  return category.storageKey || `sm-map-show-${category.kind}`;
+}
+
+function renderMarkerSettings(container) {
+  if (!container) return;
+  const fragment = document.createDocumentFragment();
+  for (const category of MARKER_CATEGORIES) {
+    const label = document.createElement("label");
+    const input = document.createElement("input");
+    const text = document.createElement("span");
+    input.type = "checkbox";
+    input.dataset.markerKind = category.kind;
+    input.checked = category.defaultVisible;
+    text.textContent = category.settingsLabel;
+    label.append(input, " ", text);
+    fragment.appendChild(label);
+  }
+  container.replaceChildren(fragment);
+}
 
 function formatSize(bytes) {
   return `${(bytes / 1048576).toFixed(1)} MiB`;
@@ -76,6 +85,7 @@ export function setupMapViewer({ onWarning, resolveMapData } = {}) {
   const viewport = document.querySelector("#map-viewport");
   const stage = document.querySelector("#map-stage");
   const image = document.querySelector("#map-image");
+  const baseCanvas = document.querySelector("#map-base-canvas");
   const detailCanvas = document.querySelector("#map-detail-layer");
   const pin = document.querySelector("#map-pin");
   const pinLabel = document.querySelector("#map-pin-label");
@@ -95,12 +105,14 @@ export function setupMapViewer({ onWarning, resolveMapData } = {}) {
   const expandButton = document.querySelector("#viewer-expand");
   const settingsButton = document.querySelector("#viewer-settings-button");
   const settingsPanel = document.querySelector("#viewer-settings");
+  renderMarkerSettings(document.querySelector("[data-marker-settings]"));
   const markerToggles = [...document.querySelectorAll("[data-marker-kind]")];
   const markerDetails = document.querySelector("#marker-details");
   const markerDetailsClose = document.querySelector("#marker-details-close");
   const markerDetailsIcon = document.querySelector("#marker-details-icon");
   const markerDetailsKind = document.querySelector("#marker-details-kind");
   const markerDetailsTitle = document.querySelector("#marker-details-title");
+  const markerDetailsDescription = document.querySelector("#marker-details-description");
   const markerDetailsRewards = document.querySelector("#marker-details-rewards");
   const markerDetailsListTitle = document.querySelector("#marker-details-list-title");
   const markerDetailsRewardList = document.querySelector("#marker-details-reward-list");
@@ -125,6 +137,7 @@ export function setupMapViewer({ onWarning, resolveMapData } = {}) {
   let pinnedPixel = null;
   let mapMarkerElements = [];
   let transformFrame = 0;
+  let pendingDecoration = 0;
   let markerPressOrder = 0;
   const hoveredLabelMarkers = new Set();
   const focusedLabelMarkers = new Set();
@@ -141,10 +154,10 @@ export function setupMapViewer({ onWarning, resolveMapData } = {}) {
   ];
   const markerVisibility = Object.fromEntries(markerToggles.map((input) => {
     const kind = input.dataset.markerKind;
-    const storageKey = kind === "pond" ? POND_VISIBILITY_KEY : `sm-map-show-${kind}`;
+    const category = markerCategory(kind);
+    const storageKey = markerStorageKey(category);
     const stored = localStorage.getItem(storageKey);
-    const defaultVisible = kind !== "ruin" && kind !== "cagedFarmer" && kind !== "pond";
-    return [kind, stored === null ? defaultVisible : stored === "true"];
+    return [kind, stored === null ? category.defaultVisible : stored === "true"];
   }));
   const pointers = new Map();
   let drag = null;
@@ -242,12 +255,18 @@ export function setupMapViewer({ onWarning, resolveMapData } = {}) {
   }
 
   function showMarkerDetails(marker) {
+    const category = markerCategory(marker.kind);
     markerDetailsIcon.textContent = "";
-    markerDetailsIcon.dataset.icon = marker.iconKind || "dot";
-    markerDetailsIcon.dataset.theme = marker.theme || "default";
-    applyMarkerGlyph(markerDetailsIcon, marker.iconKind || "dot");
-    markerDetailsKind.textContent = MARKER_KIND_LABELS[marker.kind] || "Map marker";
-    markerDetailsTitle.textContent = marker.title;
+    markerDetailsIcon.dataset.icon = marker.iconKind || category.iconKind || "dot";
+    markerDetailsIcon.dataset.theme = marker.theme || category.theme || "default";
+    markerDetailsIcon.style.setProperty("--marker-accent", marker.color || category.color || "#e8cb69");
+    applyMarkerGlyph(markerDetailsIcon, marker.iconKind || category.iconKind || "dot");
+    markerDetailsKind.textContent = category.detailsLabel;
+    markerDetailsTitle.textContent = marker.title || category.detailsLabel;
+    if (markerDetailsDescription) {
+      markerDetailsDescription.textContent = marker.description || "";
+      markerDetailsDescription.hidden = !marker.description;
+    }
     markerDetailsListTitle.textContent = marker.listTitle || "Rewards";
     markerDetailsRewardList.replaceChildren();
     for (const reward of marker.rewards || []) {
@@ -377,6 +396,7 @@ export function setupMapViewer({ onWarning, resolveMapData } = {}) {
     markerLayer.classList.remove("marker-label-active");
     markerDetails.hidden = true;
     for (const marker of markers || []) {
+      const category = markerCategory(marker.kind);
       const element = document.createElement("button");
       element.type = "button";
       element.className = `map-marker map-marker-${marker.kind}`;
@@ -384,17 +404,18 @@ export function setupMapViewer({ onWarning, resolveMapData } = {}) {
       element.dataset.pixelY = String(((WORLD_MAX_Y - marker.y) / (WORLD_MAX_Y - WORLD_MIN_Y)) * imageHeight);
       element.dataset.kind = marker.kind;
       element.dataset.pressedOrder = "0";
-      element.dataset.theme = marker.theme || "default";
+      element.dataset.theme = marker.theme || category.theme || "default";
+      element.style.setProperty("--marker-accent", marker.color || category.color || "#e8cb69");
       element._mapMarker = marker;
-      element.title = marker.title;
-      element.setAttribute("aria-label", marker.title);
+      element.title = marker.title || category.detailsLabel;
+      element.setAttribute("aria-label", element.title);
       const icon = document.createElement("span");
       icon.className = "map-marker-symbol";
-      icon.dataset.icon = marker.iconKind || "dot";
-      applyMarkerGlyph(icon, marker.iconKind || "dot");
+      icon.dataset.icon = marker.iconKind || category.iconKind || "dot";
+      applyMarkerGlyph(icon, marker.iconKind || category.iconKind || "dot");
       const label = document.createElement("span");
       label.className = "map-marker-label";
-      label.textContent = marker.title;
+      label.textContent = element.title;
       element._label = label;
       element.append(icon, label);
       element.addEventListener("pointerdown", () => {
@@ -463,25 +484,52 @@ export function setupMapViewer({ onWarning, resolveMapData } = {}) {
     }
   }
 
+  // Paints the renderer's own pixels while its WebP is still encoding. The
+  // image element takes over the moment that blob exists and decodes; both show
+  // the same picture, so the handover is invisible.
+  function showBaseBitmap(bitmap) {
+    if (!baseCanvas || !bitmap) return;
+    baseCanvas.width = bitmap.width;
+    baseCanvas.height = bitmap.height;
+    baseCanvas.getContext("2d", { alpha: false })?.drawImage(bitmap, 0, 0);
+    bitmap.close?.();
+    baseCanvas.style.width = `${imageWidth}px`;
+    baseCanvas.style.height = `${imageHeight}px`;
+    baseCanvas.hidden = false;
+  }
+
+  function hideBaseBitmapWhenImageReady() {
+    if (!baseCanvas || baseCanvas.hidden) return;
+    const drop = () => { baseCanvas.hidden = true; };
+    if (!image.getAttribute("src")) return;
+    (image.decode?.() ?? Promise.resolve()).then(drop, drop);
+  }
+
   function setMapSource(blob, previewBlob, name, details, seed, markers, cells, assetSource, {
     mapSource = null,
     previewSource = null,
     size = blob?.size || 0,
+    bitmap = null,
   } = {}) {
     releaseObjectUrls();
     currentMapSource = { blob, previewBlob, mapSource, previewSource, size, name, details, seed, markers, cells, assetSource };
     mapSuspended = false;
-    mapUrlOwned = !previewSource;
+    const hasPreview = Boolean(previewSource || previewBlob);
+    mapUrlOwned = !previewSource && Boolean(previewBlob);
     // A freshly generated map arrives as soon as its viewer-sized preview is
     // encoded; the full-resolution download image follows through
     // attachMapBlob once the browser has finished writing it.
     const hasDownload = Boolean(mapSource || blob);
     downloadUrlOwned = hasDownload && !mapSource;
-    mapUrl = previewSource || URL.createObjectURL(previewBlob);
+    mapUrl = hasPreview ? previewSource || URL.createObjectURL(previewBlob) : null;
     downloadUrl = hasDownload ? mapSource || URL.createObjectURL(blob) : null;
     imageWidth = 128 * 25;
     imageHeight = 96 * 25;
+    if (bitmap) showBaseBitmap(bitmap);
+    else if (baseCanvas) baseCanvas.hidden = true;
+    if (!hasPreview) image.removeAttribute("src");
     updateBaseMapImage();
+    hideBaseBitmapWhenImageReady();
     image.style.width = `${imageWidth}px`;
     image.style.height = `${imageHeight}px`;
     empty.hidden = true;
@@ -498,12 +546,24 @@ export function setupMapViewer({ onWarning, resolveMapData } = {}) {
     const sizeLabel = size ? ` · ${formatSize(size)}` : "";
     meta.textContent = `${seedLabel}${details.width.toLocaleString()} × ${details.height.toLocaleString()}${sizeLabel} · ${name || "map.webp"}`;
     removePin();
-    detailLayer.setOriginalCellSize(details.width / 128);
-    detailLayer.setSource(assetSource || GENERATOR_ASSET_SOURCE);
-    detailLayer.setCells(cells);
-    updateUpscalingAvailability();
-    renderMapMarkers(markers);
-    requestAnimationFrame(fitMap);
+    // Building several hundred marker elements and indexing 12,288 cells for the
+    // detail layer would hold up the very frame that first shows the map. The
+    // picture goes up now; these follow immediately after. A hidden tab runs no
+    // animation frames, so the wait falls back to a plain task there — the work
+    // still has to happen, it just has no frame to stay out of the way of.
+    const token = pendingDecoration + 1;
+    pendingDecoration = token;
+    const decorate = () => {
+      if (pendingDecoration !== token) return;
+      fitMap();
+      detailLayer.setOriginalCellSize(details.width / 128);
+      detailLayer.setSource(assetSource || GENERATOR_ASSET_SOURCE);
+      detailLayer.setCells(cells);
+      updateUpscalingAvailability();
+      renderMapMarkers(markers);
+    };
+    if (!document.hidden && typeof requestAnimationFrame === "function") requestAnimationFrame(decorate);
+    else setTimeout(decorate, 0);
   }
 
   function suspendMap() {
@@ -523,9 +583,14 @@ export function setupMapViewer({ onWarning, resolveMapData } = {}) {
   function resumeMap() {
     if (!mapSuspended || !currentMapSource || mapUrl) return;
     const hasDownload = Boolean(currentMapSource.mapSource || currentMapSource.blob);
-    mapUrlOwned = !currentMapSource.previewSource;
     downloadUrlOwned = hasDownload && !currentMapSource.mapSource;
-    mapUrl = currentMapSource.previewSource || URL.createObjectURL(currentMapSource.previewBlob);
+    // A map that was suspended before its preview finished encoding has no
+    // image to restore; its first-paint canvas is still holding the picture.
+    const hasPreview = Boolean(currentMapSource.previewSource || currentMapSource.previewBlob);
+    mapUrlOwned = hasPreview && !currentMapSource.previewSource;
+    mapUrl = hasPreview
+      ? currentMapSource.previewSource || URL.createObjectURL(currentMapSource.previewBlob)
+      : null;
     downloadUrl = hasDownload
       ? currentMapSource.mapSource || URL.createObjectURL(currentMapSource.blob)
       : null;
@@ -555,7 +620,8 @@ export function setupMapViewer({ onWarning, resolveMapData } = {}) {
     const details = metadata.width && metadata.height
       ? { width: metadata.width, height: metadata.height }
       : await imageDetails(blob);
-    const resolvedSeed = Number.isInteger(seed) ? seed : metadata.seed ?? seedFromFilename(name);
+    let resolvedSeed = Number.isInteger(seed) ? seed : metadata.seed ?? seedFromFilename(name);
+    if (!Number.isInteger(resolvedSeed)) resolvedSeed = await readSeedBarcode(blob);
     let resolvedCells = Array.isArray(cells) ? cells : metadata.cells;
     let resolvedMarkers = mapMarkers ?? builderQuests;
     const markersNeedRefresh = !Array.isArray(resolvedMarkers) || resolvedMarkers.some(
@@ -642,6 +708,31 @@ export function setupMapViewer({ onWarning, resolveMapData } = {}) {
     return details;
   }
 
+  // Opens the map straight from the renderer's pixels, before any of its images
+  // have been encoded. attachPreviewBlob and attachMapBlob fill in the encoded
+  // versions as they arrive.
+  function showMapBitmap(bitmap, name, {
+    details = { width: 128 * 25, height: 96 * 25 },
+    seed = null,
+    cells = [],
+    mapMarkers = [],
+    assetSource = GENERATOR_ASSET_SOURCE,
+  } = {}) {
+    setMapSource(null, null, name, details, seed, mapMarkers, cells, assetSource, { size: 0, bitmap });
+    return details;
+  }
+
+  function attachPreviewBlob(previewBlob) {
+    if (!(previewBlob instanceof Blob) || !currentMapSource) return;
+    currentMapSource.previewBlob = previewBlob;
+    if (mapSuspended) return;
+    if (mapUrl && mapUrlOwned) URL.revokeObjectURL(mapUrl);
+    mapUrl = URL.createObjectURL(previewBlob);
+    mapUrlOwned = true;
+    updateBaseMapImage();
+    hideBaseBitmapWhenImageReady();
+  }
+
   async function attachMapBlob(blob, { persist = true } = {}) {
     if (!(blob instanceof Blob) || !currentMapSource) return;
     currentMapSource.blob = blob;
@@ -658,6 +749,7 @@ export function setupMapViewer({ onWarning, resolveMapData } = {}) {
       // With tile detail off the base layer is the full-resolution image, which
       // only exists now.
       updateBaseMapImage();
+      hideBaseBitmapWhenImageReady();
     }
     const { details, seed, name } = currentMapSource;
     const seedLabel = Number.isInteger(seed) ? `Seed ${seed} · ` : "";
@@ -841,14 +933,14 @@ export function setupMapViewer({ onWarning, resolveMapData } = {}) {
   markerDetailsClose.addEventListener("click", () => { markerDetails.hidden = true; });
   for (const input of markerToggles) {
     const kind = input.dataset.markerKind;
+    const category = markerCategory(kind);
     input.checked = markerVisibility[kind];
     input.addEventListener("change", () => {
       markerVisibility[kind] = input.checked;
-      const storageKey = kind === "pond" ? POND_VISIBILITY_KEY : `sm-map-show-${kind}`;
-      localStorage.setItem(storageKey, String(input.checked));
+      localStorage.setItem(markerStorageKey(category), String(input.checked));
       bringMarkerKindToFront(kind);
       applyMarkerVisibility();
-      if (!input.checked && markerDetailsKind.textContent === MARKER_KIND_LABELS[kind]) {
+      if (!input.checked && markerDetailsKind.textContent === category.detailsLabel) {
         markerDetails.hidden = true;
       }
     });
@@ -911,6 +1003,8 @@ export function setupMapViewer({ onWarning, resolveMapData } = {}) {
     showMapUrl,
     showMapBlobs,
     showMapPreview,
+    showMapBitmap,
+    attachPreviewBlob,
     attachMapBlob,
     restoreLastMap,
     fitMap,

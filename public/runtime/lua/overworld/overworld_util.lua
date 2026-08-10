@@ -49,23 +49,62 @@ function closestPoi(pois, x, y)
     return winner, best
 end
 
--- A footprint spans center - size // 2 to center + (size + 1) // 2. The two
--- axes are tested separately so a candidate that misses horizontally never has
--- its vertical span computed, which is the common case.
-function collides(x, y, size, pois)
-    local half, ceilHalf = size // 2, (size + 1) // 2
-    local left, right = x - half, x + ceilHalf
-    local bottom, top = y - half, y + ceilHalf
-    for index = 1, #pois do
+-- A footprint spans center - size // 2 to center + (size + 1) // 2.
+--
+-- Every heavy caller sweeps the grid row by row, so collides is asked about one
+-- y and one size for a whole row of x in turn. Narrowing the list down to the
+-- POIs whose footprint reaches that row, once per row, turns each of those calls
+-- from a scan of every placed POI into a handful of tests. The filtered list
+-- keeps the original order, and a POI it leaves out cannot overlap the row at
+-- all, so the first match found is still the first match in pois.
+--
+-- The filter is rebuilt whenever the list, the row, the size, or the number of
+-- POIs changes. That covers every way pois grows or shrinks; the one place that
+-- edits a POI's own x, y or size in place — convertPlaceholderPois — clears it
+-- explicitly instead.
+-- Kept per query size, because the road pass asks about size 1 and size 3 for
+-- the same cell in turn; one shared row would be rebuilt on every call.
+local rowCaches = {}
+
+function invalidateCollisionRow()
+    rowCaches = {}
+end
+
+local function buildCollisionRow(cache, pois, y, size, length)
+    local bottom, top = y - size // 2, y + (size + 1) // 2
+    local candidates = cache.candidates
+    local found = 0
+    for index = 1, length do
         local candidate = pois[index]
         local otherSize = candidate.size
-        local otherHalf = otherSize // 2
+        local otherY = candidate.y
+        if top > otherY - otherSize // 2 and bottom < otherY + (otherSize + 1) // 2 then
+            found = found + 1
+            candidates[found] = candidate
+        end
+    end
+    cache.count = found
+    cache.pois, cache.y, cache.length = pois, y, length
+end
+
+function collides(x, y, size, pois)
+    local cache = rowCaches[size]
+    if cache == nil then
+        cache = { candidates = {}, count = 0, pois = nil, y = nil, length = -1 }
+        rowCaches[size] = cache
+    end
+    local length = #pois
+    if cache.pois ~= pois or cache.y ~= y or cache.length ~= length then
+        buildCollisionRow(cache, pois, y, size, length)
+    end
+    local left, right = x - size // 2, x + (size + 1) // 2
+    local candidates = cache.candidates
+    for index = 1, cache.count do
+        local candidate = candidates[index]
+        local otherSize = candidate.size
         local otherX = candidate.x
-        if right > otherX - otherHalf and left < otherX + (otherSize + 1) // 2 then
-            local otherY = candidate.y
-            if top > otherY - otherHalf and bottom < otherY + (otherSize + 1) // 2 then
-                return candidate
-            end
+        if right > otherX - otherSize // 2 and left < otherX + (otherSize + 1) // 2 then
+            return candidate
         end
     end
     return nil

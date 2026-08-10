@@ -1,4 +1,29 @@
+import builderHammer from "./assets/markers/builder-hammer.png?inline";
+import mechanicCog from "./assets/markers/mechanic-cog.png?inline";
+import packingCrate from "./assets/markers/packing-crate.png?inline";
+import partUnlock from "./assets/markers/part-unlock.png?inline";
+import pond from "./assets/markers/pond.png?inline";
+import ruin from "./assets/markers/ruin.png?inline";
+import cagedFarmer from "./assets/markers/caged-farmer.png?inline";
+
 const CELL_SIZE = 64;
+
+// Increment this whenever marker detection or marker data changes. Cached maps
+// will then rebuild their markers automatically.
+export const MARKER_DATA_VERSION = 10;
+
+// Raster icons live here so adding or replacing one never requires editing the
+// map viewer. CSS-drawn icons (currently "warehouse" and "growlab") do not
+// need an entry in this object.
+export const MARKER_ICONS = {
+  hammer: builderHammer,
+  mechanic: mechanicCog,
+  packing: packingCrate,
+  pond,
+  ruin,
+  farmer: cagedFarmer,
+  unlock: partUnlock,
+};
 
 const GENERIC_QUEST_DETAILS = [
   ["Home is Where the Woc Is", ["Door Handle", "Modular Sofa", "Modular Sofa Armrest"]],
@@ -59,20 +84,171 @@ export const BUILDER_QUESTS = GENERIC_QUEST_LOCATIONS.map(([uid, x, y], index) =
   { name: "builder_quest_advanced_car", title: "Your Nice Car", rewards: ["Fantastic T-Shirt"], uid: "f3dda4db-8450-4e9d-a501-ec6dbf14a78a", x: 112.14583587646, y: 15.041519165039 },
 ]);
 
-// Original, code-rendered marker badges. These do not redistribute the game's
-// compass artwork and remain legible when several kinds share one map area.
-const MARKER_STYLES = {
-  builderQuest: { iconKind: "hammer", theme: "builder" },
-  warehouse: { iconKind: "warehouse", theme: "warehouse" },
-  partUnlockStation: { iconKind: "unlock", theme: "unlock" },
-  ruin: { iconKind: "ruin", theme: "ruin" },
-  mechanicStation: { iconKind: "mechanic", theme: "mechanic" },
-  growlab: { iconKind: "growlab", theme: "growlab" },
-  packingStation: { iconKind: "packing", theme: "packing" },
-  cagedFarmer: { iconKind: "farmer", theme: "farmer" },
-  pondOil: { iconKind: "pond", theme: "pond-oil" },
-  pondChemical: { iconKind: "pond", theme: "pond-chemical" },
-};
+// Marker types are intentionally defined in one place. Each entry controls the
+// settings toggle, default visibility, marker appearance, and detection rule.
+// See Modding.md for a small copy-and-paste example.
+export const MARKER_TYPES = [
+  {
+    kind: "builderQuest",
+    settingsLabel: "Builder Quests",
+    detailsLabel: "Builder Quest",
+    defaultVisible: true,
+    iconKind: "hammer",
+    theme: "builder",
+    color: "#f1cd55",
+    detect({ groupsFor, add }) {
+      for (const quest of BUILDER_QUESTS) {
+        const group = groupsFor(quest.uid)[0];
+        if (group) add(group, quest.x, quest.y, quest);
+      }
+    },
+  },
+  {
+    kind: "warehouse",
+    settingsLabel: "Warehouses",
+    detailsLabel: "Warehouse",
+    defaultVisible: true,
+    iconKind: "warehouse",
+    theme: "warehouse",
+    color: "#67a9ff",
+    detect({ groups, center, add }) {
+      for (const group of groups) {
+        const warehouse = WAREHOUSES.get(group.uid);
+        if (!warehouse) continue;
+        const suffix = warehouse.trashbot ? " (Trashbot)" : "";
+        add(group, center(group), center(group), {
+          title: `Warehouse · ${warehouse.floors} Floors${suffix}`,
+        });
+      }
+    },
+  },
+  {
+    kind: "partUnlockStation",
+    settingsLabel: "Part Unlock Stations",
+    detailsLabel: "Part Unlock Station",
+    defaultVisible: true,
+    iconKind: "unlock",
+    theme: "unlock",
+    color: "#c589ff",
+    detect({ groups, center, add }) {
+      for (const group of groups) if (PART_UNLOCK_UIDS.has(group.uid)) {
+        add(group, center(group), center(group), { title: "Part Unlock Station" });
+      }
+    },
+  },
+  {
+    kind: "ruin",
+    settingsLabel: "Ruins",
+    detailsLabel: "Ruin",
+    defaultVisible: false,
+    iconKind: "ruin",
+    theme: "ruin",
+    color: "#aeb5af",
+    detect({ groups, center, add }) {
+      for (const group of groups) if (RUIN_UIDS.has(group.uid)) {
+        add(group, center(group), center(group), { title: "Ruin" });
+      }
+    },
+  },
+  {
+    kind: "mechanicStation",
+    settingsLabel: "Mechanic Stations",
+    detailsLabel: "Mechanic Station",
+    defaultVisible: true,
+    iconKind: "mechanic",
+    theme: "mechanic",
+    color: "#f39b44",
+    detect({ groups, center, add }) {
+      for (const group of groups) if (MECHANIC_UIDS.has(group.uid)) {
+        add(group, center(group), center(group), { title: "Mechanic Station" });
+      }
+    },
+  },
+  {
+    kind: "growlab",
+    settingsLabel: "Growlabs",
+    detailsLabel: "Growlab",
+    defaultVisible: true,
+    iconKind: "growlab",
+    theme: "growlab",
+    color: "#57d34c",
+    detect({ groupsFor, add }) {
+      for (const structure of SPECIAL_STRUCTURES.filter((item) => item.kind === "growlab")) {
+        const group = groupsFor(structure.uid)[0];
+        if (group) add(group, structure.x, structure.y, structure);
+      }
+    },
+  },
+  {
+    kind: "packingStation",
+    settingsLabel: "Packing Stations",
+    detailsLabel: "Packing Station",
+    defaultVisible: true,
+    iconKind: "packing",
+    theme: "packing",
+    color: "#fff1b3",
+    detect({ groupsFor, add }) {
+      for (const structure of SPECIAL_STRUCTURES.filter((item) => item.kind === "packingStation")) {
+        const group = groupsFor(structure.uid)[0];
+        if (group) add(group, structure.x, structure.y, structure);
+      }
+    },
+  },
+  {
+    kind: "cagedFarmer",
+    settingsLabel: "Caged Farmers",
+    detailsLabel: "Caged Farmer",
+    defaultVisible: false,
+    iconKind: "farmer",
+    theme: "farmer",
+    color: "#70dfcf",
+    detect({ groupsFor, add }) {
+      for (const [uid, locations] of CAGED_FARMER_LOCATIONS) {
+        for (const group of groupsFor(uid)) for (const [x, y] of locations) {
+          add(group, x, y, { title: "Caged Farmer" });
+        }
+      }
+    },
+  },
+  {
+    kind: "pond",
+    settingsLabel: "Ponds",
+    detailsLabel: "Pond",
+    defaultVisible: false,
+    storageKey: "sm-map-show-pond-v2",
+    iconKind: "pond",
+    theme: "pond-oil",
+    color: "#cf493e",
+    detect({ groups, center, add }) {
+      for (const group of groups) {
+        if (CHEMICAL_POND_UIDS.has(group.uid)) {
+          add(group, center(group), center(group), {
+            title: "Chemical Pond",
+            theme: "pond-chemical",
+            color: "#ff79bd",
+          });
+        } else if (OIL_POND_UIDS.has(group.uid)) {
+          add(group, center(group), center(group), { title: "Oil Pond" });
+        }
+      }
+    },
+  },
+];
+
+export const MARKER_CATEGORIES = MARKER_TYPES.map(({ detect, ...category }) => Object.freeze(category));
+const MARKER_CATEGORY_BY_KIND = new Map(MARKER_CATEGORIES.map((category) => [category.kind, category]));
+
+export function markerCategory(kind) {
+  return MARKER_CATEGORY_BY_KIND.get(kind) || {
+    kind,
+    settingsLabel: kind,
+    detailsLabel: "Map marker",
+    defaultVisible: true,
+    iconKind: "dot",
+    theme: "default",
+    color: "#e8cb69",
+  };
+}
 
 const WAREHOUSES = new Map([
   ["e8dfc039-7879-40cb-8b69-696f88d1cb2c", { floors: 2 }],
@@ -196,12 +372,14 @@ function groupCells(cells) {
   }));
 }
 
-function markerAt(group, localX, localY, details) {
+function markerAt(type, group, localX, localY, details) {
   const [x, y] = rotateLocal(group.rotation, localX, localY, group.size);
-  const style = MARKER_STYLES[details.theme || details.kind] || { iconKind: "dot", theme: "default" };
   return {
+    kind: type.kind,
+    iconKind: type.iconKind,
+    theme: type.theme,
+    color: type.color,
     ...details,
-    ...style,
     x: group.minimumX * CELL_SIZE + x,
     y: group.minimumY * CELL_SIZE + y,
   };
@@ -216,41 +394,13 @@ export function findMapMarkers(cells) {
   }
 
   const markers = [];
-  for (const quest of BUILDER_QUESTS) {
-    const group = groupsByUid.get(quest.uid)?.[0];
-    if (group) markers.push(markerAt(group, quest.x, quest.y, { ...quest, kind: "builderQuest" }));
-  }
-  for (const group of groups) {
-    const center = group.size * CELL_SIZE / 2;
-    const warehouse = WAREHOUSES.get(group.uid);
-    if (warehouse) {
-      const suffix = warehouse.trashbot ? " (Trashbot)" : "";
-      markers.push(markerAt(group, center, center, {
-        kind: "warehouse",
-        title: `Warehouse · ${warehouse.floors} Floors${suffix}`,
-      }));
-    } else if (PART_UNLOCK_UIDS.has(group.uid)) {
-      markers.push(markerAt(group, center, center, { kind: "partUnlockStation", title: "Part Unlock Station" }));
-    } else if (MECHANIC_UIDS.has(group.uid)) {
-      markers.push(markerAt(group, center, center, { kind: "mechanicStation", title: "Mechanic Station" }));
-    } else if (RUIN_UIDS.has(group.uid)) {
-      markers.push(markerAt(group, center, center, { kind: "ruin", title: "Ruin" }));
-    } else if (CHEMICAL_POND_UIDS.has(group.uid)) {
-      markers.push(markerAt(group, center, center, { kind: "pond", theme: "pondChemical", title: "Chemical Pond" }));
-    } else if (OIL_POND_UIDS.has(group.uid)) {
-      markers.push(markerAt(group, center, center, { kind: "pond", theme: "pondOil", title: "Oil Pond" }));
-    }
-  }
-  for (const structure of SPECIAL_STRUCTURES) {
-    const group = groupsByUid.get(structure.uid)?.[0];
-    if (group) markers.push(markerAt(group, structure.x, structure.y, structure));
-  }
-  for (const [uid, locations] of CAGED_FARMER_LOCATIONS) {
-    for (const group of groupsByUid.get(uid) || []) {
-      for (const [x, y] of locations) {
-        markers.push(markerAt(group, x, y, { kind: "cagedFarmer", title: "Caged Farmer" }));
-      }
-    }
+  const center = (group) => group.size * CELL_SIZE / 2;
+  const groupsFor = (uid) => groupsByUid.get(uid) || [];
+  for (const type of MARKER_TYPES) {
+    const add = (group, localX, localY, details = {}) => {
+      markers.push(markerAt(type, group, localX, localY, details));
+    };
+    type.detect?.({ cells, groups, groupsByUid, groupsFor, center, add });
   }
   return markers;
 }

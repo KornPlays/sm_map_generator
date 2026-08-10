@@ -1,6 +1,7 @@
 import { embedWebPMapData } from "./webp-seed.js";
 import { GENERATOR_ASSET_SOURCE, TILE_ASSET_REVISION } from "./asset-config.js";
 import { EXCAVATION_COMPOSITE_UIDS } from "./excavation-assets.js";
+import { drawSeedBarcode, seedBarcodeMetrics } from "./seed-barcode.js";
 
 const BOUNDS = { xMin: -64, xMax: 63, yMin: -48, yMax: 47 };
 const EXCAVATION_BOUNDS = { xMin: 32, xMax: 63, yMin: 16, yMax: 47 };
@@ -111,16 +112,86 @@ function tileLoadError(url, cause) {
   return error;
 }
 
+// Which tiles a world needs is only known once its cells exist, but the whole
+// tier is a few megabytes and any world uses most of it. Fetching it while the
+// Lua pass is still running takes the tile downloads off the critical path: by
+// the time the cells arrive the artwork is already in hand.
+const warmedTiles = new Map();
+
+export function prewarmTiles(cellSize, {
+  baseUrl = defaultBaseUrl(),
+  assetSource = GENERATOR_ASSET_SOURCE,
+  concurrency = 12,
+} = {}) {
+  const tier = cellSize <= 50 ? 50 : cellSize <= 100 ? 100 : 200;
+  return (async () => {
+    let metadata;
+    try {
+      const response = await fetch(publicUrl("runtime/data/tile_metadata.json", baseUrl));
+      if (!response.ok) return;
+      metadata = await response.json();
+    } catch {
+      return;
+    }
+    const paths = new Set(["excavation_island_special.webp"]);
+    for (const entry of Object.values(metadata)) {
+      if (!entry?.uid) continue;
+      paths.add(entry.size > 1 ? `${entry.uid}.webp` : `tiles/${entry.uid}.webp`);
+    }
+    const list = [...paths].map((path) => `${assetSource}detail/${tier}/${path}`);
+    let next = 0;
+    const pump = async () => {
+      while (next < list.length) {
+        const path = list[next];
+        next += 1;
+        const url = publicUrl(path, baseUrl);
+        url.searchParams.set("v", TILE_ASSET_REVISION);
+        const pending = (async () => {
+          try {
+            // Tile responses are immutable and revisioned, so the browser's
+            // native HTTP cache is both safe and much faster than an extra
+            // Cache Storage lookup/read for every individual image.
+            const response = await fetch(url, { cache: "force-cache" });
+            if (!response.ok) return null;
+            const contentType = response.headers.get("content-type") || "";
+            if (contentType.toLowerCase().includes("text/html")) return null;
+            const blob = await response.blob();
+            if (!blob.size) return null;
+            return blob;
+          } catch {
+            // A warm-up miss is harmless: the render fetches it the usual way.
+            return null;
+          }
+        })();
+        warmedTiles.set(path, pending);
+        await pending;
+      }
+    };
+    await Promise.all(Array.from({ length: concurrency }, pump));
+  })();
+}
+
+function releaseWarmedTiles() {
+  warmedTiles.clear();
+}
+
 async function loadBitmap(path, baseUrl, signal) {
+  const warmed = warmedTiles.get(path);
+  if (warmed) {
+    warmedTiles.delete(path);
+    const blob = await warmed;
+    if (blob) return await createImageBitmap(blob);
+  }
   const url = publicUrl(path, baseUrl);
   url.searchParams.set("v", TILE_ASSET_REVISION);
+
   const retryDelays = [0, 80, 250, 750];
   let lastError = null;
   for (let attempt = 0; attempt < retryDelays.length; attempt += 1) {
     if (retryDelays[attempt]) await delay(retryDelays[attempt], signal);
     throwIfAborted(signal);
     try {
-      const response = await fetch(url, { signal, cache: attempt ? "reload" : "default" });
+      const response = await fetch(url, { signal, cache: attempt ? "reload" : "force-cache" });
       if (response.status === 404 || response.status === 410) return null;
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const contentType = response.headers.get("content-type") || "";
@@ -144,6 +215,17 @@ function position(x, y, cellSize) {
 // 6e-17 that cos/sin return for π/2. Setting the matrix outright also skips the
 // save/restore pair, which matters across the ~12,000 tiles a map draws.
 const QUARTER_TURNS = [[1, 0], [0, -1], [-1, 0], [0, 1]];
+
+// Smoothing is only meaningful when the artwork is being rescaled. Where a tile
+// lands on the canvas at its own size — every tile at 50 and 100 px/cell, since
+// the source tier is chosen to match — the sample points sit exactly on source
+// texels and filtering is a no-op that costs about 3x the blit time. Verified
+// pixel-identical for 1:1 draws at all four rotations.
+function setScaleFiltering(context, sourcePixels, destinationPixels) {
+  const rescaling = sourcePixels !== destinationPixels;
+  context.imageSmoothingEnabled = rescaling;
+  if (rescaling) context.imageSmoothingQuality = "high";
+}
 
 function drawRotated(context, image, x, y, pixels, turns) {
   const turn = turns & 3;
@@ -186,21 +268,22 @@ function drawSeedStamp(context, width, height, cellSize, seed) {
   if (!Number.isInteger(seed)) return;
   const label = `Seed ${seed}`;
   const fontSize = Math.max(14, Math.round(cellSize * 0.75));
-  const paddingX = Math.max(6, Math.round(cellSize * 0.18));
-  const paddingY = Math.max(4, Math.round(cellSize * 0.12));
-  const margin = Math.max(6, Math.round(cellSize * 0.16));
+  const paddingX = Math.max(3, Math.round(cellSize * 0.18));
+  const paddingY = Math.max(2, Math.round(cellSize * 0.12));
   context.save();
   context.font = `700 ${fontSize}px ui-monospace, SFMono-Regular, Consolas, monospace`;
   context.textBaseline = "middle";
   const textWidth = context.measureText(label).width;
-  const boxWidth = Math.ceil(textWidth + paddingX * 2);
-  const boxHeight = Math.ceil(fontSize + paddingY * 2);
-  const x = margin;
-  const y = height - boxHeight - margin;
+  const barcode = seedBarcodeMetrics(width, height, cellSize);
+  const boxWidth = Math.ceil(Math.max(textWidth, barcode.width) + paddingX * 2);
+  const boxHeight = Math.ceil(fontSize + paddingY * 2 + barcode.height + paddingY);
+  const x = barcode.x - paddingX;
+  const y = barcode.y - paddingY - fontSize - paddingY;
   context.fillStyle = "rgba(8, 12, 9, 0.82)";
   context.fillRect(x, y, boxWidth, boxHeight);
+  drawSeedBarcode(context, width, height, cellSize, seed);
   context.fillStyle = "rgba(244, 242, 233, 0.96)";
-  context.fillText(label, x + paddingX, y + boxHeight / 2);
+  context.fillText(label, barcode.x, y + paddingY + fontSize / 2);
   context.restore();
 }
 
@@ -213,6 +296,10 @@ export async function composeMap(
     signal,
     seed = null,
     onPreview = () => {},
+    // Handed the downscaled pixels before they are encoded. Displaying those
+    // costs about 5 ms where the WebP encode costs ~750 ms, and they are the
+    // very same pixels, so the page can paint the finished map that much sooner.
+    onPreviewBitmap = null,
     assetSource = GENERATOR_ASSET_SOURCE,
     // Either a pace name or a function returning one, so a long background
     // render can speed up or ease off as the viewer's settings change under it.
@@ -222,7 +309,10 @@ export async function composeMap(
     preview = true,
     // Lowered only for the stand-in picture the exported viewer embeds, which is
     // displayed at half its own resolution and is never the real download.
-    quality = 0.92,
+    // The source captures are already WebP quality 85. Encoding the assembled
+    // map at the same quality avoids spending most of the render time chasing
+    // detail that no longer exists in the input tiles.
+    quality = 0.85,
   } = {},
 ) {
   const currentPace = () => (typeof pace === "function" ? pace() : pace) || "fast";
@@ -316,8 +406,7 @@ export async function composeMap(
       onProgress("Painting the ocean…", 45);
       const tileCanvas = createCanvas(cellSize, cellSize);
       const tileContext = tileCanvas.getContext("2d", { alpha: false });
-      tileContext.imageSmoothingEnabled = true;
-      tileContext.imageSmoothingQuality = "high";
+      setScaleFiltering(tileContext, ocean.width, cellSize);
       tileContext.drawImage(ocean, 0, 0, cellSize, cellSize);
       const pattern = context.createPattern(tileCanvas, "repeat");
       if (pattern) {
@@ -335,6 +424,7 @@ export async function composeMap(
     const excavation = await openBitmap("excavation_island_special.webp");
     if (excavation) {
       const [x, y] = position(32, 47, cellSize);
+      setScaleFiltering(context, excavation.width, 32 * cellSize);
       context.drawImage(excavation, x, y, 32 * cellSize, 32 * cellSize);
     }
     closeBitmap(excavation);
@@ -361,6 +451,7 @@ export async function composeMap(
       // per-cell loop that runs about 12,000 times per map.
       const oceanGroup = uid === oceanUid;
       if (!image) missing.add(uid);
+      else setScaleFiltering(context, image.width, cellSize);
       for (const cell of members) {
         if (oceanGroup && !isInsideExcavationComposite(cell)) continue;
         if (image) {
@@ -416,6 +507,7 @@ export async function composeMap(
       const { uid, size, rotation } = members[0];
       const image = landmarkImages.get(uid);
       if (image) {
+        setScaleFiltering(context, image.width, size * cellSize);
         const originX = Number.isFinite(members[0].originX)
           ? members[0].originX
           : Math.min(...members.map((cell) => cell.x));
@@ -459,6 +551,22 @@ export async function composeMap(
       previewContext.imageSmoothingEnabled = true;
       previewContext.imageSmoothingQuality = "high";
       previewContext.drawImage(canvas, 0, 0, previewCanvas.width, previewCanvas.height);
+      if (onPreviewBitmap) {
+        // transferToImageBitmap hands the pixels over without copying them, but
+        // leaves the canvas blank, so the encode below needs them drawn again.
+        // That repaint costs far less than the copy and happens after the page
+        // already has the picture.
+        const transferable = typeof previewCanvas.transferToImageBitmap === "function";
+        const bitmap = transferable
+          ? previewCanvas.transferToImageBitmap()
+          : await createImageBitmap(previewCanvas);
+        throwIfAborted(signal);
+        await onPreviewBitmap({ bitmap, width, height, missing: missingAssets });
+        if (transferable) {
+          setScaleFiltering(previewContext, width, previewCanvas.width);
+          previewContext.drawImage(canvas, 0, 0, previewCanvas.width, previewCanvas.height);
+        }
+      }
       previewBlob = await canvasBlob(previewCanvas, "image/webp", 0.88);
       previewCanvas.width = 1;
       previewCanvas.height = 1;
@@ -480,6 +588,7 @@ export async function composeMap(
     return { blob, previewBlob, width, height, missing: missingAssets };
   } finally {
     disposed = true;
+    releaseWarmedTiles();
     canvas.width = 1;
     canvas.height = 1;
     for (const bitmap of openBitmaps) bitmap.close?.();

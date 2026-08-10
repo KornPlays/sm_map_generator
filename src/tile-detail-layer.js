@@ -1,9 +1,8 @@
-import { GENERATOR_ASSET_SOURCE, tileAssetUrl, TILE_ASSET_REVISION } from "./asset-config.js";
+import { GENERATOR_ASSET_SOURCE, tileAssetUrl } from "./asset-config.js";
 import { EXCAVATION_COMPOSITE_UIDS, excavationDetailPlacements } from "./excavation-assets.js";
 
 const BASE_CELL_PX = 25;
 const MAX_DECODED_TILES = 192;
-const PERSISTENT_CACHE = `sm-map-tiles-${TILE_ASSET_REVISION}`;
 const X_MIN = -64;
 const Y_MAX = 47;
 const EXCAVATION_DETAIL_PLACEMENTS = excavationDetailPlacements();
@@ -111,25 +110,10 @@ async function decodePackedBase64(encoded, byteLength) {
 }
 
 async function cachedImage(url) {
-  if (!globalThis.caches || location.protocol === "file:") return { image: await decodeImage(url), objectUrl: null };
-  try {
-    const cache = await caches.open(PERSISTENT_CACHE);
-    let response = await cache.match(url);
-    if (!response) {
-      response = await fetch(url, { mode: "cors", credentials: "omit" });
-      if (!response.ok || (response.headers.get("content-type") || "").includes("text/html")) {
-        throw new Error(`Tile request returned ${response.status}`);
-      }
-      // Decoding the visible tile is latency-sensitive; persisting it can
-      // finish independently and serves the next visit.
-      cache.put(url, response.clone()).catch(() => {});
-    }
-    return await decodeBlob(await response.blob());
-  } catch {
-    // Cross-origin sources without CORS can still be displayed and use the
-    // browser's normal HTTP cache; they simply cannot be copied into Cache API.
-    return { image: await decodeImage(url), objectUrl: null };
-  }
+  // <img> uses the browser's highly optimized HTTP image cache directly. The
+  // static tile URLs are immutable and revisioned, while Cache Storage added a
+  // second, slower disk lookup and blob copy for every tile.
+  return { image: await decodeImage(url), objectUrl: null };
 }
 
 export function createTileDetailLayer({ canvas, viewport, baseUrl = document.baseURI, onQualityChange } = {}) {

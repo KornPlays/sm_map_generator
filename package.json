@@ -14,7 +14,14 @@
     "prebuild": "npm run prepare-vendor && npm run build:viewer",
     "build": "vite build",
     "preview": "vite preview",
-    "test:generator": "node scripts/verify-generator.mjs"
+    "test:generator": "node scripts/verify-generator.mjs",
+    "test:primitives": "node scripts/verify-primitives.mjs",
+    "test:placement": "node scripts/verify-placement.mjs",
+    "test:port": "npm run test:primitives && npm run test:placement && npm run test:catalog && npm run test:processing && npm run test:sort && npm run test:full-pipeline",
+    "test:catalog": "node scripts/verify-catalog.mjs",
+    "test:processing": "node scripts/verify-processing.mjs",
+    "test:sort": "node scripts/verify-lua-sort.mjs",
+    "test:full-pipeline": "node scripts/verify-full-pipeline.mjs 760487397 && node scripts/verify-full-pipeline.mjs 1 && node scripts/verify-full-pipeline.mjs 4294967295 && node scripts/verify-full-pipeline.mjs 123456789 && node scripts/verify-full-pipeline.mjs 999"
   },
   "dependencies": {
     "wasmoon": "^1.16.0"

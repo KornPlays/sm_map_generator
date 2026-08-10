@@ -89,7 +89,9 @@ end
 ------------------------------------------------------------------------------
 
 -- Lua's >> is a logical shift, so the sign-propagating shift the original
--- performs on an int32 is rebuilt from a floored division.
+-- performs on an int32 is rebuilt from a floored division. Replacing the divide
+-- with a shift plus a sign fill, and inlining it at each site, both measured as
+-- no change against this workload, so the readable form is kept.
 local function asr32(value, count)
     if value < 0x80000000 then return value >> count end
     return ((value - 0x100000000) // (1 << count)) & 0xFFFFFFFF
@@ -173,8 +175,10 @@ function _sm_randomseed(initialValue)
 end
 
 function _sm_random(lower, upper)
-    if lower == nil then return rngRandom() end
-    if upper == nil then return mfloor(rngRandom() * lower) + 1 end
-    return mfloor(rngRandom() * (upper - lower + 1)) + lower
+    local result
+    if lower == nil then result = rngRandom()
+    elseif upper == nil then result = mfloor(rngRandom() * lower) + 1
+    else result = mfloor(rngRandom() * (upper - lower + 1)) + lower end
+    return result
 end
 `;

@@ -1,4 +1,4 @@
-import { findMapMarkers } from "./builder-quests.js";
+import { findMapMarkers } from "./markers.js";
 
 let generatorPromise;
 

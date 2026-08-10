@@ -2,6 +2,14 @@ import { simplexNoise2d } from "./noise.js";
 import { FAST_PATH_PRELUDE } from "./lua-fastpath.js";
 import { LuaFactory, LuaLibraries } from "wasmoon";
 import { installPoiTypes, POI_TYPES } from "./world-generation/poi-types.js";
+import { generateCells as generateCellsJs } from "./world-generation/generate.js";
+
+// Switch between the native JS port (fast, verified byte-identical to the Lua
+// path across all five golden seeds — see scripts/verify-full-pipeline.mjs)
+// and the original Lua-via-wasmoon path (kept as a fallback / correctness
+// reference). Flip to false to fall back to Lua if the JS path is ever
+// suspected of diverging on a seed the differential tests don't cover.
+export const USE_JS_GENERATOR = true;
 
 const RUNTIME_SOURCES = [
   "lua/util.lua",
@@ -95,62 +103,73 @@ function resolveSource(path) {
   return normalized;
 }
 
-function instrumentSource(resolved, source) {
-  if (resolved === "lua/overworld/generate_roads.lua") {
-    return source
-      .replace("\t\tlocal roadCells = {}\n", "")
-      .replaceAll("\t\troadCells[#roadCells + 1] = { x = n.x, y = n.y }\n", "")
-      .replace("\t\troadCells[#roadCells + 1] = { x = b.x, y = b.y }\n", "");
+// Anchors the progress reports and the memory hand-backs to specific statements
+// in the world-generation source. A missed anchor is a silent failure — the
+// generator keeps working while the reporting and the collection it was meant to
+// trigger quietly stop happening — so a miss is raised instead.
+function replaceOnce(source, find, replace, label) {
+  if (!source.includes(find)) {
+    throw new Error(`The world generator source no longer contains the ${label} anchor.`);
   }
+  return source.replace(find, replace);
+}
+
+// Progress reporting and garbage collection only; neither can affect the world
+// that comes out. The collections matter because the road pass builds a node and
+// edge graph over the whole grid — by far the largest structure the generator
+// makes — and without a collection at the points where it becomes unreachable,
+// the Lua heap carries it through every later pass.
+function instrumentSource(resolved, source) {
   if (resolved !== "lua/overworld/generate_cells.lua") return source;
-  return source
-    .replace(
-      "local roadNodes = drawRoads( roadEdges, pois )",
-      `collectgarbage("collect")
-	local roadNodes = drawRoads( roadEdges, pois )
-	for _, roadPoi in ipairs( roadPois ) do
-		roadPoi.edges = nil
-		roadPoi.dist = nil
-	end
-	roadPois = nil
-	roadEdges = nil
-	roadDestinations = nil
-	collectgarbage("collect")`,
-    )
-    .replace(
-      'print( "Random road pois:", randomRoadPoiCount )\n\n\t------------------------------------------------------------------------------------------------\n\n\t-- Elevation (hills)',
-      `print( "Random road pois:", randomRoadPoiCount )
-	roadNodes = nil
-	collectgarbage("collect")
-
-	------------------------------------------------------------------------------------------------
-
-	-- Elevation (hills)`,
-    )
-    .replace(
-      "preparePoiRoadGraph( pois, roadPois )",
-      '_sm_progress("Connecting the main roads…", 20)\n\tcollectgarbage("collect")\n\tpreparePoiRoadGraph( pois, roadPois )',
-    )
-    .replace(
-      "writeStartArea( pois, roadNodes )",
-      '_sm_progress("Placing landmarks and the starting area…", 22)\n\twriteStartArea( pois, roadNodes )',
-    )
-    .replace(
-      "evaluateRoadsAndCliffs( roadNodes )",
-      '_sm_progress("Choosing road and cliff tiles…", 24)\n\tevaluateRoadsAndCliffs( roadNodes )',
-    )
-    .replace(
-      "addBorderingMeadows()",
-      '_sm_progress("Connecting biome roads…", 26)\n\taddBorderingMeadows()',
-    )
-    .replace(
-      "addExtraPois( pois, padding )",
-      '_sm_progress("Placing remaining points of interest…", 29)\n\taddExtraPois( pois, padding )',
-    )
-    .replace(
-      "evaluateType( TYPE_MEADOW, getMeadowTileIdAndRotation )",
-      '_sm_progress("Choosing terrain tiles…", 30)\n\tevaluateType( TYPE_MEADOW, getMeadowTileIdAndRotation )',
-    );
+  let output = source;
+  output = replaceOnce(
+    output,
+    "\tlocal roadPois={}; preparePoiRoadGraph(pois,roadPois)",
+    '\t_sm_progress("Connecting the main roads…", 20)\n\tcollectgarbage("collect")\n\tlocal roadPois={}; preparePoiRoadGraph(pois,roadPois)',
+    "road graph",
+  );
+  output = replaceOnce(
+    output,
+    "\tlocal roadNodes=createRoadNetwork(pois,refs,destinations)",
+    '\tlocal roadNodes=createRoadNetwork(pois,refs,destinations)\n\tcollectgarbage("collect")',
+    "road network",
+  );
+  output = replaceOnce(
+    output,
+    "\twriteStartArea(pois,roadNodes);injectExcavation(ExcavationIsland)",
+    '\t_sm_progress("Placing landmarks and the starting area…", 22)\n\twriteStartArea(pois,roadNodes);injectExcavation(ExcavationIsland)',
+    "start area",
+  );
+  output = replaceOnce(
+    output,
+    "\tenforceCliffRoadLimitations(roadNodes);",
+    '\t_sm_progress("Choosing road and cliff tiles…", 24)\n\tenforceCliffRoadLimitations(roadNodes);',
+    "roads and cliffs",
+  );
+  output = replaceOnce(
+    output,
+    "\taddBorderingMeadows()",
+    '\t_sm_progress("Connecting biome roads…", 26)\n\taddBorderingMeadows()',
+    "bordering meadows",
+  );
+  output = replaceOnce(
+    output,
+    "\tplaceRandomRoadPois(paintBiomeRoads(roadNodes,refs.crashExit),pois,padding)",
+    '\tplaceRandomRoadPois(paintBiomeRoads(roadNodes,refs.crashExit),pois,padding)\n\troadNodes=nil\n\tcollectgarbage("collect")',
+    "biome road painting",
+  );
+  output = replaceOnce(
+    output,
+    "\taddExtraPois(pois,padding)",
+    '\t_sm_progress("Placing remaining points of interest…", 29)\n\taddExtraPois(pois,padding)',
+    "extra POIs",
+  );
+  return replaceOnce(
+    output,
+    "\tevaluateType(TYPE_MEADOW,getMeadowTileIdAndRotation);",
+    '\t_sm_progress("Choosing terrain tiles…", 30)\n\tevaluateType(TYPE_MEADOW,getMeadowTileIdAndRotation);',
+    "terrain tiles",
+  );
 }
 
 function installCallbacks(engine, runtime, onProgress) {
@@ -452,6 +471,16 @@ initBiomeRoadTiles()
 for _, cell in pairs(EXCAVATION_WORLD.cellData) do
     if cell.path and cell.path ~= "" then AddTile(nil, cell.path, nil, nil) end
 end
+-- convertPlaceholderPois is the only pass that edits a POI's own x, y or size
+-- after placement, which is the one change collides' row filter cannot notice on
+-- its own. Wrapping it here keeps the vendored pass untouched.
+local browserConvertPlaceholderPois = convertPlaceholderPois
+function convertPlaceholderPois(pois)
+    local result = browserConvertPlaceholderPois(pois)
+    invalidateCollisionRow()
+    return result
+end
+
 generateOverworldCelldata(-72, 71, -56, 55, ${seed}, nil, 8)
 
 local rows = {}
@@ -487,6 +516,11 @@ __RESULT = table.concat(rows, "\\n")
 }
 
 export async function generateCells(seed, onProgress = () => {}) {
+  if (USE_JS_GENERATOR) return generateCellsJs(seed, onProgress);
+  return generateCellsLua(seed, onProgress);
+}
+
+async function generateCellsLua(seed, onProgress = () => {}) {
   onProgress("Loading the Chapter 2 world rules…", 8);
   const runtime = await loadRuntime();
   onProgress("Generating roads, biomes, islands, and POIs…", 18);

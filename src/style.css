@@ -329,6 +329,19 @@ button:disabled { cursor: wait; opacity: 0.55; transform: none; }
   -webkit-user-drag: none;
 }
 
+/* Shows the freshly composed map straight from the renderer's pixels, which is
+   roughly 750 ms sooner than the identical WebP finishes encoding. It sits under
+   the image and is dropped once that image has decoded. */
+.map-base-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  max-width: none;
+  user-select: none;
+}
+.map-base-canvas[hidden] { display: none; }
+
 .map-pin {
   position: absolute;
   z-index: 2;
@@ -558,6 +571,7 @@ button:disabled { cursor: wait; opacity: 0.55; transform: none; }
 .marker-details-symbol[data-theme="cluster"] { --marker-accent: #6eb9ff; }
 .marker-details-heading small { color: #9ca79d; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em; }
 .marker-details-heading h3 { margin: 2px 0 0; color: #f3f1e9; font-size: 0.98rem; line-height: 1.25; }
+.marker-details-description { margin: 12px 0 0; color: #c8cec8; font-size: 0.78rem; line-height: 1.5; }
 .marker-details h4 { margin: 14px 0 6px; color: #d9b04e; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.08em; }
 .marker-details ul { margin: 0; padding-left: 19px; color: #c8cec8; font-size: 0.78rem; line-height: 1.55; }
 
@@ -752,6 +766,8 @@ button:disabled { cursor: wait; opacity: 0.55; transform: none; }
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
+
+.marker-settings-list { display: contents; }
 
 .upscaling-settings {
   margin-bottom: 12px;

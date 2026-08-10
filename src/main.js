@@ -225,16 +225,30 @@ saveInput.addEventListener("change", async () => {
   }
 });
 
-function generateInWorker(seed, cellSize, signal, onProgress, onPreview) {
+function generateInWorker(seed, cellSize, signal, onProgress, onPreview, onFirstPaint) {
   return new Promise((resolve, reject) => {
     const worker = new Worker(new URL("./generator-worker.js", import.meta.url), { type: "module" });
     let rendererWorker = null;
+    // Started alongside the generator so it can pull down this tier's tile
+    // artwork while the Lua pass runs. Otherwise the render begins with several
+    // hundred cold image requests on the critical path.
+    let warmWorker = null;
+    if (typeof OffscreenCanvas !== "undefined") {
+      try {
+        warmWorker = new Worker(new URL("./renderer-worker.js", import.meta.url), { type: "module" });
+        warmWorker.addEventListener("error", () => {});
+        warmWorker.postMessage({ type: "prewarm", cellSize, baseUrl: document.baseURI });
+      } catch {
+        warmWorker = null;
+      }
+    }
     activeWorker = worker;
     let settled = false;
 
     const cleanup = () => {
       signal.removeEventListener("abort", handleAbort);
       worker.terminate();
+      if (warmWorker !== rendererWorker) warmWorker?.terminate();
       rendererWorker?.terminate();
       if (activeWorker === worker || activeWorker === rendererWorker) activeWorker = null;
     };
@@ -287,7 +301,12 @@ function generateInWorker(seed, cellSize, signal, onProgress, onPreview) {
           });
           const startRenderer = (attempt = 0) => {
             if (settled || signal.aborted) return;
-            rendererWorker = new Worker(new URL("./renderer-worker.js", import.meta.url), { type: "module" });
+            // The first attempt reuses the worker that has been warming tiles;
+            // a retry needs a clean one.
+            rendererWorker = attempt === 0 && warmWorker
+              ? warmWorker
+              : new Worker(new URL("./renderer-worker.js", import.meta.url), { type: "module" });
+            if (rendererWorker !== warmWorker) warmWorker?.terminate();
             activeWorker = rendererWorker;
             rendererWorker.addEventListener("error", (renderError) => {
               finish(reject, new Error(renderError.message || "The background map renderer stopped unexpectedly."));
@@ -296,6 +315,10 @@ function generateInWorker(seed, cellSize, signal, onProgress, onPreview) {
               const renderMessage = renderEvent.data;
               if (renderMessage?.type === "progress") {
                 onProgress(renderMessage.message, renderMessage.percent);
+              } else if (renderMessage?.type === "previewBitmap") {
+                if (!settled && !signal.aborted) {
+                  onFirstPaint({ ...renderMessage, cells: message.cells, mapMarkers: message.mapMarkers });
+                }
               } else if (renderMessage?.type === "preview") {
                 if (!settled && !signal.aborted) {
                   onPreview({ ...renderMessage, cells: message.cells, mapMarkers: message.mapMarkers });
@@ -337,6 +360,12 @@ function generateInWorker(seed, cellSize, signal, onProgress, onPreview) {
             baseUrl: document.baseURI,
             signal,
             seed,
+            onPreviewBitmap: (paint) => onFirstPaint({
+              ...paint,
+              seed,
+              cells: message.cells,
+              mapMarkers: message.mapMarkers,
+            }),
             onPreview: (preview) => onPreview({
               ...preview,
               seed,
@@ -422,7 +451,7 @@ form.addEventListener("submit", async (event) => {
   missing.hidden = true;
   setStatus(
     `Generating seed ${seed}`,
-    "Generating the map, this may take up to a few minutes…",
+    "Generating the map, this may take up to a few seconds…",
     "working",
     3,
   );
@@ -431,10 +460,32 @@ form.addEventListener("submit", async (event) => {
     const update = (message, percent) => {
       setStatus(`Generating seed ${seed}`, message, "working", percent);
     };
-    // The viewer renders from the preview image, so the finished map is shown
-    // and can be explored while the browser is still encoding the much larger
-    // download image.
+    const reportMissing = (paths) => {
+      if (!paths?.length) return;
+      missing.hidden = false;
+      missing.textContent = `${paths.length} tile image${paths.length === 1 ? " is" : "s are"} missing: ${paths.join(", ")}`;
+    };
+    // The map opens on the renderer's raw pixels, well before any of its images
+    // have been encoded. Both encodes then fill themselves in behind it: the
+    // viewer-sized WebP a second later, the full-resolution download after that.
+    const showFirstPaint = (paint) => {
+      mapViewer.showMapBitmap(paint.bitmap, `scrap-mechanic-ch2-${seed}.webp`, {
+        details: { width: paint.width, height: paint.height },
+        seed,
+        cells: paint.cells,
+        mapMarkers: paint.mapMarkers,
+      });
+      generatedMap = true;
+      showMapViewer();
+      reportMissing(paint.missing);
+    };
+    // Reached only where the first-paint handover is unavailable, so this still
+    // has to be able to open the map on its own.
     const showPreview = (preview) => {
+      if (generatedMap) {
+        mapViewer.attachPreviewBlob(preview.previewBlob);
+        return;
+      }
       mapViewer.showMapPreview(preview.previewBlob, `scrap-mechanic-ch2-${seed}.webp`, {
         details: { width: preview.width, height: preview.height },
         seed,
@@ -443,12 +494,16 @@ form.addEventListener("submit", async (event) => {
       });
       generatedMap = true;
       showMapViewer();
-      if (preview.missing.length) {
-        missing.hidden = false;
-        missing.textContent = `${preview.missing.length} tile image${preview.missing.length === 1 ? " is" : "s are"} missing: ${preview.missing.join(", ")}`;
-      }
+      reportMissing(preview.missing);
     };
-    const rendered = await generateInWorker(seed, cellSize, controller.signal, update, showPreview);
+    const rendered = await generateInWorker(
+      seed,
+      cellSize,
+      controller.signal,
+      update,
+      showPreview,
+      showFirstPaint,
+    );
     controller.signal.throwIfAborted();
     await mapViewer.attachMapBlob(rendered.blob);
     setStatus(

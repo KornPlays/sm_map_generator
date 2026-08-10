@@ -293,7 +293,9 @@ export async function readWebPSeed(blob) {
 }
 
 export function seedFromFilename(name) {
-  const match = String(name || "").match(/(?:scrap-mechanic-ch2-|seed[-_ ]?)(\d+)/i);
+  // This is deliberately exact: a renamed image must proceed to the visual
+  // barcode fallback instead of silently trusting unrelated digits in its name.
+  const match = String(name || "").match(/^scrap-mechanic-ch2-(0|[1-9]\d{0,9})\.webp$/);
   if (!match) return null;
   const seed = Number(match[1]);
   return Number.isInteger(seed) && seed >= 0 && seed <= 4294967295 ? seed : null;

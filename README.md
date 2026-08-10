@@ -73,6 +73,10 @@ other generated folders. For Cloudflare Pages, use `npm run build` and `dist`.
 Generator internals and the golden-seed update process are documented in
 [docs/world-generator.md](docs/world-generator.md).
 
+To add custom marker categories, detection rules, descriptions, rewards, or
+icons, see [Modding.md](Modding.md). Marker definitions live together in
+`src/markers.js`, and their settings toggles are generated automatically.
+
 ## License
 
 The original project code and project-created interface artwork are licensed
